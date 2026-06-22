@@ -1,0 +1,33 @@
+import { Link } from "@tanstack/react-router";
+
+export function Header() {
+  return (
+    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <Link to="/" className="font-display text-xl">
+          Clínica <span className="text-gradient-gold">L'ECLER</span>
+        </Link>
+        <nav className="hidden items-center gap-7 text-sm md:flex">
+          <a href="/#modulos" className="text-muted-foreground transition-colors hover:text-foreground">
+            Tratamentos
+          </a>
+          <a href="/#beneficios" className="text-muted-foreground transition-colors hover:text-foreground">
+            Diferenciais
+          </a>
+          <a href="/#metodo" className="text-muted-foreground transition-colors hover:text-foreground">
+            Método
+          </a>
+          <a href="/#cta" className="text-muted-foreground transition-colors hover:text-foreground">
+            Contato
+          </a>
+        </nav>
+        <a
+          href="/#cta"
+          className="hidden rounded-full bg-gradient-gold px-5 py-2 text-sm font-semibold text-primary shadow-soft transition-transform hover:scale-[1.02] sm:inline-flex"
+        >
+          Garantir minha vaga
+        </a>
+      </div>
+    </header>
+  );
+}

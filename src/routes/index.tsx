@@ -6,6 +6,7 @@ import { MethodSection } from "@/components/MethodSection";
 import { PricingSection } from "@/components/PricingSection";
 import { CtaSection } from "@/components/CtaSection";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,6 +23,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="min-h-screen bg-background">
+      <Header />
       <HeroSection />
       <ModulesSection />
       <BenefitsSection />
