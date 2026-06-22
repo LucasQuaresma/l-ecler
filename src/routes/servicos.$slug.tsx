@@ -22,13 +22,22 @@ export const Route = createFileRoute("/servicos/$slug")({
   loader: ({ params }) => {
     const service = getServiceBySlug(params.slug);
     if (!service) throw notFound();
-    return { service };
+    return { slug: service.slug };
   },
   component: ServicePage,
+  notFoundComponent: () => (
+    <div className="flex min-h-screen items-center justify-center px-6 text-center">
+      <div>
+        <h1 className="font-display text-4xl">Tratamento não encontrado</h1>
+        <Link to="/" className="mt-6 inline-block text-gold underline">Voltar à home</Link>
+      </div>
+    </div>
+  ),
 });
 
 function ServicePage() {
-  const { service } = Route.useLoaderData();
+  const { slug } = Route.useLoaderData();
+  const service = getServiceBySlug(slug)!;
   const Icon = service.icon;
 
   return (
