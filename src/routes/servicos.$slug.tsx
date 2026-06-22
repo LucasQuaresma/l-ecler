@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Check, Sparkles, ArrowRight } from "lucide-react";
 import {
@@ -26,27 +26,33 @@ export const Route = createFileRoute("/servicos/$slug")({
       ],
     };
   },
-  loader: ({ params }) => {
-    const service = getServiceBySlug(params.slug);
-    if (!service) throw notFound();
-    return { slug: service.slug };
-  },
   component: ServicePage,
-  notFoundComponent: () => (
-    <div className="flex min-h-screen items-center justify-center px-6 text-center">
-      <div>
-        <h1 className="font-display text-4xl">Tratamento não encontrado</h1>
-        <Link to="/" className="mt-6 inline-block text-gold underline">
-          Voltar à home
-        </Link>
-      </div>
-    </div>
-  ),
 });
 
 function ServicePage() {
-  const { slug } = Route.useLoaderData();
-  const service = getServiceBySlug(slug)!;
+  const { slug } = Route.useParams();
+  const service = getServiceBySlug(slug);
+
+  if (!service) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="flex min-h-[70vh] items-center justify-center px-6 text-center">
+          <div>
+            <h1 className="font-display text-4xl">Tratamento não encontrado</h1>
+            <p className="mt-3 text-sm text-muted-foreground">
+              O link acessado não corresponde a um tratamento disponível.
+            </p>
+            <Link to="/" className="mt-6 inline-block text-gold underline">
+              Voltar à home
+            </Link>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
   const Icon = service.icon;
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 6);
 
