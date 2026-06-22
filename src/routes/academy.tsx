@@ -13,6 +13,7 @@ import { Footer } from "@/components/Footer";
 import { openSignupDialog } from "@/lib/signup-dialog";
 
 export const Route = createFileRoute("/academy")({
+  ssr: false,
   head: () => ({
     meta: [
       { title: "L'ECLER Academy — Formação em Harmonização Orofacial" },
