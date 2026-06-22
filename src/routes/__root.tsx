@@ -80,6 +80,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Clínica L'ECLER" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Clínica L'ECLER" },
+      { name: "twitter:title", content: "Clínica L'ECLER" },
+      { property: "og:description", content: "Odontologia integrada e Harmonização Orofacial — Clínica L'ECLER." },
+      { name: "twitter:description", content: "Odontologia integrada e Harmonização Orofacial — Clínica L'ECLER." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fd64cb3b-fb6b-4af8-b62d-bb3a90d18773/id-preview-e0d40581--4a704252-3ab4-4967-91e8-79d383df7ecd.lovable.app-1782148987455.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fd64cb3b-fb6b-4af8-b62d-bb3a90d18773/id-preview-e0d40581--4a704252-3ab4-4967-91e8-79d383df7ecd.lovable.app-1782148987455.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
