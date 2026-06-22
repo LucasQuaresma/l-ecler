@@ -1,0 +1,145 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { MessageCircle, ClipboardList, Stethoscope, Sparkles, Calendar } from "lucide-react";
+
+const steps = [
+  {
+    icon: MessageCircle,
+    title: "Diagnóstico Online",
+    text: "Você conta o que te incomoda e o que deseja. Direcionamos o plano antes da clínica.",
+    gradient: "linear-gradient(135deg, oklch(0.85 0.12 80), oklch(0.65 0.13 60))",
+  },
+  {
+    icon: ClipboardList,
+    title: "Avaliação individualizada",
+    text: "Análise técnica de oclusão, estrutura óssea, função e estética facial — sem protocolo padrão.",
+    gradient: "linear-gradient(135deg, oklch(0.82 0.1 50), oklch(0.6 0.12 30))",
+  },
+  {
+    icon: Stethoscope,
+    title: "Plano personalizado",
+    text: "Um projeto técnico próprio para o seu rosto e seu sorriso, com etapas claras.",
+    gradient: "linear-gradient(135deg, oklch(0.86 0.08 25), oklch(0.55 0.12 20))",
+  },
+  {
+    icon: Sparkles,
+    title: "Execução com tecnologia",
+    text: "Procedimentos conduzidos com equipamentos de última geração e equipe multidisciplinar.",
+    gradient: "linear-gradient(135deg, oklch(0.88 0.1 90), oklch(0.62 0.14 70))",
+  },
+  {
+    icon: Calendar,
+    title: "Acompanhamento contínuo",
+    text: "Manutenções, gerenciamento dérmico e follow-up para resultado duradouro.",
+    gradient: "linear-gradient(135deg, oklch(0.83 0.1 70), oklch(0.55 0.11 40))",
+  },
+];
+
+export function MethodSection() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start 70%", "end 30%"],
+  });
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  return (
+    <section className="relative py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            Metodologia
+          </span>
+          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
+            Um caminho técnico, <span className="text-gradient-gold">um resultado seu.</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Da escuta inicial ao acompanhamento — cada etapa pensada para entregar segurança e
+            naturalidade.
+          </p>
+        </div>
+
+        {/* Mobile stacked */}
+        <div className="mt-14 space-y-5 lg:hidden">
+          {steps.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft"
+              >
+                <div className="relative shrink-0">
+                  <div
+                    className="grid h-14 w-14 place-items-center rounded-xl text-primary shadow-soft"
+                    style={{ background: s.gradient }}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div className="absolute -top-1 -right-1 grid h-6 w-6 place-items-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+                    {i + 1}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-display text-lg">{s.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Desktop alternating timeline */}
+        <div ref={ref} className="relative mx-auto mt-16 hidden max-w-4xl lg:block">
+          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-border" />
+          <motion.div
+            style={{ height: lineHeight }}
+            className="absolute left-1/2 top-0 w-px -translate-x-1/2 bg-gradient-to-b from-gold via-gold to-primary"
+          />
+
+          {steps.map((s, i) => {
+            const Icon = s.icon;
+            const isLeft = i % 2 === 0;
+            return (
+              <div key={s.title} className="relative mb-16 grid grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6 }}
+                  className={isLeft ? "col-start-1 pr-12 text-right" : "col-start-2 pl-12"}
+                >
+                  <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-gold">
+                      Etapa {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="mt-2 font-display text-2xl">{s.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className="absolute left-1/2 top-6 -translate-x-1/2"
+                >
+                  <div
+                    className="grid h-14 w-14 place-items-center rounded-full text-primary shadow-elegant ring-4 ring-background"
+                    style={{ background: s.gradient }}
+                  >
+                    <Icon className="h-6 w-6" />
+                  </div>
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
