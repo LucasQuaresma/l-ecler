@@ -88,7 +88,7 @@ function ServicePage() {
               Fale com nosso time e receba um direcionamento personalizado para o seu caso.
             </p>
             <button
-              onClick={() => openSignupDialog(service.title)}
+              onClick={() => openSignupDialog()}
               className="mt-6 inline-flex items-center justify-center rounded-full bg-gradient-gold px-7 py-3 text-sm font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
               Garantir minha vaga
