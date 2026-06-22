@@ -5,7 +5,7 @@ import { openSignupDialog } from "@/lib/signup-dialog";
 
 export function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-cta py-20 sm:py-28">
+    <section id="cta" className="relative overflow-hidden bg-gradient-cta py-20 sm:py-28">
       <div className="absolute inset-0 opacity-20" style={{
         background: "radial-gradient(circle at 20% 30%, oklch(0.8 0.14 75) 0%, transparent 50%), radial-gradient(circle at 80% 70%, oklch(0.7 0.13 60) 0%, transparent 50%)"
       }} />
