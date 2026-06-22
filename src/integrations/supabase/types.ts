@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      cookie_consents: {
+        Row: {
+          accepted: boolean
+          created_at: string
+          id: string
+          visitor_id: string
+        }
+        Insert: {
+          accepted: boolean
+          created_at?: string
+          id?: string
+          visitor_id: string
+        }
+        Update: {
+          accepted?: boolean
+          created_at?: string
+          id?: string
+          visitor_id?: string
+        }
+        Relationships: []
+      }
+      leads: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          source: string | null
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          source?: string | null
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          source?: string | null
+          whatsapp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
