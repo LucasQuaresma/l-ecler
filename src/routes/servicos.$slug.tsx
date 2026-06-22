@@ -67,7 +67,7 @@ function ServicePage() {
           </motion.div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
-            {service.benefits.map((b) => (
+            {service.benefits.map((b: string) => (
               <div
                 key={b}
                 className="flex items-start gap-3 rounded-xl border border-border bg-card p-5 shadow-soft"
