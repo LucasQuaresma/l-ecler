@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { openSignupDialog } from "@/lib/signup-dialog";
 
 const inclusos = [
-  "Avaliação individualizada com a Dra. Cássia",
-  "Plano técnico personalizado (sem protocolo padrão)",
-  "Acesso à equipe multidisciplinar L'ECLER",
-  "Tecnologias de última geração",
-  "Diagnóstico Online prévio",
+  "Nossa equipe chama você no WhatsApp",
+  "Você conta o que incomoda e o que deseja melhorar",
+  "Recebe um direcionamento inicial para o seu caso",
+  "Entende os tratamentos que podem fazer sentido",
+  "Agenda a avaliação presencial quando estiver pronta para avançar",
 ];
 
 export function PricingSection() {
@@ -26,15 +26,16 @@ export function PricingSection() {
           <div className="relative">
             <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
               <Sparkles className="h-3.5 w-3.5" />
-              Condições especiais de lançamento
+              Agendamento guiado
             </div>
             <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl">
-              Uma oportunidade <span className="text-gradient-gold">única</span> para começar.
+              Quer entender o que faz sentido{" "}
+              <span className="text-gradient-gold">para o seu caso?</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Vagas limitadas para novos pacientes neste mês — com acesso facilitado e
-              condições exclusivas de lançamento. Fale com nossa equipe e descubra o que
-              está incluso no seu plano.
+              Você não precisa chegar sabendo o nome do procedimento. Deixe seu contato,
+              converse com a equipe da L'ECLER e descubra o caminho mais seguro para cuidar
+              do seu sorriso, da sua face e da sua autoestima.
             </p>
 
             <ul className="mt-8 space-y-3">
@@ -53,7 +54,7 @@ export function PricingSection() {
               onClick={openSignupDialog}
               className="mt-10 h-12 w-full rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.01] sm:w-auto"
             >
-              Quero saber mais
+              Quero conversar com a equipe
             </Button>
           </div>
         </motion.div>

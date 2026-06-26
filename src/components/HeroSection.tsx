@@ -33,20 +33,21 @@ export function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary shadow-soft">
             <Sparkles className="h-3.5 w-3.5 text-gold" />
-            Vagas limitadas neste mês
+            Diagnóstico online + clínica em Bragança
           </div>
 
           <h1 className="mt-6 font-display text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-            Saúde e estética <br className="hidden sm:block" />
-            que parecem{" "}
-            <span className="text-gradient-gold">naturais</span>,<br className="hidden sm:block" />
-            porque foram feitas para você.
+            Imagine se olhar no espelho <br className="hidden sm:block" />
+            e gostar ainda{" "}
+            <span className="text-gradient-gold">mais</span>{" "}<br className="hidden sm:block" />
+            do que vê.
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
-            Odontologia integrada e Harmonização Orofacial com a Dra. Cássia —
-            cirurgiã-dentista há 26 anos e especialista em HOF há mais de 14.
-            Planos individualizados, resultado sutil, técnico e seguro.
+            Na L'ECLER, a Dra. Cássia une odontologia, harmonização orofacial e
+            estética avançada para planejar, com você, uma mudança natural,
+            segura e possível. Conte o que te incomoda e receba um primeiro
+            direcionamento pelo WhatsApp.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -55,7 +56,7 @@ export function HeroSection() {
               onClick={openSignupDialog}
               className="group h-12 rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
-              Garantir minha vaga
+              Quero conversar e agendar
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -64,16 +65,16 @@ export function HeroSection() {
               onClick={scrollToModules}
               className="h-12 rounded-full border-primary/20 bg-transparent px-7 text-base font-medium text-primary hover:bg-secondary"
             >
-              Ver conteúdo
+              Conhecer tratamentos
             </Button>
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-6 text-xs text-muted-foreground sm:text-sm lg:justify-start">
-            <div><strong className="text-foreground">26+</strong> anos de odontologia</div>
+            <div><strong className="text-foreground">26+</strong> anos cuidando de sorrisos</div>
             <div className="h-4 w-px bg-border" />
             <div><strong className="text-foreground">14+</strong> anos em HOF</div>
             <div className="h-4 w-px bg-border" />
-            <div><strong className="text-foreground">100%</strong> personalizado</div>
+            <div><strong className="text-foreground">1º</strong> passo online</div>
           </div>
         </motion.div>
 
@@ -107,8 +108,8 @@ export function HeroSection() {
                 <Sparkles className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-gold">Dra. Cássia</div>
-                <div className="text-sm font-medium text-foreground">Cirurgiã-dentista · HOF</div>
+                <div className="text-xs font-semibold uppercase tracking-wider text-gold">Dra. Cássia Blasques</div>
+                <div className="text-sm font-medium text-foreground">Odontologia · HOF · estética</div>
               </div>
             </div>
           </motion.div>

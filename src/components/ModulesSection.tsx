@@ -1,20 +1,23 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { services } from "@/lib/services";
+import { openSignupDialog } from "@/lib/signup-dialog";
 import consultationImg from "@/assets/home-consultation.jpg";
 
 const treatmentHighlights = [
   {
-    title: "Avaliação conduzida de perto",
-    text: "A primeira leitura combina queixa, função, estética e histórico clínico.",
+    title: "Você conta o que deseja mudar",
+    text: "Pode ser o sorriso, a pele, o contorno do rosto ou uma sensação de que algo não combina mais com você.",
   },
   {
-    title: "Plano integrado",
-    text: "Sorriso, face e saúde oral entram no mesmo raciocínio técnico.",
+    title: "A equipe traduz isso em caminho clínico",
+    text: "A indicação nasce da sua história, da sua saúde bucal, da análise facial e do resultado que faz sentido para sua rotina.",
   },
   {
-    title: "Resultado sem exagero",
-    text: "Cada indicação busca naturalidade, segurança e coerência com o seu rosto.",
+    title: "Você decide com segurança",
+    text: "Antes de começar, você entende possibilidades, prioridades, investimento e próximos passos.",
   },
 ];
 
@@ -27,12 +30,13 @@ export function ModulesSection() {
             Tratamentos
           </span>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
-            Tudo o que seu rosto e seu sorriso precisam,{" "}
-            <span className="text-gradient-gold">em um só lugar.</span>
+            Não é sobre fazer mais. É sobre fazer{" "}
+            <span className="text-gradient-gold">o que combina com você.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Odontologia integrada e Harmonização Orofacial conduzidas com domínio técnico,
-            sensibilidade estética e equipe multidisciplinar.
+            A L'ECLER integra odontologia, harmonização orofacial e estética avançada para
+            construir um plano coerente: bonito de ver, confortável de viver e seguro para
+            o seu corpo.
           </p>
         </div>
 
@@ -55,10 +59,10 @@ export function ModulesSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/35 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 max-w-xs rounded-2xl bg-card/95 p-4 shadow-elegant ring-1 ring-gold/30 backdrop-blur">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                Consulta personalizada
+                Primeiro passo: conversa
               </div>
               <p className="mt-1 text-sm leading-relaxed text-foreground">
-                A decisão estética nasce de uma avaliação clínica completa.
+                A melhor indicação começa quando a equipe entende o que você quer sentir ao sorrir e se olhar.
               </p>
             </div>
           </motion.div>
@@ -105,13 +109,24 @@ export function ModulesSection() {
                   <h3 className="font-display text-xl text-foreground">{m.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.text}</p>
                   <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gold opacity-0 transition-opacity group-hover:opacity-100">
-                    Saiba mais →
+                    Ver detalhes →
                   </span>
                   <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gold/10 opacity-0 transition-opacity group-hover:opacity-100" />
                 </Link>
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button
+            size="lg"
+            onClick={openSignupDialog}
+            className="group h-auto min-h-12 max-w-full whitespace-normal rounded-full bg-gradient-gold px-6 py-3 text-center text-base font-semibold leading-snug text-primary shadow-gold transition-transform hover:scale-[1.02] sm:px-7"
+          >
+            Não sei por onde começar, quero orientação
+            <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
       </div>
     </section>

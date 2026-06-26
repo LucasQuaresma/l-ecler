@@ -3,12 +3,12 @@ import { ShieldCheck, UserCheck, HeartHandshake, Microscope, Gem, Globe2 } from 
 import differentialsImg from "@/assets/home-differentials.jpg";
 
 const benefits = [
-  { icon: ShieldCheck, title: "Segurança técnica rara", text: "26 anos de odontologia + 14 em HOF — base de oclusão, anatomia e função." },
-  { icon: UserCheck, title: "Plano individualizado", text: "Sem protocolo padrão. Cada rosto recebe um projeto técnico próprio." },
-  { icon: HeartHandshake, title: "Equipe selecionada", text: "Time multidisciplinar formado dentro do mesmo padrão da Dra. Cássia." },
-  { icon: Microscope, title: "Tecnologia de ponta", text: "Equipamentos e tecnologias de última geração em odontologia e HOF." },
-  { icon: Gem, title: "Resultado natural", text: "Sorriso e rosto que melhoram — sem parecer 'feito'." },
-  { icon: Globe2, title: "Diagnóstico online", text: "Direcionamento personalizado antes mesmo da primeira visita." },
+  { icon: ShieldCheck, title: "Segurança antes da estética", text: "Toda indicação considera saúde bucal, anatomia, função e histórico clínico." },
+  { icon: UserCheck, title: "Plano feito para o seu rosto", text: "Sem pacote pronto. O plano parte do que você deseja e do que seu caso permite." },
+  { icon: HeartHandshake, title: "Equipe que acolhe e orienta", text: "Você não precisa chegar sabendo o procedimento. A equipe te ajuda a entender o caminho." },
+  { icon: Microscope, title: "Tecnologia para prever melhor", text: "Recursos digitais e equipamentos modernos apoiam diagnóstico, conforto e precisão." },
+  { icon: Gem, title: "Naturalidade como assinatura", text: "O objetivo é melhorar sem apagar sua identidade ou deixar aparência artificial." },
+  { icon: Globe2, title: "Começo pelo WhatsApp", text: "O primeiro direcionamento pode acontecer antes da visita presencial." },
 ];
 
 export function BenefitsSection() {
@@ -20,9 +20,14 @@ export function BenefitsSection() {
             Por que a L'ECLER
           </span>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
-            A diferença está em quem{" "}
-            <span className="text-gradient-gold">conduz</span> seu tratamento.
+            Você sente quando está em{" "}
+            <span className="text-gradient-gold">boas mãos</span>.
           </h2>
+          <p className="mt-4 text-muted-foreground">
+            Desde a primeira mensagem, a experiência precisa transmitir clareza:
+            o que pode ser feito, o que deve ser evitado e qual resultado realmente
+            combina com você.
+          </p>
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
@@ -46,10 +51,10 @@ export function BenefitsSection() {
             </div>
             <div className="absolute -bottom-5 left-5 right-5 rounded-2xl bg-card/95 p-4 shadow-elegant ring-1 ring-gold/30 backdrop-blur">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                26+ anos de odontologia
+                Técnica com sensibilidade
               </div>
               <p className="mt-1 text-sm leading-relaxed text-foreground">
-                Experiência clínica por trás de cada decisão estética.
+                A estética só encanta quando respeita saúde, proporção e identidade.
               </p>
             </div>
           </motion.div>

@@ -12,9 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
   id: '/privacidade',
@@ -29,6 +31,11 @@ const ObrigadoRoute = ObrigadoRouteImport.update({
 const CookiesRoute = CookiesRouteImport.update({
   id: '/cookies',
   path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcademyRoute = AcademyRouteImport.update({
@@ -46,30 +53,41 @@ const ServicosSlugRoute = ServicosSlugRouteImport.update({
   path: '/servicos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog_/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/blog_/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
 }
 export interface FileRouteTypes {
@@ -77,34 +95,42 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/academy'
+    | '/blog'
     | '/cookies'
     | '/obrigado'
     | '/privacidade'
+    | '/blog/$slug'
     | '/servicos/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/academy'
+    | '/blog'
     | '/cookies'
     | '/obrigado'
     | '/privacidade'
+    | '/blog/$slug'
     | '/servicos/$slug'
   id:
     | '__root__'
     | '/'
     | '/academy'
+    | '/blog'
     | '/cookies'
     | '/obrigado'
     | '/privacidade'
+    | '/blog_/$slug'
     | '/servicos/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcademyRoute: typeof AcademyRoute
+  BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
   ObrigadoRoute: typeof ObrigadoRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
 }
 
@@ -131,6 +157,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/academy': {
       id: '/academy'
       path: '/academy'
@@ -152,17 +185,36 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/$slug': {
+      id: '/blog_/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcademyRoute: AcademyRoute,
+  BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
   ObrigadoRoute: ObrigadoRoute,
   PrivacidadeRoute: PrivacidadeRoute,
+  BlogSlugRoute: BlogSlugRoute,
   ServicosSlugRoute: ServicosSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

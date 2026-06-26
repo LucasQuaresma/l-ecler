@@ -6,32 +6,32 @@ import methodImg from "@/assets/home-method.jpg";
 const steps = [
   {
     icon: MessageCircle,
-    title: "Diagnóstico Online",
-    text: "Você conta o que te incomoda e o que deseja. Direcionamos o plano antes da clínica.",
+    title: "Primeira conversa",
+    text: "Você deixa seu contato, conta o que deseja melhorar e a equipe entende seu momento com cuidado.",
     gradient: "linear-gradient(135deg, oklch(0.85 0.12 80), oklch(0.65 0.13 60))",
   },
   {
     icon: ClipboardList,
-    title: "Avaliação individualizada",
-    text: "Análise técnica de oclusão, estrutura óssea, função e estética facial — sem protocolo padrão.",
+    title: "Diagnóstico online",
+    text: "Receba um primeiro direcionamento e entenda quais caminhos podem fazer sentido antes da consulta.",
     gradient: "linear-gradient(135deg, oklch(0.82 0.1 50), oklch(0.6 0.12 30))",
   },
   {
     icon: Stethoscope,
-    title: "Plano personalizado",
-    text: "Um projeto técnico próprio para o seu rosto e seu sorriso, com etapas claras.",
+    title: "Avaliação na clínica",
+    text: "A Dra. Cássia avalia sorriso, face, função e saúde para confirmar o plano com segurança.",
     gradient: "linear-gradient(135deg, oklch(0.86 0.08 25), oklch(0.55 0.12 20))",
   },
   {
     icon: Sparkles,
-    title: "Execução com tecnologia",
-    text: "Procedimentos conduzidos com equipamentos de última geração e equipe multidisciplinar.",
+    title: "Plano com prioridades",
+    text: "Você entende etapas, tempo, investimento e o que deve vir primeiro para chegar ao melhor resultado.",
     gradient: "linear-gradient(135deg, oklch(0.88 0.1 90), oklch(0.62 0.14 70))",
   },
   {
     icon: Calendar,
-    title: "Acompanhamento contínuo",
-    text: "Manutenções, gerenciamento dérmico e follow-up para resultado duradouro.",
+    title: "Execução e acompanhamento",
+    text: "O tratamento é conduzido com tecnologia, conforto e retornos para preservar o resultado.",
     gradient: "linear-gradient(135deg, oklch(0.83 0.1 70), oklch(0.55 0.11 40))",
   },
 ];
@@ -49,14 +49,15 @@ export function MethodSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            Metodologia
+            Como funciona
           </span>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
-            Um caminho técnico, <span className="text-gradient-gold">um resultado seu.</span>
+            Do primeiro contato à cadeira da clínica,{" "}
+            <span className="text-gradient-gold">você sabe o próximo passo.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Da escuta inicial ao acompanhamento — cada etapa pensada para entregar segurança e
-            naturalidade.
+            Nada de escolher procedimento no escuro. A jornada foi pensada para transformar
+            dúvida em clareza e vontade em plano.
           </p>
         </div>
 
@@ -78,10 +79,10 @@ export function MethodSection() {
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent" />
           <div className="absolute bottom-5 left-5 max-w-sm rounded-2xl bg-card/95 p-4 shadow-elegant ring-1 ring-gold/30 backdrop-blur">
             <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-              Planejamento técnico
+              Plano antes de procedimento
             </div>
             <p className="mt-1 text-sm leading-relaxed text-foreground">
-              O tratamento começa na leitura clínica, não em um protocolo pronto.
+              O encantamento começa quando você entende o que faz sentido para o seu caso.
             </p>
           </div>
         </motion.div>

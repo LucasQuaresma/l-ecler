@@ -85,9 +85,9 @@ function ServicePage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <button
                 onClick={() => openSignupDialog()}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-7 py-3 text-sm font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
+                className="inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-full bg-gradient-gold px-6 py-3 text-center text-sm font-semibold leading-snug text-primary shadow-gold transition-transform hover:scale-[1.02] sm:px-7"
               >
-                Garantir minha vaga <ArrowRight className="h-4 w-4" />
+                Quero conversar sobre este tratamento <ArrowRight className="h-4 w-4" />
               </button>
               <a
                 href="#beneficios"
@@ -112,7 +112,7 @@ function ServicePage() {
                 "{service.tagline}"
               </p>
               <div className="mt-6 border-t border-border/60 pt-5 text-sm text-muted-foreground">
-                Conduzido pela Dra. Cássia e equipe multidisciplinar L'ECLER.
+                A indicação certa começa na conversa, não em um protocolo pronto.
               </div>
               <div className="pointer-events-none absolute -bottom-16 -right-16 h-48 w-48 rounded-full bg-gold/10 blur-3xl" />
             </div>
@@ -151,7 +151,8 @@ function ServicePage() {
               Indicações
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Este tratamento costuma ser indicado para os seguintes perfis. Avaliamos cada caso individualmente no Diagnóstico Online.
+              Este tratamento costuma ser indicado para os seguintes perfis. A equipe avalia
+              cada caso individualmente e orienta o melhor próximo passo.
             </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -307,20 +308,21 @@ function ServicePage() {
           <div className="relative overflow-hidden rounded-3xl border border-gold/30 bg-gradient-to-br from-card via-card to-secondary p-10 text-center shadow-gold sm:p-14">
             <div className="pointer-events-none absolute -top-20 -right-20 h-64 w-64 rounded-full bg-gold/15 blur-3xl" />
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-background px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-              Vagas limitadas
+              Agendamento orientado
             </span>
             <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl">
-              Pronta para o seu{" "}
-              <span className="text-gradient-gold">Diagnóstico Online</span>?
+              Quer saber se{" "}
+              <span className="text-gradient-gold">{service.title}</span> é para você?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Fale com nosso time e receba um direcionamento personalizado para o seu caso, antes mesmo de visitar a clínica.
+              Fale com nosso time, conte o que te incomoda e receba um direcionamento inicial
+              antes de avançar para a avaliação presencial.
             </p>
             <button
               onClick={() => openSignupDialog()}
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-8 py-3 text-sm font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
-              Garantir minha vaga <ArrowRight className="h-4 w-4" />
+              Quero orientação <ArrowRight className="h-4 w-4" />
             </button>
           </div>
         </div>

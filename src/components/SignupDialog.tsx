@@ -94,14 +94,15 @@ export function SignupDialog() {
         <div className="rounded-t-3xl bg-gradient-hero p-6 pt-7">
           <div className="inline-flex items-center gap-2 rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold">
             <Sparkles className="h-3.5 w-3.5" />
-            Vagas limitadas
+            Agendamento
           </div>
           <DialogHeader className="mt-3">
             <DialogTitle className="font-display text-2xl text-foreground">
-              Garanta sua vaga na L'ECLER
+              Vamos entender seu caso?
             </DialogTitle>
             <DialogDescription className="text-muted-foreground">
-              Deixe seu contato e nossa equipe vai te chamar no WhatsApp em breve.
+              Deixe seu contato e a equipe da L'ECLER chama você no WhatsApp para conversar
+              sobre o que deseja melhorar e orientar o próximo passo.
             </DialogDescription>
           </DialogHeader>
         </div>
@@ -138,7 +139,7 @@ export function SignupDialog() {
             disabled={loading}
             className="h-12 w-full rounded-full bg-gradient-gold text-base font-semibold text-primary shadow-gold"
           >
-            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Quero minha vaga"}
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Quero ser chamada no WhatsApp"}
           </Button>
           <p className="text-center text-[11px] text-muted-foreground">
             Ao enviar, você concorda com nossa{" "}

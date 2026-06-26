@@ -11,10 +11,10 @@ import { Header } from "@/components/Header";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clínica L'ECLER — Odontologia Integrada e Harmonização Orofacial" },
-      { name: "description", content: "Saúde e estética que parecem naturais. Odontologia integrada e HOF com a Dra. Cássia. Plano individualizado, técnico e seguro. Vagas limitadas." },
-      { property: "og:title", content: "Clínica L'ECLER — Odontologia e Harmonização Orofacial" },
-      { property: "og:description", content: "Tratamentos individualizados com a Dra. Cássia. 26+ anos de odontologia e 14+ de HOF." },
+      { title: "Clínica L'ECLER — Agende sua avaliação em Bragança Paulista" },
+      { name: "description", content: "Converse com a equipe da L'ECLER e entenda o melhor caminho para cuidar do seu sorriso, da sua face e da sua autoestima com naturalidade e segurança." },
+      { property: "og:title", content: "Clínica L'ECLER — Odontologia, HOF e estética avançada" },
+      { property: "og:description", content: "Diagnóstico online, avaliação individualizada e plano conduzido pela Dra. Cássia em Bragança Paulista." },
     ],
   }),
   component: Index,

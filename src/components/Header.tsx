@@ -15,8 +15,11 @@ export function Header() {
             Diferenciais
           </a>
           <a href="/#metodo" className="text-muted-foreground transition-colors hover:text-foreground">
-            Método
+            Como funciona
           </a>
+          <Link to="/blog" className="text-muted-foreground transition-colors hover:text-foreground">
+            Blog
+          </Link>
           <a href="/#cta" className="text-muted-foreground transition-colors hover:text-foreground">
             Contato
           </a>
@@ -25,7 +28,7 @@ export function Header() {
           href="/#cta"
           className="hidden rounded-full bg-gradient-gold px-5 py-2 text-sm font-semibold text-primary shadow-soft transition-transform hover:scale-[1.02] sm:inline-flex"
         >
-          Garantir minha vaga
+          Agendar avaliação
         </a>
       </div>
     </header>

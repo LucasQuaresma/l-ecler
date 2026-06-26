@@ -23,19 +23,20 @@ export function CtaSection() {
           className="text-center lg:text-left"
         >
           <h2 className="font-display text-3xl text-primary-foreground sm:text-4xl lg:text-5xl">
-            Seu rosto e seu sorriso{" "}
-            <span className="text-gradient-gold">merecem técnica de verdade.</span>
+            Vamos conversar sobre a mudança que você quer{" "}
+            <span className="text-gradient-gold">ver no espelho?</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-primary-foreground/80 lg:mx-0">
-            Garanta sua vaga e converse com a equipe da L'ECLER. Quem cuida de você precisa
-            unir saúde, estética e segurança, e é exatamente isso que entregamos.
+            Talvez você queira sorrir sem esconder os dentes, suavizar sinais do tempo,
+            recuperar a firmeza da pele ou simplesmente se sentir mais confiante. O primeiro
+            passo é falar com a equipe e entender o que é possível para você.
           </p>
           <Button
             size="lg"
             onClick={openSignupDialog}
             className="group mt-10 h-14 rounded-full bg-gradient-gold px-9 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
           >
-            Garantir minha vaga agora
+            Agendar minha avaliação
             <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
         </motion.div>

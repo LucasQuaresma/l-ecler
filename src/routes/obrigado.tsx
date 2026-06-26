@@ -32,8 +32,9 @@ function Page() {
             Recebemos seu <span className="text-gradient-gold">contato</span>!
           </h1>
           <p className="mt-4 text-muted-foreground">
-            Obrigada por escolher a L'ECLER. Em instantes nossa equipe vai te chamar no WhatsApp
-            para conversar sobre seu plano personalizado.
+            Obrigada por dar esse primeiro passo. A equipe da L'ECLER vai chamar você no
+            WhatsApp para entender o que deseja melhorar e orientar o caminho mais seguro
+            para sua avaliação.
           </p>
 
           <div className="mt-8 rounded-2xl bg-secondary/60 p-5 text-left">
@@ -43,11 +44,11 @@ function Page() {
             <ul className="mt-3 space-y-2 text-sm text-foreground">
               <li className="flex items-start gap-2">
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                Vamos te chamar no WhatsApp em até 1 dia útil.
+                Vamos te chamar no WhatsApp para conversar sobre seu caso.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                Você fará seu Diagnóstico Online antes mesmo de visitar a clínica.
+                Se fizer sentido, você recebe um diagnóstico inicial antes da visita à clínica.
               </li>
             </ul>
           </div>
