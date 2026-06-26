@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { MessageCircle, ClipboardList, Stethoscope, Sparkles, Calendar } from "lucide-react";
+import methodImg from "@/assets/home-method.jpg";
 
 const steps = [
   {
@@ -58,6 +59,32 @@ export function MethodSection() {
             naturalidade.
           </p>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="relative mt-12 overflow-hidden rounded-[2rem] shadow-elegant ring-1 ring-gold/30"
+        >
+          <img
+            src={methodImg}
+            alt="Planejamento individualizado com a Dra. Cássia"
+            loading="lazy"
+            width={1600}
+            height={1000}
+            className="aspect-[16/10] w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent" />
+          <div className="absolute bottom-5 left-5 max-w-sm rounded-2xl bg-card/95 p-4 shadow-elegant ring-1 ring-gold/30 backdrop-blur">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+              Planejamento técnico
+            </div>
+            <p className="mt-1 text-sm leading-relaxed text-foreground">
+              O tratamento começa na leitura clínica, não em um protocolo pronto.
+            </p>
+          </div>
+        </motion.div>
 
         {/* Mobile stacked */}
         <div className="mt-14 space-y-5 lg:hidden">

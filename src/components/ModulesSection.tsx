@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { services } from "@/lib/services";
+import consultationImg from "@/assets/home-consultation.jpg";
+
+const treatmentHighlights = [
+  {
+    title: "Avaliação conduzida de perto",
+    text: "A primeira leitura combina queixa, função, estética e histórico clínico.",
+  },
+  {
+    title: "Plano integrado",
+    text: "Sorriso, face e saúde oral entram no mesmo raciocínio técnico.",
+  },
+  {
+    title: "Resultado sem exagero",
+    text: "Cada indicação busca naturalidade, segurança e coerência com o seu rosto.",
+  },
+];
 
 export function ModulesSection() {
   return (
@@ -20,7 +36,54 @@ export function ModulesSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="relative min-h-[24rem] overflow-hidden rounded-[2rem] shadow-elegant ring-1 ring-gold/30"
+          >
+            <img
+              src={consultationImg}
+              alt="Consulta individualizada com a Dra. Cássia"
+              loading="lazy"
+              width={1600}
+              height={1200}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/35 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 max-w-xs rounded-2xl bg-card/95 p-4 shadow-elegant ring-1 ring-gold/30 backdrop-blur">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                Consulta personalizada
+              </div>
+              <p className="mt-1 text-sm leading-relaxed text-foreground">
+                A decisão estética nasce de uma avaliação clínica completa.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid gap-4">
+            {treatmentHighlights.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="rounded-2xl bg-card p-6 shadow-soft ring-1 ring-border/70"
+              >
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                  0{i + 1}
+                </div>
+                <h3 className="mt-3 font-display text-2xl text-foreground">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((m, i) => {
             const Icon = m.icon;
             return (
