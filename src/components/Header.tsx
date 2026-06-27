@@ -1,11 +1,18 @@
 import { Link } from "@tanstack/react-router";
+import leclerLogo from "@/assets/lecler-logo.png";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="font-display text-xl">
-          Clínica <span className="text-gradient-gold">L'ECLER</span>
+        <Link to="/" className="inline-flex items-center" aria-label="Clínica L'ECLER">
+          <img
+            src={leclerLogo}
+            alt="L'ECLER Saúde e Bem-Estar"
+            width={408}
+            height={178}
+            className="h-9 w-auto sm:h-10"
+          />
         </Link>
         <nav className="hidden items-center gap-7 text-sm md:flex">
           <a href="/#modulos" className="text-muted-foreground transition-colors hover:text-foreground">

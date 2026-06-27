@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { blogPosts, featuredBlogPost } from "@/lib/blog";
-import { openSignupDialog } from "@/lib/signup-dialog";
+import { WHATSAPP_URL } from "@/lib/signup-dialog";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -58,10 +58,10 @@ function BlogPage() {
             </p>
             <Button
               size="lg"
-              onClick={openSignupDialog}
+              onClick={() => window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer")}
               className="group mt-8 h-auto min-h-12 max-w-full whitespace-normal rounded-full bg-gradient-gold px-6 py-3 text-center text-base font-semibold leading-snug text-primary shadow-gold transition-transform hover:scale-[1.02] sm:px-7"
             >
-              Quero tirar minha dúvida no WhatsApp
+              Falar com o atendimento no WhatsApp
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </motion.div>
@@ -189,10 +189,10 @@ function BlogPage() {
               </p>
               <Button
                 size="lg"
-                onClick={openSignupDialog}
+                onClick={() => window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer")}
                 className="mt-8 h-12 rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold"
               >
-                Falar com a equipe
+                Falar com o atendimento
               </Button>
             </div>
           </div>

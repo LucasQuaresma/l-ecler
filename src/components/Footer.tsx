@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Mail, Phone } from "lucide-react";
 import { services } from "@/lib/services";
 import { WHATSAPP_URL } from "@/lib/signup-dialog";
+import leclerLogo from "@/assets/lecler-logo.png";
 
 export function Footer() {
   return (
@@ -9,8 +10,14 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
-            <Link to="/" className="font-display text-2xl">
-              Clínica <span className="text-gradient-gold">L'ECLER</span>
+            <Link to="/" className="inline-flex" aria-label="Clínica L'ECLER">
+              <img
+                src={leclerLogo}
+                alt="L'ECLER Saúde e Bem-Estar"
+                width={408}
+                height={178}
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">
               Odontologia integrada, harmonização orofacial e estética avançada para quem busca

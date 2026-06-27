@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { blogPosts, getBlogPostBySlug } from "@/lib/blog";
-import { openSignupDialog } from "@/lib/signup-dialog";
+import { WHATSAPP_URL } from "@/lib/signup-dialog";
 
 export const Route = createFileRoute("/blog_/$slug")({
   head: ({ params }) => {
@@ -85,11 +85,13 @@ function BlogArticlePage() {
               </p>
               <Button
                 size="lg"
-                onClick={openSignupDialog}
+                asChild
                 className="group mt-8 h-12 rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
               >
-                Conversar sobre meu caso
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                  Falar com o atendimento
+                  <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
             </motion.div>
 
@@ -138,16 +140,17 @@ function BlogArticlePage() {
                     <MessageCircle className="h-5 w-5" />
                   </div>
                   <div>
-                    <h2 className="font-display text-2xl">Quer saber se isso se aplica a você?</h2>
+                    <h2 className="font-display text-2xl">{post.ctaTitle}</h2>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      Deixe seu contato e a equipe da L'ECLER conversa com você sobre seu objetivo,
-                      seus receios e o melhor próximo passo.
+                      {post.ctaText}
                     </p>
                     <Button
-                      onClick={openSignupDialog}
+                      asChild
                       className="mt-5 rounded-full bg-gradient-gold px-6 font-semibold text-primary shadow-gold"
                     >
-                      Quero orientação
+                      <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                        {post.ctaButtonLabel}
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -163,12 +166,14 @@ function BlogArticlePage() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   O artigo ajuda a entender, mas a indicação certa depende de avaliação individual.
                 </p>
-                <button
-                  onClick={openSignupDialog}
-                  className="mt-5 w-full rounded-full bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-primary shadow-soft transition-transform hover:scale-[1.02]"
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-gradient-gold px-4 py-2.5 text-sm font-semibold text-primary shadow-soft transition-transform hover:scale-[1.02]"
                 >
-                  Agendar avaliação
-                </button>
+                  Falar com atendimento
+                </a>
               </div>
             </aside>
           </div>

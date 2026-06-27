@@ -16,6 +16,7 @@ import heroImg from "@/assets/academy-hero.jpg";
 import mentorImg from "@/assets/academy-mentor.jpg";
 import toolsImg from "@/assets/academy-tools.jpg";
 import doctorImg from "@/assets/academy-doctor.jpg";
+import academyLogo from "@/assets/lecler-academy-logo.png";
 
 export const Route = createFileRoute("/academy")({
   ssr: false,
@@ -107,6 +108,13 @@ function AcademyPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
+            <img
+              src={academyLogo}
+              alt="L'ECLER Academy"
+              width={329}
+              height={322}
+              className="mb-6 h-24 w-auto"
+            />
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary shadow-soft">
               <GraduationCap className="h-3.5 w-3.5 text-gold" />
               L'ECLER Academy · Vagas limitadas
