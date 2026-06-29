@@ -99,7 +99,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-border/60 pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Clínica L'ECLER — Todos os direitos reservados.
+          <p>© {new Date().getFullYear()} Clínica L'ECLER - Todos os direitos reservados.</p>
+          <p className="mt-2">Responsável técnica: Dra. Cássia Blasques - CRO 67279.</p>
         </div>
       </div>
     </footer>
