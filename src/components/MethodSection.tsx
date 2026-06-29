@@ -1,7 +1,19 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, ClipboardList, Stethoscope, Sparkles, Calendar } from "lucide-react";
+import {
+  MessageCircle,
+  ClipboardList,
+  Stethoscope,
+  Sparkles,
+  Calendar,
+  Camera,
+  ShieldCheck,
+} from "lucide-react";
 import methodImg from "@/assets/home-method.jpg";
+import seniorSmileImg from "@/assets/smile-senior-natural.jpg";
+import implantSmileImg from "@/assets/smile-implants-lecler.jpg";
+import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
+import leclerSymbolImg from "@/assets/lecler-symbol.png";
 
 const steps = [
   {
@@ -33,6 +45,19 @@ const steps = [
     title: "Execução e acompanhamento",
     text: "O tratamento é conduzido com tecnologia, conforto e retornos para preservar o resultado.",
     gradient: "linear-gradient(135deg, oklch(0.83 0.1 70), oklch(0.55 0.11 40))",
+  },
+];
+
+const smileProofs = [
+  {
+    image: implantSmileImg,
+    title: "Implantes e segurança",
+    text: "Referência visual para casos em que mastigação, estabilidade e sorriso precisam caminhar juntos.",
+  },
+  {
+    image: digitalScanImg,
+    title: "Planejamento digital do sorriso",
+    text: "Escaneamento, fotos e simulações ajudam a enxergar o caminho antes de começar.",
   },
 ];
 
@@ -84,6 +109,127 @@ export function MethodSection() {
             <p className="mt-1 text-sm leading-relaxed text-foreground">
               O encantamento começa quando você entende o que faz sentido para o seu caso.
             </p>
+          </div>
+        </motion.div>
+
+        <div id="casos-e-sorrisos" className="mt-8 grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
+          <motion.article
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.55 }}
+            className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-gold/25 bg-primary shadow-elegant"
+          >
+            <img
+              src={seniorSmileImg}
+              alt="Sorriso natural em destaque"
+              loading="lazy"
+              width={1600}
+              height={900}
+              className="h-full min-h-[360px] w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
+            <img
+              src={leclerSymbolImg}
+              alt=""
+              aria-hidden="true"
+              className="absolute right-6 top-6 h-16 w-auto opacity-70 drop-shadow-sm sm:h-20"
+            />
+            <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground sm:p-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/35 bg-primary/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-gold backdrop-blur">
+                <Camera className="h-3.5 w-3.5" />
+                Sorrisos em alta definição
+              </div>
+              <h3 className="mt-4 max-w-xl font-display text-3xl leading-tight sm:text-4xl">
+                A transformação precisa ser vista, entendida e desejada antes de começar.
+              </h3>
+              <p className="mt-3 max-w-lg text-sm leading-relaxed text-primary-foreground/78">
+                Fotos, simulações e referências de casos ajudam a mostrar proporção, cor,
+                alinhamento e naturalidade sem tratar o sorriso como um modelo pronto.
+              </p>
+            </div>
+          </motion.article>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+            {smileProofs.map((item, index) => (
+              <motion.article
+                key={item.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.55, delay: index * 0.08 }}
+                className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft"
+              >
+                <div className="aspect-[16/9] overflow-hidden bg-secondary">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    width={900}
+                    height={520}
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-xl">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55 }}
+          className="mt-5 grid gap-5 rounded-[2rem] border border-gold/25 bg-card p-5 shadow-elegant lg:grid-cols-[0.85fr_1.15fr] lg:p-7"
+        >
+          <div className="rounded-[1.5rem] bg-primary p-6 text-primary-foreground">
+            <div className="flex items-center justify-between gap-4">
+              <div className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gold text-primary shadow-gold">
+                <ShieldCheck className="h-5 w-5" />
+              </div>
+              <img
+                src={leclerSymbolImg}
+                alt=""
+                aria-hidden="true"
+                className="h-10 w-auto opacity-55"
+              />
+            </div>
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              Antes e depois autorizados
+            </p>
+            <h3 className="mt-2 font-display text-2xl leading-tight">
+              Casos reais entram como conversa, não como promessa.
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-primary-foreground/72">
+              A L'ECLER pode apresentar registros autorizados durante a avaliação para
+              comparar ponto de partida, plano e evolução possível em casos semelhantes.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-[1.25rem] border border-border bg-secondary/50 p-5">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                Antes
+              </span>
+              <h4 className="mt-2 font-display text-xl">O incômodo é documentado</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Forma, cor, alinhamento, função, gengiva e expectativa são avaliados com
+                fotos e diagnóstico individual.
+              </p>
+            </div>
+            <div className="rounded-[1.25rem] border border-gold/35 bg-gradient-to-br from-cream to-card p-5 shadow-soft">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                Depois
+              </span>
+              <h4 className="mt-2 font-display text-xl">O resultado segue um plano</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                O objetivo é chegar a um sorriso natural, proporcional ao rosto e seguro
+                para a saúde bucal no longo prazo.
+              </p>
+            </div>
           </div>
         </motion.div>
 

@@ -7,10 +7,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { getServiceBySlug, services } from "@/lib/services";
+import { getServiceBySlug, services, type Service } from "@/lib/services";
 import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import seniorSmileImg from "@/assets/smile-senior-natural.jpg";
+import implantSmileImg from "@/assets/smile-implants-lecler.jpg";
+import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
+import consultationImg from "@/assets/home-consultation.jpg";
+import heroSmileImg from "@/assets/hero-smile.jpg";
+import leclerSymbolImg from "@/assets/lecler-symbol.png";
 
 export const Route = createFileRoute("/servicos/$slug")({
   head: ({ params }) => {
@@ -28,6 +34,137 @@ export const Route = createFileRoute("/servicos/$slug")({
   },
   component: ServicePage,
 });
+
+const dentalProofs = [
+  {
+    image: seniorSmileImg,
+    title: "Sorrisos que devolvem segurança",
+    text: "Estética, função e conforto pensados para a vida real, não só para a foto.",
+  },
+  {
+    image: implantSmileImg,
+    title: "Reabilitação e implantes",
+    text: "Função, estética e segurança para quem quer voltar a sorrir e mastigar com confiança.",
+  },
+  {
+    image: digitalScanImg,
+    title: "Planejamento digital",
+    text: "Fotos, escaneamento e simulação ajudam a visualizar possibilidades com mais clareza.",
+  },
+];
+
+const aestheticProofs = [
+  {
+    image: heroSmileImg,
+    title: "Naturalidade como direção",
+    text: "O rosto é avaliado em proporção, expressão e identidade antes de qualquer indicação.",
+  },
+  {
+    image: consultationImg,
+    title: "Conversa técnica",
+    text: "A Dra. Cássia explica prioridades, limites e caminhos possíveis para cada caso.",
+  },
+  {
+    image: seniorSmileImg,
+    title: "Resultado elegante",
+    text: "O objetivo é que o cuidado apareça como leveza, saúde e segurança ao sorrir.",
+  },
+];
+
+function TreatmentProofSection({ service }: { service: Service }) {
+  const isDental = service.category === "Odontologia";
+  const proofItems = isDental ? dentalProofs : aestheticProofs;
+
+  return (
+    <section id="prova-visual" className="bg-secondary/35 py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              Prova visual
+            </span>
+            <h2 className="mt-3 font-display text-3xl leading-tight sm:text-4xl">
+              {isDental ? "Sorrisos, antes/depois e planejamento" : "Registros, naturalidade e plano"}{" "}
+              <span className="text-gradient-gold">antes da decisão</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Em {service.title}, a conversa não fica só na explicação técnica. A equipe usa
+              fotos, referências, diagnóstico e registros autorizados para mostrar caminhos
+              possíveis com mais clareza.
+            </p>
+            <div className="relative mt-7 overflow-hidden rounded-[1.5rem] border border-gold/30 bg-card p-5 shadow-soft">
+              <img
+                src={leclerSymbolImg}
+                alt=""
+                aria-hidden="true"
+                className="absolute -right-5 -top-5 h-28 w-auto opacity-10"
+              />
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                Antes/depois reais, quando autorizados
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Casos clínicos de pacientes não são usados como promessa de resultado igual.
+                Eles servem para orientar a conversa, comparar situações semelhantes e ajudar
+                você a entender o padrão de cuidado da L'ECLER.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            {proofItems.map((item, index) => (
+              <motion.article
+                key={item.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-70px" }}
+                transition={{ duration: 0.5, delay: index * 0.07 }}
+                className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft"
+              >
+                <div className="aspect-[4/5] overflow-hidden bg-cream">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    width={800}
+                    height={1000}
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-lg leading-tight">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {item.text}
+                  </p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative mt-8 grid gap-4 overflow-hidden rounded-[2rem] border border-gold/25 bg-primary p-5 text-primary-foreground shadow-elegant sm:grid-cols-3 lg:p-7">
+          <img
+            src={leclerSymbolImg}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-10 -top-10 h-40 w-auto opacity-10"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
+          {[
+            ["01", "Ponto de partida", "O que incomoda, o que precisa ser tratado antes e quais limites o caso apresenta."],
+            ["02", "Simulação e referências", "Fotos, mock-up ou planejamento digital ajudam a enxergar proporção e naturalidade."],
+            ["03", "Plano seguro", "A decisão considera estética, função, saúde bucal e manutenção do resultado."],
+          ].map(([number, title, text]) => (
+            <div key={number} className="rounded-[1.25rem] border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5">
+              <div className="font-display text-3xl text-gold">{number}</div>
+              <h3 className="mt-2 font-display text-xl">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-primary-foreground/72">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function ServicePage() {
   const { slug } = Route.useParams();
@@ -139,6 +276,8 @@ function ServicePage() {
           </div>
         </div>
       </section>
+
+      <TreatmentProofSection service={service} />
 
       {/* INDICAÇÕES */}
       <section className="bg-secondary/40 py-20 sm:py-24">
