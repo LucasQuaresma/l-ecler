@@ -81,9 +81,6 @@ export function HeroSection() {
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/15 via-transparent to-transparent" />
-            <div className="absolute left-5 top-5 rounded-full border border-gold/35 bg-card/80 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary shadow-soft backdrop-blur">
-              Naturalidade como assinatura
-            </div>
           </div>
 
           <motion.div
