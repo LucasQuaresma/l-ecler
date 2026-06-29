@@ -8,35 +8,54 @@ import consultationImg from "@/assets/home-consultation.jpg";
 
 const treatmentHighlights = [
   {
-    title: "Você conta o que deseja mudar",
-    text: "Pode ser o sorriso, a pele, o contorno do rosto ou uma sensação de que algo não combina mais com você.",
+    title: "Odontologia integrada como base",
+    text: "Saúde bucal, função, estética dental e prevenção entram no mesmo plano antes de qualquer decisão estética.",
   },
   {
-    title: "A equipe traduz isso em caminho clínico",
-    text: "A indicação nasce da sua história, da sua saúde bucal, da análise facial e do resultado que faz sentido para sua rotina.",
+    title: "Sorriso, face e pele em conjunto",
+    text: "A indicação nasce da sua história, da análise facial, da mordida e do resultado que faz sentido para sua rotina.",
   },
   {
-    title: "Você decide com segurança",
-    text: "Antes de começar, você entende possibilidades, prioridades, investimento e próximos passos.",
+    title: "Tecnologia com critério clínico",
+    text: "Airflow, Invisalign, planejamento digital e protocolos de HOF entram quando realmente agregam ao seu caso.",
   },
 ];
 
+const serviceDisplayOrder = [
+  "odontologia-estetica",
+  "facetas-e-lentes-de-contato",
+  "ortodontia-invisalign",
+  "airflow-prevencao-suica",
+  "implantes",
+  "proteses",
+  "endodontia",
+  "odontologia-preventiva-integrativa",
+  "fios-e-bioestimulo",
+  "gerenciamento-dermico",
+  "botox-e-preenchimentos",
+  "laser-co2-e-hipro",
+];
+
 export function ModulesSection() {
+  const orderedServices = [...services].sort(
+    (a, b) => serviceDisplayOrder.indexOf(a.slug) - serviceDisplayOrder.indexOf(b.slug),
+  );
+
   return (
     <section id="modulos" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            Tratamentos
+            Especialidades
           </span>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
-            Não é sobre fazer mais. É sobre fazer{" "}
-            <span className="text-gradient-gold">o que combina com você.</span>
+            Odontologia especializada, HOF e tecnologias para cuidar{" "}
+            <span className="text-gradient-gold">do seu sorriso e da sua face.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            A L'ECLER integra odontologia, harmonização orofacial e estética avançada para
-            construir um plano coerente: bonito de ver, confortável de viver e seguro para
-            o seu corpo.
+            O carro-chefe da L'ECLER é a odontologia integrada: estética dental,
+            implantes, próteses, facetas, lentes, Invisalign, canal e prevenção.
+            A harmonização orofacial entra como extensão natural desse cuidado.
           </p>
         </div>
 
@@ -59,7 +78,7 @@ export function ModulesSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/35 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 max-w-xs rounded-2xl bg-card/95 p-4 shadow-elegant ring-1 ring-gold/30 backdrop-blur">
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                Primeiro passo: conversa
+                Diagnóstico antes de procedimento
               </div>
               <p className="mt-1 text-sm leading-relaxed text-foreground">
                 A melhor indicação começa quando a equipe entende o que você quer sentir ao sorrir e se olhar.
@@ -88,7 +107,7 @@ export function ModulesSection() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((m, i) => {
+          {orderedServices.map((m, i) => {
             const Icon = m.icon;
             return (
               <motion.div
@@ -106,6 +125,9 @@ export function ModulesSection() {
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary shadow-soft">
                     <Icon className="h-6 w-6" strokeWidth={1.8} />
                   </div>
+                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
+                    {m.category}
+                  </p>
                   <h3 className="font-display text-xl text-foreground">{m.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.text}</p>
                   <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gold opacity-0 transition-opacity group-hover:opacity-100">
