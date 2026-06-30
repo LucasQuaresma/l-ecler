@@ -38,7 +38,7 @@ import treatmentHeroProtesesImg from "@/assets/treatment-hero-proteses.jpg";
 export const Route = createFileRoute("/servicos/$slug")({
   head: ({ params }) => {
     const s = getServiceBySlug(params.slug);
-    const title = s ? `${s.title} — Clínica L'ECLER` : "Tratamento — Clínica L'ECLER";
+    const title = s ? `${s.title}, Clínica L'ECLER` : "Tratamento, Clínica L'ECLER";
     const description = s?.hero ?? "Tratamento na Clínica L'ECLER.";
     return {
       meta: [

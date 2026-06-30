@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
-      { title: "Política de Cookies — Clínica L'ECLER" },
+      { title: "Política de Cookies, Clínica L'ECLER" },
       { name: "description", content: "Saiba quais cookies usamos e como gerenciar suas preferências." },
     ],
   }),

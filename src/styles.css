@@ -41,7 +41,7 @@
 :root {
   --radius: 0.875rem;
 
-  /* L'ECLER — champagne, gold & deep burgundy */
+  /* L'ECLER, champagne, gold & deep burgundy */
   --background: oklch(0.985 0.012 80);          /* warm ivory */
   --foreground: oklch(0.22 0.025 30);           /* deep warm brown */
   --card: oklch(1 0 0);

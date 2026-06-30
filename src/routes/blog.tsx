@@ -10,7 +10,7 @@ import { WHATSAPP_URL } from "@/lib/signup-dialog";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog L'ECLER — Sorriso, face, pele e bem-estar" },
+      { title: "Blog L'ECLER, Sorriso, face, pele e bem-estar" },
       {
         name: "description",
         content:

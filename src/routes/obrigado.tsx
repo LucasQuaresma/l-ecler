@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/obrigado")({
   head: () => ({
     meta: [
-      { title: "Obrigado — Clínica L'ECLER" },
+      { title: "Obrigado, Clínica L'ECLER" },
       { name: "description", content: "Recebemos seu contato. Em breve nossa equipe falará com você no WhatsApp." },
       { name: "robots", content: "noindex" },
     ],

@@ -47,16 +47,16 @@ export const services: Service[] = [
     title: "Odontologia Estética",
     tagline: "Sorrisos naturais, harmônicos e fiéis ao seu rosto.",
     text: "Sorrisos naturais, harmônicos e fiéis ao seu rosto.",
-    hero: "Planejamento digital de sorriso com sensibilidade estética e domínio técnico — para um resultado que parece seu desde o primeiro dia.",
+    hero: "Planejamento digital de sorriso com sensibilidade estética e domínio técnico, para um resultado que parece seu desde o primeiro dia.",
     longDescription: [
       "A Odontologia Estética da L'ECLER vai muito além de clarear ou alinhar dentes: é desenho de sorriso. Estudamos proporções faciais, traços, idade, personalidade e função para projetar um sorriso que conversa com o seu rosto.",
-      "Utilizamos protocolos de Digital Smile Design (DSD), mock-up em 3D e simulação prévia para que você visualize o resultado antes de qualquer procedimento irreversível. Cada etapa é validada com você — nada é decidido pela paciente, é decidido com a paciente.",
+      "Utilizamos protocolos de Digital Smile Design (DSD), mock-up em 3D e simulação prévia para que você visualize o resultado antes de qualquer procedimento irreversível. Cada etapa é validada com você, nada é decidido pela paciente, é decidido com a paciente.",
     ],
     indications: [
       "Quem quer melhorar a forma, cor ou proporção dos dentes",
       "Sorrisos com assimetrias, desgastes ou restaurações antigas visíveis",
       "Pacientes em planejamento de casamento, exposição pública ou nova fase de vida",
-      "Quem busca um sorriso natural — sem aparência artificial",
+      "Quem busca um sorriso natural, sem aparência artificial",
     ],
     benefits: [
       { title: "Planejamento digital (DSD)", text: "Projeto 3D do sorriso antes de iniciar qualquer procedimento." },
@@ -68,11 +68,11 @@ export const services: Service[] = [
     differentials: sharedDifferentials,
     results: [
       "Sorriso harmônico, proporcional ao seu rosto",
-      "Aparência natural — ninguém precisa saber",
+      "Aparência natural, ninguém precisa saber",
       "Mais segurança ao sorrir, falar e aparecer",
     ],
     faq: [
-      { q: "O resultado fica natural?", a: "Sim. Todo o planejamento é guiado pela análise do seu rosto, traços e proporções — o objetivo é parecer seu, só que melhor." },
+      { q: "O resultado fica natural?", a: "Sim. Todo o planejamento é guiado pela análise do seu rosto, traços e proporções, o objetivo é parecer seu, só que melhor." },
       { q: "Vou ver o resultado antes?", a: "Sim. Fazemos planejamento digital e mock-up para você validar antes de qualquer procedimento definitivo." },
       { q: "Quanto tempo dura o tratamento?", a: "Varia conforme o caso. Casos estéticos simples levam poucas semanas; reabilitações mais amplas, alguns meses, com cronograma claro." },
     ],
@@ -87,7 +87,7 @@ export const services: Service[] = [
     hero: "Reabilitação oral com implantes de última geração, planejamento digital guiado e equipe multidisciplinar para devolver função, estética e autoestima.",
     longDescription: [
       "Perder um ou vários dentes não é apenas estético: compromete mastigação, fala, suporte facial e autoestima. Nossa abordagem com implantes parte do diagnóstico tridimensional para devolver tudo isso com previsibilidade.",
-      "Trabalhamos com cirurgia guiada por computador, marcas premium de implantes e equipe multidisciplinar (cirurgia, prótese, estética). Em casos indicados, oferecemos carga imediata — você sai com dente provisório no mesmo dia.",
+      "Trabalhamos com cirurgia guiada por computador, marcas premium de implantes e equipe multidisciplinar (cirurgia, prótese, estética). Em casos indicados, oferecemos carga imediata, você sai com dente provisório no mesmo dia.",
     ],
     indications: [
       "Perda de um ou mais dentes",
@@ -124,7 +124,7 @@ export const services: Service[] = [
     hero: "Próteses fixas, removíveis e sobre implantes desenvolvidas com materiais nobres e tecnologia CAD/CAM para máxima precisão, conforto e estética.",
     longDescription: [
       "Uma boa prótese é a soma de diagnóstico preciso, planejamento estético e execução técnica. Trabalhamos com zircônia, dissilicato e resinas de última geração para resultados que devolvem função sem abrir mão da estética.",
-      "Tudo é planejado individualmente, considerando oclusão, estética facial e expectativa de cada paciente. Próteses bem feitas não são notadas — são vividas.",
+      "Tudo é planejado individualmente, considerando oclusão, estética facial e expectativa de cada paciente. Próteses bem feitas não são notadas, são vividas.",
     ],
     indications: [
       "Substituição de próteses antigas",
@@ -136,7 +136,7 @@ export const services: Service[] = [
       { title: "Materiais nobres", text: "Zircônia e dissilicato de alta estética e resistência." },
       { title: "Tecnologia CAD/CAM", text: "Precisão milimétrica e adaptação superior." },
       { title: "Estética natural", text: "Reproduzimos translucidez e textura do dente natural." },
-      { title: "Plano individualizado", text: "Cada caso é único — nada é solução de prateleira." },
+      { title: "Plano individualizado", text: "Cada caso é único, nada é solução de prateleira." },
     ],
     process: standardProcess,
     differentials: sharedDifferentials,
@@ -195,9 +195,9 @@ export const services: Service[] = [
     title: "Ortodontia / Invisalign",
     tagline: "Alinhamento discreto, previsível e eficiente.",
     text: "Alinhamento discreto, previsível e eficiente.",
-    hero: "Alinhadores invisíveis Invisalign e aparelhos estéticos com planejamento digital 3D — para alinhar o sorriso sem interromper sua vida.",
+    hero: "Alinhadores invisíveis Invisalign e aparelhos estéticos com planejamento digital 3D, para alinhar o sorriso sem interromper sua vida.",
     longDescription: [
-      "O Invisalign substitui o aparelho fixo por alinhadores transparentes removíveis. O planejamento é digital, 3D e mostra o movimento dos dentes desde a primeira até a última etapa — você sabe exatamente o que esperar.",
+      "O Invisalign substitui o aparelho fixo por alinhadores transparentes removíveis. O planejamento é digital, 3D e mostra o movimento dos dentes desde a primeira até a última etapa, você sabe exatamente o que esperar.",
       "Por ser removível, não interfere em alimentação, higiene, eventos sociais ou vida profissional. É a escolha de quem quer alinhar o sorriso com discrição e previsibilidade.",
     ],
     indications: [
@@ -207,7 +207,7 @@ export const services: Service[] = [
       "Adultos que rejeitam aparelho fixo aparente",
     ],
     benefits: [
-      { title: "Praticamente invisível", text: "Alinhadores transparentes — quase ninguém percebe." },
+      { title: "Praticamente invisível", text: "Alinhadores transparentes, quase ninguém percebe." },
       { title: "Removível", text: "Você tira para comer e higienizar normalmente." },
       { title: "Planejamento 3D", text: "Visualização do resultado desde o início." },
       { title: "Previsibilidade", text: "Cronograma claro de etapas e duração." },
@@ -220,9 +220,9 @@ export const services: Service[] = [
       "Base ideal para tratamentos estéticos posteriores",
     ],
     faq: [
-      { q: "Invisalign serve para qualquer caso?", a: "Para a maioria dos casos sim. Em situações muito complexas, indicamos a melhor estratégia — às vezes combinada." },
+      { q: "Invisalign serve para qualquer caso?", a: "Para a maioria dos casos sim. Em situações muito complexas, indicamos a melhor estratégia, às vezes combinada." },
       { q: "Quanto tempo demora?", a: "Em média de 6 a 18 meses, dependendo da complexidade. O plano mostra a duração estimada já no início." },
-      { q: "Preciso usar muitas horas por dia?", a: "Sim — em torno de 22h/dia. Removível apenas para alimentação e higiene." },
+      { q: "Preciso usar muitas horas por dia?", a: "Sim, em torno de 22h/dia. Removível apenas para alimentação e higiene." },
     ],
   },
   {
@@ -232,10 +232,10 @@ export const services: Service[] = [
     title: "Endodontia (Canal)",
     tagline: "Tratamento de canal com tecnologia e mínimo desconforto.",
     text: "Tratamento de canal com tecnologia e mínimo desconforto.",
-    hero: "Tratamento endodôntico com microscopia e instrumentação rotatória — para preservar o dente natural com segurança, precisão e conforto.",
+    hero: "Tratamento endodôntico com microscopia e instrumentação rotatória, para preservar o dente natural com segurança, precisão e conforto.",
     longDescription: [
       "O tratamento de canal mudou. Com microscopia operatória e instrumentação rotatória, é possível tratar canais com altíssima precisão, sessões mais curtas e pós-operatório muito mais confortável do que antigamente.",
-      "Salvar um dente natural quase sempre é a melhor escolha — para a estética, para a oclusão e para a longevidade da boca como um todo.",
+      "Salvar um dente natural quase sempre é a melhor escolha, para a estética, para a oclusão e para a longevidade da boca como um todo.",
     ],
     indications: [
       "Dor espontânea ou ao mastigar",
@@ -257,7 +257,7 @@ export const services: Service[] = [
       "Base para restauração ou prótese definitiva",
     ],
     faq: [
-      { q: "Canal dói?", a: "Não. O dente costuma doer antes — o tratamento é o que tira a dor. É feito com anestesia local eficaz." },
+      { q: "Canal dói?", a: "Não. O dente costuma doer antes, o tratamento é o que tira a dor. É feito com anestesia local eficaz." },
       { q: "Em quantas sessões?", a: "A maioria dos casos é resolvida em uma ou duas sessões." },
       { q: "Vou precisar de coroa depois?", a: "Em muitos casos sim, especialmente em dentes posteriores. Avaliamos o melhor protocolo para proteger o dente tratado." },
     ],
@@ -269,10 +269,10 @@ export const services: Service[] = [
     title: "Odontologia Preventiva e Integrativa",
     tagline: "Saúde bucal aliada ao bem-estar do corpo todo.",
     text: "Saúde bucal aliada ao bem-estar do corpo todo.",
-    hero: "Uma visão integrativa que conecta saúde bucal e bem-estar sistêmico — para prevenir antes de tratar e manter equilíbrio a longo prazo.",
+    hero: "Uma visão integrativa que conecta saúde bucal e bem-estar sistêmico, para prevenir antes de tratar e manter equilíbrio a longo prazo.",
     longDescription: [
-      "A boca é porta de entrada do corpo. Inflamações, microbioma desequilibrado e hábitos do dia a dia impactam saúde sistêmica — e vice-versa. Por isso trabalhamos com uma visão integrativa.",
-      "Protocolos preventivos personalizados, orientação de higiene, avaliação de hábitos, manutenção profissional periódica e olhar atento ao paciente como um todo — não apenas à boca isolada.",
+      "A boca é porta de entrada do corpo. Inflamações, microbioma desequilibrado e hábitos do dia a dia impactam saúde sistêmica, e vice-versa. Por isso trabalhamos com uma visão integrativa.",
+      "Protocolos preventivos personalizados, orientação de higiene, avaliação de hábitos, manutenção profissional periódica e olhar atento ao paciente como um todo, não apenas à boca isolada.",
     ],
     indications: [
       "Quem quer prevenir problemas antes que apareçam",
@@ -295,7 +295,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Com que frequência devo fazer manutenção?", a: "A maioria dos pacientes se beneficia de 2 a 4 visitas por ano, conforme risco individual." },
-      { q: "Preventivo serve mesmo para quem já tem problemas?", a: "Sim — e principalmente. Controle e prevenção evitam recidiva e protegem tratamentos já realizados." },
+      { q: "Preventivo serve mesmo para quem já tem problemas?", a: "Sim, e principalmente. Controle e prevenção evitam recidiva e protegem tratamentos já realizados." },
       { q: "Vocês orientam alimentação e hábitos?", a: "Sim. A visão integrativa inclui hábitos do dia a dia que impactam diretamente a saúde bucal." },
     ],
   },
@@ -402,7 +402,7 @@ export const services: Service[] = [
     results: [
       "Contorno facial mais definido",
       "Pele mais firme e luminosa",
-      "Aparência descansada e jovem — sem parecer diferente",
+      "Aparência descansada e jovem, sem parecer diferente",
     ],
     faq: [
       { q: "Quando vejo resultado?", a: "Fios têm efeito lifting imediato; bioestimuladores constroem resultado em 2 a 4 meses, com pico entre 3 e 6 meses." },

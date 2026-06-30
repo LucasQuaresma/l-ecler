@@ -22,13 +22,13 @@ export const Route = createFileRoute("/academy")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "L'ECLER Academy — Formação em Harmonização Orofacial" },
+      { title: "L'ECLER Academy, Formação em Harmonização Orofacial" },
       {
         name: "description",
         content:
           "Habilitação, atualização e Residência Completa em Harmonização Orofacial com a Dra. Cássia Blasques. Prática real com pacientes modelo, ciência aprofundada e mentoria.",
       },
-      { property: "og:title", content: "L'ECLER Academy — Formação em Harmonização Orofacial" },
+      { property: "og:title", content: "L'ECLER Academy, Formação em Harmonização Orofacial" },
       {
         property: "og:description",
         content:
@@ -41,25 +41,25 @@ export const Route = createFileRoute("/academy")({
 });
 
 const pilares = [
-  { n: "01", icon: Syringe, title: "Toxina Botulínica", text: "Domínio das técnicas modernas: doses, pontos seguros e leitura facial dinâmica — do iniciante ao avançado." },
+  { n: "01", icon: Syringe, title: "Toxina Botulínica", text: "Domínio das técnicas modernas: doses, pontos seguros e leitura facial dinâmica, do iniciante ao avançado." },
   { n: "02", icon: Microscope, title: "BIOFACES", text: "Bioestimuladores e biorregeneradores: PDRN, polinucleotídeos, peptídeos, exossomos e enzimas recombinantes." },
-  { n: "03", icon: Layers, title: "Full Threads", text: "Fios faciais com a maior referência nacional do Brasil — vetores, planejamento e segurança." },
+  { n: "03", icon: Layers, title: "Full Threads", text: "Fios faciais com a maior referência nacional do Brasil, vetores, planejamento e segurança." },
   { n: "04", icon: Wand2, title: "Full Face", text: "Preenchimentos faciais com leitura de terços, projeção e harmonia global do rosto." },
-  { n: "05", icon: Droplets, title: "LIPS Advanced", text: "Tratamentos labiais e periorais — desenho, projeção, função e estética em alta performance." },
+  { n: "05", icon: Droplets, title: "LIPS Advanced", text: "Tratamentos labiais e periorais, desenho, projeção, função e estética em alta performance." },
 ];
 
 const trilha = [
   { tag: "Iniciante", title: "Habilitação", text: "Base sólida, técnica e científica para iniciar com segurança em HOF.", price: "Por módulo" },
   { tag: "Atualização", title: "Imersões", text: "Para quem já atua e quer dominar bioestimuladores, peptídeos, fios e novas tecnologias.", price: "Por imersão" },
-  { tag: "Residência", title: "Residência Completa", text: "A formação ampla e intensiva que reúne todos os pilares — para quem quer dominar a linha inteira.", price: "Condição diferenciada", highlight: true },
+  { tag: "Residência", title: "Residência Completa", text: "A formação ampla e intensiva que reúne todos os pilares, para quem quer dominar a linha inteira.", price: "Condição diferenciada", highlight: true },
 ];
 
 const cronograma = [
   { fase: "Fase 01", title: "Fundamentos & Anatomia", text: "Anatomia funcional, planos faciais, leitura dinâmica e mecanismos de ação das principais substâncias." },
   { fase: "Fase 02", title: "Teoria com Profundidade", text: "Estudos multicêntricos, indicações, contraindicações, manejo de complicações e protocolos individualizados." },
-  { fase: "Fase 03", title: "Demonstração ao Vivo", text: "Você observa cada técnica sendo executada pela Dra. Cássia em paciente modelo — com discussão em tempo real." },
+  { fase: "Fase 03", title: "Demonstração ao Vivo", text: "Você observa cada técnica sendo executada pela Dra. Cássia em paciente modelo, com discussão em tempo real." },
   { fase: "Fase 04", title: "Prática Supervisionada", text: "Você aplica em paciente modelo real, sob mentoria direta. Não é manequim. Não é simulação." },
-  { fase: "Fase 05", title: "Mentoria Pós-Curso", text: "Acompanhamento dos seus primeiros casos clínicos depois da formação — você não fica sozinho." },
+  { fase: "Fase 05", title: "Mentoria Pós-Curso", text: "Acompanhamento dos seus primeiros casos clínicos depois da formação, você não fica sozinho." },
 ];
 
 const stats = [
@@ -71,7 +71,7 @@ const stats = [
 
 const depoimentos = [
   { name: "Dra. Marina P.", role: "Cirurgiã-dentista · SP", text: "Saí do curso aplicando com segurança no consultório na segunda-feira seguinte. A profundidade científica é o que diferencia." },
-  { name: "Dr. Rafael T.", role: "HOF · MG", text: "Já tinha feito outros cursos. Aqui foi a primeira vez que entendi o porquê de cada decisão clínica — não só o passo a passo." },
+  { name: "Dr. Rafael T.", role: "HOF · MG", text: "Já tinha feito outros cursos. Aqui foi a primeira vez que entendi o porquê de cada decisão clínica, não só o passo a passo." },
   { name: "Dra. Letícia M.", role: "Dentista · RJ", text: "A turma pequena fez toda a diferença. Dra. Cássia acompanhou cada aplicação minha. Mentoria de verdade." },
 ];
 
@@ -79,8 +79,8 @@ const faqs = [
   { q: "Tem prática real com paciente?", a: "Sim. A prática é em ambiente clínico em funcionamento, com pacientes modelo reais. Você não sai daqui sem ter aplicado." },
   { q: "Preciso já atuar em HOF para fazer?", a: "Não. Temos a trilha de Habilitação para quem está começando e a de Atualização/Residência para quem já atua." },
   { q: "Quem pode se inscrever?", a: "Cirurgiões-dentistas, médicos e demais profissionais da saúde habilitados a atuar em harmonização facial, dentro do escopo de cada conselho." },
-  { q: "Como funciona a Residência Completa?", a: "É a formação ampla que reúne todos os pilares — Toxina, BIOFACES, Full Threads, Full Face e LIPS Advanced — com condição diferenciada em relação aos cursos isolados." },
-  { q: "Tem suporte depois que o curso termina?", a: "Sim. Mentoria pós-curso para os primeiros casos é parte da nossa proposta — você não fica sozinho." },
+  { q: "Como funciona a Residência Completa?", a: "É a formação ampla que reúne todos os pilares, Toxina, BIOFACES, Full Threads, Full Face e LIPS Advanced, com condição diferenciada em relação aos cursos isolados." },
+  { q: "Tem suporte depois que o curso termina?", a: "Sim. Mentoria pós-curso para os primeiros casos é parte da nossa proposta, você não fica sozinho." },
   { q: "As vagas são limitadas?", a: "Sim. Turmas pequenas são parte do método: garantem mentoria próxima e prática individualizada com a Dra. Cássia." },
 ];
 
@@ -129,7 +129,7 @@ function AcademyPage() {
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
               Habilitação, atualização e <strong className="text-foreground">Residência Completa</strong> em HOF. Cinco pilares,
               turmas pequenas, prática com paciente modelo dentro de uma clínica
-              multidisciplinar em funcionamento real — sob mentoria direta da
+              multidisciplinar em funcionamento real, sob mentoria direta da
               <strong className="text-foreground"> Dra. Cássia Blasques</strong>.
             </p>
 
@@ -250,7 +250,7 @@ function AcademyPage() {
               </h2>
             </div>
             <p className="max-w-sm text-muted-foreground">
-              Da habilitação inicial à Residência Completa — todas com o mesmo nível
+              Da habilitação inicial à Residência Completa, todas com o mesmo nível
               de exigência técnica e científica.
             </p>
           </div>
@@ -463,7 +463,7 @@ function AcademyPage() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Dentro de uma clínica real</div>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl leading-[1.05]">
-              Você aprende <span className="italic text-gradient-gold">onde se atende</span> — não em manequim.
+              Você aprende <span className="italic text-gradient-gold">onde se atende</span>, não em manequim.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
               A L'ECLER Academy acontece dentro de uma clínica multidisciplinar em
@@ -473,7 +473,7 @@ function AcademyPage() {
 
             <ul className="mt-8 space-y-3">
               {[
-                "Turmas reduzidas — mentoria 1:1 garantida",
+                "Turmas reduzidas, mentoria 1:1 garantida",
                 "Pacientes modelo reais em todas as práticas",
                 "Acesso a substâncias e protocolos de ponta",
                 "Discussão de casos clínicos em tempo real",

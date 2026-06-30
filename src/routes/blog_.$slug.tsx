@@ -10,7 +10,7 @@ import { WHATSAPP_URL } from "@/lib/signup-dialog";
 export const Route = createFileRoute("/blog_/$slug")({
   head: ({ params }) => {
     const post = getBlogPostBySlug(params.slug);
-    const title = post ? `${post.title} — Blog L'ECLER` : "Artigo — Blog L'ECLER";
+    const title = post ? `${post.title}, Blog L'ECLER` : "Artigo, Blog L'ECLER";
     const description = post?.description ?? "Conteúdo da Clínica L'ECLER.";
 
     return {

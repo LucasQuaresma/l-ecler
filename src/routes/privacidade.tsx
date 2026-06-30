@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — Clínica L'ECLER" },
+      { title: "Política de Privacidade, Clínica L'ECLER" },
       { name: "description", content: "Como a Clínica L'ECLER coleta, usa e protege seus dados pessoais, em conformidade com a LGPD." },
     ],
   }),
@@ -27,7 +27,7 @@ function Page() {
             <h2 className="font-display text-2xl">1. Quem somos</h2>
             <p className="text-muted-foreground">
               A Clínica L'ECLER ("nós") é a controladora dos dados pessoais coletados nesta página,
-              nos termos da Lei Geral de Proteção de Dados Pessoais — Lei nº 13.709/2018 (LGPD).
+              nos termos da Lei Geral de Proteção de Dados Pessoais, Lei nº 13.709/2018 (LGPD).
             </p>
           </section>
 
