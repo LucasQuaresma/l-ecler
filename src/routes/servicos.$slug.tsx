@@ -12,11 +12,15 @@ import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import seniorSmileImg from "@/assets/smile-senior-natural.jpg";
-import implantSmileImg from "@/assets/smile-implants-lecler.jpg";
+import implantSmileImg from "@/assets/smile-implants-clean.jpg";
 import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
 import consultationImg from "@/assets/home-consultation.jpg";
 import heroSmileImg from "@/assets/hero-smile.jpg";
 import leclerSymbolImg from "@/assets/lecler-symbol.png";
+import invisalignHeroImg from "@/assets/invisalign-aligners-hero.webp";
+import invisalignLogoImg from "@/assets/invisalign-logo-aligner.jpeg";
+import invisalignSmileBlueImg from "@/assets/invisalign-smile-blue.jpeg";
+import invisalignDoctorAlignerImg from "@/assets/invisalign-doctor-aligner.jpeg";
 
 export const Route = createFileRoute("/servicos/$slug")({
   head: ({ params }) => {
@@ -71,9 +75,41 @@ const aestheticProofs = [
   },
 ];
 
+const invisalignProofs = [
+  {
+    image: invisalignSmileBlueImg,
+    title: "Alinhadores transparentes",
+    text: "Uma solução discreta para alinhar o sorriso sem comprometer rotina, fala ou imagem profissional.",
+  },
+  {
+    image: invisalignDoctorAlignerImg,
+    title: "Planejamento acompanhado",
+    text: "O caso é conduzido com avaliação técnica, sequência de alinhadores e ajustes de acompanhamento.",
+  },
+  {
+    image: invisalignLogoImg,
+    title: "Invisalign Doctor",
+    text: "A L'ECLER é uma clínica credenciada para planejar casos com a tecnologia Invisalign.",
+  },
+  {
+    image: invisalignHeroImg,
+    title: "Uso no dia a dia",
+    text: "Os alinhadores são removíveis, o que facilita alimentação, higiene e rotina social.",
+  },
+];
+
 function TreatmentProofSection({ service }: { service: Service }) {
   const isDental = service.category === "Odontologia";
-  const proofItems = isDental ? dentalProofs : aestheticProofs;
+  const isInvisalign = service.slug === "ortodontia-invisalign";
+  const proofItems = isInvisalign ? invisalignProofs : isDental ? dentalProofs : aestheticProofs;
+  const proofTitle = isInvisalign
+    ? "Invisalign, simulação e evolução do sorriso"
+    : isDental
+      ? "Sorrisos, antes/depois e planejamento"
+      : "Registros, naturalidade e plano";
+  const proofText = isInvisalign
+    ? "Em Invisalign, a conversa precisa mostrar mais do que a promessa de dentes alinhados. A equipe apresenta imagens, planejamento digital, referências e etapas para você entender se o alinhador faz sentido para o seu caso."
+    : `Em ${service.title}, a conversa não fica só na explicação técnica. A equipe usa fotos, referências, diagnóstico e registros autorizados para mostrar caminhos possíveis com mais clareza.`;
 
   return (
     <section id="prova-visual" className="bg-secondary/35 py-20 sm:py-24">
@@ -84,13 +120,11 @@ function TreatmentProofSection({ service }: { service: Service }) {
               Prova visual
             </span>
             <h2 className="mt-3 font-display text-3xl leading-tight sm:text-4xl">
-              {isDental ? "Sorrisos, antes/depois e planejamento" : "Registros, naturalidade e plano"}{" "}
+              {proofTitle}{" "}
               <span className="text-gradient-gold">antes da decisão</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Em {service.title}, a conversa não fica só na explicação técnica. A equipe usa
-              fotos, referências, diagnóstico e registros autorizados para mostrar caminhos
-              possíveis com mais clareza.
+              {proofText}
             </p>
             <div className="relative mt-7 overflow-hidden rounded-[1.5rem] border border-gold/30 bg-card p-5 shadow-soft">
               <img
@@ -110,7 +144,7 @@ function TreatmentProofSection({ service }: { service: Service }) {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className={isInvisalign ? "grid gap-4 sm:grid-cols-2" : "grid gap-4 sm:grid-cols-3"}>
             {proofItems.map((item, index) => (
               <motion.article
                 key={item.title}
@@ -120,13 +154,13 @@ function TreatmentProofSection({ service }: { service: Service }) {
                 transition={{ duration: 0.5, delay: index * 0.07 }}
                 className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft"
               >
-                <div className="aspect-[4/5] overflow-hidden bg-cream">
+                <div className={isInvisalign ? "aspect-[16/10] overflow-hidden bg-cream" : "aspect-[4/5] overflow-hidden bg-cream"}>
                   <img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
-                    width={800}
-                    height={1000}
+                    width={isInvisalign ? 1200 : 800}
+                    height={isInvisalign ? 750 : 1000}
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
@@ -140,6 +174,40 @@ function TreatmentProofSection({ service }: { service: Service }) {
             ))}
           </div>
         </div>
+
+        {isInvisalign && (
+          <div className="mt-8 overflow-hidden rounded-[2rem] border border-gold/25 bg-card shadow-elegant lg:grid lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="aspect-[16/9] overflow-hidden bg-cream lg:aspect-auto">
+              <img
+                src={invisalignHeroImg}
+                alt="Alinhador transparente Invisalign sendo encaixado no sorriso"
+                loading="lazy"
+                width={1600}
+                height={900}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-center p-6 sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                Clínica credenciada Invisalign Doctor
+              </p>
+              <h3 className="mt-3 font-display text-2xl leading-tight sm:text-3xl">
+                Alinhe o sorriso com discrição, previsibilidade e acompanhamento próximo.
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                A avaliação mostra se o seu caso pode ser conduzido com alinhadores
+                transparentes, qual sequência faz sentido e como o tratamento conversa com
+                estética, mordida e saúde bucal.
+              </p>
+              <button
+                onClick={() => openSignupDialog()}
+                className="mt-6 inline-flex w-fit items-center justify-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
+              >
+                Quero avaliar meu caso <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="relative mt-8 grid gap-4 overflow-hidden rounded-[2rem] border border-gold/25 bg-primary p-5 text-primary-foreground shadow-elegant sm:grid-cols-3 lg:p-7">
           <img

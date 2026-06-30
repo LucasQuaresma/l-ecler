@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import methodImg from "@/assets/home-method.jpg";
 import seniorSmileImg from "@/assets/smile-senior-natural.jpg";
-import implantSmileImg from "@/assets/smile-implants-lecler.jpg";
+import implantSmileImg from "@/assets/smile-implants-clean-wide.jpg";
 import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
 import leclerSymbolImg from "@/assets/lecler-symbol.png";
 

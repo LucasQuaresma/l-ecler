@@ -5,6 +5,7 @@ import { openSignupDialog } from "@/lib/signup-dialog";
 import loungeImg from "@/assets/clinic-lounge.jpg";
 import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
 import airflowImg from "@/assets/airflow-prophylaxis-master.jpg";
+import invisalignImg from "@/assets/invisalign-logo-aligner.jpeg";
 
 const carePillars = [
   "Odontologia integrada e especializada",
@@ -23,6 +24,11 @@ const showcase = [
     image: airflowImg,
     title: "Airflow Prophylaxis Master",
     text: "Tecnologia suíça de prevenção para uma profilaxia mais confortável, precisa e sofisticada.",
+  },
+  {
+    image: invisalignImg,
+    title: "Invisalign Doctor",
+    text: "Alinhadores transparentes com planejamento digital para alinhar o sorriso com discrição.",
   },
   {
     image: loungeImg,
@@ -88,7 +94,7 @@ export function SignatureCareSection() {
             </Button>
           </motion.div>
 
-          <div className="grid gap-4 sm:grid-cols-3 lg:gap-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:gap-5">
             {showcase.map((item, index) => (
               <motion.article
                 key={item.title}
@@ -98,7 +104,7 @@ export function SignatureCareSection() {
                 transition={{ duration: 0.55, delay: index * 0.08 }}
                 className="overflow-hidden rounded-2xl border border-gold/20 bg-primary-foreground/[0.07] shadow-elegant backdrop-blur"
               >
-                <div className="aspect-[4/5] overflow-hidden bg-primary-foreground/90">
+                <div className="aspect-[4/3] overflow-hidden bg-primary-foreground/90">
                   <img
                     src={item.image}
                     alt={item.title}
