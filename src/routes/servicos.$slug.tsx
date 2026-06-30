@@ -22,6 +22,18 @@ import invisalignHeroImg from "@/assets/invisalign-aligners-hero.webp";
 import invisalignLogoImg from "@/assets/invisalign-logo-aligner.jpeg";
 import invisalignSmileBlueImg from "@/assets/invisalign-smile-blue.jpeg";
 import invisalignDoctorAlignerImg from "@/assets/invisalign-doctor-aligner.jpeg";
+import treatmentHeroAirflowImg from "@/assets/treatment-hero-airflow-prevencao-suica.jpg";
+import treatmentHeroBotoxImg from "@/assets/treatment-hero-botox-e-preenchimentos.jpg";
+import treatmentHeroEndodontiaImg from "@/assets/treatment-hero-endodontia.jpg";
+import treatmentHeroFacetasImg from "@/assets/treatment-hero-facetas-e-lentes-de-contato.jpg";
+import treatmentHeroFiosImg from "@/assets/treatment-hero-fios-e-bioestimulo.jpg";
+import treatmentHeroDermicoImg from "@/assets/treatment-hero-gerenciamento-dermico.jpg";
+import treatmentHeroImplantesImg from "@/assets/treatment-hero-implantes.jpg";
+import treatmentHeroLaserImg from "@/assets/treatment-hero-laser-co2-e-hipro.jpg";
+import treatmentHeroOdontoEsteticaImg from "@/assets/treatment-hero-odontologia-estetica.jpg";
+import treatmentHeroPreventivaImg from "@/assets/treatment-hero-odontologia-preventiva-integrativa.jpg";
+import treatmentHeroInvisalignImg from "@/assets/treatment-hero-ortodontia-invisalign.jpg";
+import treatmentHeroProtesesImg from "@/assets/treatment-hero-proteses.jpg";
 
 export const Route = createFileRoute("/servicos/$slug")({
   head: ({ params }) => {
@@ -104,64 +116,64 @@ const treatmentHeroVisuals: Record<
   { image: string; alt: string; objectPosition?: string }
 > = {
   "odontologia-estetica": {
-    image: seniorSmileImg,
-    alt: "Sorriso natural em destaque para odontologia estética",
+    image: treatmentHeroOdontoEsteticaImg,
+    alt: "Sorriso natural em destaque para odontologia estetica",
     objectPosition: "center",
   },
   implantes: {
-    image: implantSmileImg,
-    alt: "Sorriso reabilitado simbolizando tratamento com implantes",
-    objectPosition: "center 35%",
+    image: treatmentHeroImplantesImg,
+    alt: "Procedimento odontologico de implante em detalhe",
+    objectPosition: "center",
   },
   proteses: {
-    image: seniorSmileImg,
-    alt: "Sorriso maduro e natural simbolizando próteses odontológicas",
+    image: treatmentHeroProtesesImg,
+    alt: "Protese odontologica em avaliacao clinica",
     objectPosition: "center",
   },
   "facetas-e-lentes-de-contato": {
-    image: seniorSmileImg,
-    alt: "Sorriso harmônico simbolizando facetas e lentes de contato dental",
+    image: treatmentHeroFacetasImg,
+    alt: "Selecao de cor para facetas e lentes de contato dental",
     objectPosition: "center",
   },
   "ortodontia-invisalign": {
-    image: invisalignSmileBlueImg,
-    alt: "Alinhador transparente Invisalign no sorriso",
+    image: treatmentHeroInvisalignImg,
+    alt: "Alinhador transparente Invisalign em destaque",
     objectPosition: "center",
   },
   endodontia: {
-    image: digitalScanImg,
-    alt: "Tecnologia odontológica simbolizando endodontia",
+    image: treatmentHeroEndodontiaImg,
+    alt: "Atendimento odontologico simbolizando tratamento de canal",
     objectPosition: "center",
   },
   "odontologia-preventiva-integrativa": {
-    image: airflowImg,
-    alt: "Tecnologia de prevenção odontológica Airflow",
+    image: treatmentHeroPreventivaImg,
+    alt: "Profilaxia odontologica preventiva em atendimento",
     objectPosition: "center",
   },
   "airflow-prevencao-suica": {
-    image: airflowImg,
-    alt: "Airflow Prophylaxis Master para prevenção suíça",
+    image: treatmentHeroAirflowImg,
+    alt: "Airflow Prophylaxis Master para prevencao suica",
     objectPosition: "center",
   },
   "botox-e-preenchimentos": {
-    image: consultationImg,
-    alt: "Avaliação facial simbolizando botox, preenchimentos e reestruturação",
-    objectPosition: "center 35%",
+    image: treatmentHeroBotoxImg,
+    alt: "Aplicacao estetica facial para labios e contorno",
+    objectPosition: "center",
   },
   "fios-e-bioestimulo": {
-    image: heroSmileImg,
-    alt: "Rosto natural simbolizando lifting com fios faciais",
-    objectPosition: "center 35%",
+    image: treatmentHeroFiosImg,
+    alt: "Procedimento facial de harmonizacao e bioestimulo",
+    objectPosition: "center",
   },
   "gerenciamento-dermico": {
-    image: consultationImg,
-    alt: "Consulta estética simbolizando biorregeneração e bioestimulação",
-    objectPosition: "center 35%",
+    image: treatmentHeroDermicoImg,
+    alt: "Tratamento de pele para biorregeneracao e bioestimulacao",
+    objectPosition: "center",
   },
   "laser-co2-e-hipro": {
-    image: heroSmileImg,
-    alt: "Rosto com aparência natural simbolizando tecnologias de rejuvenescimento",
-    objectPosition: "center 35%",
+    image: treatmentHeroLaserImg,
+    alt: "Tecnologia facial para rejuvenescimento com laser e HIPRO",
+    objectPosition: "center",
   },
 };
 
