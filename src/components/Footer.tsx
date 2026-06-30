@@ -3,11 +3,18 @@ import { Instagram, MapPin, Mail, Phone } from "lucide-react";
 import { services } from "@/lib/services";
 import { WHATSAPP_URL } from "@/lib/signup-dialog";
 import leclerLogo from "@/assets/lecler-logo.png";
+import leclerSymbol from "@/assets/lecler-symbol.png";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-secondary/40">
-      <div className="mx-auto max-w-6xl px-6 py-14">
+    <footer className="relative overflow-hidden border-t border-border bg-secondary/40">
+      <img
+        src={leclerSymbol}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-8 top-10 hidden h-44 w-auto opacity-[0.08] sm:block"
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link to="/" className="inline-flex" aria-label="Clínica L'ECLER">
@@ -19,6 +26,12 @@ export function Footer() {
                 className="h-14 w-auto"
               />
             </Link>
+            <img
+              src={leclerSymbol}
+              alt=""
+              aria-hidden="true"
+              className="mt-4 h-9 w-auto opacity-75"
+            />
             <p className="mt-3 text-sm text-muted-foreground">
               Odontologia integrada, harmonização orofacial e estética avançada para quem busca
               resultado natural, saúde e segurança.

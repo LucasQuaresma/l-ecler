@@ -6,6 +6,7 @@ import loungeImg from "@/assets/clinic-lounge.jpg";
 import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
 import airflowImg from "@/assets/airflow-prophylaxis-master.jpg";
 import invisalignImg from "@/assets/invisalign-logo-aligner.jpeg";
+import leclerSymbolImg from "@/assets/lecler-symbol.png";
 
 const carePillars = [
   "Odontologia integrada e especializada",
@@ -42,6 +43,12 @@ export function SignatureCareSection() {
     <section className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-28">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      <img
+        src={leclerSymbolImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-8 top-10 h-44 w-auto opacity-10 sm:right-10 sm:h-64"
+      />
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
@@ -51,9 +58,17 @@ export function SignatureCareSection() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
-              Odontologia integrada
-            </span>
+            <div className="flex items-center gap-3">
+              <img
+                src={leclerSymbolImg}
+                alt=""
+                aria-hidden="true"
+                className="h-9 w-auto opacity-80"
+              />
+              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+                Odontologia integrada
+              </span>
+            </div>
             <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
               O sorriso é o ponto de partida de um plano mais completo.
             </h2>

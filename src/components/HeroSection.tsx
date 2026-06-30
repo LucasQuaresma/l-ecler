@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openSignupDialog } from "@/lib/signup-dialog";
 import heroImg from "@/assets/hero-smile.jpg";
+import leclerSymbolImg from "@/assets/lecler-symbol.png";
 
 function scrollToModules() {
   document.getElementById("modulos")?.scrollIntoView({ behavior: "smooth" });
@@ -11,6 +12,12 @@ function scrollToModules() {
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-hero pt-10 pb-20 sm:pt-16 sm:pb-28">
+      <img
+        src={leclerSymbolImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[9%] top-24 hidden h-48 opacity-[0.035] sm:block lg:right-[17%] lg:top-28 lg:h-64"
+      />
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-2 lg:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -90,7 +97,14 @@ export function HeroSection() {
             className="absolute -bottom-5 left-1/2 z-20 w-[88%] -translate-x-1/2 rounded-2xl border border-gold/25 bg-card/95 px-5 py-4 shadow-elegant backdrop-blur sm:left-6 sm:w-auto sm:translate-x-0"
           >
             <div className="flex items-center gap-4">
-              <div className="h-10 w-px bg-gradient-to-b from-transparent via-gold to-transparent" />
+              <div className="grid h-12 w-12 flex-none place-items-center rounded-full border border-gold/30 bg-cream shadow-soft">
+                <img
+                  src={leclerSymbolImg}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-7 w-auto opacity-90"
+                />
+              </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Dra. Cássia Blasques</div>
                 <div className="text-sm font-medium text-foreground">Cirurgiã-dentista | HOF | CRO 67279</div>

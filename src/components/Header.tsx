@@ -1,11 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import leclerLogo from "@/assets/lecler-logo.png";
+import leclerSymbol from "@/assets/lecler-symbol.png";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="inline-flex items-center" aria-label="Clínica L'ECLER">
+        <Link to="/" className="inline-flex items-center gap-3" aria-label="Clínica L'ECLER">
+          <img
+            src={leclerSymbol}
+            alt=""
+            aria-hidden="true"
+            width={296}
+            height={217}
+            className="h-8 w-auto opacity-85 sm:h-9"
+          />
           <img
             src={leclerLogo}
             alt="L'ECLER Saúde e Bem-Estar"
