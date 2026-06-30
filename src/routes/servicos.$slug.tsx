@@ -17,6 +17,7 @@ import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
 import consultationImg from "@/assets/home-consultation.jpg";
 import heroSmileImg from "@/assets/hero-smile.jpg";
 import leclerSymbolImg from "@/assets/lecler-symbol.png";
+import airflowImg from "@/assets/airflow-prophylaxis-master.jpg";
 import invisalignHeroImg from "@/assets/invisalign-aligners-hero.webp";
 import invisalignLogoImg from "@/assets/invisalign-logo-aligner.jpeg";
 import invisalignSmileBlueImg from "@/assets/invisalign-smile-blue.jpeg";
@@ -97,6 +98,72 @@ const invisalignProofs = [
     text: "Os alinhadores são removíveis, o que facilita alimentação, higiene e rotina social.",
   },
 ];
+
+const treatmentHeroVisuals: Record<
+  string,
+  { image: string; alt: string; objectPosition?: string }
+> = {
+  "odontologia-estetica": {
+    image: seniorSmileImg,
+    alt: "Sorriso natural em destaque para odontologia estética",
+    objectPosition: "center",
+  },
+  implantes: {
+    image: implantSmileImg,
+    alt: "Sorriso reabilitado simbolizando tratamento com implantes",
+    objectPosition: "center 35%",
+  },
+  proteses: {
+    image: seniorSmileImg,
+    alt: "Sorriso maduro e natural simbolizando próteses odontológicas",
+    objectPosition: "center",
+  },
+  "facetas-e-lentes-de-contato": {
+    image: seniorSmileImg,
+    alt: "Sorriso harmônico simbolizando facetas e lentes de contato dental",
+    objectPosition: "center",
+  },
+  "ortodontia-invisalign": {
+    image: invisalignSmileBlueImg,
+    alt: "Alinhador transparente Invisalign no sorriso",
+    objectPosition: "center",
+  },
+  endodontia: {
+    image: digitalScanImg,
+    alt: "Tecnologia odontológica simbolizando endodontia",
+    objectPosition: "center",
+  },
+  "odontologia-preventiva-integrativa": {
+    image: airflowImg,
+    alt: "Tecnologia de prevenção odontológica Airflow",
+    objectPosition: "center",
+  },
+  "airflow-prevencao-suica": {
+    image: airflowImg,
+    alt: "Airflow Prophylaxis Master para prevenção suíça",
+    objectPosition: "center",
+  },
+  "botox-e-preenchimentos": {
+    image: consultationImg,
+    alt: "Avaliação facial simbolizando botox, preenchimentos e reestruturação",
+    objectPosition: "center 35%",
+  },
+  "fios-e-bioestimulo": {
+    image: heroSmileImg,
+    alt: "Rosto natural simbolizando lifting com fios faciais",
+    objectPosition: "center 35%",
+  },
+  "gerenciamento-dermico": {
+    image: consultationImg,
+    alt: "Consulta estética simbolizando biorregeneração e bioestimulação",
+    objectPosition: "center 35%",
+  },
+  "laser-co2-e-hipro": {
+    image: heroSmileImg,
+    alt: "Rosto com aparência natural simbolizando tecnologias de rejuvenescimento",
+    objectPosition: "center 35%",
+  },
+};
 
 function TreatmentProofSection({ service }: { service: Service }) {
   const isDental = service.category === "Odontologia";
@@ -258,7 +325,8 @@ function ServicePage() {
     );
   }
 
-  const Icon = service.icon;
+  const treatmentVisual =
+    treatmentHeroVisuals[service.slug] ?? treatmentHeroVisuals["odontologia-estetica"];
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 6);
 
   return (
@@ -276,8 +344,8 @@ function ServicePage() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                <Sparkles className="h-3 w-3" /> {service.category}
+              <span className="inline-flex rounded-full border border-gold/30 bg-card px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                {service.category}
               </span>
             </div>
             <h1 className="mt-5 font-display text-4xl leading-tight sm:text-5xl lg:text-6xl">
@@ -310,8 +378,16 @@ function ServicePage() {
             className="relative mx-auto w-full max-w-md"
           >
             <div className="relative overflow-hidden rounded-3xl border border-gold/30 bg-card p-10 shadow-gold">
-              <div className="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-gold text-primary shadow-soft">
-                <Icon className="h-10 w-10" strokeWidth={1.6} />
+              <div className="relative h-28 w-28 overflow-hidden rounded-2xl border border-gold/35 bg-secondary shadow-elegant">
+                <img
+                  src={treatmentVisual.image}
+                  alt={treatmentVisual.alt}
+                  width={420}
+                  height={420}
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: treatmentVisual.objectPosition ?? "center" }}
+                />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/35" />
               </div>
               <p className="mt-6 font-display text-2xl leading-snug text-foreground">
                 "{service.tagline}"
