@@ -18,7 +18,7 @@ export function HeroSection() {
         aria-hidden="true"
         className="pointer-events-none absolute right-[9%] top-24 hidden h-48 opacity-[0.035] sm:block lg:right-[17%] lg:top-28 lg:h-64"
       />
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-2 lg:gap-12">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,10 +29,11 @@ export function HeroSection() {
             Clínica L'ECLER | Saúde e bem-estar
           </div>
 
-          <h1 className="mt-6 font-display text-4xl leading-[1.03] sm:text-5xl lg:text-[4rem]">
-            Odontologia integrada,
-            <span className="block">estética natural e</span>
-            <span className="block text-gradient-gold">bem-estar.</span>
+          <h1 className="mt-6 font-display text-[1.7rem] leading-[1.02] sm:text-[2.4rem] lg:text-[3rem]">
+            <span className="block">Odontologia integrada,</span>
+            <span className="block">
+              estética natural e <span className="text-gradient-gold">bem-estar.</span>
+            </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
