@@ -69,8 +69,9 @@ export function SignatureCareSection() {
                 Odontologia integrada
               </span>
             </div>
-            <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
-              Na Clínica L'ECLER, a odontologia integrada é o carro-chefe.
+            <h2 className="mt-4 font-display text-[1.42rem] leading-[1.05] sm:text-[1.75rem] lg:text-[1.9rem]">
+              <span className="block">Na Clínica L'ECLER, a odontologia</span>
+              <span className="block">integrada é o carro-chefe.</span>
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-primary-foreground/75 sm:text-base">
               O sorriso é o ponto de partida de um plano mais completo. A clínica reúne
