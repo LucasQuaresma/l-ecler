@@ -44,7 +44,7 @@ function Page() {
             <ul className="mt-3 space-y-2 text-sm text-foreground">
               <li className="flex items-start gap-2">
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                Vamos te chamar no WhatsApp para conversar sobre seu caso.
+                Vamos chamar você no WhatsApp para conversar sobre seu caso.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
@@ -60,7 +60,7 @@ function Page() {
           >
             <Link to="/">
               <ArrowLeft className="mr-1 h-4 w-4" />
-              Voltar à home
+              Voltar à página inicial
             </Link>
           </Button>
         </motion.div>

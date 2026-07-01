@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Naturalidade não é ausência de resultado",
         body: [
-          "Muitas pessoas chegam à clínica dizendo a mesma frase: querem melhorar, mas não querem ficar diferentes. Esse receio é legítimo. A harmonização orofacial ficou muito conhecida por resultados exagerados, porém o caminho mais elegante é justamente o oposto. Um bom plano não tenta padronizar rostos. Ele busca entender proporções, expressão, envelhecimento, estrutura óssea, qualidade de pele e estilo pessoal. A partir dessa leitura, a indicação pode ser muito mais precisa.",
+          "Muitas pessoas chegam à clínica dizendo a mesma frase: querem melhorar, mas não querem ficar diferentes. Esse receio é legítimo. A harmonização orofacial ficou muito conhecida por resultados exagerados, porém, o caminho mais elegante é justamente o oposto. Um bom plano não tenta padronizar rostos. Ele busca entender proporções, expressão, envelhecimento, estrutura óssea, qualidade de pele e estilo pessoal. A partir dessa leitura, a indicação pode ser muito mais precisa.",
           "Um resultado natural pode suavizar linhas de expressão, devolver pontos discretos de sustentação, melhorar a textura da pele, definir melhor o contorno facial ou equilibrar pequenas assimetrias. Nada disso precisa alterar a forma como a pessoa se reconhece. Quando bem indicada, a harmonização não chama atenção pelo procedimento, e sim pela sensação de descanso, leveza e autocuidado.",
           "Por isso, naturalidade não significa fazer pouco de qualquer jeito. Significa fazer o necessário, na região certa, com dose adequada e expectativa bem alinhada. Em alguns casos, o melhor plano começa com pele. Em outros, com toxina botulínica, bioestimuladores, fios, preenchimento pontual ou uma combinação em etapas. A diferença está em não transformar a aplicação em ponto de partida. O ponto de partida deve ser sempre o diagnóstico.",
         ],
@@ -52,7 +52,7 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Antes de falar em produtos ou técnicas, é preciso entender o incômodo principal. A paciente se sente cansada? Percebe perda de contorno? Tem medo de flacidez? Quer melhorar olheiras, linhas de expressão, lábios, mandíbula ou qualidade da pele? Cada queixa pode ter causas diferentes. Uma ruga pode vir de contração muscular, perda de colágeno, desidratação, exposição solar ou falta de sustentação. Tratar todas as queixas com o mesmo procedimento é uma simplificação perigosa.",
           "A avaliação também considera histórico de saúde, procedimentos anteriores, rotina, idade, hábitos, anatomia e expectativa. Isso evita indicações por tendência. Nem tudo o que está em alta faz sentido para todos os rostos. Um rosto mais delicado pede estratégia diferente de um rosto com maior estrutura. Uma paciente que nunca fez procedimentos pode precisar de uma abordagem mais gradual. Outra, que já tem intervenções anteriores, pode precisar primeiro reorganizar volumes ou recuperar qualidade de pele.",
-          "Na L'ECLER, a proposta é unir técnica, segurança e escuta. A Dra. Cássia e a equipe analisam o que pode ser feito, mas também o que deve ser evitado. Essa parte é essencial. Um bom atendimento não empurra procedimentos, ele orienta. A paciente precisa sair da conversa entendendo possibilidades, limites, tempo de resposta, cuidados e manutenção.",
+          "Na L'ECLER, a proposta é unir técnica, segurança e escuta. A Dra. Cássia e a equipe analisam o que pode ser feito, mas também o que deve ser evitado. Essa parte é essencial. Um bom atendimento não empurra procedimentos; ele orienta. A paciente precisa sair da conversa entendendo possibilidades, limites, tempo de resposta, cuidados e manutenção.",
         ],
       },
       {
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Quando falar com o atendimento",
         body: [
           "Se você tem vontade de melhorar, mas ainda não sabe qual procedimento pedir, esse é exatamente o momento de falar com o atendimento. O primeiro contato não precisa ser uma decisão definitiva. Ele serve para entender sua queixa, orientar o próximo passo e direcionar você para a avaliação mais adequada. Quanto mais clara for essa primeira conversa, mais segura tende a ser a consulta.",
-          "Fale com o atendimento da L'ECLER pelo WhatsApp e conte o que gostaria de melhorar. A equipe vai orientar você sobre a avaliação, explicar como funciona o diagnóstico inicial e ajudar a agendar sua visita à clínica em Bragança Paulista. O objetivo é que você chegue mais tranquila, com menos dúvida e com uma expectativa realista sobre o que pode ser feito.",
+          "Fale com o atendimento da L'ECLER pelo WhatsApp e conte o que gostaria de melhorar. A equipe vai orientar você sobre a avaliação, explicar como funciona o diagnóstico inicial e ajudar a agendar sua visita à clínica em Bragança Paulista. O objetivo é que você chegue mais tranquila, com menos dúvidas e com uma expectativa realista sobre o que pode ser feito.",
         ],
       },
     ],
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "A boca influencia muito mais do que a aparência",
         body: [
-          "A saúde bucal está ligada a mastigação, fala, respiração, sono, autoestima e bem-estar geral. Quando existe dor, inflamação, perda dental, restaurações antigas, gengiva sensível ou mordida desequilibrada, o impacto não fica restrito ao sorriso. A pessoa pode evitar fotos, mastigar de um lado só, sentir insegurança ao falar de perto ou adiar tratamentos por medo de descobrir problemas maiores.",
+          "A saúde bucal está ligada à mastigação, à fala, à respiração, ao sono, à autoestima e ao bem-estar geral. Quando existe dor, inflamação, perda dental, restaurações antigas, gengiva sensível ou mordida desequilibrada, o impacto não fica restrito ao sorriso. A pessoa pode evitar fotos, mastigar de um lado só, sentir insegurança ao falar de perto ou adiar tratamentos por medo de descobrir problemas maiores.",
           "Por isso, a odontologia integrativa não olha apenas para dentes isolados. Ela considera a boca como parte do corpo e da vida da paciente. Um tratamento estético bonito precisa respeitar função, saúde e previsibilidade. Clarear, alinhar, colocar facetas ou reabilitar dentes sem avaliar a base pode gerar um resultado bonito no começo, mas frágil no longo prazo.",
           "Na L'ECLER, a estética do sorriso é tratada como consequência de um plano bem feito. O objetivo é unir beleza, função e conforto. Isso significa entender o que a paciente deseja melhorar, mas também avaliar o que precisa ser tratado antes para que o resultado seja estável.",
         ],
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Planejamento evita arrependimento",
         body: [
-          "O paciente precisa entender o processo antes de iniciar. Isso inclui saber quais dentes serão envolvidos, qual material será indicado, quanto tempo o tratamento pode durar, quais cuidados serão necessários e como funcionam as manutenções. Quando há simulação ou mock-up, a pessoa consegue visualizar melhor a proposta e participar da decisão.",
+          "O paciente precisa entender o processo antes de iniciar. Isso inclui saber quais dentes serão envolvidos, qual material será indicado, quanto tempo o tratamento pode durar, quais cuidados serão necessários e como funcionam as manutenções. Quando há simulação ou prova estética, a pessoa consegue visualizar melhor a proposta e participar da decisão.",
           "Essa participação muda a experiência. Em vez de aceitar um resultado pronto, a paciente entende escolhas de forma, comprimento, cor e proporção. O tratamento deixa de ser uma aposta estética e passa a ser um projeto de sorriso. Essa diferença reduz ansiedade e aumenta segurança.",
           "Na L'ECLER, o planejamento é pensado para unir estética e função. Um sorriso com facetas ou lentes precisa ser bonito, mas também confortável para mastigar, falar e viver. Por isso, a avaliação clínica vem antes da promessa visual.",
         ],
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
     image: methodImg,
     imageAlt: "Planejamento de tratamento com a Dra. Cássia",
     intro:
-      "O medo de ficar artificial é comum. A boa notícia é que toxina botulínica e preenchimento, quando bem indicados, podem ter justamente o objetivo oposto: preservar expressão e melhorar com sutileza.",
+      "O medo de ficar artificial é comum. A boa notícia é que a toxina botulínica e o preenchimento, quando bem indicados, podem ter justamente o objetivo oposto: preservar expressão e melhorar com sutileza.",
     sections: [
       {
         heading: "Botox e preenchimento não são a mesma coisa",
@@ -209,7 +209,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Como evitar o aspecto artificial",
         body: [
           "O aspecto artificial geralmente nasce de excesso, indicação errada ou falta de continuidade estética. Para evitar isso, a avaliação precisa considerar dose, profundidade, produto, região, tempo de resposta e manutenção. Também é importante respeitar o estilo da paciente. Algumas pessoas querem mudanças muito discretas. Outras aceitam um resultado mais evidente, mas ainda assim natural.",
-          "Outro ponto é alinhar expectativa. Procedimentos injetáveis melhoram pontos específicos, mas não substituem cirurgia quando há flacidez avançada, nem resolvem todos os sinais de envelhecimento de uma vez. Uma orientação honesta evita frustração. Muitas vezes, o melhor plano combina pele, colágeno, toxina e pequenos ajustes, em vez de concentrar tudo em preenchimento.",
+          "Outro ponto é alinhar expectativa. Procedimentos injetáveis melhoram pontos específicos, mas não substituem uma cirurgia quando há flacidez avançada, nem resolvem todos os sinais de envelhecimento de uma vez. Uma orientação honesta evita frustração. Muitas vezes, o melhor plano combina pele, colágeno, toxina e pequenos ajustes, em vez de concentrar tudo em preenchimento.",
           "Na L'ECLER, a proposta é conduzir o tratamento com técnica conservadora, segurança e acompanhamento. A paciente entende o que será feito, por que será feito e como acompanhar o resultado nos dias e semanas seguintes.",
         ],
       },
@@ -243,7 +243,7 @@ export const blogPosts: BlogPost[] = [
         heading: "A perda dental afeta estética e função",
         body: [
           "Perder um ou mais dentes muda mais do que a aparência do sorriso. A mastigação pode ficar limitada, a fala pode sofrer alterações, dentes vizinhos podem se movimentar e a autoestima pode ser profundamente impactada. Muitas pessoas passam a sorrir menos, evitam alimentos mais firmes ou ficam inseguras em situações sociais.",
-          "Além disso, a ausência dental pode influenciar suporte facial e equilíbrio da mordida. Por isso, adiar a avaliação nem sempre é a melhor escolha. Quanto antes o caso é analisado, mais opções podem estar disponíveis para planejar uma reabilitação confortável, estética e segura.",
+          "Além disso, a ausência dental pode influenciar suporte facial e equilíbrio da mordida. Por isso, adiar a avaliação nem sempre é a melhor escolha. Quanto antes o caso for analisado, mais opções podem estar disponíveis para planejar uma reabilitação confortável, estética e segura.",
           "Implantes dentários são uma solução moderna para substituir raízes perdidas e apoiar próteses ou coroas. Mas cada caso precisa ser estudado. A quantidade de osso, a gengiva, a mordida, o número de dentes ausentes, a saúde geral e a expectativa do paciente influenciam o plano.",
         ],
       },
@@ -252,13 +252,13 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Hoje, a implantodontia pode contar com exames de imagem, planejamento digital e recursos que ajudam a definir posição, angulação e sequência do tratamento com mais precisão. Essa previsibilidade não serve apenas para o profissional. Ela também ajuda o paciente a entender o processo antes de começar.",
           "Em uma avaliação completa, a equipe pode explicar se o caso envolve um implante unitário, múltiplos implantes, prótese sobre implante, enxerto ou reabilitação mais ampla. Também é possível discutir tempo de tratamento, etapas, cuidados, provisórios e manutenção. Esse tipo de clareza reduz medo e melhora a experiência.",
-          "O planejamento também evita que a estética seja pensada separada da função. Um implante precisa estar bem posicionado para receber uma coroa ou prótese que pareça natural, mastigue bem e seja higienizável. A beleza do resultado depende da precisão da base.",
+          "O planejamento também evita que a estética seja pensada separadamente da função. Um implante precisa estar bem posicionado para receber uma coroa ou prótese que pareça natural, permita mastigação adequada e seja higienizável. A beleza do resultado depende da precisão da base.",
         ],
       },
       {
         heading: "O que esperar da avaliação",
         body: [
-          "A primeira avaliação não significa iniciar cirurgia imediatamente. Ela serve para entender o caso. A equipe examina boca, gengiva, dentes remanescentes, mordida, histórico de saúde e, quando necessário, solicita exames complementares. O paciente também explica seus medos, necessidades e objetivos.",
+          "A primeira avaliação não significa iniciar cirurgia imediatamente. Ela serve para entender o caso. A equipe examina a boca, a gengiva, os dentes remanescentes, a mordida, o histórico de saúde e, quando necessário, solicita exames complementares. O paciente também explica seus medos, necessidades e objetivos.",
           "Algumas pessoas querem substituir um dente perdido recentemente. Outras usam próteses antigas e desejam mais estabilidade. Há pacientes que perderam muitos dentes e buscam reabilitação completa. Cada situação exige um plano diferente. Por isso, comparar o próprio caso com o de outra pessoa pode gerar expectativa errada.",
           "Na L'ECLER, o foco é orientar com segurança. O paciente precisa entender o que é possível, quais etapas vêm primeiro e como será acompanhado. Um bom tratamento com implantes é construído com técnica, tempo e cuidado.",
         ],
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Quando falar com o atendimento",
         body: [
           "Se você perdeu dentes, usa prótese desconfortável, evita sorrir ou sente insegurança para mastigar, fale com o atendimento. A equipe pode orientar o agendamento e explicar quais informações são importantes para a avaliação inicial.",
-          "Chame o atendimento da L'ECLER pelo WhatsApp e conte sua situação. O primeiro passo é entender o seu caso, e não assumir que existe uma única solução. Com avaliação individualizada, é possível planejar uma reabilitação que una função, estética e confiança.",
+          "Chame o atendimento da L'ECLER pelo WhatsApp e conte sua situação. O primeiro passo é entender o seu caso e não assumir que existe uma única solução. Com avaliação individualizada, é possível planejar uma reabilitação que una função, estética e confiança.",
         ],
       },
     ],
@@ -292,7 +292,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Gerenciar é diferente de apagar um problema",
         body: [
-          "Muitas pessoas procuram procedimentos quando uma mancha, ruga, poro, flacidez ou perda de viço começa a incomodar. Isso é natural, mas a pele não funciona como um problema isolado. Ela responde a genética, hormônios, exposição solar, sono, alimentação, rotina de skincare, procedimentos anteriores e idade.",
+          "Muitas pessoas procuram procedimentos quando uma mancha, ruga, poro, flacidez ou perda de viço começa a incomodar. Isso é natural, mas a pele não funciona como um problema isolado. Ela responde a fatores como genética, hormônios, exposição solar, sono, alimentação, cuidados domiciliares, procedimentos anteriores e idade.",
           "O gerenciamento dérmico propõe olhar para a pele como um projeto contínuo. Em vez de fazer um procedimento solto e esperar que ele resolva tudo, a equipe organiza etapas: tratar o que incomoda, fortalecer a qualidade da pele, estimular colágeno, manter resultado e prevenir piora. Essa lógica costuma entregar resultados mais consistentes.",
           "Na prática, isso pode envolver peelings, bioestimuladores, laser, microagulhamento, ativos profissionais, hidratação, controle de manchas e ajustes na rotina domiciliar. A escolha depende do tipo de pele, sensibilidade, histórico e objetivo. Não existe uma fórmula única para todas as pessoas.",
         ],
@@ -317,7 +317,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Quando falar com o atendimento",
         body: [
           "Se você sente que sua pele perdeu brilho, apresenta manchas, textura irregular, poros aparentes, flacidez ou sinais de envelhecimento, fale com o atendimento. Você não precisa saber qual tecnologia pedir. A equipe ajuda a direcionar a avaliação e entender o melhor primeiro passo.",
-          "Chame o atendimento da L'ECLER pelo WhatsApp e explique o que incomoda na sua pele. A partir dessa conversa, é possível agendar uma avaliação e construir um plano contínuo, realista e seguro para melhorar qualidade, viço e prevenção.",
+          "Chame o atendimento da L'ECLER pelo WhatsApp e explique o que incomoda na sua pele. A partir dessa conversa, é possível agendar uma avaliação e construir um plano contínuo, realista e seguro para melhorar a qualidade e o viço da pele, além de prevenir sinais do envelhecimento.",
         ],
       },
     ],

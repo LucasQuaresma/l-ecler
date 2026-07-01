@@ -6,9 +6,9 @@ import { openSignupDialog } from "@/lib/signup-dialog";
 const inclusos = [
   "Nossa equipe chama você no WhatsApp",
   "Você conta o que incomoda e o que deseja melhorar",
-  "Recebe um direcionamento inicial para o seu caso",
-  "Entende os tratamentos que podem fazer sentido",
-  "Agenda a avaliação presencial quando estiver pronta para avançar",
+  "Você recebe um direcionamento inicial para o seu caso",
+  "Você entende os tratamentos que podem fazer sentido",
+  "Você agenda a avaliação presencial quando estiver pronta para avançar",
 ];
 
 export function PricingSection() {

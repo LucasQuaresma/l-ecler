@@ -190,7 +190,7 @@ function BlogArticlePage() {
               <h2 className="mt-3 font-display text-3xl">Artigos relacionados</h2>
             </div>
             <Link to="/blog" className="text-sm font-semibold text-gold hover:underline">
-              Ver todos →
+              Ver todos
             </Link>
           </div>
 

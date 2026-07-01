@@ -12,13 +12,13 @@ import { Header } from "@/components/Header";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clínica L'ECLER - Saúde, bem-estar e odontologia integrada" },
+      { title: "Clínica L'ECLER, saúde, bem-estar e odontologia integrada" },
       {
         name: "description",
         content:
           "Clínica L'ECLER em Bragança Paulista: odontologia integrada, Invisalign, Airflow, facetas, implantes, Harmonização Orofacial e estética natural com a Dra. Cássia Blasques.",
       },
-      { property: "og:title", content: "Clínica L'ECLER - Saúde, bem-estar e odontologia integrada" },
+      { property: "og:title", content: "Clínica L'ECLER, saúde, bem-estar e odontologia integrada" },
       {
         property: "og:description",
         content: "Sorriso, face e pele avaliados em conjunto para resultados naturais, seguros e sofisticados.",

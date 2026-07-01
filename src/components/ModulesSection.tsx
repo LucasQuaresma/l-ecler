@@ -162,7 +162,7 @@ export function ModulesSection() {
                   <h3 className="font-display text-xl text-foreground">{m.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.text}</p>
                   <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gold opacity-0 transition-opacity group-hover:opacity-100">
-                    Ver detalhes →
+                    Ver detalhes
                   </span>
                   <div className="pointer-events-none absolute -right-12 -top-12 hidden h-32 w-32 rounded-full bg-gold/10 opacity-0 transition-opacity group-hover:opacity-100 lg:block" />
                 </Link>

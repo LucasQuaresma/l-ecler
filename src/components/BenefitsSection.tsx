@@ -5,7 +5,7 @@ import differentialsImg from "@/assets/home-differentials.jpg";
 const benefits = [
   { icon: ShieldCheck, title: "Segurança antes da estética", text: "Toda indicação considera saúde bucal, anatomia, função e histórico clínico." },
   { icon: UserCheck, title: "Plano feito para o seu rosto", text: "Sem pacote pronto. O plano parte do que você deseja e do que seu caso permite." },
-  { icon: HeartHandshake, title: "Equipe que orienta", text: "Você não precisa saber o procedimento. A equipe ajuda a entender o caminho." },
+  { icon: HeartHandshake, title: "Equipe que orienta", text: "Você não precisa saber qual procedimento pedir. A equipe ajuda a entender o caminho." },
   { icon: Microscope, title: "Tecnologia para prever melhor", text: "Recursos digitais apoiam diagnóstico, conforto e precisão." },
 ];
 

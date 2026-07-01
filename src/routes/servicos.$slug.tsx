@@ -117,22 +117,22 @@ const treatmentHeroVisuals: Record<
 > = {
   "odontologia-estetica": {
     image: treatmentHeroOdontoEsteticaImg,
-    alt: "Sorriso natural em destaque para odontologia estetica",
+    alt: "Sorriso natural em destaque para odontologia estética",
     objectPosition: "center",
   },
   implantes: {
     image: treatmentHeroImplantesImg,
-    alt: "Procedimento odontologico de implante em detalhe",
+    alt: "Procedimento odontológico de implante em detalhe",
     objectPosition: "center",
   },
   proteses: {
     image: treatmentHeroProtesesImg,
-    alt: "Protese odontologica em avaliacao clinica",
+    alt: "Prótese odontológica em avaliação clínica",
     objectPosition: "center",
   },
   "facetas-e-lentes-de-contato": {
     image: treatmentHeroFacetasImg,
-    alt: "Selecao de cor para facetas e lentes de contato dental",
+    alt: "Seleção de cor para facetas e lentes de contato dental",
     objectPosition: "center",
   },
   "ortodontia-invisalign": {
@@ -142,32 +142,32 @@ const treatmentHeroVisuals: Record<
   },
   endodontia: {
     image: treatmentHeroEndodontiaImg,
-    alt: "Atendimento odontologico simbolizando tratamento de canal",
+    alt: "Atendimento odontológico simbolizando tratamento de canal",
     objectPosition: "center",
   },
   "odontologia-preventiva-integrativa": {
     image: treatmentHeroPreventivaImg,
-    alt: "Profilaxia odontologica preventiva em atendimento",
+    alt: "Profilaxia odontológica preventiva em atendimento",
     objectPosition: "center",
   },
   "airflow-prevencao-suica": {
     image: treatmentHeroAirflowImg,
-    alt: "Airflow Prophylaxis Master para prevencao suica",
+    alt: "Airflow Prophylaxis Master para prevenção suíça",
     objectPosition: "center",
   },
   "botox-e-preenchimentos": {
     image: treatmentHeroBotoxImg,
-    alt: "Aplicacao estetica facial para labios e contorno",
+    alt: "Aplicação estética facial para lábios e contorno",
     objectPosition: "center",
   },
   "fios-e-bioestimulo": {
     image: treatmentHeroFiosImg,
-    alt: "Procedimento facial de harmonizacao e bioestimulo",
+    alt: "Procedimento facial de harmonização e bioestímulo",
     objectPosition: "center",
   },
   "gerenciamento-dermico": {
     image: treatmentHeroDermicoImg,
-    alt: "Tratamento de pele para biorregeneracao e bioestimulacao",
+    alt: "Tratamento de pele para biorregeneração e bioestimulação",
     objectPosition: "center",
   },
   "laser-co2-e-hipro": {
@@ -184,7 +184,7 @@ function TreatmentProofSection({ service }: { service: Service }) {
   const proofTitle = isInvisalign
     ? "Invisalign, simulação e evolução do sorriso"
     : isDental
-      ? "Sorrisos, antes/depois e planejamento"
+      ? "Sorrisos, registros de antes e depois e planejamento"
       : "Registros, naturalidade e plano";
   const proofText = isInvisalign
     ? "Em Invisalign, a conversa precisa mostrar mais do que a promessa de dentes alinhados. A equipe apresenta imagens, planejamento digital, referências e etapas para você entender se o alinhador faz sentido para o seu caso."
@@ -213,7 +213,7 @@ function TreatmentProofSection({ service }: { service: Service }) {
                 className="absolute -right-5 -top-5 h-28 w-auto opacity-10"
               />
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                Antes/depois reais, quando autorizados
+                Antes e depois reais, quando autorizados
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Casos clínicos de pacientes não são usados como promessa de resultado igual.
@@ -298,7 +298,7 @@ function TreatmentProofSection({ service }: { service: Service }) {
           />
           {[
             ["01", "Ponto de partida", "O que incomoda, o que precisa ser tratado antes e quais limites o caso apresenta."],
-            ["02", "Simulação e referências", "Fotos, mock-up ou planejamento digital ajudam a enxergar proporção e naturalidade."],
+            ["02", "Simulação e referências", "Fotos, prova estética ou planejamento digital ajudam a enxergar proporção e naturalidade."],
             ["03", "Plano seguro", "A decisão considera estética, função, saúde bucal e manutenção do resultado."],
           ].map(([number, title, text]) => (
             <div key={number} className="rounded-[1.25rem] border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5">
@@ -328,7 +328,7 @@ function ServicePage() {
               O link acessado não corresponde a um tratamento disponível.
             </p>
             <Link to="/" className="mt-6 inline-block text-gold underline">
-              Voltar à home
+              Voltar à página inicial
             </Link>
           </div>
         </div>
@@ -629,7 +629,7 @@ function ServicePage() {
           <div className="flex items-end justify-between gap-4">
             <h3 className="font-display text-2xl">Outros tratamentos</h3>
             <Link to="/" className="text-sm text-gold hover:underline">
-              Ver todos →
+              Ver todos
             </Link>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

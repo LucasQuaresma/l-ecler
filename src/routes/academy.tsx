@@ -43,7 +43,7 @@ export const Route = createFileRoute("/academy")({
 const pilares = [
   { n: "01", icon: Syringe, title: "Toxina Botulínica", text: "Domínio das técnicas modernas: doses, pontos seguros e leitura facial dinâmica, do iniciante ao avançado." },
   { n: "02", icon: Microscope, title: "BIOFACES", text: "Bioestimuladores e biorregeneradores: PDRN, polinucleotídeos, peptídeos, exossomos e enzimas recombinantes." },
-  { n: "03", icon: Layers, title: "Full Threads", text: "Fios faciais com a maior referência nacional do Brasil, vetores, planejamento e segurança." },
+  { n: "03", icon: Layers, title: "Full Threads", text: "Fios faciais com uma das maiores referências nacionais do Brasil: vetores, planejamento e segurança." },
   { n: "04", icon: Wand2, title: "Full Face", text: "Preenchimentos faciais com leitura de terços, projeção e harmonia global do rosto." },
   { n: "05", icon: Droplets, title: "LIPS Advanced", text: "Tratamentos labiais e periorais, desenho, projeção, função e estética em alta performance." },
 ];
@@ -51,7 +51,7 @@ const pilares = [
 const trilha = [
   { tag: "Iniciante", title: "Habilitação", text: "Base sólida, técnica e científica para iniciar com segurança em HOF.", price: "Por módulo" },
   { tag: "Atualização", title: "Imersões", text: "Para quem já atua e quer dominar bioestimuladores, peptídeos, fios e novas tecnologias.", price: "Por imersão" },
-  { tag: "Residência", title: "Residência Completa", text: "A formação ampla e intensiva que reúne todos os pilares, para quem quer dominar a linha inteira.", price: "Condição diferenciada", highlight: true },
+  { tag: "Residência", title: "Residência Completa", text: "A formação ampla e intensiva que reúne todos os pilares para quem quer dominar a linha inteira.", price: "Condição diferenciada", highlight: true },
 ];
 
 const cronograma = [
@@ -361,7 +361,7 @@ function AcademyPage() {
               Cinco fases de uma <span className="italic text-gradient-gold">formação real</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Um percurso desenhado para sair de teoria → demonstração → prática supervisionada → consultório.
+              Um percurso desenhado para levar você da teoria à demonstração, da prática supervisionada ao consultório.
             </p>
           </div>
 
@@ -508,7 +508,7 @@ function AcademyPage() {
               className="absolute -bottom-5 right-4 sm:-right-6 rounded-2xl bg-primary text-primary-foreground p-4 shadow-elegant max-w-[200px]"
             >
               <Clock className="h-5 w-5 text-gold" />
-              <div className="mt-1 font-display text-base leading-tight">Imersão intensiva, prática real do dia 1</div>
+              <div className="mt-1 font-display text-base leading-tight">Imersão intensiva, prática real desde o dia 1</div>
             </motion.div>
             <div className="pointer-events-none absolute -bottom-8 -left-8 h-32 w-32 rounded-full border border-gold/40" />
           </div>

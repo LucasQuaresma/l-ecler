@@ -91,7 +91,7 @@ export function SignatureCareSection() {
 
             <div className="mt-8 rounded-2xl border border-gold/25 bg-primary-foreground/[0.06] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                Casos reais e antes/depois
+                Casos reais autorizados
               </p>
               <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">
                 A clínica trabalha com registros autorizados de pacientes. Eles podem ser

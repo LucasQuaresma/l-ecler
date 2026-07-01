@@ -75,7 +75,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 flex-none text-gold" />
-                <span>R. José Domingues, 577 - Centro, Bragança Paulista - SP</span>
+                <span>R. José Domingues, 577, Centro, Bragança Paulista, SP</span>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 flex-none text-gold" />
@@ -112,8 +112,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-border/60 pt-6 text-center text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Clínica L'ECLER - Todos os direitos reservados.</p>
-          <p className="mt-2">Responsável técnica: Dra. Cássia Blasques - CRO 67279.</p>
+          <p>© {new Date().getFullYear()} Clínica L'ECLER. Todos os direitos reservados.</p>
+          <p className="mt-2">Responsável técnica: Dra. Cássia Blasques, CRO 67279.</p>
         </div>
       </div>
     </footer>

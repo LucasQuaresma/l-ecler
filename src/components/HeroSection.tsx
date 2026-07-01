@@ -87,7 +87,7 @@ export function HeroSection() {
           <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] shadow-elegant ring-1 ring-gold/30">
             <img
               src={heroImg}
-              alt="Dra. Cássia - Clínica L'ECLER"
+              alt="Dra. Cássia, Clínica L'ECLER"
               width={1024}
               height={1536}
               loading="eager"

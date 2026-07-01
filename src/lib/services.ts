@@ -25,8 +25,8 @@ export type Service = {
 };
 
 const standardProcess: Step[] = [
-  { title: "Diagnóstico Online", text: "Conversa inicial e envio de fotos para um direcionamento personalizado antes mesmo de você ir à clínica." },
-  { title: "Avaliação presencial", text: "Exame clínico, análise facial e/ou exames de imagem para construir o plano individualizado." },
+  { title: "Diagnóstico online", text: "Conversa inicial e envio de fotos para um direcionamento personalizado antes mesmo de você ir à clínica." },
+  { title: "Avaliação presencial", text: "Exame clínico, análise facial e, quando necessário, exames de imagem para construir o plano individualizado." },
   { title: "Plano de tratamento", text: "Apresentação do passo a passo, prazos, investimento e simulação do resultado quando aplicável." },
   { title: "Execução técnica", text: "Procedimentos conduzidos pela Dra. Cássia e equipe, com tecnologia de ponta e foco em conforto." },
   { title: "Acompanhamento", text: "Retornos programados, manutenção e protocolos de longevidade do resultado." },
@@ -35,8 +35,8 @@ const standardProcess: Step[] = [
 const sharedDifferentials = [
   "Atendimento conduzido pela Dra. Cássia e equipe multidisciplinar formada dentro do mesmo padrão técnico",
   "Tecnologia de última geração em odontologia e harmonização orofacial",
-  "Plano individualizado, com decisões clínicas baseadas em evidência e estética",
-  "Diagnóstico Online antes da visita à clínica, otimizando seu tempo",
+  "Plano individualizado, com decisões clínicas baseadas em evidências e critérios estéticos",
+  "Diagnóstico online antes da visita à clínica, otimizando seu tempo",
 ];
 
 export const services: Service[] = [
@@ -50,7 +50,7 @@ export const services: Service[] = [
     hero: "Planejamento digital de sorriso com sensibilidade estética e domínio técnico, para um resultado que parece seu desde o primeiro dia.",
     longDescription: [
       "A Odontologia Estética da L'ECLER vai muito além de clarear ou alinhar dentes: é desenho de sorriso. Estudamos proporções faciais, traços, idade, personalidade e função para projetar um sorriso que conversa com o seu rosto.",
-      "Utilizamos protocolos de Digital Smile Design (DSD), mock-up em 3D e simulação prévia para que você visualize o resultado antes de qualquer procedimento irreversível. Cada etapa é validada com você, nada é decidido pela paciente, é decidido com a paciente.",
+      "Utilizamos protocolos de desenho digital do sorriso (DSD), prova estética em 3D e simulação prévia para que você visualize o resultado antes de qualquer procedimento irreversível. Cada etapa é validada com você: nada é decidido para a paciente, e sim com a paciente.",
     ],
     indications: [
       "Quem quer melhorar a forma, cor ou proporção dos dentes",
@@ -60,7 +60,7 @@ export const services: Service[] = [
     ],
     benefits: [
       { title: "Planejamento digital (DSD)", text: "Projeto 3D do sorriso antes de iniciar qualquer procedimento." },
-      { title: "Mock-up testável", text: "Você experimenta o sorriso novo na boca antes de decidir." },
+      { title: "Prova estética testável", text: "Você experimenta o sorriso novo na boca antes de decidir." },
       { title: "Clareamento profissional", text: "Protocolo seguro, com avaliação de sensibilidade e manutenção." },
       { title: "Estética indetectável", text: "Materiais nobres que mimetizam o esmalte natural." },
     ],
@@ -68,12 +68,12 @@ export const services: Service[] = [
     differentials: sharedDifferentials,
     results: [
       "Sorriso harmônico, proporcional ao seu rosto",
-      "Aparência natural, ninguém precisa saber",
+      "Aparência natural, sem sinais artificiais",
       "Mais segurança ao sorrir, falar e aparecer",
     ],
     faq: [
-      { q: "O resultado fica natural?", a: "Sim. Todo o planejamento é guiado pela análise do seu rosto, traços e proporções, o objetivo é parecer seu, só que melhor." },
-      { q: "Vou ver o resultado antes?", a: "Sim. Fazemos planejamento digital e mock-up para você validar antes de qualquer procedimento definitivo." },
+      { q: "O resultado fica natural?", a: "Sim. Todo o planejamento é guiado pela análise do seu rosto, traços e proporções. O objetivo é parecer seu, só que melhor." },
+      { q: "Vou ver o resultado antes?", a: "Sim. Fazemos planejamento digital e prova estética para você validar antes de qualquer procedimento definitivo." },
       { q: "Quanto tempo dura o tratamento?", a: "Varia conforme o caso. Casos estéticos simples levam poucas semanas; reabilitações mais amplas, alguns meses, com cronograma claro." },
     ],
   },
@@ -86,20 +86,20 @@ export const services: Service[] = [
     text: "Reabilitação completa com precisão técnica e conforto.",
     hero: "Reabilitação oral com implantes de última geração, planejamento digital guiado e equipe multidisciplinar para devolver função, estética e autoestima.",
     longDescription: [
-      "Perder um ou vários dentes não é apenas estético: compromete mastigação, fala, suporte facial e autoestima. Nossa abordagem com implantes parte do diagnóstico tridimensional para devolver tudo isso com previsibilidade.",
-      "Trabalhamos com cirurgia guiada por computador, marcas premium de implantes e equipe multidisciplinar (cirurgia, prótese, estética). Em casos indicados, oferecemos carga imediata, você sai com dente provisório no mesmo dia.",
+      "Perder um ou vários dentes não é uma questão apenas estética: compromete mastigação, fala, suporte facial e autoestima. Nossa abordagem com implantes parte do diagnóstico tridimensional para devolver tudo isso com previsibilidade.",
+      "Trabalhamos com cirurgia guiada por computador, marcas premium de implantes e equipe multidisciplinar (cirurgia, prótese e estética). Em casos indicados, oferecemos carga imediata, e você sai com dente provisório no mesmo dia.",
     ],
     indications: [
       "Perda de um ou mais dentes",
       "Necessidade de troca de próteses antigas que ficaram desconfortáveis",
-      "Reabilitação total da arcada (protocolo / All-on-X)",
+      "Reabilitação total da arcada (protocolo All-on-X)",
       "Pacientes que querem voltar a mastigar e sorrir com segurança",
     ],
     benefits: [
       { title: "Cirurgia guiada", text: "Planejamento 3D que aumenta precisão e reduz tempo cirúrgico." },
       { title: "Carga imediata", text: "Quando indicado, prótese provisória no mesmo dia da cirurgia." },
       { title: "Implantes premium", text: "Marcas com décadas de pesquisa e altíssima taxa de sucesso." },
-      { title: "Equipe multidisciplinar", text: "Cirurgia, prótese e estética conversando no mesmo plano." },
+      { title: "Equipe multidisciplinar", text: "Cirurgia, prótese e estética integradas no mesmo plano." },
     ],
     process: standardProcess,
     differentials: sharedDifferentials,
@@ -124,7 +124,7 @@ export const services: Service[] = [
     hero: "Próteses fixas, removíveis e sobre implantes desenvolvidas com materiais nobres e tecnologia CAD/CAM para máxima precisão, conforto e estética.",
     longDescription: [
       "Uma boa prótese é a soma de diagnóstico preciso, planejamento estético e execução técnica. Trabalhamos com zircônia, dissilicato e resinas de última geração para resultados que devolvem função sem abrir mão da estética.",
-      "Tudo é planejado individualmente, considerando oclusão, estética facial e expectativa de cada paciente. Próteses bem feitas não são notadas, são vividas.",
+      "Tudo é planejado individualmente, considerando oclusão, estética facial e expectativa de cada paciente. Próteses bem feitas não são notadas; são vividas.",
     ],
     indications: [
       "Substituição de próteses antigas",
@@ -146,7 +146,7 @@ export const services: Service[] = [
       "Mastigação devolvida sem desconforto",
     ],
     faq: [
-      { q: "Próteses modernas parecem dentes naturais?", a: "Sim. Com zircônia / dissilicato e técnica adequada, é praticamente impossível diferenciar." },
+      { q: "Próteses modernas parecem dentes naturais?", a: "Sim. Com zircônia, dissilicato e técnica adequada, é praticamente impossível diferenciar." },
       { q: "Quanto tempo demora?", a: "Em geral, de 2 a 6 semanas após o preparo, conforme complexidade." },
       { q: "Vou precisar de ajustes?", a: "Pequenos ajustes finais são comuns para garantir oclusão e conforto perfeitos." },
     ],
@@ -161,7 +161,7 @@ export const services: Service[] = [
     hero: "Lâminas ultrafinas em cerâmica para redesenhar forma, cor e proporção do sorriso com mínimo desgaste e máxima naturalidade.",
     longDescription: [
       "Facetas e lentes de contato são uma das soluções mais elegantes da odontologia estética moderna: corrigem cor, forma, alinhamento aparente e proporção com desgaste mínimo (em muitos casos, sem desgaste).",
-      "Trabalhamos com planejamento digital, mock-up testável e ceramistas parceiros de altíssimo padrão. Você só fecha o tratamento depois de aprovar o sorriso na sua própria boca.",
+      "Trabalhamos com planejamento digital, prova estética testável e ceramistas parceiros de altíssimo padrão. Você só fecha o tratamento depois de aprovar o sorriso na sua própria boca.",
     ],
     indications: [
       "Dentes manchados que não respondem ao clareamento",
@@ -192,18 +192,18 @@ export const services: Service[] = [
     slug: "ortodontia-invisalign",
     icon: AlignCenter,
     category: "Odontologia",
-    title: "Ortodontia / Invisalign",
+    title: "Ortodontia e Invisalign",
     tagline: "Alinhamento discreto, previsível e eficiente.",
     text: "Alinhamento discreto, previsível e eficiente.",
     hero: "Alinhadores invisíveis Invisalign e aparelhos estéticos com planejamento digital 3D, para alinhar o sorriso sem interromper sua vida.",
     longDescription: [
-      "O Invisalign substitui o aparelho fixo por alinhadores transparentes removíveis. O planejamento é digital, 3D e mostra o movimento dos dentes desde a primeira até a última etapa, você sabe exatamente o que esperar.",
-      "Por ser removível, não interfere em alimentação, higiene, eventos sociais ou vida profissional. É a escolha de quem quer alinhar o sorriso com discrição e previsibilidade.",
+      "O Invisalign substitui o aparelho fixo por alinhadores transparentes removíveis. O planejamento é digital e em 3D, mostrando o movimento dos dentes desde a primeira até a última etapa. Assim, você sabe exatamente o que esperar.",
+      "Por ser removível, não interfere na alimentação, na higiene, em eventos sociais ou na vida profissional. É a escolha de quem quer alinhar o sorriso com discrição e previsibilidade.",
     ],
     indications: [
       "Apinhamentos leves a moderados",
       "Diastemas (espaços) entre dentes",
-      "Correção pré-protética (antes de lentes/facetas)",
+      "Correção pré-protética antes de lentes ou facetas",
       "Adultos que rejeitam aparelho fixo aparente",
     ],
     benefits: [
@@ -220,9 +220,9 @@ export const services: Service[] = [
       "Base ideal para tratamentos estéticos posteriores",
     ],
     faq: [
-      { q: "Invisalign serve para qualquer caso?", a: "Para a maioria dos casos sim. Em situações muito complexas, indicamos a melhor estratégia, às vezes combinada." },
+      { q: "Invisalign serve para qualquer caso?", a: "Para a maioria dos casos, sim. Em situações muito complexas, indicamos a melhor estratégia, às vezes combinada." },
       { q: "Quanto tempo demora?", a: "Em média de 6 a 18 meses, dependendo da complexidade. O plano mostra a duração estimada já no início." },
-      { q: "Preciso usar muitas horas por dia?", a: "Sim, em torno de 22h/dia. Removível apenas para alimentação e higiene." },
+      { q: "Preciso usar muitas horas por dia?", a: "Sim, em torno de 22 horas por dia. Removível apenas para alimentação e higiene." },
     ],
   },
   {
@@ -235,7 +235,7 @@ export const services: Service[] = [
     hero: "Tratamento endodôntico com microscopia e instrumentação rotatória, para preservar o dente natural com segurança, precisão e conforto.",
     longDescription: [
       "O tratamento de canal mudou. Com microscopia operatória e instrumentação rotatória, é possível tratar canais com altíssima precisão, sessões mais curtas e pós-operatório muito mais confortável do que antigamente.",
-      "Salvar um dente natural quase sempre é a melhor escolha, para a estética, para a oclusão e para a longevidade da boca como um todo.",
+      "Salvar um dente natural quase sempre é a melhor escolha, tanto para a estética quanto para a oclusão e a longevidade da boca como um todo.",
     ],
     indications: [
       "Dor espontânea ou ao mastigar",
@@ -257,9 +257,9 @@ export const services: Service[] = [
       "Base para restauração ou prótese definitiva",
     ],
     faq: [
-      { q: "Canal dói?", a: "Não. O dente costuma doer antes, o tratamento é o que tira a dor. É feito com anestesia local eficaz." },
+      { q: "Canal dói?", a: "Não. O dente costuma doer antes; o tratamento é o que tira a dor. É feito com anestesia local eficaz." },
       { q: "Em quantas sessões?", a: "A maioria dos casos é resolvida em uma ou duas sessões." },
-      { q: "Vou precisar de coroa depois?", a: "Em muitos casos sim, especialmente em dentes posteriores. Avaliamos o melhor protocolo para proteger o dente tratado." },
+      { q: "Vou precisar de coroa depois?", a: "Em muitos casos, sim, especialmente em dentes posteriores. Avaliamos o melhor protocolo para proteger o dente tratado." },
     ],
   },
   {
@@ -271,8 +271,8 @@ export const services: Service[] = [
     text: "Saúde bucal aliada ao bem-estar do corpo todo.",
     hero: "Uma visão integrativa que conecta saúde bucal e bem-estar sistêmico, para prevenir antes de tratar e manter equilíbrio a longo prazo.",
     longDescription: [
-      "A boca é porta de entrada do corpo. Inflamações, microbioma desequilibrado e hábitos do dia a dia impactam saúde sistêmica, e vice-versa. Por isso trabalhamos com uma visão integrativa.",
-      "Protocolos preventivos personalizados, orientação de higiene, avaliação de hábitos, manutenção profissional periódica e olhar atento ao paciente como um todo, não apenas à boca isolada.",
+      "A boca é uma porta de entrada para o corpo. Inflamações, microbioma desequilibrado e hábitos do dia a dia impactam a saúde sistêmica, e vice-versa. Por isso, trabalhamos com uma visão integrativa.",
+      "Protocolos preventivos personalizados, orientação de higiene, avaliação de hábitos, manutenção profissional periódica e olhar atento ao paciente como um todo, e não apenas à boca isolada.",
     ],
     indications: [
       "Quem quer prevenir problemas antes que apareçam",
@@ -321,7 +321,7 @@ export const services: Service[] = [
       { title: "Tecnologia suíça", text: "Airflow Prophylaxis Master para profilaxia moderna e precisa." },
       { title: "Mais conforto", text: "Limpeza profissional com experiência mais leve para o paciente." },
       { title: "Manutenção estética", text: "Apoio na preservação de facetas, lentes, implantes e alinhadores." },
-      { title: "Prevenção integrativa", text: "Cuidado contínuo para proteger saúde, estética e longevidade do sorriso." },
+      { title: "Prevenção integrativa", text: "Cuidado contínuo para proteger a saúde, a estética e a longevidade do sorriso." },
     ],
     process: standardProcess,
     differentials: sharedDifferentials,
@@ -343,9 +343,9 @@ export const services: Service[] = [
     title: "Botox, Preenchimentos e Reestruturação",
     tagline: "Suavização de linhas e reposição estratégica, sem exagero.",
     text: "Toxina, preenchimentos e reestruturação facial com naturalidade.",
-    hero: "Toxina botulínica e ácido hialurônico aplicados com técnica refinada - para suavizar linhas e reestruturar pontos específicos preservando expressão e identidade.",
+    hero: "Toxina botulínica e ácido hialurônico aplicados com técnica refinada para suavizar linhas e reestruturar pontos específicos, preservando expressão e identidade.",
     longDescription: [
-      "Harmonização não é mudar o rosto. É devolver equilíbrio. Toxina botulínica suaviza linhas dinâmicas; preenchimentos com ácido hialurônico podem reestruturar pontos específicos quando há indicação - sempre respeitando expressão e proporção facial.",
+      "Harmonização não é mudar o rosto. É devolver equilíbrio. Toxina botulínica suaviza linhas dinâmicas; preenchimentos com ácido hialurônico podem reestruturar pontos específicos quando há indicação, sempre respeitando expressão e proporção facial.",
       "Na L'ECLER, esses recursos entram dentro de um plano maior, ao lado de fios, bioestimulação, biorregeneração e tecnologias de rejuvenescimento. O objetivo é sempre o rosto descansado, nunca o rosto modificado.",
     ],
     indications: [
@@ -357,7 +357,7 @@ export const services: Service[] = [
     benefits: [
       { title: "Toxina premium", text: "Produtos de alta qualidade e segurança comprovada." },
       { title: "Ácido hialurônico premium", text: "Reestruturação pontual, reversível e segura." },
-      { title: "Técnica conservadora", text: "Menos é mais - o objetivo é parecer descansada, não diferente." },
+      { title: "Técnica conservadora", text: "Menos é mais. O objetivo é parecer descansada, não diferente." },
       { title: "Plano individualizado", text: "Análise facial completa antes de qualquer aplicação." },
     ],
     process: standardProcess,
@@ -383,7 +383,7 @@ export const services: Service[] = [
     hero: "Fios faciais para efeito lifting, sustentação e estímulo de colágeno, com planejamento técnico para preservar identidade e naturalidade.",
     longDescription: [
       "Com o tempo, o rosto perde colágeno, sustentação e firmeza. Os fios faciais podem criar efeito lifting e estimular colágeno quando bem indicados, respeitando vetores, anatomia e proporção.",
-      "A Dra. Cássia é referência em fios faciais e conduz esse tratamento com plano individualizado. São protocolos para quem quer envelhecer com elegância, sem mudar o rosto - apenas mantendo firmeza, viço e contorno.",
+      "A Dra. Cássia é referência em fios faciais e conduz esse tratamento com plano individualizado. São protocolos para quem quer envelhecer com elegância, sem mudar o rosto, apenas mantendo firmeza, viço e contorno.",
     ],
     indications: [
       "Flacidez leve a moderada de face e pescoço",
@@ -394,7 +394,7 @@ export const services: Service[] = [
     benefits: [
       { title: "Fios de sustentação", text: "Lifting suave com estímulo de colágeno." },
       { title: "Vetores bem planejados", text: "A tração respeita anatomia, expressão e proporção." },
-      { title: "Efeito natural", text: "Resultado se constrói em semanas - nada artificial." },
+      { title: "Efeito natural", text: "O resultado se constrói em semanas, sem aparência artificial." },
       { title: "Qualidade da pele", text: "Mais firmeza, viço e textura." },
     ],
     process: standardProcess,
@@ -419,7 +419,7 @@ export const services: Service[] = [
     text: "Tratamentos atuais para colágeno, viço, textura e qualidade da pele.",
     hero: "Protocolos com bioestimuladores, biorregeneradores, peptídeos, peelings e ativos de alta performance para tratar textura, viço e saúde da pele de forma progressiva.",
     longDescription: [
-      "Pele bonita não é fruto de um único procedimento - é fruto de gerenciamento. Construímos protocolos contínuos com bioestimuladores, biorregeneradores, peptídeos, peelings, microagulhamento e ativos de alta performance.",
+      "Pele bonita não é fruto de um único procedimento. É fruto de gerenciamento. Construímos protocolos contínuos com bioestimuladores, biorregeneradores, peptídeos, peelings, microagulhamento e ativos de alta performance.",
       "É a diferença entre tratar um problema pontual e cuidar da pele como um ativo: melhor textura, menos manchas, mais viço e prevenção real do envelhecimento.",
     ],
     indications: [
@@ -457,7 +457,7 @@ export const services: Service[] = [
     hero: "Laser de CO2 fracionado e ultrassom microfocado HIPRO para rejuvenescimento profundo, firmeza e renovação com tecnologia de ponta.",
     longDescription: [
       "Laser de CO2 fracionado é referência em rejuvenescimento: trata manchas, melhora textura, suaviza linhas finas e cicatrizes de acne, com resultado que se constrói ao longo de meses.",
-      "HIPRO (ultrassom microfocado de alta intensidade) entrega energia em profundidade selecionada para promover lifting e estímulo de colágeno - sem cortes, sem internação e sem afastamento prolongado.",
+      "HIPRO (ultrassom microfocado de alta intensidade) entrega energia em profundidade selecionada para promover lifting e estímulo de colágeno, sem cortes, sem internação e sem afastamento prolongado.",
     ],
     indications: [
       "Rejuvenescimento facial profundo",
@@ -479,7 +479,7 @@ export const services: Service[] = [
       "Lifting natural sem cirurgia",
     ],
     faq: [
-      { q: "Tem tempo de recuperação?", a: "Laser de CO₂ exige alguns dias de recuperação social (vermelhidão e descamação). HIPRO praticamente não tem downtime." },
+      { q: "Tem tempo de recuperação?", a: "Laser de CO₂ exige alguns dias de recuperação social (vermelhidão e descamação). HIPRO praticamente não exige tempo de recuperação." },
       { q: "Em quantas sessões vejo resultado?", a: "CO₂ costuma ser sessão única ou poucas sessões. HIPRO em geral 1 a 2 sessões por ano, com efeito progressivo." },
       { q: "É seguro?", a: "Sim, quando indicado e executado com critério. Avaliação prévia define se você é candidata." },
     ],
