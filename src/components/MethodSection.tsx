@@ -72,13 +72,13 @@ export function MethodSection() {
   return (
     <section id="metodo" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Como funciona
           </span>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
-            Do primeiro contato à cadeira da clínica,{" "}
-            <span className="text-gradient-gold">você sabe o próximo passo.</span>
+            <span className="lg:block">Do primeiro contato à cadeira da clínica,</span>{" "}
+            <span className="text-gradient-gold lg:block">você sabe o próximo passo.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
             Nada de escolher procedimento no escuro. A jornada foi pensada para transformar
