@@ -9,7 +9,7 @@ import invisalignImg from "@/assets/invisalign-logo-aligner.jpeg";
 import leclerSymbolImg from "@/assets/lecler-symbol.png";
 
 const carePillars = [
-  "Odontologia integrada e especializada",
+  "Especialidades odontológicas na clínica",
   "Invisalign Doctor",
   "Airflow suíço para prevenção",
   "Facetas, lentes, implantes e próteses",
@@ -70,13 +70,13 @@ export function SignatureCareSection() {
               </span>
             </div>
             <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl lg:text-5xl">
-              O sorriso é o ponto de partida de um plano mais completo.
+              Na Clínica L'ECLER, a odontologia integrada é o carro-chefe.
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-primary-foreground/75 sm:text-base">
-              A L'ECLER une saúde bucal, função, estética dental e harmonização orofacial.
-              Antes de falar em facetas, Invisalign, implantes ou fios faciais, a equipe
-              entende a base: gengiva, mordida, estrutura, expressão e o que precisa parecer
-              naturalmente seu.
+              O sorriso é o ponto de partida de um plano mais completo. A clínica reúne
+              estética dental, prevenção, Invisalign, implantes, próteses, endodontia,
+              reabilitação e Harmonização Orofacial para avaliar saúde, função e
+              naturalidade no mesmo cuidado.
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -109,7 +109,7 @@ export function SignatureCareSection() {
             </Button>
           </motion.div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:gap-5">
+          <div className="-mx-6 grid auto-cols-[78%] grid-flow-col gap-4 overflow-x-auto px-6 pb-3 sm:mx-0 sm:grid-flow-row sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:gap-5">
             {showcase.map((item, index) => (
               <motion.article
                 key={item.title}

@@ -47,22 +47,22 @@ export function CookieBanner() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-4 right-4 z-50 w-[calc(100%-2rem)] max-w-sm rounded-2xl border border-border bg-card p-4 shadow-elegant"
+          className="fixed bottom-3 right-3 z-50 w-[calc(100%-1.5rem)] max-w-sm rounded-2xl border border-border bg-card p-3 shadow-elegant sm:bottom-4 sm:right-4 sm:w-[calc(100%-2rem)] sm:p-4"
         >
           <div className="flex items-start gap-3">
-            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gold/15 text-gold">
+            <div className="hidden h-9 w-9 shrink-0 place-items-center rounded-full bg-gold/15 text-gold sm:grid">
               <Cookie className="h-4 w-4" />
             </div>
             <div className="flex-1">
-              <p className="text-sm text-foreground">
+              <p className="text-xs leading-relaxed text-foreground sm:text-sm">
                 Usamos cookies para melhorar sua experiência. Veja nossa{" "}
                 <a href="/cookies" className="underline">Política de Cookies</a>.
               </p>
-              <div className="mt-3 flex gap-2">
+              <div className="mt-2 flex gap-2 sm:mt-3">
                 <Button
                   size="sm"
                   onClick={() => handle(true)}
-                  className="h-8 rounded-full bg-gradient-gold text-xs font-semibold text-primary"
+                  className="h-8 rounded-full bg-gradient-gold px-4 text-xs font-semibold text-primary"
                 >
                   Aceitar
                 </Button>

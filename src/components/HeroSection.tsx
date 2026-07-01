@@ -29,15 +29,16 @@ export function HeroSection() {
             Clínica L'ECLER | Saúde e bem-estar
           </div>
 
-          <h1 className="mt-6 font-display text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-            Odontologia integrada, estética natural e{" "}
-            <span className="text-gradient-gold">bem-estar</span> em um só plano.
+          <h1 className="mt-6 font-display text-4xl leading-[1.03] sm:text-5xl lg:text-[4rem]">
+            Odontologia integrada,
+            <span className="block">estética natural e</span>
+            <span className="block text-gradient-gold">bem-estar.</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
             A L'ECLER é uma clínica de saúde e bem-estar com foco em odontologia
-            integrada e especializada. Sorriso, face e pele são avaliados em conjunto
-            para construir um resultado natural, seguro e fiel à sua identidade.
+            integrada, Harmonização Orofacial e tecnologias para cuidar do sorriso,
+            da face e da pele com naturalidade.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -59,10 +60,14 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-muted-foreground sm:text-sm lg:justify-start">
+          <div className="mt-6 text-xs text-muted-foreground sm:hidden">
+            <strong className="text-foreground">26+</strong> anos em odontologia | Clínica multidisciplinar
+          </div>
+
+          <div className="mt-8 hidden flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-muted-foreground sm:flex sm:text-sm lg:justify-start">
             <div><strong className="text-foreground">26+</strong> anos em odontologia</div>
             <div className="hidden h-4 w-px bg-border sm:block" />
-            <div><strong className="text-foreground">14+</strong> anos em HOF</div>
+            <div><strong className="text-foreground">14+</strong> anos em Harmonização Orofacial</div>
             <div className="hidden h-4 w-px bg-border sm:block" />
             <div><strong className="text-foreground">Clínica</strong> multidisciplinar</div>
           </div>
@@ -107,7 +112,7 @@ export function HeroSection() {
               </div>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">Dra. Cássia Blasques</div>
-                <div className="text-sm font-medium text-foreground">Cirurgiã-dentista | HOF | CRO 67279</div>
+                <div className="text-sm font-medium text-foreground">Cirurgiã-dentista | Harmonização Orofacial | CRO 67279</div>
               </div>
             </div>
           </motion.div>
