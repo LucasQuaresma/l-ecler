@@ -76,7 +76,7 @@ export function MethodSection() {
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Como funciona
           </span>
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 py-1 font-display text-3xl leading-[1.14] sm:text-4xl lg:text-5xl">
             <span className="lg:block">Do primeiro contato à cadeira da clínica,</span>{" "}
             <span className="text-gradient-gold lg:block">você sabe o próximo passo.</span>
           </h2>
