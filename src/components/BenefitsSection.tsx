@@ -13,11 +13,11 @@ export function BenefitsSection() {
   return (
     <section id="beneficios" className="relative bg-secondary/40 py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-6xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Por que a L'ECLER
           </span>
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-[2.85rem] xl:text-[3.25rem]">
             Você sente quando está em{" "}
             <span className="text-gradient-gold">boas mãos</span>.
           </h2>
