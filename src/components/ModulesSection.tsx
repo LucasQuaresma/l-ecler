@@ -44,15 +44,18 @@ export function ModulesSection() {
   return (
     <section id="modulos" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-6xl text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Especialidades
           </span>
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl">
-            Odontologia especializada, Harmonização Orofacial e tecnologias{" "}
-            <span className="text-gradient-gold">no mesmo cuidado.</span>
+          <h2 className="mt-3 font-display text-[1.7rem] leading-[1.04] sm:text-[2.25rem] lg:text-[2.15rem] xl:text-[2.25rem]">
+            <span className="block">Odontologia especializada,</span>
+            <span className="block">
+              Harmonização Orofacial e tecnologias{" "}
+              <span className="text-gradient-gold">no mesmo cuidado.</span>
+            </span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             Na Clínica L'ECLER, a odontologia integrada é o carro-chefe. A clínica
             reúne especialidades como estética dental, implantes, próteses, facetas,
             lentes, Invisalign, canal e prevenção, com Harmonização Orofacial como
