@@ -37,9 +37,10 @@ export function HeroSection() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
-            A L'ECLER é uma clínica de saúde e bem-estar com foco em odontologia
-            integrada, Harmonização Orofacial e tecnologias para cuidar do sorriso,
-            da face e da pele com naturalidade.
+            A L'ECLER é uma clínica multiprofissional de saúde e bem-estar, com foco em
+            odontologia integrada, Harmonização Orofacial e tecnologias para cuidar do
+            sorriso, da face e da pele com naturalidade, integrando também cuidados nas
+            áreas de medicina, psicologia, nutrição e demais áreas da saúde e do bem-estar.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -62,13 +63,13 @@ export function HeroSection() {
           </div>
 
           <div className="mt-6 text-xs text-muted-foreground sm:hidden">
-            <strong className="text-foreground">26+</strong> anos em odontologia | Clínica multidisciplinar
+            <strong className="text-foreground">Odontologia desde 1998</strong> | Clínica multidisciplinar
           </div>
 
           <div className="mt-8 hidden flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-muted-foreground sm:flex sm:text-sm lg:justify-start">
-            <div><strong className="text-foreground">26+</strong> anos em odontologia</div>
+            <div><strong className="text-foreground">Odontologia</strong> desde 1998</div>
             <div className="hidden h-4 w-px bg-border sm:block" />
-            <div><strong className="text-foreground">14+</strong> anos em Harmonização Orofacial</div>
+            <div><strong className="text-foreground">Harmonização Orofacial</strong> desde 2012</div>
             <div className="hidden h-4 w-px bg-border sm:block" />
             <div><strong className="text-foreground">Clínica</strong> multidisciplinar</div>
           </div>

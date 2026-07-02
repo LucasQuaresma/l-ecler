@@ -51,8 +51,7 @@ export function ModulesSection() {
           <h2 className="mt-3 font-display text-[1.7rem] leading-[1.04] sm:text-[2.25rem] lg:text-[2.15rem] xl:text-[2.25rem]">
             <span className="block">Odontologia especializada,</span>
             <span className="block">
-              Harmonização Orofacial e tecnologias{" "}
-              <span className="text-gradient-gold">no mesmo cuidado.</span>
+              Harmonização Orofacial e <span className="text-gradient-gold">tecnologias.</span>
             </span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">

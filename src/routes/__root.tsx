@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Clínica L'ECLER" },
-      { name: "description", content: "Clínica L'ECLER em Bragança Paulista: odontologia integrada, harmonização orofacial, estética avançada e agendamento pelo WhatsApp." },
+      { name: "description", content: "Clínica L'ECLER em Bragança Paulista: saúde e bem-estar multiprofissional, odontologia integrada, harmonização orofacial, estética avançada e agendamento pelo WhatsApp." },
       { name: "author", content: "Clínica L'ECLER" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

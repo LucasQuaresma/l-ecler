@@ -77,7 +77,7 @@ export function SignatureCareSection() {
               O sorriso é o ponto de partida de um plano mais completo. A clínica reúne
               estética dental, prevenção, Invisalign, implantes, próteses, endodontia,
               reabilitação e Harmonização Orofacial para avaliar saúde, função e
-              naturalidade no mesmo cuidado.
+              naturalidade com segurança.
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-2">

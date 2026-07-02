@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Clínica L'ECLER em Bragança Paulista: odontologia integrada, Invisalign, Airflow, facetas, implantes, Harmonização Orofacial e estética natural com a Dra. Cássia Blasques.",
+          "Clínica L'ECLER em Bragança Paulista: saúde e bem-estar multiprofissional, odontologia integrada, Invisalign, Airflow, Harmonização Orofacial e estética natural com a Dra. Cássia Blasques.",
       },
       { property: "og:title", content: "Clínica L'ECLER, saúde, bem-estar e odontologia integrada" },
       {

@@ -15,8 +15,8 @@ export function Footer() {
         className="pointer-events-none absolute right-8 top-10 hidden h-44 w-auto opacity-[0.08] sm:block"
       />
       <div className="relative mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="md:col-span-1">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
+          <div>
             <Link to="/" className="inline-flex" aria-label="Clínica L'ECLER">
               <img
                 src={leclerLogo}
@@ -33,8 +33,8 @@ export function Footer() {
               className="mt-4 h-9 w-auto opacity-75"
             />
             <p className="mt-3 text-sm text-muted-foreground">
-              Odontologia integrada, harmonização orofacial e estética avançada para quem busca
-              resultado natural, saúde e segurança.
+              Clínica multiprofissional de saúde e bem-estar, com odontologia integrada,
+              harmonização orofacial e estética avançada.
             </p>
             <div className="mt-5 flex gap-3">
               <a
@@ -49,7 +49,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Tratamentos
             </h4>
@@ -65,6 +65,18 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              Saúde e bem-estar
+            </h4>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>Medicina</li>
+              <li>Psicologia</li>
+              <li>Nutrição</li>
+              <li>Demais especialidades da saúde e do bem-estar</li>
             </ul>
           </div>
 

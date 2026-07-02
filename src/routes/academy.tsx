@@ -63,7 +63,7 @@ const cronograma = [
 ];
 
 const stats = [
-  { v: "14+", l: "anos em HOF" },
+  { v: "Desde 2012", l: "em HOF" },
   { v: "5", l: "pilares técnicos" },
   { v: "100%", l: "prática real" },
   { v: "1:1", l: "mentoria próxima" },
@@ -429,8 +429,8 @@ function AcademyPage() {
               Dra. <span className="italic text-gradient-gold">Cássia Blasques</span>
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Cirurgiã-dentista há 26 anos, especialista em Harmonização Orofacial há mais
-              de 14 anos e referência nacional em Fios Faciais no Brasil. Formação
+              Cirurgiã-dentista desde 1998, especialista em Harmonização Orofacial desde
+              2012 e referência nacional em Fios Faciais no Brasil. Formação
               internacional em Harvard (MARC, Boston), Yonsei University (Coreia do Sul),
               Suíça e Itália. Especialista científica da equipe de Speakers da Vida Bela Med,
               organizadora do primeiro congresso exclusivo de fios faciais do Brasil e
