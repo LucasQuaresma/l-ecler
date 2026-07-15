@@ -133,12 +133,13 @@ function CursoFiosPage() {
             transition={{ duration: 0.6 }}
             className="font-display text-5xl leading-[0.95] sm:text-6xl lg:text-7xl"
           >
-            FIOS
+            CURSO DE
             <br />
             <span className="bg-gradient-to-r from-[#f0d78c] via-[#c9a84c] to-[#8b6f2a] bg-clip-text text-transparent">
-              FACIAIS
+              FIOS FACIAIS
             </span>
           </motion.h1>
+
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
