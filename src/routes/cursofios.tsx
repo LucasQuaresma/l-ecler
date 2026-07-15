@@ -96,7 +96,7 @@ function CursoFiosPage() {
       }).catch(() => {});
 
 
-      navigate({ to: "/obrigado" });
+      navigate({ to: "/obrigadofios" });
     } catch (err) {
       console.error(err);
       toast.error("Não foi possível enviar. Tente novamente.");
