@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AcademyRouteImport } from './routes/academy'
@@ -26,6 +27,11 @@ const PrivacidadeRoute = PrivacidadeRouteImport.update({
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursofiosRoute = CursofiosRouteImport.update({
+  id: '/cursofios',
+  path: '/cursofios',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CookiesRoute = CookiesRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/academy': typeof AcademyRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
+  '/cursofios': typeof CursofiosRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/academy': typeof AcademyRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
+  '/cursofios': typeof CursofiosRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/academy': typeof AcademyRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
+  '/cursofios': typeof CursofiosRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog_/$slug': typeof BlogSlugRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/academy'
     | '/blog'
     | '/cookies'
+    | '/cursofios'
     | '/obrigado'
     | '/privacidade'
     | '/blog/$slug'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/academy'
     | '/blog'
     | '/cookies'
+    | '/cursofios'
     | '/obrigado'
     | '/privacidade'
     | '/blog/$slug'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/academy'
     | '/blog'
     | '/cookies'
+    | '/cursofios'
     | '/obrigado'
     | '/privacidade'
     | '/blog_/$slug'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AcademyRoute: typeof AcademyRoute
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
+  CursofiosRoute: typeof CursofiosRoute
   ObrigadoRoute: typeof ObrigadoRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursofios': {
+      id: '/cursofios'
+      path: '/cursofios'
+      fullPath: '/cursofios'
+      preLoaderRoute: typeof CursofiosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cookies': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AcademyRoute: AcademyRoute,
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
+  CursofiosRoute: CursofiosRoute,
   ObrigadoRoute: ObrigadoRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   BlogSlugRoute: BlogSlugRoute,
@@ -208,13 +229,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
