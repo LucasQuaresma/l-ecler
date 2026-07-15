@@ -90,11 +90,12 @@ function CursoFiosPage() {
       });
       if (error) throw error;
 
-      fetch(N8N_WEBHOOK_URL, {
+      fetch("https://projeto01-n8n.gmxuno.easypanel.host/webhook/fioagosto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       }).catch(() => {});
+
 
       navigate({ to: "/obrigado" });
     } catch (err) {
