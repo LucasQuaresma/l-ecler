@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { N8N_WEBHOOK_URL } from "@/lib/signup-dialog";
-import heroImg from "@/assets/cursofios-hero.png.asset.json";
+import heroImg from "@/assets/cursofios-cassia.png.asset.json";
 
 export const Route = createFileRoute("/cursofios")({
   ssr: false,
