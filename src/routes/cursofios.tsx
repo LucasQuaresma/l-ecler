@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { N8N_WEBHOOK_URL } from "@/lib/signup-dialog";
-import heroImg from "@/assets/cursofios-cassia-nobg.png.asset.json";
 
 export const Route = createFileRoute("/cursofios")({
   ssr: false,
@@ -150,19 +149,6 @@ function CursoFiosPage() {
             </span>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative mt-8 flex justify-center"
-          >
-            <img
-              src={heroImg.url}
-              alt="Curso Fios Faciais com Dra. Cássia Blasques - 15 e 16 de Agosto"
-              className="w-full max-w-md h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-              loading="eager"
-            />
-          </motion.div>
 
 
           <div className="mt-6 rounded-2xl border border-[#c9a84c]/30 bg-[#c9a84c]/5 p-5">
