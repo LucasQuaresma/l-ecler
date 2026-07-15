@@ -154,15 +154,16 @@ function CursoFiosPage() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative mt-8 overflow-hidden rounded-3xl ring-1 ring-white/10 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]"
+            className="relative mt-8 flex justify-center"
           >
             <img
               src={heroImg.url}
               alt="Curso Fios Faciais com Dra. Cássia Blasques - 15 e 16 de Agosto"
-              className="w-full object-cover"
+              className="w-full max-w-md h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
               loading="eager"
             />
           </motion.div>
+
 
           <div className="mt-6 rounded-2xl border border-[#c9a84c]/30 bg-[#c9a84c]/5 p-5">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#c9a84c]">
