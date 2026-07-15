@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CookiesRouteImport } from './routes/cookies'
@@ -22,6 +23,11 @@ import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
   id: '/privacidade',
   path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
+  id: '/obrigadofios',
+  path: '/obrigadofios',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObrigadoRoute = ObrigadoRouteImport.update({
@@ -72,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/obrigado': typeof ObrigadoRoute
+  '/obrigadofios': typeof ObrigadofiosRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -83,6 +90,7 @@ export interface FileRoutesByTo {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/obrigado': typeof ObrigadoRoute
+  '/obrigadofios': typeof ObrigadofiosRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -95,6 +103,7 @@ export interface FileRoutesById {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/obrigado': typeof ObrigadoRoute
+  '/obrigadofios': typeof ObrigadofiosRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/obrigado'
+    | '/obrigadofios'
     | '/privacidade'
     | '/blog/$slug'
     | '/servicos/$slug'
@@ -119,6 +129,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/obrigado'
+    | '/obrigadofios'
     | '/privacidade'
     | '/blog/$slug'
     | '/servicos/$slug'
@@ -130,6 +141,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/obrigado'
+    | '/obrigadofios'
     | '/privacidade'
     | '/blog_/$slug'
     | '/servicos/$slug'
@@ -142,6 +154,7 @@ export interface RootRouteChildren {
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
   ObrigadoRoute: typeof ObrigadoRoute
+  ObrigadofiosRoute: typeof ObrigadofiosRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/privacidade'
       fullPath: '/privacidade'
       preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadofios': {
+      id: '/obrigadofios'
+      path: '/obrigadofios'
+      fullPath: '/obrigadofios'
+      preLoaderRoute: typeof ObrigadofiosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/obrigado': {
@@ -222,6 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
   ObrigadoRoute: ObrigadoRoute,
+  ObrigadofiosRoute: ObrigadofiosRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   BlogSlugRoute: BlogSlugRoute,
   ServicosSlugRoute: ServicosSlugRoute,
@@ -229,13 +250,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
