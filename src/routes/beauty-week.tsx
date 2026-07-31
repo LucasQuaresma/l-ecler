@@ -23,7 +23,10 @@ import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImg from "@/assets/beautyweek-hero.jpg";
-import detailImg from "@/assets/beautyweek-detail.jpg";
+import cassiaWhite from "@/assets/cassia-white-suit.jpg.asset.json";
+import cassiaBlack from "@/assets/cassia-black-portrait.jpg.asset.json";
+import cassiaLounge from "@/assets/cassia-lounge.jpg.asset.json";
+import cassiaSmile from "@/assets/cassia-smile.jpg.asset.json";
 
 export const Route = createFileRoute("/beauty-week")({
   ssr: false,
