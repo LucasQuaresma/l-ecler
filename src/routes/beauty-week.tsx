@@ -126,11 +126,11 @@ const benefits = [
 ];
 
 const schedule = [
-  { time: "09h", event: "Recepção VIP com welcome drink" },
-  { time: "09h30", event: "Diagnóstico personalizado com especialista" },
-  { time: "11h", event: "Sessão de tratamento ou procedimento escolhido" },
-  { time: "12h30", event: "Pausa gourmet com coffee break saudável" },
-  { time: "14h", event: "Planejamento do próximo passo + brindes exclusivos" },
+  { time: "Passo 1", event: "Avaliação gratuita pelo lead ou Diagnóstico Online" },
+  { time: "Passo 2", event: "Triagem com o especialista certo para seu caso" },
+  { time: "Passo 3", event: "Planejamento personalizado de sorriso, pele ou face" },
+  { time: "Passo 4", event: "Aplicação do tratamento na última semana de agosto" },
+  { time: "Passo 5", event: "Acompanhamento pós-procedimento e próximos passos" },
 ];
 
 const testimonials = [
@@ -153,33 +153,37 @@ const testimonials = [
 
 const packages = [
   {
-    name: "Essencial",
-    price: "12x R$ 197",
-    badge: "Mais acessível",
-    items: ["1 dia de experiência", "Diagnóstico Online", "1 sessão de tratamento", "Coffee break VIP"],
+    name: "Avaliação Gratuita",
+    price: "Grátis",
+    badge: "Comece aqui",
+    items: ["Avaliação presencial ou Diagnóstico Online", "Direcionamento personalizado", "Condições especiais de aniversário", "Sem compromisso"],
   },
   {
-    name: "Premium",
-    price: "12x R$ 397",
-    badge: "Mais escolhido",
-    items: ["3 dias de experiência", "Diagnóstico Online", "3 sessões de tratamento", "Brindes exclusivos", "Acompanhamento 30 dias"],
+    name: "Sorriso",
+    price: "Condições especiais",
+    badge: "Mais procurado",
+    items: ["Clareamento dental", "AIRFLOW suíço", "Avaliação odontológica completa", "Planejamento digital do sorriso"],
   },
   {
-    name: "VIP",
-    price: "12x R$ 697",
-    badge: "Experiência completa",
-    items: ["5 dias de experiência", "Diagnóstico Online", "Plano completo sorriso + face + pele", "Kit home care", "Acompanhamento 90 dias"],
+    name: "Pele & Contorno",
+    price: "Condições especiais",
+    badge: "Tecnologias exclusivas",
+    items: ["Botox e preenchimentos", "HIPRO", "RF Microagulhada Robótica", "Laser de CO2 Híbrido"],
   },
 ];
 
 const faq = [
   {
-    q: "O que é a Beauty Week L'ECLER?",
-    a: "É uma semana exclusiva de experiências em estética facial, odontologia e bem-estar, com atendimento VIP, diagnósticos personalizados e condições especiais de tratamento.",
+    q: "O que é a Beauty Week de Aniversário L'ECLER?",
+    a: "É uma semana exclusiva na última semana de agosto em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
   },
   {
-    q: "Preciso agendar todos os dias?",
-    a: "Não. Você escolhe o pacote que faz sentido para você e agenda os dias de acordo com a disponibilidade da clínica.",
+    q: "Preciso pagar para fazer a avaliação?",
+    a: "Não. A avaliação é gratuita e serve para entender o que faz sentido para o seu caso. A partir dela, você agenda o tratamento desejado e aproveita as condições especiais de aniversário.",
+  },
+  {
+    q: "Quais tecnologias estarão disponíveis?",
+    a: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. As três estarão na clínica durante a última semana de agosto para avaliações e aplicações.",
   },
   {
     q: "O Diagnóstico Online realmente funciona?",
@@ -187,7 +191,7 @@ const faq = [
   },
   {
     q: "Quem pode participar?",
-    a: "Mulheres que buscam naturalidade, rejuvenescimento e uma experiência de cuidado completa, sem exageros.",
+    a: "Qualquer pessoa que busca cuidado multidisciplinar para sorriso, pele e face com naturalidade, segurança e tecnologia de ponta.",
   },
   {
     q: "Onde acontece o evento?",
