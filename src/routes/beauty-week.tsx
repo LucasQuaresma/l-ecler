@@ -245,7 +245,7 @@ function BeautyWeekPage() {
                 Garantir minha vaga
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Link to="/#tratamentos">
+              <a href="#experiencias">
                 <Button
                   size="lg"
                   variant="outline"
@@ -253,7 +253,7 @@ function BeautyWeekPage() {
                 >
                   Ver experiências
                 </Button>
-              </Link>
+              </a>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4 text-sm text-primary-foreground/70">
