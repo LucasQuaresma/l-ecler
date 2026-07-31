@@ -8,7 +8,6 @@ import {
   Star,
   Calendar,
   MapPin,
-  Clock,
   CheckCircle2,
   ArrowRight,
   ChevronDown,
@@ -17,7 +16,6 @@ import {
   ShieldCheck,
   ScanFace,
   Smile,
-  User,
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
