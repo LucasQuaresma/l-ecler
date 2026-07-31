@@ -636,7 +636,7 @@ function BeautyWeekPage() {
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
             {packages.map((pkg, i) => (
               <motion.div
                 key={pkg.name}
@@ -657,9 +657,7 @@ function BeautyWeekPage() {
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
                 <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">
-                  {pkg.name === "Avaliação Gratuita" ? "sem compromisso" : "condições especiais de aniversário"}
-                </p>
+                <p className="text-xs text-primary-foreground/60">condições especiais de aniversário</p>
                 <ul className="mt-6 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
