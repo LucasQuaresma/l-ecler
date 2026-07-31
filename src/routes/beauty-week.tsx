@@ -36,7 +36,7 @@ export const Route = createFileRoute("/beauty-week")({
       {
         name: "description",
         content:
-          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Avaliações gratuitas para lotar a agenda.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Reserve sua vaga para lotar a agenda.",
       },
       {
         property: "og:title",
@@ -118,7 +118,7 @@ const highlights = [
 ];
 
 const benefits = [
-  "Avaliação gratuita para direcionar seu tratamento",
+  "Reserva da vaga para direcionar seu tratamento",
   "Clareamento dental + AIRFLOW em condições especiais de aniversário",
   "3 tecnologias exclusivas: HIPRO, RF Microagulhada Robótica e Laser CO2 Híbrido",
   "Atendimento com time selecionado pela Dra. Cássia",
@@ -127,7 +127,7 @@ const benefits = [
 ];
 
 const schedule = [
-  { time: "Passo 1", event: "Avaliação gratuita pelo lead ou Diagnóstico Online" },
+  { time: "Passo 1", event: "Reserva pelo lead ou Diagnóstico Online" },
   { time: "Passo 2", event: "Triagem com o especialista certo para seu caso" },
   { time: "Passo 3", event: "Planejamento personalizado de sorriso, pele ou face" },
   { time: "Passo 4", event: "Aplicação do tratamento na semana de 24 a 30 de agosto" },
@@ -154,12 +154,6 @@ const testimonials = [
 
 const packages = [
   {
-    name: "Avaliação Gratuita",
-    price: "Grátis",
-    badge: "Comece aqui",
-    items: ["Avaliação presencial ou Diagnóstico Online", "Direcionamento personalizado", "Condições especiais de aniversário", "Sem compromisso"],
-  },
-  {
     name: "Sorriso",
     price: "Condições especiais",
     badge: "Mais procurado",
@@ -176,11 +170,11 @@ const packages = [
 const faq = [
   {
     q: "O que é a Beauty Week de Aniversário L'ECLER?",
-    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
+    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos condições especiais para clareamento dental + AIRFLOW e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica, com vagas limitadas por dia.",
   },
   {
-    q: "Preciso pagar para fazer a avaliação?",
-    a: "Não. A avaliação é gratuita e serve para entender o que faz sentido para o seu caso. A partir dela, você agenda o tratamento desejado e aproveita as condições especiais de aniversário.",
+    q: "Como funciona a reserva de vaga?",
+    a: "Você deixa seu contato pelo formulário ou Diagnóstico Online. Nossa equipe entra em contato para entender seu caso, apresentar as condições especiais de aniversário e confirmar seu horário na semana de 24 a 30 de agosto.",
   },
   {
     q: "Quais tecnologias estarão disponíveis?",
@@ -248,8 +242,8 @@ function BeautyWeekPage() {
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
               Em comemoração ao aniversário da Clínica L'ECLER, preparamos uma semana exclusiva com
-              avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias
-              de harmonização e rejuvenescimento que estão mudando o mercado.
+              clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias
+              de harmonização e rejuvenescimento que estão mudando o mercado. Vagas limitadas por dia.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -258,7 +252,7 @@ function BeautyWeekPage() {
                 onClick={openSignupDialog}
                 className="group h-14 rounded-full bg-gradient-gold px-8 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
               >
-                Quero minha avaliação gratuita
+                Quero reservar minha vaga
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
               <a href="#tratamentos">
@@ -346,7 +340,7 @@ function BeautyWeekPage() {
               condições especiais.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              A entrada é a avaliação gratuita. A partir dela, você entende quais tratamentos fazem sentido
+              A entrada é a reserva da vaga. A partir dela, você entende quais tratamentos fazem sentido
               para o seu caso e agenda o que precisa para lotar a semana com resultados reais.
             </p>
           </motion.div>
@@ -515,7 +509,7 @@ function BeautyWeekPage() {
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Por que participar</p>
               <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-                Avaliação gratuita para lotar a agenda de <span className="text-gradient-gold">resultados reais</span>.
+                Reserva de vaga para lotar a agenda de <span className="text-gradient-gold">resultados reais</span>.
               </h2>
               <Button
                 size="lg"
@@ -556,7 +550,7 @@ function BeautyWeekPage() {
             className="text-center"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Como funciona</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Da avaliação ao resultado</h2>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Da reserva ao resultado</h2>
           </motion.div>
 
           <div className="mt-14 space-y-0">
@@ -642,7 +636,7 @@ function BeautyWeekPage() {
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
             {packages.map((pkg, i) => (
               <motion.div
                 key={pkg.name}
@@ -663,9 +657,7 @@ function BeautyWeekPage() {
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
                 <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">
-                  {pkg.name === "Avaliação Gratuita" ? "sem compromisso" : "condições especiais de aniversário"}
-                </p>
+                <p className="text-xs text-primary-foreground/60">condições especiais de aniversário</p>
                 <ul className="mt-6 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
@@ -752,10 +744,10 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-display text-4xl text-primary-foreground sm:text-5xl">
-              Sua avaliação gratuita na <span className="text-gradient-gold">Beauty Week</span> está esperando.
+              Sua vaga na <span className="text-gradient-gold">Beauty Week</span> está esperando.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base text-primary-foreground/80">
-              Vagas limitadas para a última semana de agosto. Reserve sua avaliação agora e garanta seu
+              Vagas limitadas para a última semana de agosto. Reserve sua vaga agora e garanta seu
               lugar na agenda de aniversário da Clínica L'ECLER.
             </p>
             <Button
@@ -763,7 +755,7 @@ function BeautyWeekPage() {
               onClick={openSignupDialog}
               className="group mt-10 h-14 rounded-full bg-gradient-gold px-10 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
-              Quero minha avaliação gratuita
+              Quero reservar minha vaga
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <p className="mt-4 flex items-center justify-center gap-2 text-sm text-primary-foreground/70">
