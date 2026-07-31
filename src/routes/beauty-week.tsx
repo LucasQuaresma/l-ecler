@@ -371,8 +371,8 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Três dias, três focos</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Escolha sua experiência</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Tratamentos da semana</p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Sorriso, pele e tecnologia</h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -417,11 +417,11 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">O que está incluído</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Tratamentos em destaque</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">O que está incluso</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Tratamentos e tecnologias exclusivas</h2>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {highlights.map((h, i) => (
               <motion.div
                 key={h.title}
@@ -454,7 +454,7 @@ function BeautyWeekPage() {
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Por que participar</p>
               <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-                Uma semana pensada para quem valoriza <span className="text-gradient-gold">resultado e cuidado</span>.
+                Avaliação gratuita para lotar a agenda de <span className="text-gradient-gold">resultados reais</span>.
               </h2>
               <Button
                 size="lg"
