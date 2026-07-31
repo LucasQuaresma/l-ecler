@@ -27,6 +27,11 @@ import cassiaWhite from "@/assets/cassia-white-suit.jpg.asset.json";
 import cassiaBlack from "@/assets/cassia-black-portrait.jpg.asset.json";
 import cassiaLounge from "@/assets/cassia-lounge.jpg.asset.json";
 import cassiaSmile from "@/assets/cassia-smile.jpg.asset.json";
+import clinicaRecepcao from "@/assets/clinica-recepcao.jpg.asset.json";
+import clinicaLounge from "@/assets/clinica-lounge.jpg.asset.json";
+import clinicaEspera from "@/assets/clinica-espera.jpg.asset.json";
+import clinicaConsultorio1 from "@/assets/clinica-consultorio1.jpg.asset.json";
+import clinicaConsultorio2 from "@/assets/clinica-consultorio2.jpg.asset.json";
 
 export const Route = createFileRoute("/beauty-week")({
   ssr: false,
@@ -364,6 +369,58 @@ function BeautyWeekPage() {
               />
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* A CLÍNICA */}
+      <section id="clinica" className="relative overflow-hidden bg-background py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">O espaço</p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
+              Conheça a <span className="text-gradient-gold">Clínica L'ECLER</span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Um ambiente pensado para o seu conforto em Bragança Paulista: recepção acolhedora,
+              lounge de espera, salas privativas e consultórios equipados com tecnologia de ponta.
+            </p>
+          </motion.div>
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { src: clinicaRecepcao.url, alt: "Recepção da Clínica L'ECLER", label: "Recepção", span: "lg:col-span-2 lg:row-span-2", ratio: "aspect-[4/3] lg:aspect-[4/3]" },
+              { src: clinicaLounge.url, alt: "Lounge de espera da Clínica L'ECLER", label: "Lounge de espera", span: "", ratio: "aspect-[4/3]" },
+              { src: clinicaEspera.url, alt: "Área de atendimento e espera privativa", label: "Espaços privativos", span: "", ratio: "aspect-[4/3]" },
+              { src: clinicaConsultorio1.url, alt: "Consultório odontológico da Clínica L'ECLER", label: "Consultório", span: "", ratio: "aspect-[4/3]" },
+              { src: clinicaConsultorio2.url, alt: "Consultório com equipamentos de última geração", label: "Tecnologia de ponta", span: "", ratio: "aspect-[4/3]" },
+            ].map((img, i) => (
+              <motion.figure
+                key={img.src}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className={`group relative overflow-hidden rounded-[1.75rem] shadow-elegant ring-1 ring-gold/20 ${img.span}`}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className={`h-full w-full ${img.ratio} object-cover transition-transform duration-700 group-hover:scale-105`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                <figcaption className="absolute bottom-4 left-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground">
+                  {img.label}
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
         </div>
       </section>
 
