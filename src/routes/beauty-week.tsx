@@ -40,7 +40,7 @@ export const Route = createFileRoute("/beauty-week")({
       {
         name: "description",
         content:
-          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Reserve sua vaga para lotar a agenda.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em valores especiais de aniversário, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Reserve sua vaga para lotar a agenda.",
       },
       {
         property: "og:title",
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/beauty-week")({
       {
         property: "og:description",
         content:
-          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais e as 3 tecnologias de ponta em harmonização e rejuvenescimento.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em valores especiais de aniversário e as 3 tecnologias de ponta em harmonização e rejuvenescimento.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -71,7 +71,7 @@ const experiences = [
   {
     day: "Sorriso",
     title: "Clareamento + AIRFLOW",
-    desc: "Avaliação odontológica completa com condições especiais de aniversário para clareamento dental e limpeza Airflow suíça.",
+    desc: "Avaliação odontológica completa com valores exclusivos de aniversário para clareamento dental e limpeza Airflow suíça.",
     icon: Smile,
   },
   {
@@ -91,7 +91,7 @@ const experiences = [
 const highlights = [
   {
     title: "Clareamento Dental",
-    desc: "Sorriso mais luminoso com condições especiais de aniversário e acompanhamento clínico completo.",
+    desc: "Sorriso mais luminoso com valores exclusivos de aniversário e acompanhamento clínico completo.",
     icon: Smile,
   },
   {
@@ -123,7 +123,7 @@ const highlights = [
 
 const benefits = [
   "Reserva da vaga para direcionar seu tratamento",
-  "Clareamento dental + AIRFLOW em condições especiais de aniversário",
+  "Clareamento dental + AIRFLOW em valores exclusivos de aniversário",
   "3 tecnologias exclusivas: HIPRO, RF Microagulhada Robótica e Laser CO2 Híbrido",
   "Atendimento com time selecionado pela Dra. Cássia",
   "Diagnóstico Online incluído para otimizar sua visita",
@@ -159,13 +159,13 @@ const testimonials = [
 const packages = [
   {
     name: "Sorriso",
-    price: "Condições especiais",
+    price: "valores especiais de aniversário",
     badge: "Mais procurado",
     items: ["Clareamento dental", "AIRFLOW suíço", "Avaliação odontológica completa", "Planejamento digital do sorriso"],
   },
   {
     name: "Pele & Contorno",
-    price: "Condições especiais",
+    price: "valores especiais de aniversário",
     badge: "Tecnologias exclusivas",
     items: ["Botox e preenchimentos", "HIPRO", "RF Microagulhada Robótica", "Laser de CO2 Híbrido"],
   },
@@ -174,11 +174,11 @@ const packages = [
 const faq = [
   {
     q: "O que é a Beauty Week de Aniversário L'ECLER?",
-    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos condições especiais para clareamento dental + AIRFLOW e as 3 tecnologias de rejuvenescimento disponíveis na clínica, com vagas limitadas por dia.",
+    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos valores especiais de aniversário para clareamento dental + AIRFLOW e as 3 tecnologias de rejuvenescimento disponíveis na clínica, com vagas limitadas por dia.",
   },
   {
     q: "Como funciona a reserva de vaga?",
-    a: "Você deixa seu contato pelo formulário ou Diagnóstico Online. Nossa equipe entra em contato para entender seu caso, apresentar as condições especiais de aniversário e confirmar seu horário na semana de 24 a 30 de agosto.",
+    a: "Você deixa seu contato pelo formulário ou Diagnóstico Online. Nossa equipe entra em contato para entender seu caso, apresentar as valores exclusivos de aniversário e confirmar seu horário na semana de 24 a 30 de agosto.",
   },
   {
     q: "Quais tecnologias estarão disponíveis?",
@@ -246,7 +246,7 @@ function BeautyWeekPage() {
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
               Em comemoração ao aniversário da Clínica L'ECLER, preparamos uma semana exclusiva com
-              clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias
+              clareamento dental + AIRFLOW em valores especiais de aniversário e as 3 tecnologias
               de harmonização e rejuvenescimento que estão mudando o mercado. Vagas limitadas por dia.
             </p>
 
@@ -341,7 +341,7 @@ function BeautyWeekPage() {
               A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
               De <strong>24 a 30 de agosto de 2026</strong>, nosso time multidisciplinar estará disponível para avaliar
               seu sorriso, sua pele e seu contorno — tudo em um só lugar, com tecnologia de ponta e
-              condições especiais.
+              valores especiais de aniversário.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               A entrada é a reserva da vaga. A partir dela, você entende quais tratamentos fazem sentido
@@ -687,7 +687,7 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Condições especiais</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">valores especiais de aniversário</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
           </motion.div>
 
@@ -712,7 +712,7 @@ function BeautyWeekPage() {
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
                 <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">condições especiais de aniversário</p>
+                <p className="text-xs text-primary-foreground/60">valores exclusivos de aniversário</p>
                 <ul className="mt-6 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
