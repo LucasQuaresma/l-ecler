@@ -176,7 +176,7 @@ const packages = [
 const faq = [
   {
     q: "O que é a Beauty Week de Aniversário L'ECLER?",
-    a: "É uma semana exclusiva na última semana de agosto em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
+    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
   },
   {
     q: "Preciso pagar para fazer a avaliação?",
@@ -184,7 +184,7 @@ const faq = [
   },
   {
     q: "Quais tecnologias estarão disponíveis?",
-    a: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. As três estarão na clínica durante a última semana de agosto para avaliações e aplicações.",
+    a: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. As três estarão na clínica durante a semana de 24 a 30 de agosto para avaliações e aplicações.",
   },
   {
     q: "O Diagnóstico Online realmente funciona?",
