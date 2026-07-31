@@ -130,7 +130,7 @@ const schedule = [
   { time: "Passo 1", event: "Avaliação gratuita pelo lead ou Diagnóstico Online" },
   { time: "Passo 2", event: "Triagem com o especialista certo para seu caso" },
   { time: "Passo 3", event: "Planejamento personalizado de sorriso, pele ou face" },
-  { time: "Passo 4", event: "Aplicação do tratamento na última semana de agosto" },
+  { time: "Passo 4", event: "Aplicação do tratamento na semana de 24 a 30 de agosto" },
   { time: "Passo 5", event: "Acompanhamento pós-procedimento e próximos passos" },
 ];
 
