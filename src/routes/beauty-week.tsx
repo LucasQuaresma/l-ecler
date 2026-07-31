@@ -236,9 +236,9 @@ function BeautyWeekPage() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
-              De 24 a 30 de agosto de 2026, nosso time multidisciplinar se reúne para cuidar do seu
-              sorriso, da sua pele e do seu contorno em um só lugar. Tecnologia de ponta,
-              atendimento personalizado e vagas limitadas por dia.
+              De 24 a 30 de agosto de 2026, nossa equipe multidisciplinar estará disponível para
+              avaliar seu sorriso, sua pele e sua harmonia facial e corporal — tudo em um só lugar,
+              com tecnologia avançada, segurança e um olhar integrado para o seu bem-estar.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
