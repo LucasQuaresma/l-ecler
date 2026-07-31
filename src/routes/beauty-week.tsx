@@ -23,7 +23,10 @@ import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImg from "@/assets/beautyweek-hero.jpg";
-import detailImg from "@/assets/beautyweek-detail.jpg";
+import cassiaWhite from "@/assets/cassia-white-suit.jpg.asset.json";
+import cassiaBlack from "@/assets/cassia-black-portrait.jpg.asset.json";
+import cassiaLounge from "@/assets/cassia-lounge.jpg.asset.json";
+import cassiaSmile from "@/assets/cassia-smile.jpg.asset.json";
 
 export const Route = createFileRoute("/beauty-week")({
   ssr: false,
@@ -351,17 +354,66 @@ function BeautyWeekPage() {
             <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-gold/20 to-transparent blur-xl" />
             <div className="relative overflow-hidden rounded-[2rem] shadow-elegant ring-1 ring-gold/20">
               <img
-                src={detailImg}
-                alt="Detalhes de skincare premium na Beauty Week"
+                src={cassiaLounge.url}
+                alt="Dra. Cássia Blasques na Clínica L'ECLER"
                 width={1280}
                 height={1280}
                 loading="lazy"
-                className="aspect-square w-full object-cover"
+                className="aspect-square w-full object-cover object-top"
               />
             </div>
           </motion.div>
         </div>
       </section>
+
+      {/* DRA CÁSSIA */}
+      <section className="relative overflow-hidden bg-background py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Quem conduz</p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
+              Dra. <span className="text-gradient-gold">Cássia Blasques</span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Referência em odontologia estética e harmonização orofacial em Bragança Paulista, a Dra. Cássia
+              lidera o padrão técnico de todo o time da L'ECLER — e é ela quem supervisiona cada plano da
+              Beauty Week.
+            </p>
+          </motion.div>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-3">
+            {[
+              { src: cassiaWhite.url, alt: "Dra. Cássia Blasques em terno branco" },
+              { src: cassiaBlack.url, alt: "Retrato da Dra. Cássia Blasques" },
+              { src: cassiaSmile.url, alt: "Dra. Cássia Blasques sorrindo" },
+            ].map((img, i) => (
+              <motion.div
+                key={img.src}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="relative overflow-hidden rounded-[1.75rem] shadow-elegant ring-1 ring-gold/20"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* EXPERIENCES */}
       <section id="experiencias" className="relative bg-background py-24">
