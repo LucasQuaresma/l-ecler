@@ -31,20 +31,20 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Beauty Week L'ECLER — Evento VIP de Estética e Bem-Estar" },
+      { title: "Beauty Week Aniversário L'ECLER — Tecnologias Exclusivas em Bragança Paulista" },
       {
         name: "description",
         content:
-          "Uma semana exclusiva de experiências em estética facial, odontologia e bem-estar na Clínica L'ECLER em Bragança Paulista. Vagas limitadas.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Avaliações gratuitas para lotar a agenda.",
       },
       {
         property: "og:title",
-        content: "Beauty Week L'ECLER — Evento VIP de Estética e Bem-Estar",
+        content: "Beauty Week Aniversário L'ECLER — Tecnologias Exclusivas",
       },
       {
         property: "og:description",
         content:
-          "Diagnóstico personalizado, tratamentos de ponta e uma experiência de luxo por uma semana inteira.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais e as 3 tecnologias de ponta em harmonização e rejuvenescimento.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -64,55 +64,65 @@ const floats = [
 
 const experiences = [
   {
-    day: "Dia 1",
-    title: "Dia do Sorriso",
-    desc: "Avaliação odontológica completa, clareamento, Airflow e planejamento de sorriso digital.",
+    day: "Sorriso",
+    title: "Clareamento + AIRFLOW",
+    desc: "Avaliação odontológica completa com condições especiais de aniversário para clareamento dental e limpeza Airflow suíça.",
     icon: Smile,
   },
   {
-    day: "Dia 2",
-    title: "Dia da Pele",
-    desc: "Análise dérmica, gerenciamento de pele, bioestimuladores e protocolos de rejuvenescimento.",
+    day: "Pele",
+    title: "Rejuvenescimento Facial",
+    desc: "Botox, preenchimentos, fios e bioestímulo com foco em naturalidade, equilíbrio e resultado sem exageros.",
     icon: ScanFace,
   },
   {
-    day: "Dia 3",
-    title: "Dia do Contorno",
-    desc: "Avaliação facial harmonizada, toxina, preenchimentos, fios e emagrecimento facial.",
-    icon: User,
+    day: "Tecnologia",
+    title: "Equipamentos de Ponta",
+    desc: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido disponíveis na clínica por tempo limitado.",
+    icon: Gem,
   },
 ];
 
 const highlights = [
   {
-    title: "Odontologia Estética",
-    desc: "Facetas, lentes e clareamento para um sorriso natural e luminoso.",
+    title: "Clareamento Dental",
+    desc: "Sorriso mais luminoso com condições especiais de aniversário e acompanhamento clínico completo.",
     icon: Smile,
   },
   {
-    title: "Harmonização Orofacial",
-    desc: "Toxina, preenchimentos e fios com foco em naturalidade e equilíbrio.",
-    icon: ScanFace,
-  },
-  {
-    title: "Gerenciamento Dérmico",
-    desc: "Protocolos personalizados para pele saudável, firme e rejuvenescida.",
+    title: "AIRFLOW Suíço",
+    desc: "Limpeza e prevenção confortável com tecnologia suíça de propilaxia para manter a saúde bucal.",
     icon: Sparkles,
   },
   {
-    title: "Laser e Tecnologia",
-    desc: "Equipamentos de última geração para resultados precisos e confortáveis.",
+    title: "Botox & Preenchimentos",
+    desc: "Harmonização facial com toxina e preenchimentos para rejuvenescimento natural e equilibrado.",
+    icon: ScanFace,
+  },
+  {
+    title: "HIPRO",
+    desc: "Tecnologia de ultrassom microfocado para lifting não cirúrgico e definição facial.",
     icon: Gem,
+  },
+  {
+    title: "Rádiofrequência Microagulhada Robótica",
+    desc: "Precisão robótica para estimular colágeno, melhorar textura e firmeza da pele.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Laser de CO2 Híbrido",
+    desc: "Laser fracionado para rejuvenescimento, textura e tratamentos com recuperação controlada.",
+    icon: Star,
   },
 ];
 
 const benefits = [
-  "Avaliação multidisciplinar em um só lugar",
+  "Avaliação gratuita para direcionar seu tratamento",
+  "Clareamento dental + AIRFLOW em condições especiais de aniversário",
+  "3 tecnologias exclusivas: HIPRO, RF Microagulhada Robótica e Laser CO2 Híbrido",
   "Atendimento com time selecionado pela Dra. Cássia",
-  "Tecnologias de ponta em odontologia e estética",
-  "Diagnóstico Online incluído para direcionar sua visita",
+  "Diagnóstico Online incluído para otimizar sua visita",
   "Ambiente premium e acolhedor em Bragança Paulista",
-  "Planos de tratamento personalizados e sem exageros",
 ];
 
 const schedule = [
@@ -127,12 +137,12 @@ const testimonials = [
   {
     name: "Ana Paula M.",
     role: "Paciente L'ECLER",
-    text: "Nunca imaginei que uma clínica pudesse reunir tanta qualidade. Saí com um plano completo para sorriso, pele e face.",
+    text: "Saí com um plano completo para sorriso, pele e face. A equipe entendeu exatamente o que eu queria sem forçar nada.",
   },
   {
     name: "Fernanda R.",
     role: "Paciente L'ECLER",
-    text: "A Beauty Week foi um presente para mim. Atendimento delicado, ambiente lindo e resultados que superaram minha expectativa.",
+    text: "A Beauty Week foi um presente. Atendimento delicado, ambiente lindo e resultados que superaram minha expectativa.",
   },
   {
     name: "Juliana C.",
