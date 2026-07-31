@@ -130,13 +130,6 @@ const benefits = [
   "Ambiente premium e acolhedor em Bragança Paulista",
 ];
 
-const schedule = [
-  { time: "Passo 1", event: "Reserva pelo lead ou Diagnóstico Online" },
-  { time: "Passo 2", event: "Triagem com o especialista certo para seu caso" },
-  { time: "Passo 3", event: "Planejamento personalizado de sorriso, pele ou face" },
-  { time: "Passo 4", event: "Aplicação do tratamento na semana de 24 a 30 de agosto" },
-  { time: "Passo 5", event: "Acompanhamento pós-procedimento e próximos passos" },
-];
 
 const testimonials = [
   {
@@ -588,41 +581,6 @@ function BeautyWeekPage() {
                 </div>
               ))}
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* SCHEDULE */}
-      <section id="agenda" className="relative bg-background py-24">
-        <div className="mx-auto max-w-4xl px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Como funciona</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Da reserva ao resultado</h2>
-          </motion.div>
-
-          <div className="mt-14 space-y-0">
-            {schedule.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="relative flex gap-6 border-l-2 border-gold/30 pb-10 pl-8 last:pb-0"
-              >
-                <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 border-gold bg-background" />
-                <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
-                  <span className="min-w-[4rem] font-display text-xl text-gold">{s.time}</span>
-                  <p className="text-base text-foreground">{s.event}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
