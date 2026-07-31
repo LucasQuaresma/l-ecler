@@ -27,6 +27,7 @@ import cassiaWhite from "@/assets/cassia-white-suit.jpg.asset.json";
 import cassiaBlack from "@/assets/cassia-black-portrait.jpg.asset.json";
 import cassiaLounge from "@/assets/cassia-lounge.jpg.asset.json";
 import cassiaSmile from "@/assets/cassia-smile.jpg.asset.json";
+import clinicaRecepcao from "@/assets/clinica-recepcao.jpg.asset.json";
 import clinicaEspera from "@/assets/clinica-espera.jpg.asset.json";
 import clinicaConsultorio1 from "@/assets/clinica-consultorio1.jpg.asset.json";
 import clinicaConsultorio2 from "@/assets/clinica-consultorio2.jpg.asset.json";
