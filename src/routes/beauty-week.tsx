@@ -187,7 +187,7 @@ const faq = [
     a: "Sim. Você envia fotos e preenche um formulário. Nossa equipe direciona sua visita para que o tempo na clínica seja 100% produtivo.",
   },
   {
-    q: "Quem pode participar?",
+    q: "Quem pode ser atendido?",
     a: "Qualquer pessoa que busca cuidado multidisciplinar para sorriso, pele e face com naturalidade, segurança e tecnologia de ponta.",
   },
   {
@@ -560,9 +560,9 @@ function BeautyWeekPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Por que participar</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Por que reservar sua vaga</p>
               <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-                Reserva de vaga para lotar a agenda de <span className="text-gradient-gold">resultados reais</span>.
+                Uma semana exclusiva para cuidar do seu sorriso, pele e <span className="text-gradient-gold">bem-estar</span>.
               </h2>
               <Button
                 size="lg"
