@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { z } from "zod";
 import {
@@ -122,7 +122,6 @@ function GiftVoucherPage() {
   const [errors, setErrors] = useState<{ name?: string; email?: string; phone?: string }>({});
   const [loading, setLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const navigate = useNavigate();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -161,7 +160,8 @@ function GiftVoucherPage() {
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-      navigate({ to: "/obrigadogift" });
+      const message = encodeURIComponent("quero o gift-voucher para o meu pai");
+      window.location.href = `https://api.whatsapp.com/send?phone=5511915633857&text=${message}`;
     } catch (err) {
       console.error(err);
       toast.error("Não foi possível enviar. Tente novamente.");
