@@ -236,9 +236,9 @@ function BeautyWeekPage() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
-              Em comemoração ao aniversário da Clínica L'ECLER, preparamos uma semana exclusiva com
-              clareamento dental + AIRFLOW e as 3 tecnologias de harmonização e rejuvenescimento
-              que estão mudando o mercado. Vagas limitadas por dia.
+              De 24 a 30 de agosto de 2026, nosso time multidisciplinar se reúne para cuidar do seu
+              sorriso, da sua pele e do seu contorno em um só lugar. Tecnologia de ponta,
+              atendimento personalizado e vagas limitadas por dia.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
