@@ -159,13 +159,13 @@ const testimonials = [
 const packages = [
   {
     name: "Sorriso",
-    price: "valores especiais de aniversário",
+    price: "Sob consulta",
     badge: "Mais procurado",
     items: ["Clareamento dental", "AIRFLOW suíço", "Avaliação odontológica completa", "Planejamento digital do sorriso"],
   },
   {
     name: "Pele & Contorno",
-    price: "valores especiais de aniversário",
+    price: "Sob consulta",
     badge: "Tecnologias exclusivas",
     items: ["Botox e preenchimentos", "HIPRO", "RF Microagulhada Robótica", "Laser de CO2 Híbrido"],
   },
@@ -687,7 +687,7 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">valores especiais de aniversário</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Investimento</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
           </motion.div>
 
@@ -712,7 +712,7 @@ function BeautyWeekPage() {
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
                 <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">valores exclusivos de aniversário</p>
+                <p className="text-xs text-primary-foreground/60">valores sob consulta</p>
                 <ul className="mt-6 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
