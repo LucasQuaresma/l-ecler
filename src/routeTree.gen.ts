@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
@@ -25,6 +26,11 @@ import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
   id: '/privacidade',
   path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
+  id: '/obrigadogift',
+  path: '/obrigadogift',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
@@ -93,6 +99,7 @@ export interface FileRoutesByFullPath {
   '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -107,6 +114,7 @@ export interface FileRoutesByTo {
   '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -122,6 +130,7 @@ export interface FileRoutesById {
   '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -138,6 +147,7 @@ export interface FileRouteTypes {
     | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadogift'
     | '/privacidade'
     | '/blog/$slug'
     | '/servicos/$slug'
@@ -152,6 +162,7 @@ export interface FileRouteTypes {
     | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadogift'
     | '/privacidade'
     | '/blog/$slug'
     | '/servicos/$slug'
@@ -166,6 +177,7 @@ export interface FileRouteTypes {
     | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadogift'
     | '/privacidade'
     | '/blog_/$slug'
     | '/servicos/$slug'
@@ -181,6 +193,7 @@ export interface RootRouteChildren {
   GiftVoucherRoute: typeof GiftVoucherRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
+  ObrigadogiftRoute: typeof ObrigadogiftRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
@@ -193,6 +206,13 @@ declare module '@tanstack/react-router' {
       path: '/privacidade'
       fullPath: '/privacidade'
       preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadogift': {
+      id: '/obrigadogift'
+      path: '/obrigadogift'
+      fullPath: '/obrigadogift'
+      preLoaderRoute: typeof ObrigadogiftRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/obrigadofios': {
@@ -285,6 +305,7 @@ const rootRouteChildren: RootRouteChildren = {
   GiftVoucherRoute: GiftVoucherRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
+  ObrigadogiftRoute: ObrigadogiftRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   BlogSlugRoute: BlogSlugRoute,
   ServicosSlugRoute: ServicosSlugRoute,
