@@ -10,8 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -26,6 +28,11 @@ const PrivacidadeRoute = PrivacidadeRouteImport.update({
   path: '/privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
+  id: '/obrigadogift',
+  path: '/obrigadogift',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
   id: '/obrigadofios',
   path: '/obrigadofios',
@@ -34,6 +41,11 @@ const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftVoucherRoute = GiftVoucherRouteImport.update({
+  id: '/gift-voucher',
+  path: '/gift-voucher',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CursofiosRoute = CursofiosRouteImport.update({
@@ -84,8 +96,10 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -97,8 +111,10 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -111,8 +127,10 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
@@ -126,8 +144,10 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadogift'
     | '/privacidade'
     | '/blog/$slug'
     | '/servicos/$slug'
@@ -139,8 +159,10 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadogift'
     | '/privacidade'
     | '/blog/$slug'
     | '/servicos/$slug'
@@ -152,8 +174,10 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadogift'
     | '/privacidade'
     | '/blog_/$slug'
     | '/servicos/$slug'
@@ -166,8 +190,10 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
+  GiftVoucherRoute: typeof GiftVoucherRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
+  ObrigadogiftRoute: typeof ObrigadogiftRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
@@ -182,6 +208,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obrigadogift': {
+      id: '/obrigadogift'
+      path: '/obrigadogift'
+      fullPath: '/obrigadogift'
+      preLoaderRoute: typeof ObrigadogiftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/obrigadofios': {
       id: '/obrigadofios'
       path: '/obrigadofios'
@@ -194,6 +227,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gift-voucher': {
+      id: '/gift-voucher'
+      path: '/gift-voucher'
+      fullPath: '/gift-voucher'
+      preLoaderRoute: typeof GiftVoucherRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cursofios': {
@@ -262,8 +302,10 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
+  GiftVoucherRoute: GiftVoucherRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
+  ObrigadogiftRoute: ObrigadogiftRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   BlogSlugRoute: BlogSlugRoute,
   ServicosSlugRoute: ServicosSlugRoute,
