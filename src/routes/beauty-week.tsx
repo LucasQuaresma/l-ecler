@@ -187,7 +187,7 @@ const faq = [
     a: "Sim. Você envia fotos e preenche um formulário. Nossa equipe direciona sua visita para que o tempo na clínica seja 100% produtivo.",
   },
   {
-    q: "Quem pode participar?",
+    q: "Quem pode ser atendido?",
     a: "Qualquer pessoa que busca cuidado multidisciplinar para sorriso, pele e face com naturalidade, segurança e tecnologia de ponta.",
   },
   {
