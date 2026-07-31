@@ -36,20 +36,20 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Beauty Week Aniversário L'ECLER — Tecnologias Exclusivas em Bragança Paulista" },
+      { title: "Beauty Week Aniversário L'ECLER — Vagas Limitadas em Bragança Paulista" },
       {
         name: "description",
         content:
-          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Reserve sua vaga para lotar a agenda.",
+          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Uma semana exclusiva para cuidar do sorriso, da pele e do contorno com tecnologia de ponta e atendimento personalizado. Reserve sua vaga.",
       },
       {
         property: "og:title",
-        content: "Beauty Week Aniversário L'ECLER — Tecnologias Exclusivas",
+        content: "Beauty Week Aniversário L'ECLER — Vagas Limitadas",
       },
       {
         property: "og:description",
         content:
-          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW e as 3 tecnologias de ponta em harmonização e rejuvenescimento.",
+          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Sorriso, pele e contorno em um só lugar, com tecnologia de ponta e vagas limitadas.",
       },
       { property: "og:type", content: "website" },
     ],
