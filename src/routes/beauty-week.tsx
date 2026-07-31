@@ -336,7 +336,7 @@ function BeautyWeekPage() {
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
               De <strong>24 a 30 de agosto de 2026</strong>, nosso time multidisciplinar estará disponível para avaliar
-              seu sorriso, sua pele e seu contorno facial — tudo em um só lugar, com tecnologia de ponta e
+              seu sorriso, sua pele e seu contorno — tudo em um só lugar, com tecnologia de ponta e
               condições especiais.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
