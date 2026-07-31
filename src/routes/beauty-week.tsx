@@ -159,13 +159,11 @@ const testimonials = [
 const packages = [
   {
     name: "Sorriso",
-    price: "Sob consulta",
     badge: "Mais procurado",
     items: ["Clareamento dental", "AIRFLOW suíço", "Avaliação odontológica completa", "Planejamento digital do sorriso"],
   },
   {
     name: "Pele & Contorno",
-    price: "Sob consulta",
     badge: "Tecnologias exclusivas",
     items: ["Botox e preenchimentos", "HIPRO", "RF Microagulhada Robótica", "Laser de CO2 Híbrido"],
   },
@@ -711,9 +709,7 @@ function BeautyWeekPage() {
                   </span>
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
-                <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">valores sob consulta</p>
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-5 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
