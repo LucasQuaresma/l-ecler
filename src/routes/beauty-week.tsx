@@ -498,8 +498,8 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Como será o seu dia</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Agenda VIP</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Como funciona</p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Da avaliação ao resultado</h2>
           </motion.div>
 
           <div className="mt-14 space-y-0">
@@ -534,7 +534,7 @@ function BeautyWeekPage() {
             className="text-center"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Depoimentos</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">O que dizem nossas pacientes</h2>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">O que dizem nossos pacientes</h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -581,8 +581,8 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Investimento</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Pacotes Beauty Week</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Condições especiais</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -693,18 +693,18 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-display text-4xl text-primary-foreground sm:text-5xl">
-              Sua vaga na <span className="text-gradient-gold">Beauty Week</span> está esperando.
+              Sua avaliação gratuita na <span className="text-gradient-gold">Beauty Week</span> está esperando.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base text-primary-foreground/80">
-              As vagas são limitadas e a experiência é única. Reserve agora e comece sua jornada de
-              transformação com a equipe L'ECLER.
+              Vagas limitadas para a última semana de agosto. Reserve sua avaliação agora e garanta seu
+              lugar na agenda de aniversário da Clínica L'ECLER.
             </p>
             <Button
               size="lg"
               onClick={openSignupDialog}
               className="group mt-10 h-14 rounded-full bg-gradient-gold px-10 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
-              Garantir minha vaga agora
+              Quero minha avaliação gratuita
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <p className="mt-4 flex items-center justify-center gap-2 text-sm text-primary-foreground/70">
