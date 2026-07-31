@@ -274,11 +274,18 @@ function BeautyWeekPage() {
 
             <div className="mt-10 flex flex-wrap gap-4 text-sm text-primary-foreground/70">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Calendar className="h-4 w-4 text-gold" /> Última semana de agosto
+                <Calendar className="h-4 w-4 text-gold" /> 24 a 30 de agosto de 2026
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
                 <MapPin className="h-4 w-4 text-gold" /> Bragança Paulista — SP
               </span>
+            </div>
+
+            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold/30 bg-gold/10 px-5 py-3 backdrop-blur-sm">
+              <Calendar className="h-5 w-5 flex-none text-gold" />
+              <p className="text-sm font-medium text-gold">
+                Atenção: evento acontece exclusivamente na semana de <span className="font-bold">24 a 30 de agosto</span>. Vagas limitadas por dia.
+              </p>
             </div>
           </motion.div>
 
