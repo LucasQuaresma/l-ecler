@@ -326,17 +326,18 @@ function BeautyWeekPage() {
           >
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A semana do aniversário</p>
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-              Uma semana para cuidar do sorriso, da pele e do <span className="text-gradient-gold">bem-estar</span>.
+              Resultado real. Naturalidade <span className="text-gradient-gold">intacta</span>.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
-              De <strong>24 a 30 de agosto de 2026</strong>, nosso time multidisciplinar estará disponível para avaliar
-              seu sorriso, sua pele e seu contorno — tudo em um só lugar, com tecnologia de ponta e
-              vagas limitadas para atendimento personalizado.
+              A Beauty Week de Aniversário L'ECLER é para quem quer ver uma versão mais luminosa de si
+              sem abrir mão da naturalidade. Entre <strong>24 e 30 de agosto de 2026</strong>, nosso time
+              multidisciplinar estará disponível para avaliar seu sorriso, sua pele e seu contorno —
+              tudo em um só lugar, com tecnologia de ponta e vagas limitadas por dia.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              A entrada é a reserva da vaga. A partir dela, você entende quais tratamentos fazem sentido
-              para o seu caso e agenda o que precisa para lotar a semana com resultados reais.
+              A reserva da vaga é a sua entrada. A partir dela, você entende exatamente quais
+              tratamentos fazem sentido para o seu caso e agenda o que precisa para viver uma semana
+              inteira dedicada ao seu bem-estar, com resultados que você enxerga no espelho.
             </p>
           </motion.div>
 
