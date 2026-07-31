@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -34,6 +35,11 @@ const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftVoucherRoute = GiftVoucherRouteImport.update({
+  id: '/gift-voucher',
+  path: '/gift-voucher',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CursofiosRoute = CursofiosRouteImport.update({
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/privacidade': typeof PrivacidadeRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/privacidade': typeof PrivacidadeRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/gift-voucher': typeof GiftVoucherRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/privacidade': typeof PrivacidadeRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
     | '/privacidade'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
     | '/privacidade'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/gift-voucher'
     | '/obrigado'
     | '/obrigadofios'
     | '/privacidade'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
+  GiftVoucherRoute: typeof GiftVoucherRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
@@ -194,6 +207,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gift-voucher': {
+      id: '/gift-voucher'
+      path: '/gift-voucher'
+      fullPath: '/gift-voucher'
+      preLoaderRoute: typeof GiftVoucherRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cursofios': {
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
+  GiftVoucherRoute: GiftVoucherRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
   PrivacidadeRoute: PrivacidadeRoute,
@@ -271,13 +292,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
