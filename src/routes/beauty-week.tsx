@@ -232,7 +232,7 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-              <Sparkles className="h-3.5 w-3.5" /> Evento VIP · Vagas limitadas
+              <Sparkles className="h-3.5 w-3.5" /> Aniversário L'ECLER · Última semana de agosto
             </span>
 
             <h1 className="mt-6 font-display text-5xl leading-[0.95] text-primary-foreground sm:text-6xl lg:text-7xl">
@@ -242,8 +242,9 @@ function BeautyWeekPage() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
-              Uma semana inteira dedicada à sua melhor versão. Sorriso, pele e face em uma experiência
-              premium e personalizada na Clínica L'ECLER.
+              Em comemoração ao aniversário da Clínica L'ECLER, preparamos uma semana exclusiva com
+              avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias
+              de harmonização e rejuvenescimento que estão mudando o mercado.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -252,23 +253,23 @@ function BeautyWeekPage() {
                 onClick={openSignupDialog}
                 className="group h-14 rounded-full bg-gradient-gold px-8 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
               >
-                Garantir minha vaga
+                Quero minha avaliação gratuita
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <a href="#experiencias">
+              <a href="#tratamentos">
                 <Button
                   size="lg"
                   variant="outline"
                   className="h-14 rounded-full border-primary-foreground/30 bg-transparent px-8 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10"
                 >
-                  Ver experiências
+                  Ver tratamentos
                 </Button>
               </a>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4 text-sm text-primary-foreground/70">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Calendar className="h-4 w-4 text-gold" /> Semana exclusiva
+                <Calendar className="h-4 w-4 text-gold" /> Última semana de agosto
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
                 <MapPin className="h-4 w-4 text-gold" /> Bragança Paulista — SP
@@ -322,18 +323,19 @@ function BeautyWeekPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A experiência</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A semana do aniversário</p>
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-              Sete dias para se reconectar com a sua <span className="text-gradient-gold">beleza</span>.
+              Uma semana para cuidar do sorriso, da pele e do <span className="text-gradient-gold">bem-estar</span>.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              A Beauty Week L'ECLER nasceu para mulheres que não querem apenas um procedimento, mas uma
-              jornada de cuidado. Durante uma semana, nosso time multidisciplinar estará inteiramente
-              dedicado a entender o que você precisa e entregar resultados naturais, seguros e sofisticados.
+              A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
+              Durante a última semana de agosto, nosso time multidisciplinar estará disponível para avaliar
+              seu sorriso, sua pele e seu contorno facial — tudo em um só lugar, com tecnologia de ponta e
+              condições especiais.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Cada visita começa com um Diagnóstico Online gratuito, que direciona seu atendimento para que
-              você aproveite cada minuto na clínica com propósito.
+              A entrada é a avaliação gratuita. A partir dela, você entende quais tratamentos fazem sentido
+              para o seu caso e agenda o que precisa para lotar a semana com resultados reais.
             </p>
           </motion.div>
 
