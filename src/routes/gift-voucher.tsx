@@ -155,7 +155,7 @@ function GiftVoucherPage() {
       });
       if (error) throw error;
 
-      fetch("https://projeto01-n8n.gmxuno.easypanel.host/webhook/giftvoucher", {
+      fetch("https://projeto01-n8n.gmxuno.easypanel.host/webhook/Gift-Voucher", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
