@@ -178,7 +178,7 @@ const faq = [
   },
   {
     q: "Como funciona a reserva de vaga?",
-    a: "Você deixa seu contato pelo formulário ou Diagnóstico Online. Nossa equipe entra em contato para entender seu caso, apresentar as valores exclusivos de aniversário e confirmar seu horário na semana de 24 a 30 de agosto.",
+    a: "Você deixa seu contato pelo formulário ou Diagnóstico Online. Nossa equipe entra em contato para entender seu caso, apresentar os valores exclusivos de aniversário e confirmar seu horário na semana de 24 a 30 de agosto.",
   },
   {
     q: "Quais tecnologias estarão disponíveis?",
