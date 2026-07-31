@@ -592,19 +592,21 @@ function BeautyWeekPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`relative overflow-hidden rounded-3xl border p-8 ${
-                  pkg.name === "Premium"
+                  pkg.name === "Sorriso"
                     ? "border-gold bg-gradient-to-b from-gold/20 to-gold/5 shadow-gold"
                     : "border-gold/20 bg-white/5"
                 }`}
               >
-                {pkg.name === "Premium" && (
+                {pkg.name === "Sorriso" && (
                   <span className="absolute right-0 top-0 rounded-bl-2xl bg-gold px-4 py-1 text-xs font-semibold text-primary">
                     {pkg.badge}
                   </span>
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
                 <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">sem juros no cartão</p>
+                <p className="text-xs text-primary-foreground/60">
+                  {pkg.name === "Avaliação Gratuita" ? "sem compromisso" : "condições especiais de aniversário"}
+                </p>
                 <ul className="mt-6 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
@@ -616,12 +618,12 @@ function BeautyWeekPage() {
                 <Button
                   onClick={openSignupDialog}
                   className={`mt-8 h-12 w-full rounded-full font-semibold transition-transform hover:scale-[1.02] ${
-                    pkg.name === "Premium"
+                    pkg.name === "Sorriso"
                       ? "bg-gradient-gold text-primary shadow-gold"
                       : "border border-gold/40 bg-transparent text-gold hover:bg-gold/10"
                   }`}
                 >
-                  Escolher {pkg.name}
+                  Quero reservar
                 </Button>
               </motion.div>
             ))}
