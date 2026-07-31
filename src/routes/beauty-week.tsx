@@ -72,7 +72,7 @@ const experiences = [
   },
   {
     day: "Pele",
-    title: "Rejuvenescimento Facial",
+    title: "Rejuvenescimento",
     desc: "Botox, preenchimentos, fios e bioestímulo com foco em naturalidade, equilíbrio e resultado sem exageros.",
     icon: ScanFace,
   },
@@ -97,12 +97,12 @@ const highlights = [
   },
   {
     title: "Botox & Preenchimentos",
-    desc: "Harmonização facial com toxina e preenchimentos para rejuvenescimento natural e equilibrado.",
+    desc: "Harmonização com toxina e preenchimentos para rejuvenescimento natural e equilibrado.",
     icon: ScanFace,
   },
   {
     title: "HIPRO",
-    desc: "Tecnologia de ultrassom microfocado para lifting não cirúrgico e definição facial.",
+    desc: "Tecnologia de ultrassom microfocado para lifting não cirúrgico e definição.",
     icon: Gem,
   },
   {
@@ -170,7 +170,7 @@ const packages = [
 const faq = [
   {
     q: "O que é a Beauty Week de Aniversário L'ECLER?",
-    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos condições especiais para clareamento dental + AIRFLOW e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica, com vagas limitadas por dia.",
+    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos condições especiais para clareamento dental + AIRFLOW e as 3 tecnologias de rejuvenescimento disponíveis na clínica, com vagas limitadas por dia.",
   },
   {
     q: "Como funciona a reserva de vaga?",
@@ -336,7 +336,7 @@ function BeautyWeekPage() {
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
               De <strong>24 a 30 de agosto de 2026</strong>, nosso time multidisciplinar estará disponível para avaliar
-              seu sorriso, sua pele e seu contorno facial — tudo em um só lugar, com tecnologia de ponta e
+              seu sorriso, sua pele e seu contorno — tudo em um só lugar, com tecnologia de ponta e
               condições especiais.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
@@ -382,7 +382,7 @@ function BeautyWeekPage() {
               Dra. <span className="text-gradient-gold">Cássia Blasques</span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Referência em odontologia estética e harmonização orofacial em Bragança Paulista, a Dra. Cássia
+              Referência em odontologia estética e harmonização em Bragança Paulista, a Dra. Cássia
               lidera o padrão técnico de todo o time da L'ECLER — e é ela quem supervisiona cada plano da
               Beauty Week.
             </p>
