@@ -8,7 +8,6 @@ import {
   Star,
   Calendar,
   MapPin,
-  Clock,
   CheckCircle2,
   ArrowRight,
   ChevronDown,
@@ -17,7 +16,6 @@ import {
   ShieldCheck,
   ScanFace,
   Smile,
-  User,
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,20 +29,20 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Beauty Week L'ECLER — Evento VIP de Estética e Bem-Estar" },
+      { title: "Beauty Week Aniversário L'ECLER — Tecnologias Exclusivas em Bragança Paulista" },
       {
         name: "description",
         content:
-          "Uma semana exclusiva de experiências em estética facial, odontologia e bem-estar na Clínica L'ECLER em Bragança Paulista. Vagas limitadas.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais, HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. Avaliações gratuitas para lotar a agenda.",
       },
       {
         property: "og:title",
-        content: "Beauty Week L'ECLER — Evento VIP de Estética e Bem-Estar",
+        content: "Beauty Week Aniversário L'ECLER — Tecnologias Exclusivas",
       },
       {
         property: "og:description",
         content:
-          "Diagnóstico personalizado, tratamentos de ponta e uma experiência de luxo por uma semana inteira.",
+          "Última semana de agosto na Clínica L'ECLER. Clareamento + AIRFLOW em condições especiais e as 3 tecnologias de ponta em harmonização e rejuvenescimento.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -64,75 +62,85 @@ const floats = [
 
 const experiences = [
   {
-    day: "Dia 1",
-    title: "Dia do Sorriso",
-    desc: "Avaliação odontológica completa, clareamento, Airflow e planejamento de sorriso digital.",
+    day: "Sorriso",
+    title: "Clareamento + AIRFLOW",
+    desc: "Avaliação odontológica completa com condições especiais de aniversário para clareamento dental e limpeza Airflow suíça.",
     icon: Smile,
   },
   {
-    day: "Dia 2",
-    title: "Dia da Pele",
-    desc: "Análise dérmica, gerenciamento de pele, bioestimuladores e protocolos de rejuvenescimento.",
+    day: "Pele",
+    title: "Rejuvenescimento Facial",
+    desc: "Botox, preenchimentos, fios e bioestímulo com foco em naturalidade, equilíbrio e resultado sem exageros.",
     icon: ScanFace,
   },
   {
-    day: "Dia 3",
-    title: "Dia do Contorno",
-    desc: "Avaliação facial harmonizada, toxina, preenchimentos, fios e emagrecimento facial.",
-    icon: User,
+    day: "Tecnologia",
+    title: "Equipamentos de Ponta",
+    desc: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido disponíveis na clínica por tempo limitado.",
+    icon: Gem,
   },
 ];
 
 const highlights = [
   {
-    title: "Odontologia Estética",
-    desc: "Facetas, lentes e clareamento para um sorriso natural e luminoso.",
+    title: "Clareamento Dental",
+    desc: "Sorriso mais luminoso com condições especiais de aniversário e acompanhamento clínico completo.",
     icon: Smile,
   },
   {
-    title: "Harmonização Orofacial",
-    desc: "Toxina, preenchimentos e fios com foco em naturalidade e equilíbrio.",
-    icon: ScanFace,
-  },
-  {
-    title: "Gerenciamento Dérmico",
-    desc: "Protocolos personalizados para pele saudável, firme e rejuvenescida.",
+    title: "AIRFLOW Suíço",
+    desc: "Limpeza e prevenção confortável com tecnologia suíça de propilaxia para manter a saúde bucal.",
     icon: Sparkles,
   },
   {
-    title: "Laser e Tecnologia",
-    desc: "Equipamentos de última geração para resultados precisos e confortáveis.",
+    title: "Botox & Preenchimentos",
+    desc: "Harmonização facial com toxina e preenchimentos para rejuvenescimento natural e equilibrado.",
+    icon: ScanFace,
+  },
+  {
+    title: "HIPRO",
+    desc: "Tecnologia de ultrassom microfocado para lifting não cirúrgico e definição facial.",
     icon: Gem,
+  },
+  {
+    title: "Rádiofrequência Microagulhada Robótica",
+    desc: "Precisão robótica para estimular colágeno, melhorar textura e firmeza da pele.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Laser de CO2 Híbrido",
+    desc: "Laser fracionado para rejuvenescimento, textura e tratamentos com recuperação controlada.",
+    icon: Star,
   },
 ];
 
 const benefits = [
-  "Avaliação multidisciplinar em um só lugar",
+  "Avaliação gratuita para direcionar seu tratamento",
+  "Clareamento dental + AIRFLOW em condições especiais de aniversário",
+  "3 tecnologias exclusivas: HIPRO, RF Microagulhada Robótica e Laser CO2 Híbrido",
   "Atendimento com time selecionado pela Dra. Cássia",
-  "Tecnologias de ponta em odontologia e estética",
-  "Diagnóstico Online incluído para direcionar sua visita",
+  "Diagnóstico Online incluído para otimizar sua visita",
   "Ambiente premium e acolhedor em Bragança Paulista",
-  "Planos de tratamento personalizados e sem exageros",
 ];
 
 const schedule = [
-  { time: "09h", event: "Recepção VIP com welcome drink" },
-  { time: "09h30", event: "Diagnóstico personalizado com especialista" },
-  { time: "11h", event: "Sessão de tratamento ou procedimento escolhido" },
-  { time: "12h30", event: "Pausa gourmet com coffee break saudável" },
-  { time: "14h", event: "Planejamento do próximo passo + brindes exclusivos" },
+  { time: "Passo 1", event: "Avaliação gratuita pelo lead ou Diagnóstico Online" },
+  { time: "Passo 2", event: "Triagem com o especialista certo para seu caso" },
+  { time: "Passo 3", event: "Planejamento personalizado de sorriso, pele ou face" },
+  { time: "Passo 4", event: "Aplicação do tratamento na última semana de agosto" },
+  { time: "Passo 5", event: "Acompanhamento pós-procedimento e próximos passos" },
 ];
 
 const testimonials = [
   {
     name: "Ana Paula M.",
     role: "Paciente L'ECLER",
-    text: "Nunca imaginei que uma clínica pudesse reunir tanta qualidade. Saí com um plano completo para sorriso, pele e face.",
+    text: "Saí com um plano completo para sorriso, pele e face. A equipe entendeu exatamente o que eu queria sem forçar nada.",
   },
   {
     name: "Fernanda R.",
     role: "Paciente L'ECLER",
-    text: "A Beauty Week foi um presente para mim. Atendimento delicado, ambiente lindo e resultados que superaram minha expectativa.",
+    text: "A Beauty Week foi um presente. Atendimento delicado, ambiente lindo e resultados que superaram minha expectativa.",
   },
   {
     name: "Juliana C.",
@@ -143,33 +151,37 @@ const testimonials = [
 
 const packages = [
   {
-    name: "Essencial",
-    price: "12x R$ 197",
-    badge: "Mais acessível",
-    items: ["1 dia de experiência", "Diagnóstico Online", "1 sessão de tratamento", "Coffee break VIP"],
+    name: "Avaliação Gratuita",
+    price: "Grátis",
+    badge: "Comece aqui",
+    items: ["Avaliação presencial ou Diagnóstico Online", "Direcionamento personalizado", "Condições especiais de aniversário", "Sem compromisso"],
   },
   {
-    name: "Premium",
-    price: "12x R$ 397",
-    badge: "Mais escolhido",
-    items: ["3 dias de experiência", "Diagnóstico Online", "3 sessões de tratamento", "Brindes exclusivos", "Acompanhamento 30 dias"],
+    name: "Sorriso",
+    price: "Condições especiais",
+    badge: "Mais procurado",
+    items: ["Clareamento dental", "AIRFLOW suíço", "Avaliação odontológica completa", "Planejamento digital do sorriso"],
   },
   {
-    name: "VIP",
-    price: "12x R$ 697",
-    badge: "Experiência completa",
-    items: ["5 dias de experiência", "Diagnóstico Online", "Plano completo sorriso + face + pele", "Kit home care", "Acompanhamento 90 dias"],
+    name: "Pele & Contorno",
+    price: "Condições especiais",
+    badge: "Tecnologias exclusivas",
+    items: ["Botox e preenchimentos", "HIPRO", "RF Microagulhada Robótica", "Laser de CO2 Híbrido"],
   },
 ];
 
 const faq = [
   {
-    q: "O que é a Beauty Week L'ECLER?",
-    a: "É uma semana exclusiva de experiências em estética facial, odontologia e bem-estar, com atendimento VIP, diagnósticos personalizados e condições especiais de tratamento.",
+    q: "O que é a Beauty Week de Aniversário L'ECLER?",
+    a: "É uma semana exclusiva na última semana de agosto em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
   },
   {
-    q: "Preciso agendar todos os dias?",
-    a: "Não. Você escolhe o pacote que faz sentido para você e agenda os dias de acordo com a disponibilidade da clínica.",
+    q: "Preciso pagar para fazer a avaliação?",
+    a: "Não. A avaliação é gratuita e serve para entender o que faz sentido para o seu caso. A partir dela, você agenda o tratamento desejado e aproveita as condições especiais de aniversário.",
+  },
+  {
+    q: "Quais tecnologias estarão disponíveis?",
+    a: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. As três estarão na clínica durante a última semana de agosto para avaliações e aplicações.",
   },
   {
     q: "O Diagnóstico Online realmente funciona?",
@@ -177,7 +189,7 @@ const faq = [
   },
   {
     q: "Quem pode participar?",
-    a: "Mulheres que buscam naturalidade, rejuvenescimento e uma experiência de cuidado completa, sem exageros.",
+    a: "Qualquer pessoa que busca cuidado multidisciplinar para sorriso, pele e face com naturalidade, segurança e tecnologia de ponta.",
   },
   {
     q: "Onde acontece o evento?",
@@ -222,7 +234,7 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-              <Sparkles className="h-3.5 w-3.5" /> Evento VIP · Vagas limitadas
+              <Sparkles className="h-3.5 w-3.5" /> Aniversário L'ECLER · Última semana de agosto
             </span>
 
             <h1 className="mt-6 font-display text-5xl leading-[0.95] text-primary-foreground sm:text-6xl lg:text-7xl">
@@ -232,8 +244,9 @@ function BeautyWeekPage() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
-              Uma semana inteira dedicada à sua melhor versão. Sorriso, pele e face em uma experiência
-              premium e personalizada na Clínica L'ECLER.
+              Em comemoração ao aniversário da Clínica L'ECLER, preparamos uma semana exclusiva com
+              avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias
+              de harmonização e rejuvenescimento que estão mudando o mercado.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -242,23 +255,23 @@ function BeautyWeekPage() {
                 onClick={openSignupDialog}
                 className="group h-14 rounded-full bg-gradient-gold px-8 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
               >
-                Garantir minha vaga
+                Quero minha avaliação gratuita
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <a href="#experiencias">
+              <a href="#tratamentos">
                 <Button
                   size="lg"
                   variant="outline"
                   className="h-14 rounded-full border-primary-foreground/30 bg-transparent px-8 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10"
                 >
-                  Ver experiências
+                  Ver tratamentos
                 </Button>
               </a>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-4 text-sm text-primary-foreground/70">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Calendar className="h-4 w-4 text-gold" /> Semana exclusiva
+                <Calendar className="h-4 w-4 text-gold" /> Última semana de agosto
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
                 <MapPin className="h-4 w-4 text-gold" /> Bragança Paulista — SP
@@ -312,18 +325,19 @@ function BeautyWeekPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A experiência</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A semana do aniversário</p>
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-              Sete dias para se reconectar com a sua <span className="text-gradient-gold">beleza</span>.
+              Uma semana para cuidar do sorriso, da pele e do <span className="text-gradient-gold">bem-estar</span>.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              A Beauty Week L'ECLER nasceu para mulheres que não querem apenas um procedimento, mas uma
-              jornada de cuidado. Durante uma semana, nosso time multidisciplinar estará inteiramente
-              dedicado a entender o que você precisa e entregar resultados naturais, seguros e sofisticados.
+              A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
+              Durante a última semana de agosto, nosso time multidisciplinar estará disponível para avaliar
+              seu sorriso, sua pele e seu contorno facial — tudo em um só lugar, com tecnologia de ponta e
+              condições especiais.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Cada visita começa com um Diagnóstico Online gratuito, que direciona seu atendimento para que
-              você aproveite cada minuto na clínica com propósito.
+              A entrada é a avaliação gratuita. A partir dela, você entende quais tratamentos fazem sentido
+              para o seu caso e agenda o que precisa para lotar a semana com resultados reais.
             </p>
           </motion.div>
 
@@ -359,8 +373,8 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Três dias, três focos</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Escolha sua experiência</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Tratamentos da semana</p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Sorriso, pele e tecnologia</h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -405,11 +419,11 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">O que está incluído</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Tratamentos em destaque</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">O que está incluso</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Tratamentos e tecnologias exclusivas</h2>
           </motion.div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {highlights.map((h, i) => (
               <motion.div
                 key={h.title}
@@ -442,7 +456,7 @@ function BeautyWeekPage() {
             >
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Por que participar</p>
               <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-                Uma semana pensada para quem valoriza <span className="text-gradient-gold">resultado e cuidado</span>.
+                Avaliação gratuita para lotar a agenda de <span className="text-gradient-gold">resultados reais</span>.
               </h2>
               <Button
                 size="lg"
@@ -482,8 +496,8 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Como será o seu dia</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Agenda VIP</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Como funciona</p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Da avaliação ao resultado</h2>
           </motion.div>
 
           <div className="mt-14 space-y-0">
@@ -518,7 +532,7 @@ function BeautyWeekPage() {
             className="text-center"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Depoimentos</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">O que dizem nossas pacientes</h2>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">O que dizem nossos pacientes</h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -565,8 +579,8 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Investimento</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Pacotes Beauty Week</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Condições especiais</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -578,19 +592,21 @@ function BeautyWeekPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className={`relative overflow-hidden rounded-3xl border p-8 ${
-                  pkg.name === "Premium"
+                  pkg.name === "Sorriso"
                     ? "border-gold bg-gradient-to-b from-gold/20 to-gold/5 shadow-gold"
                     : "border-gold/20 bg-white/5"
                 }`}
               >
-                {pkg.name === "Premium" && (
+                {pkg.name === "Sorriso" && (
                   <span className="absolute right-0 top-0 rounded-bl-2xl bg-gold px-4 py-1 text-xs font-semibold text-primary">
                     {pkg.badge}
                   </span>
                 )}
                 <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
                 <p className="mt-2 font-display text-4xl text-primary-foreground">{pkg.price}</p>
-                <p className="text-xs text-primary-foreground/60">sem juros no cartão</p>
+                <p className="text-xs text-primary-foreground/60">
+                  {pkg.name === "Avaliação Gratuita" ? "sem compromisso" : "condições especiais de aniversário"}
+                </p>
                 <ul className="mt-6 space-y-3">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
@@ -602,12 +618,12 @@ function BeautyWeekPage() {
                 <Button
                   onClick={openSignupDialog}
                   className={`mt-8 h-12 w-full rounded-full font-semibold transition-transform hover:scale-[1.02] ${
-                    pkg.name === "Premium"
+                    pkg.name === "Sorriso"
                       ? "bg-gradient-gold text-primary shadow-gold"
                       : "border border-gold/40 bg-transparent text-gold hover:bg-gold/10"
                   }`}
                 >
-                  Escolher {pkg.name}
+                  Quero reservar
                 </Button>
               </motion.div>
             ))}
@@ -677,18 +693,18 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-display text-4xl text-primary-foreground sm:text-5xl">
-              Sua vaga na <span className="text-gradient-gold">Beauty Week</span> está esperando.
+              Sua avaliação gratuita na <span className="text-gradient-gold">Beauty Week</span> está esperando.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base text-primary-foreground/80">
-              As vagas são limitadas e a experiência é única. Reserve agora e comece sua jornada de
-              transformação com a equipe L'ECLER.
+              Vagas limitadas para a última semana de agosto. Reserve sua avaliação agora e garanta seu
+              lugar na agenda de aniversário da Clínica L'ECLER.
             </p>
             <Button
               size="lg"
               onClick={openSignupDialog}
               className="group mt-10 h-14 rounded-full bg-gradient-gold px-10 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
-              Garantir minha vaga agora
+              Quero minha avaliação gratuita
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <p className="mt-4 flex items-center justify-center gap-2 text-sm text-primary-foreground/70">
