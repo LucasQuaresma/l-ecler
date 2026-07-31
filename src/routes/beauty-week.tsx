@@ -36,20 +36,20 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Beauty Week Aniversário L'ECLER — Vagas Limitadas em Bragança Paulista" },
+      { title: "Beauty Week Aniversário L'ECLER — Avaliação Multidisciplinar em Bragança Paulista" },
       {
         name: "description",
         content:
-          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Uma semana exclusiva para cuidar do sorriso, da pele e do contorno com tecnologia de ponta e atendimento personalizado. Reserve sua vaga.",
+          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Avaliação individualizada do sorriso, pele e harmonia facial e corporal com tecnologia avançada e olhar integrado para o seu bem-estar.",
       },
       {
         property: "og:title",
-        content: "Beauty Week Aniversário L'ECLER — Vagas Limitadas",
+        content: "Beauty Week Aniversário L'ECLER — Avaliação Multidisciplinar",
       },
       {
         property: "og:description",
         content:
-          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Sorriso, pele e contorno em um só lugar, com tecnologia de ponta e vagas limitadas.",
+          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Cuidado completo do sorriso, pele e harmonia facial e corporal com tecnologia avançada e segurança.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -236,9 +236,9 @@ function BeautyWeekPage() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-primary-foreground/80">
-              De 24 a 30 de agosto de 2026, nosso time multidisciplinar se reúne para cuidar do seu
-              sorriso, da sua pele e do seu contorno em um só lugar. Tecnologia de ponta,
-              atendimento personalizado e vagas limitadas por dia.
+              De 24 a 30 de agosto de 2026, nossa equipe multidisciplinar estará disponível para
+              avaliar seu sorriso, sua pele e sua harmonia facial e corporal — tudo em um só lugar,
+              com tecnologia avançada, segurança e um olhar integrado para o seu bem-estar.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -326,18 +326,23 @@ function BeautyWeekPage() {
           >
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A semana do aniversário</p>
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-              Resultado real. Naturalidade <span className="text-gradient-gold">intacta</span>.
+              Cuidar de você de forma <span className="text-gradient-gold">completa</span>.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              A Beauty Week de Aniversário L'ECLER é para quem quer ver uma versão mais luminosa de si
-              sem abrir mão da naturalidade. Entre <strong>24 e 30 de agosto de 2026</strong>, nosso time
-              multidisciplinar estará disponível para avaliar seu sorriso, sua pele e seu contorno —
-              tudo em um só lugar, com tecnologia de ponta e vagas limitadas por dia.
+              A Beauty Week de Aniversário L’ECLER é um convite para cuidar de você de forma completa,
+              respeitando sua naturalidade e colocando a saúde em primeiro lugar.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              A reserva da vaga é a sua entrada. A partir dela, você entende exatamente quais
-              tratamentos fazem sentido para o seu caso e agenda o que precisa para viver uma semana
-              inteira dedicada ao seu bem-estar, com resultados que você enxerga no espelho.
+              De <strong>24 a 30 de agosto de 2026</strong>, nossa equipe multidisciplinar estará disponível para
+              realizar uma avaliação individualizada do seu sorriso, da sua pele e da harmonia facial e
+              corporal. Tudo em um só lugar, com tecnologia avançada, segurança e um olhar integrado
+              para o seu bem-estar.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              O agendamento da avaliação é o primeiro passo. A partir dela, você poderá compreender
+              suas necessidades e receber orientações profissionais sobre os cuidados mais adequados
+              para o seu momento, sempre de maneira personalizada, responsável e alinhada aos seus
+              objetivos.
             </p>
           </motion.div>
 
