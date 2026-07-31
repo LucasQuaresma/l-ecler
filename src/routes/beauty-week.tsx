@@ -392,6 +392,7 @@ function BeautyWeekPage() {
 
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
+              { src: clinicaRecepcao.url, alt: "Recepção e lounge da Clínica L'ECLER", label: "Recepção", span: "", ratio: "aspect-[4/3]" },
               { src: clinicaEspera.url, alt: "Área de atendimento e espera privativa", label: "Espaços privativos", span: "", ratio: "aspect-[4/3]" },
               { src: clinicaConsultorio1.url, alt: "Consultório odontológico da Clínica L'ECLER", label: "Consultório", span: "", ratio: "aspect-[4/3]" },
               { src: clinicaConsultorio2.url, alt: "Consultório com equipamentos de última geração", label: "Tecnologia de ponta", span: "", ratio: "aspect-[4/3]" },
