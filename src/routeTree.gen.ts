@@ -15,6 +15,7 @@ import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
 import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
@@ -50,6 +51,11 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BeautyWeekRoute = BeautyWeekRouteImport.update({
+  id: '/beauty-week',
+  path: '/beauty-week',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AcademyRoute = AcademyRouteImport.update({
   id: '/academy',
   path: '/academy',
@@ -74,6 +80,7 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
@@ -99,6 +107,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
@@ -113,6 +122,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/academy'
+    | '/beauty-week'
     | '/blog'
     | '/cookies'
     | '/cursofios'
@@ -125,6 +135,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/academy'
+    | '/beauty-week'
     | '/blog'
     | '/cookies'
     | '/cursofios'
@@ -137,6 +148,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/academy'
+    | '/beauty-week'
     | '/blog'
     | '/cookies'
     | '/cursofios'
@@ -150,6 +162,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcademyRoute: typeof AcademyRoute
+  BeautyWeekRoute: typeof BeautyWeekRoute
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/beauty-week': {
+      id: '/beauty-week'
+      path: '/beauty-week'
+      fullPath: '/beauty-week'
+      preLoaderRoute: typeof BeautyWeekRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/academy': {
       id: '/academy'
       path: '/academy'
@@ -238,6 +258,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcademyRoute: AcademyRoute,
+  BeautyWeekRoute: BeautyWeekRoute,
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
