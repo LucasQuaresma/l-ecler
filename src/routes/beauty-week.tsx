@@ -237,7 +237,7 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-              <Sparkles className="h-3.5 w-3.5" /> Aniversário L'ECLER · Última semana de agosto
+              <Sparkles className="h-3.5 w-3.5" /> Aniversário L'ECLER · 24 a 30 de agosto
             </span>
 
             <h1 className="mt-6 font-display text-5xl leading-[0.95] text-primary-foreground sm:text-6xl lg:text-7xl">
