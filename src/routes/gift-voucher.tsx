@@ -161,7 +161,8 @@ function GiftVoucherPage() {
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-      navigate({ to: "/obrigadogift" });
+      const message = encodeURIComponent("quero o gift-voucher para o meu pai");
+      window.location.href = `https://api.whatsapp.com/send?phone=5511915633857&text=${message}`;
     } catch (err) {
       console.error(err);
       toast.error("Não foi possível enviar. Tente novamente.");
