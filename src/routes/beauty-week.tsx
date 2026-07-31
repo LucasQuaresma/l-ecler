@@ -433,10 +433,17 @@ function BeautyWeekPage() {
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
               Dra. <span className="text-gradient-gold">Cássia Blasques</span>
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Referência em odontologia estética e harmonização em Bragança Paulista, a Dra. Cássia
-              lidera o padrão técnico de todo o time da L'ECLER — e é ela quem supervisiona cada plano da
-              Beauty Week.
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              Com 27 anos de experiência, a Dra. Cássia Blasques é referência em odontologia estética e
+              harmonização em Bragança Paulista. Ao longo de sua trajetória, buscou aperfeiçoamento em
+              países como Coreia do Sul, Estados Unidos e Suíça, acompanhando de perto técnicas e
+              tecnologias avançadas para oferecer aos pacientes da L’ECLER um cuidado cada vez mais seguro,
+              moderno e individualizado.
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              À frente da clínica, ela orienta o padrão técnico da equipe e supervisiona os planos de
+              cuidado desenvolvidos durante a Beauty Week, sempre priorizando a saúde, a naturalidade e as
+              necessidades de cada paciente.
             </p>
           </motion.div>
 
