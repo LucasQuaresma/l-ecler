@@ -130,7 +130,7 @@ const schedule = [
   { time: "Passo 1", event: "Avaliação gratuita pelo lead ou Diagnóstico Online" },
   { time: "Passo 2", event: "Triagem com o especialista certo para seu caso" },
   { time: "Passo 3", event: "Planejamento personalizado de sorriso, pele ou face" },
-  { time: "Passo 4", event: "Aplicação do tratamento na última semana de agosto" },
+  { time: "Passo 4", event: "Aplicação do tratamento na semana de 24 a 30 de agosto" },
   { time: "Passo 5", event: "Acompanhamento pós-procedimento e próximos passos" },
 ];
 
@@ -176,7 +176,7 @@ const packages = [
 const faq = [
   {
     q: "O que é a Beauty Week de Aniversário L'ECLER?",
-    a: "É uma semana exclusiva na última semana de agosto em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
+    a: "É uma semana exclusiva de 24 a 30 de agosto de 2026 em comemoração ao aniversário da clínica. Teremos avaliações gratuitas, clareamento dental + AIRFLOW em condições especiais e as 3 tecnologias de rejuvenescimento facial disponíveis na clínica.",
   },
   {
     q: "Preciso pagar para fazer a avaliação?",
@@ -184,7 +184,7 @@ const faq = [
   },
   {
     q: "Quais tecnologias estarão disponíveis?",
-    a: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. As três estarão na clínica durante a última semana de agosto para avaliações e aplicações.",
+    a: "HIPRO, Rádiofrequência Microagulhada Robótica e Laser de CO2 Híbrido. As três estarão na clínica durante a semana de 24 a 30 de agosto para avaliações e aplicações.",
   },
   {
     q: "O Diagnóstico Online realmente funciona?",
@@ -237,7 +237,7 @@ function BeautyWeekPage() {
             transition={{ duration: 0.7 }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-              <Sparkles className="h-3.5 w-3.5" /> Aniversário L'ECLER · Última semana de agosto
+              <Sparkles className="h-3.5 w-3.5" /> Aniversário L'ECLER · 24 a 30 de agosto
             </span>
 
             <h1 className="mt-6 font-display text-5xl leading-[0.95] text-primary-foreground sm:text-6xl lg:text-7xl">
@@ -274,11 +274,18 @@ function BeautyWeekPage() {
 
             <div className="mt-10 flex flex-wrap gap-4 text-sm text-primary-foreground/70">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Calendar className="h-4 w-4 text-gold" /> Última semana de agosto
+                <Calendar className="h-4 w-4 text-gold" /> 24 a 30 de agosto de 2026
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
                 <MapPin className="h-4 w-4 text-gold" /> Bragança Paulista — SP
               </span>
+            </div>
+
+            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold/30 bg-gold/10 px-5 py-3 backdrop-blur-sm">
+              <Calendar className="h-5 w-5 flex-none text-gold" />
+              <p className="text-sm font-medium text-gold">
+                Atenção: evento acontece exclusivamente na semana de <span className="font-bold">24 a 30 de agosto</span>. Vagas limitadas por dia.
+              </p>
             </div>
           </motion.div>
 
@@ -334,7 +341,7 @@ function BeautyWeekPage() {
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               A Beauty Week de Aniversário L'ECLER é para quem quer resultado sem abrir mão da naturalidade.
-              Durante a última semana de agosto, nosso time multidisciplinar estará disponível para avaliar
+              De <strong>24 a 30 de agosto de 2026</strong>, nosso time multidisciplinar estará disponível para avaliar
               seu sorriso, sua pele e seu contorno facial — tudo em um só lugar, com tecnologia de ponta e
               condições especiais.
             </p>
