@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { z } from "zod";
 import {
@@ -122,7 +122,6 @@ function GiftVoucherPage() {
   const [errors, setErrors] = useState<{ name?: string; email?: string; phone?: string }>({});
   const [loading, setLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const navigate = useNavigate();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
