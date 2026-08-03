@@ -46,7 +46,7 @@ export function HeroSection() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <Button
               size="lg"
-              onClick={openSignupDialog}
+              onClick={() => openSignupDialog()}
               className="group h-12 rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
               Quero conversar e agendar

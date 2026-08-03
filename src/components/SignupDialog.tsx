@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { SIGNUP_EVENT, N8N_WEBHOOK_URL } from "@/lib/signup-dialog";
+import { SIGNUP_EVENT, N8N_WEBHOOK_URL, WHATSAPP_URL, type SignupConfig } from "@/lib/signup-dialog";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome completo").max(100, "Nome muito longo"),
@@ -35,10 +35,15 @@ export function SignupDialog() {
   const [whatsapp, setWhatsapp] = useState("");
   const [errors, setErrors] = useState<{ name?: string; whatsapp?: string }>({});
   const [loading, setLoading] = useState(false);
+  const [config, setConfig] = useState<SignupConfig | undefined>();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const handler = () => setOpen(true);
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<SignupConfig | undefined>).detail;
+      setConfig(detail);
+      setOpen(true);
+    };
     window.addEventListener(SIGNUP_EVENT, handler);
     return () => window.removeEventListener(SIGNUP_EVENT, handler);
   }, []);
@@ -60,7 +65,7 @@ export function SignupDialog() {
     const payload = {
       name: parsed.data.name,
       whatsapp: parsed.data.whatsapp,
-      source: "landing-page",
+      source: config?.source ?? "landing-page",
       created_at: new Date().toISOString(),
     };
 
@@ -73,13 +78,19 @@ export function SignupDialog() {
       if (error) throw error;
 
       // Webhook n8n (não bloqueia se falhar)
-      fetch(N8N_WEBHOOK_URL, {
+      fetch(config?.webhookUrl ?? N8N_WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-      navigate({ to: "/obrigado" });
+      if (config?.whatsappUrl) {
+        window.location.href = config.whatsappUrl;
+      } else if (config?.redirectTo) {
+        navigate({ to: config.redirectTo });
+      } else {
+        navigate({ to: "/obrigado" });
+      }
     } catch (err) {
       console.error(err);
       toast.error("Não foi possível enviar. Tente novamente.");
@@ -87,6 +98,12 @@ export function SignupDialog() {
       setLoading(false);
     }
   }
+
+  const dialogTitle = config?.title ?? "Vamos entender seu caso?";
+  const dialogDescription =
+    config?.description ??
+    "Deixe seu contato e a equipe da L'ECLER chama você no WhatsApp para conversar sobre o que deseja melhorar e orientar o próximo passo.";
+  const ctaText = config?.ctaText ?? "Quero ser chamada no WhatsApp";
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -97,13 +114,8 @@ export function SignupDialog() {
             Agendamento
           </div>
           <DialogHeader className="mt-3">
-            <DialogTitle className="font-display text-2xl text-foreground">
-              Vamos entender seu caso?
-            </DialogTitle>
-            <DialogDescription className="text-muted-foreground">
-              Deixe seu contato e a equipe da L'ECLER chama você no WhatsApp para conversar
-              sobre o que deseja melhorar e orientar o próximo passo.
-            </DialogDescription>
+            <DialogTitle className="font-display text-2xl text-foreground">{dialogTitle}</DialogTitle>
+            <DialogDescription className="text-muted-foreground">{dialogDescription}</DialogDescription>
           </DialogHeader>
         </div>
 
@@ -139,11 +151,14 @@ export function SignupDialog() {
             disabled={loading}
             className="h-12 w-full rounded-full bg-gradient-gold text-base font-semibold text-primary shadow-gold"
           >
-            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Quero ser chamada no WhatsApp"}
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : ctaText}
           </Button>
           <p className="text-center text-[11px] text-muted-foreground">
             Ao enviar, você concorda com nossa{" "}
-            <a href="/privacidade" className="underline">Política de Privacidade</a>.
+            <a href="/privacidade" className="underline">
+              Política de Privacidade
+            </a>
+            .
           </p>
         </form>
       </DialogContent>

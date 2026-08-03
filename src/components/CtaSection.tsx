@@ -33,7 +33,7 @@ export function CtaSection() {
           </p>
           <Button
             size="lg"
-            onClick={openSignupDialog}
+            onClick={() => openSignupDialog()}
             className="group mt-10 h-14 rounded-full bg-gradient-gold px-9 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
           >
             Agendar minha avaliação

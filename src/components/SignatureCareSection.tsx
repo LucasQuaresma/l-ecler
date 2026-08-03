@@ -102,7 +102,7 @@ export function SignatureCareSection() {
 
             <Button
               size="lg"
-              onClick={openSignupDialog}
+              onClick={() => openSignupDialog()}
               className="group mt-8 h-auto min-h-12 max-w-full whitespace-normal rounded-full bg-gradient-gold px-6 py-3 text-center text-base font-semibold leading-snug text-primary shadow-gold transition-transform hover:scale-[1.02] sm:px-7"
             >
               Quero avaliar meu sorriso
