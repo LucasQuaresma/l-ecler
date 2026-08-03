@@ -176,7 +176,7 @@ export function ModulesSection() {
           </p>
           <Button
             size="lg"
-            onClick={openSignupDialog}
+            onClick={() => openSignupDialog()}
             className="group h-12 max-w-full rounded-full bg-gradient-gold px-8 text-center text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
           >
             Quero orientação

@@ -136,7 +136,7 @@ function AcademyPage() {
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
               <Button
                 size="lg"
-                onClick={openSignupDialog}
+                onClick={() => openSignupDialog()}
                 className="group h-12 rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold hover:scale-[1.02] transition-transform"
               >
                 Garantir minha vaga
@@ -571,7 +571,7 @@ function AcademyPage() {
               <div className="flex flex-col gap-3">
                 <Button
                   size="lg"
-                  onClick={openSignupDialog}
+                  onClick={() => openSignupDialog()}
                   className="h-12 rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold hover:scale-[1.02] transition-transform"
                 >
                   Garantir minha vaga
@@ -625,7 +625,7 @@ function AcademyPage() {
             </p>
             <Button
               size="lg"
-              onClick={openSignupDialog}
+              onClick={() => openSignupDialog()}
               className="relative mt-10 h-12 rounded-full bg-primary px-8 text-base font-semibold text-cream hover:bg-primary/90"
             >
               Garantir minha vaga

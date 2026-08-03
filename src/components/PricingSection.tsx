@@ -51,7 +51,7 @@ export function PricingSection() {
 
             <Button
               size="lg"
-              onClick={openSignupDialog}
+              onClick={() => openSignupDialog()}
               className="mt-10 h-12 w-full rounded-full bg-gradient-gold px-7 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.01] sm:w-auto"
             >
               Quero conversar com a equipe
