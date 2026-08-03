@@ -24,8 +24,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import heroImg from "@/assets/quiz-hero.jpg";
 import { N8N_WEBHOOK_URL } from "@/lib/signup-dialog";
 
@@ -300,7 +298,6 @@ function QuizPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
 
       <main className="relative flex min-h-screen flex-col">
         {/* Hero / Quiz background */}
@@ -596,7 +593,6 @@ function QuizPage() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }
