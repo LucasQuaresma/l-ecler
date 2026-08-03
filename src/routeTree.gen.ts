@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
@@ -23,6 +24,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
   id: '/privacidade',
   path: '/privacidade',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/quiz': typeof QuizRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
 }
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/quiz': typeof QuizRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
 }
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/quiz': typeof QuizRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/servicos/$slug': typeof ServicosSlugRoute
 }
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
     | '/obrigadofios'
     | '/obrigadogift'
     | '/privacidade'
+    | '/quiz'
     | '/blog/$slug'
     | '/servicos/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/obrigadofios'
     | '/obrigadogift'
     | '/privacidade'
+    | '/quiz'
     | '/blog/$slug'
     | '/servicos/$slug'
   id:
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/obrigadofios'
     | '/obrigadogift'
     | '/privacidade'
+    | '/quiz'
     | '/blog_/$slug'
     | '/servicos/$slug'
   fileRoutesById: FileRoutesById
@@ -195,12 +207,20 @@ export interface RootRouteChildren {
   ObrigadofiosRoute: typeof ObrigadofiosRoute
   ObrigadogiftRoute: typeof ObrigadogiftRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
+  QuizRoute: typeof QuizRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacidade': {
       id: '/privacidade'
       path: '/privacidade'
@@ -307,9 +327,20 @@ const rootRouteChildren: RootRouteChildren = {
   ObrigadofiosRoute: ObrigadofiosRoute,
   ObrigadogiftRoute: ObrigadogiftRoute,
   PrivacidadeRoute: PrivacidadeRoute,
+  QuizRoute: QuizRoute,
   BlogSlugRoute: BlogSlugRoute,
   ServicosSlugRoute: ServicosSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
