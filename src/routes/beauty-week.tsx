@@ -19,7 +19,7 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { openSignupDialog } from "@/lib/signup-dialog";
+import { openSignupDialog, BEAUTYWEEK_SIGNUP_CONFIG } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import heroImg from "@/assets/beautyweek-hero.jpg";
@@ -244,7 +244,7 @@ function BeautyWeekPage() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button
                 size="lg"
-                onClick={openSignupDialog}
+                onClick={() => openSignupDialog(BEAUTYWEEK_SIGNUP_CONFIG)}
                 className="group h-14 rounded-full bg-gradient-gold px-8 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
               >
                 Quero reservar minha vaga
@@ -572,7 +572,7 @@ function BeautyWeekPage() {
               </h2>
               <Button
                 size="lg"
-                onClick={openSignupDialog}
+                onClick={() => openSignupDialog(BEAUTYWEEK_SIGNUP_CONFIG)}
                 className="group mt-8 h-13 rounded-full bg-gradient-gold px-8 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
               >
                 Quero minha vaga
@@ -689,7 +689,7 @@ function BeautyWeekPage() {
                   ))}
                 </ul>
                 <Button
-                  onClick={openSignupDialog}
+                  onClick={() => openSignupDialog(BEAUTYWEEK_SIGNUP_CONFIG)}
                   className={`mt-8 h-12 w-full rounded-full font-semibold transition-transform hover:scale-[1.02] ${
                     pkg.name === "Sorriso"
                       ? "bg-gradient-gold text-primary shadow-gold"
@@ -774,7 +774,7 @@ function BeautyWeekPage() {
             </p>
             <Button
               size="lg"
-              onClick={openSignupDialog}
+              onClick={() => openSignupDialog(BEAUTYWEEK_SIGNUP_CONFIG)}
               className="group mt-10 h-14 rounded-full bg-gradient-gold px-10 text-base font-semibold text-primary shadow-gold transition-transform hover:scale-[1.02]"
             >
               Quero reservar minha vaga
