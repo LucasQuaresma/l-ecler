@@ -13,21 +13,21 @@ import { N8N_WEBHOOK_URL } from "@/lib/signup-dialog";
 export const Route = createFileRoute("/cursofios")({
   ssr: false,
   head: () => ({
-    meta: [
-      { title: "Curso Fios Faciais | 15 e 16 de Agosto | L'ECLER Academy" },
-      {
-        name: "description",
-        content:
-          "Últimas 2 vagas com 40% OFF. Curso presencial de Fios Faciais (PDO, PLLA e PLACL, incluindo Fios Aptos) com a Dra. Cássia Blasques.",
-      },
-      { property: "og:title", content: "Curso Fios Faciais | 15 e 16 de Agosto" },
-      {
-        property: "og:description",
-        content:
-          "Últimas 2 vagas com 40% OFF. Técnica segura, prática e com resultado clínico real.",
-      },
-      { property: "og:type", content: "website" },
-    ],
+      meta: [
+        { title: "Curso de Fios Faciais | 15 e 16 de Agosto | L'ECLER Academy" },
+        {
+          name: "description",
+          content:
+            "Curso presencial de Fios Faciais (PDO, PLLA e PLACL, incluindo Fios Aptos) com a Dra. Cássia Blasques.",
+        },
+        { property: "og:title", content: "Curso de Fios Faciais | 15 e 16 de Agosto" },
+        {
+          property: "og:description",
+          content:
+            "Técnica segura, prática e com resultado clínico real.",
+        },
+        { property: "og:type", content: "website" },
+      ],
     links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/cursofios" }],
     scripts: [
       {
@@ -165,10 +165,7 @@ function CursoFiosPage() {
               Últimas 2 vagas
             </p>
             <p className="mt-1 font-display text-2xl">
-              40% OFF{" "}
-              <span className="text-sm font-sans font-normal text-white/60">
-                com Fios Aptos incluídos
-              </span>
+              Fios Aptos incluídos
             </p>
             <p className="mt-2 text-sm text-white/70">
               As melhores técnicas com fios de PDO, PLLA e PLACL, aplicadas de forma segura, prática
