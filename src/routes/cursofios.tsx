@@ -29,6 +29,15 @@ export const Route = createFileRoute("/cursofios")({
       { property: "og:type", content: "website" },
     ],
     links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/cursofios" }],
+    scripts: [
+      {
+        children: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1228387582116931');fbq('track','PageView');`,
+      },
+      {
+        async: true,
+        src: "https://www.facebook.com/tr?id=1228387582116931&ev=PageView&noscript=1",
+      },
+    ],
   }),
   component: CursoFiosPage,
 });
