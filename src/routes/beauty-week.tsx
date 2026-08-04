@@ -36,7 +36,9 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Beauty Week Aniversário L'ECLER — Avaliação Multidisciplinar em Bragança Paulista" },
+      {
+        title: "Beauty Week Aniversário L'ECLER | Avaliação Multidisciplinar em Bragança Paulista",
+      },
       {
         name: "description",
         content:
@@ -44,7 +46,7 @@ export const Route = createFileRoute("/beauty-week")({
       },
       {
         property: "og:title",
-        content: "Beauty Week Aniversário L'ECLER — Avaliação Multidisciplinar",
+        content: "Beauty Week Aniversário L'ECLER | Avaliação Multidisciplinar",
       },
       {
         property: "og:description",
@@ -130,7 +132,6 @@ const benefits = [
   "Ambiente premium e acolhedor em Bragança Paulista",
 ];
 
-
 const testimonials = [
   {
     name: "Ana Paula M.",
@@ -153,7 +154,12 @@ const packages = [
   {
     name: "Sorriso",
     badge: "Mais procurado",
-    items: ["Clareamento dental", "AIRFLOW suíço", "Avaliação odontológica completa", "Planejamento digital do sorriso"],
+    items: [
+      "Clareamento dental",
+      "AIRFLOW suíço",
+      "Avaliação odontológica completa",
+      "Planejamento digital do sorriso",
+    ],
   },
   {
     name: "Pele & Contorno",
@@ -185,7 +191,7 @@ const faq = [
   },
   {
     q: "Onde acontece o evento?",
-    a: "Na Clínica L'ECLER, em Bragança Paulista — SP. Endereço completo é enviado após a confirmação da reserva.",
+    a: "Na Clínica L'ECLER, em Bragança Paulista, SP. Endereço completo é enviado após a confirmação da reserva.",
   },
 ];
 
@@ -266,14 +272,15 @@ function BeautyWeekPage() {
                 <Calendar className="h-4 w-4 text-gold" /> 24 a 30 de agosto de 2026
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <MapPin className="h-4 w-4 text-gold" /> Bragança Paulista — SP
+                <MapPin className="h-4 w-4 text-gold" /> Bragança Paulista, SP
               </span>
             </div>
 
             <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold/30 bg-gold/10 px-5 py-3 backdrop-blur-sm">
               <Calendar className="h-5 w-5 flex-none text-gold" />
               <p className="text-sm font-medium text-gold">
-                Atenção: evento acontece exclusivamente na semana de <span className="font-bold">24 a 30 de agosto</span>. Vagas limitadas por dia.
+                Atenção: evento acontece exclusivamente na semana de{" "}
+                <span className="font-bold">24 a 30 de agosto</span>. Vagas limitadas por dia.
               </p>
             </div>
           </motion.div>
@@ -324,19 +331,21 @@ function BeautyWeekPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">A semana do aniversário</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              A semana do aniversário
+            </p>
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
               Cuidar de você de forma <span className="text-gradient-gold">completa</span>.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              A Beauty Week de Aniversário L’ECLER é um convite para cuidar de você de forma completa,
-              respeitando sua naturalidade e colocando a saúde em primeiro lugar.
+              A Beauty Week de Aniversário L’ECLER é um convite para cuidar de você de forma
+              completa, respeitando sua naturalidade e colocando a saúde em primeiro lugar.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              De <strong>24 a 30 de agosto de 2026</strong>, nossa equipe multidisciplinar estará disponível para
-              realizar uma avaliação individualizada do seu sorriso, da sua pele e da harmonia facial e
-              corporal. Tudo em um só lugar, com tecnologia avançada, segurança e um olhar integrado
-              para o seu bem-estar.
+              De <strong>24 a 30 de agosto de 2026</strong>, nossa equipe multidisciplinar estará
+              disponível para realizar uma avaliação individualizada do seu sorriso, da sua pele e
+              da harmonia facial e corporal. Tudo em um só lugar, com tecnologia avançada, segurança
+              e um olhar integrado para o seu bem-estar.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               O agendamento da avaliação é o primeiro passo. A partir dela, você poderá compreender
@@ -390,10 +399,34 @@ function BeautyWeekPage() {
 
           <div className="mt-14 grid auto-rows-[220px] gap-5 sm:auto-rows-[260px] lg:grid-cols-3 lg:auto-rows-[280px]">
             {[
-              { src: clinicaRecepcao.url, alt: "Recepção e lounge da Clínica L'ECLER", label: "Recepção", span: "sm:col-span-2", ratio: "aspect-[16/9] sm:aspect-auto" },
-              { src: clinicaEspera.url, alt: "Área de atendimento e espera privativa", label: "Espaços privativos", span: "", ratio: "aspect-[4/3] sm:aspect-auto" },
-              { src: clinicaConsultorio1.url, alt: "Consultório odontológico da Clínica L'ECLER", label: "Consultório", span: "", ratio: "aspect-[4/3] sm:aspect-auto" },
-              { src: clinicaConsultorio2.url, alt: "Consultório com equipamentos de última geração", label: "Tecnologia de ponta", span: "sm:col-span-2", ratio: "aspect-[16/9] sm:aspect-auto" },
+              {
+                src: clinicaRecepcao.url,
+                alt: "Recepção e lounge da Clínica L'ECLER",
+                label: "Recepção",
+                span: "sm:col-span-2",
+                ratio: "aspect-[16/9] sm:aspect-auto",
+              },
+              {
+                src: clinicaEspera.url,
+                alt: "Área de atendimento e espera privativa",
+                label: "Espaços privativos",
+                span: "",
+                ratio: "aspect-[4/3] sm:aspect-auto",
+              },
+              {
+                src: clinicaConsultorio1.url,
+                alt: "Consultório odontológico da Clínica L'ECLER",
+                label: "Consultório",
+                span: "",
+                ratio: "aspect-[4/3] sm:aspect-auto",
+              },
+              {
+                src: clinicaConsultorio2.url,
+                alt: "Consultório com equipamentos de última geração",
+                label: "Tecnologia de ponta",
+                span: "sm:col-span-2",
+                ratio: "aspect-[16/9] sm:aspect-auto",
+              },
             ].map((img, i) => (
               <motion.figure
                 key={img.src}
@@ -429,21 +462,23 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Quem conduz</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Quem conduz
+            </p>
             <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
               Dra. <span className="text-gradient-gold">Cássia Blasques</span>
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              Com 27 anos de experiência, a Dra. Cássia Blasques é referência em odontologia estética e
-              harmonização em Bragança Paulista. Ao longo de sua trajetória, buscou aperfeiçoamento em
-              países como Coreia do Sul, Estados Unidos e Suíça, acompanhando de perto técnicas e
-              tecnologias avançadas para oferecer aos pacientes da L’ECLER um cuidado cada vez mais seguro,
-              moderno e individualizado.
+              Com 27 anos de experiência, a Dra. Cássia Blasques é referência em odontologia
+              estética e harmonização em Bragança Paulista. Ao longo de sua trajetória, buscou
+              aperfeiçoamento em países como Coreia do Sul, Estados Unidos e Suíça, acompanhando de
+              perto técnicas e tecnologias avançadas para oferecer aos pacientes da L’ECLER um
+              cuidado cada vez mais seguro, moderno e individualizado.
             </p>
             <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              À frente da clínica, ela orienta o padrão técnico da equipe e supervisiona os planos de
-              cuidado desenvolvidos durante a Beauty Week, sempre priorizando a saúde, a naturalidade e as
-              necessidades de cada paciente.
+              À frente da clínica, ela orienta o padrão técnico da equipe e supervisiona os planos
+              de cuidado desenvolvidos durante a Beauty Week, sempre priorizando a saúde, a
+              naturalidade e as necessidades de cada paciente.
             </p>
           </motion.div>
 
@@ -474,7 +509,6 @@ function BeautyWeekPage() {
         </div>
       </section>
 
-
       {/* EXPERIENCES */}
       <section id="experiencias" className="relative bg-background py-24">
         <div className="mx-auto max-w-6xl px-6">
@@ -485,8 +519,12 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Tratamentos da semana</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Sorriso, pele e tecnologia</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Tratamentos da semana
+            </p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
+              Sorriso, pele e tecnologia
+            </h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -531,8 +569,12 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">O que está incluso</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Tratamentos e tecnologias exclusivas</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              O que está incluso
+            </p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">
+              Tratamentos e tecnologias exclusivas
+            </h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -566,9 +608,12 @@ function BeautyWeekPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Por que reservar sua vaga</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+                Por que reservar sua vaga
+              </p>
               <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
-                Uma semana exclusiva para cuidar do seu sorriso, pele e <span className="text-gradient-gold">bem-estar</span>.
+                Uma semana exclusiva para cuidar do seu sorriso, pele e{" "}
+                <span className="text-gradient-gold">bem-estar</span>.
               </h2>
               <Button
                 size="lg"
@@ -588,7 +633,10 @@ function BeautyWeekPage() {
               className="space-y-4"
             >
               {benefits.map((b, i) => (
-                <div key={i} className="flex items-start gap-4 rounded-2xl border border-gold/10 bg-background p-4">
+                <div
+                  key={i}
+                  className="flex items-start gap-4 rounded-2xl border border-gold/10 bg-background p-4"
+                >
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
                   <p className="text-base text-foreground">{b}</p>
                 </div>
@@ -608,8 +656,12 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Depoimentos</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">O que dizem nossos pacientes</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Depoimentos
+            </p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
+              O que dizem nossos pacientes
+            </h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -656,8 +708,12 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Focos da semana</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Escolha seu foco na Beauty Week</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Focos da semana
+            </p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">
+              Escolha seu foco na Beauty Week
+            </h2>
           </motion.div>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
@@ -679,10 +735,15 @@ function BeautyWeekPage() {
                     {pkg.badge}
                   </span>
                 )}
-                <p className="text-xs font-semibold uppercase tracking-wider text-gold">{pkg.name}</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+                  {pkg.name}
+                </p>
                 <ul className="mt-5 space-y-3">
                   {pkg.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm text-primary-foreground/80">
+                    <li
+                      key={j}
+                      className="flex items-start gap-3 text-sm text-primary-foreground/80"
+                    >
                       <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold" />
                       {item}
                     </li>
@@ -714,8 +775,12 @@ function BeautyWeekPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">Tire suas dúvidas</p>
-            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">Perguntas frequentes</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gold">
+              Tire suas dúvidas
+            </p>
+            <h2 className="mt-3 font-display text-4xl text-primary sm:text-5xl">
+              Perguntas frequentes
+            </h2>
           </motion.div>
 
           <div className="mt-14 space-y-4">
@@ -781,7 +846,8 @@ function BeautyWeekPage() {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <p className="mt-4 flex items-center justify-center gap-2 text-sm text-primary-foreground/70">
-              <MessageCircle className="h-4 w-4" /> Nossa equipe entrará em contato pelo WhatsApp em até 24h.
+              <MessageCircle className="h-4 w-4" /> Nossa equipe entrará em contato pelo WhatsApp em
+              até 24h.
             </p>
           </motion.div>
         </div>

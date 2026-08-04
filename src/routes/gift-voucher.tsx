@@ -26,13 +26,13 @@ export const Route = createFileRoute("/gift-voucher")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Gift Voucher L'ECLER — Presenteie com Saúde e Bem-Estar" },
+      { title: "Gift Voucher L'ECLER | Presenteie com Saúde e Bem-Estar" },
       {
         name: "description",
         content:
           "Presenteie quem você ama com experiências L'ECLER: odontologia estética, harmonização e bem-estar em Bragança Paulista. Cadastre-se e receba as opções de voucher.",
       },
-      { property: "og:title", content: "Gift Voucher L'ECLER — Presenteie com Saúde e Bem-Estar" },
+      { property: "og:title", content: "Gift Voucher L'ECLER | Presenteie com Saúde e Bem-Estar" },
       {
         property: "og:description",
         content:
@@ -48,10 +48,13 @@ export const Route = createFileRoute("/gift-voucher")({
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
   email: z.string().trim().email("E-mail inválido").max(254),
-  phone: z.string().trim().refine((v) => {
-    const d = v.replace(/\D/g, "");
-    return d.length >= 10 && d.length <= 15;
-  }, "Telefone inválido"),
+  phone: z
+    .string()
+    .trim()
+    .refine((v) => {
+      const d = v.replace(/\D/g, "");
+      return d.length >= 10 && d.length <= 15;
+    }, "Telefone inválido"),
 });
 
 function maskPhone(value: string) {
@@ -234,7 +237,7 @@ function GiftVoucherPage() {
                 <Calendar className="h-4 w-4 text-[#c9a84c]" /> Voucher sob consulta
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Gift className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista — SP
+                <Gift className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
               </span>
             </div>
           </motion.div>
@@ -367,12 +370,36 @@ function GiftVoucherPage() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: "Exclusivo", desc: "Voucher personalizado para uma experiência premium na clínica.", icon: Crown },
-              { title: "Flexível", desc: "Válido para diversos tratamentos de odontologia e harmonização.", icon: Gift },
-              { title: "Memorável", desc: "Presenteie com cuidado, saúde e bem-estar de verdade.", icon: Heart },
-              { title: "Acompanhado", desc: "Atendimento pelo time selecionado pela Dra. Cássia.", icon: Star },
-              { title: "Premium", desc: "Ambiente sofisticado e acolhedor em Bragança Paulista.", icon: Gem },
-              { title: "Seguro", desc: "Tecnologias avançadas e protocolos com foco na saúde.", icon: CheckCircle2 },
+              {
+                title: "Exclusivo",
+                desc: "Voucher personalizado para uma experiência premium na clínica.",
+                icon: Crown,
+              },
+              {
+                title: "Flexível",
+                desc: "Válido para diversos tratamentos de odontologia e harmonização.",
+                icon: Gift,
+              },
+              {
+                title: "Memorável",
+                desc: "Presenteie com cuidado, saúde e bem-estar de verdade.",
+                icon: Heart,
+              },
+              {
+                title: "Acompanhado",
+                desc: "Atendimento pelo time selecionado pela Dra. Cássia.",
+                icon: Star,
+              },
+              {
+                title: "Premium",
+                desc: "Ambiente sofisticado e acolhedor em Bragança Paulista.",
+                icon: Gem,
+              },
+              {
+                title: "Seguro",
+                desc: "Tecnologias avançadas e protocolos com foco na saúde.",
+                icon: CheckCircle2,
+              },
             ].map((item, i) => (
               <motion.div
                 key={item.title}

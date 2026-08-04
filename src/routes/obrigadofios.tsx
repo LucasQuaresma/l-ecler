@@ -7,7 +7,7 @@ export const Route = createFileRoute("/obrigadofios")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Inscrição recebida — Curso de Fios Faciais | L'ECLER Academy" },
+      { title: "Inscrição recebida | Curso de Fios Faciais | L'ECLER Academy" },
       {
         name: "description",
         content:
@@ -55,9 +55,9 @@ function Page() {
           </h1>
 
           <p className="mt-4 text-white/70">
-            Obrigada pelo seu interesse. Nossa equipe entrará em contato pelo WhatsApp
-            para confirmar sua matrícula com a condição especial de 40% OFF e enviar
-            todos os detalhes do curso.
+            Obrigada pelo seu interesse. Nossa equipe entrará em contato pelo WhatsApp para
+            confirmar sua matrícula com a condição especial de 40% OFF e enviar todos os detalhes do
+            curso.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-white/80">
@@ -65,7 +65,7 @@ function Page() {
               <Calendar className="h-4 w-4 text-[#c9a84c]" /> 15 e 16 de Agosto
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-              <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista — SP
+              <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
             </span>
           </div>
 
@@ -76,18 +76,17 @@ function Page() {
             <ul className="mt-3 space-y-3 text-sm text-white/80">
               <li className="flex items-start gap-2">
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#c9a84c]" />
-                Vamos chamar você no WhatsApp para confirmar sua vaga e tirar dúvidas
-                sobre o curso.
+                Vamos chamar você no WhatsApp para confirmar sua vaga e tirar dúvidas sobre o curso.
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#c9a84c]" />
-                Você receberá o cronograma completo, materiais inclusos e instruções
-                de acesso à L'ECLER Academy.
+                Você receberá o cronograma completo, materiais inclusos e instruções de acesso à
+                L'ECLER Academy.
               </li>
               <li className="flex items-start gap-2">
                 <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-[#c9a84c]" />
-                Prepare-se para uma imersão prática em fios de PDO, PLLA e PLACL —
-                incluindo Fios Aptos.
+                Prepare-se para uma imersão prática em fios de PDO, PLLA e PLACL, incluindo Fios
+                Aptos.
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/obrigadogift")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Cadastro recebido — Gift Voucher L'ECLER" },
+      { title: "Cadastro recebido | Gift Voucher L'ECLER" },
       {
         name: "description",
         content:
@@ -54,8 +54,8 @@ function Page() {
           </h1>
 
           <p className="mt-4 text-white/70">
-            Obrigado pelo interesse. Nossa equipe entrará em contato pelo WhatsApp para apresentar os
-            vouchers disponíveis e ajudar você a escolher o presente perfeito.
+            Obrigado pelo interesse. Nossa equipe entrará em contato pelo WhatsApp para apresentar
+            os vouchers disponíveis e ajudar você a escolher o presente perfeito.
           </p>
 
           <div className="mt-8 rounded-2xl border border-[#c9a84c]/30 bg-[#c9a84c]/5 p-5 text-left">

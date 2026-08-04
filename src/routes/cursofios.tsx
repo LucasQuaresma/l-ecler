@@ -14,13 +14,13 @@ export const Route = createFileRoute("/cursofios")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Curso Fios Faciais — 15 e 16 de Agosto | L'ECLER Academy" },
+      { title: "Curso Fios Faciais | 15 e 16 de Agosto | L'ECLER Academy" },
       {
         name: "description",
         content:
           "Últimas 2 vagas com 40% OFF. Curso presencial de Fios Faciais (PDO, PLLA e PLACL, incluindo Fios Aptos) com a Dra. Cássia Blasques.",
       },
-      { property: "og:title", content: "Curso Fios Faciais — 15 e 16 de Agosto" },
+      { property: "og:title", content: "Curso Fios Faciais | 15 e 16 de Agosto" },
       {
         property: "og:description",
         content:
@@ -36,10 +36,13 @@ export const Route = createFileRoute("/cursofios")({
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
   email: z.string().trim().email("E-mail inválido").max(254),
-  phone: z.string().trim().refine((v) => {
-    const d = v.replace(/\D/g, "");
-    return d.length >= 10 && d.length <= 15;
-  }, "Telefone inválido"),
+  phone: z
+    .string()
+    .trim()
+    .refine((v) => {
+      const d = v.replace(/\D/g, "");
+      return d.length >= 10 && d.length <= 15;
+    }, "Telefone inválido"),
 });
 
 function maskPhone(value: string) {
@@ -95,7 +98,6 @@ function CursoFiosPage() {
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-
       navigate({ to: "/obrigadofios" });
     } catch (err) {
       console.error(err);
@@ -140,28 +142,28 @@ function CursoFiosPage() {
             </span>
           </motion.h1>
 
-
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
               <Calendar className="h-4 w-4 text-[#c9a84c]" /> 15 e 16 de Agosto
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-              <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista — SP
+              <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
             </span>
           </div>
-
-
 
           <div className="mt-6 rounded-2xl border border-[#c9a84c]/30 bg-[#c9a84c]/5 p-5">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#c9a84c]">
               Últimas 2 vagas
             </p>
             <p className="mt-1 font-display text-2xl">
-              40% OFF <span className="text-sm font-sans font-normal text-white/60">— incluindo Fios Aptos</span>
+              40% OFF{" "}
+              <span className="text-sm font-sans font-normal text-white/60">
+                com Fios Aptos incluídos
+              </span>
             </p>
             <p className="mt-2 text-sm text-white/70">
-              As melhores técnicas com fios de PDO, PLLA e PLACL, aplicadas de forma segura,
-              prática e com resultado clínico real.
+              As melhores técnicas com fios de PDO, PLLA e PLACL, aplicadas de forma segura, prática
+              e com resultado clínico real.
             </p>
           </div>
 
@@ -195,13 +197,16 @@ function CursoFiosPage() {
                 Cadastre-se para receber os detalhes
               </h2>
               <p className="mt-1.5 text-sm text-white/60">
-                Nossa equipe entrará em contato para confirmar sua matrícula com a condição especial.
+                Nossa equipe entrará em contato para confirmar sua matrícula com a condição
+                especial.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4 px-6 py-6">
               <div>
-                <Label htmlFor="name" className="text-white/80">Nome completo</Label>
+                <Label htmlFor="name" className="text-white/80">
+                  Nome completo
+                </Label>
                 <Input
                   id="name"
                   value={name}
@@ -214,7 +219,9 @@ function CursoFiosPage() {
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-white/80">E-mail</Label>
+                <Label htmlFor="email" className="text-white/80">
+                  E-mail
+                </Label>
                 <Input
                   id="email"
                   type="email"
@@ -228,7 +235,9 @@ function CursoFiosPage() {
               </div>
 
               <div>
-                <Label htmlFor="phone" className="text-white/80">Telefone / WhatsApp</Label>
+                <Label htmlFor="phone" className="text-white/80">
+                  Telefone / WhatsApp
+                </Label>
                 <Input
                   id="phone"
                   inputMode="tel"
@@ -246,7 +255,11 @@ function CursoFiosPage() {
                 disabled={loading}
                 className="h-12 w-full rounded-full bg-gradient-to-r from-[#f0d78c] via-[#c9a84c] to-[#8b6f2a] text-base font-semibold text-[#0e0a08] shadow-[0_10px_30px_-10px_rgba(201,168,76,0.6)] hover:opacity-95"
               >
-                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Quero garantir minha vaga"}
+                {loading ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  "Quero garantir minha vaga"
+                )}
               </Button>
 
               <p className="text-center text-[11px] text-white/40">
