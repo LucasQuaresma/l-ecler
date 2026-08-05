@@ -153,7 +153,7 @@ function CursoFiosPage() {
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-              <Calendar className="h-4 w-4 text-[#c9a84c]" /> 15 e 16 de Agosto
+              <Calendar className="h-4 w-4 text-[#c9a84c]" /> 14 e 15 de Agosto
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
               <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
