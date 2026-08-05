@@ -14,13 +14,13 @@ export const Route = createFileRoute("/cursofios")({
   ssr: false,
   head: () => ({
       meta: [
-        { title: "Curso de Fios Faciais | 15 e 16 de Agosto | L'ECLER Academy" },
+        { title: "Curso de Fios Faciais | 14 e 15 de Agosto | L'ECLER Academy" },
         {
           name: "description",
           content:
             "Curso presencial de Fios Faciais (PDO, PLLA e PLACL, incluindo Fios Aptos) com a Dra. Cássia Blasques.",
         },
-        { property: "og:title", content: "Curso de Fios Faciais | 15 e 16 de Agosto" },
+        { property: "og:title", content: "Curso de Fios Faciais | 14 e 15 de Agosto" },
         {
           property: "og:description",
           content:
