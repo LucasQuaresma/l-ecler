@@ -136,10 +136,7 @@ function LinktreePage() {
           </div>
         </div>
 
-        <h1 className="mt-6 text-center font-display text-3xl font-semibold text-foreground">
-          Clínica L'ECLER
-        </h1>
-        <p className="mt-2 text-center text-sm text-muted-foreground">
+        <p className="mt-6 text-center text-sm text-muted-foreground">
           Saúde, estética e bem-estar multiprofissional
         </p>
 
