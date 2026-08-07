@@ -9,7 +9,7 @@ import {
   Stethoscope,
   MapPin,
 } from "lucide-react";
-import leclerSymbol from "@/assets/lecler-symbol.png";
+import leclerLogo from "@/assets/lecler-logo.png";
 
 export const Route = createFileRoute("/linktree")({
   ssr: false,
