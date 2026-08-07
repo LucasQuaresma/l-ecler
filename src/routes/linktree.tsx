@@ -124,14 +124,14 @@ function LinktreePage() {
         transition={{ duration: 0.6 }}
         className="relative z-10 flex w-full max-w-sm flex-col items-center"
       >
-        {/* Avatar / Logo */}
+        {/* Logo */}
         <div className="relative">
-          <div className="absolute inset-0 rounded-full bg-gradient-gold blur-md" />
-          <div className="relative flex h-28 w-28 items-center justify-center rounded-full border-2 border-gold/30 bg-card shadow-elegant">
+          <div className="absolute inset-0 rounded-2xl bg-gradient-gold blur-md" />
+          <div className="relative flex h-24 w-56 items-center justify-center rounded-2xl border-2 border-gold/30 bg-card px-6 shadow-elegant">
             <img
               src={leclerLogo}
               alt="L'ECLER"
-              className="h-20 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </div>
         </div>
