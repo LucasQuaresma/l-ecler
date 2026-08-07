@@ -188,7 +188,7 @@ function LinktreePage() {
         </nav>
 
         {/* Footer note */}
-        <p className="mt-10 text-center text-xs text is-muted-foreground">
+        <p className="mt-10 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} Clínica L'ECLER · Todos os direitos reservados
         </p>
       </motion.div>
