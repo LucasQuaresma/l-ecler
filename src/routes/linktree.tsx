@@ -129,9 +129,9 @@ function LinktreePage() {
           <div className="absolute inset-0 rounded-full bg-gradient-gold blur-md" />
           <div className="relative flex h-28 w-28 items-center justify-center rounded-full border-2 border-gold/30 bg-card shadow-elegant">
             <img
-              src={leclerSymbol}
+              src={leclerLogo}
               alt="L'ECLER"
-              className="h-14 w-auto opacity-90"
+              className="h-20 w-auto object-contain"
             />
           </div>
         </div>
