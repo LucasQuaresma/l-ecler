@@ -14,6 +14,7 @@ import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as LinktreeRouteImport } from './routes/linktree'
 import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CookiesRouteImport } from './routes/cookies'
@@ -47,6 +48,11 @@ const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LinktreeRoute = LinktreeRouteImport.update({
+  id: '/linktree',
+  path: '/linktree',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GiftVoucherRoute = GiftVoucherRouteImport.update({
@@ -103,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/gift-voucher': typeof GiftVoucherRoute
+  '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadogift': typeof ObrigadogiftRoute
@@ -119,6 +126,7 @@ export interface FileRoutesByTo {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/gift-voucher': typeof GiftVoucherRoute
+  '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadogift': typeof ObrigadogiftRoute
@@ -136,6 +144,7 @@ export interface FileRoutesById {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/gift-voucher': typeof GiftVoucherRoute
+  '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadogift': typeof ObrigadogiftRoute
@@ -154,6 +163,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/gift-voucher'
+    | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
     | '/obrigadogift'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/gift-voucher'
+    | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
     | '/obrigadogift'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/gift-voucher'
+    | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
     | '/obrigadogift'
@@ -203,6 +215,7 @@ export interface RootRouteChildren {
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
   GiftVoucherRoute: typeof GiftVoucherRoute
+  LinktreeRoute: typeof LinktreeRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
   ObrigadogiftRoute: typeof ObrigadogiftRoute
@@ -247,6 +260,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/linktree': {
+      id: '/linktree'
+      path: '/linktree'
+      fullPath: '/linktree'
+      preLoaderRoute: typeof LinktreeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gift-voucher': {
@@ -323,6 +343,7 @@ const rootRouteChildren: RootRouteChildren = {
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
   GiftVoucherRoute: GiftVoucherRoute,
+  LinktreeRoute: LinktreeRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
   ObrigadogiftRoute: ObrigadogiftRoute,
