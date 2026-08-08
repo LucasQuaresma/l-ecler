@@ -9,75 +9,27 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as QuizRouteImport } from './routes/quiz'
-import { Route as PrivacidadeRouteImport } from './routes/privacidade'
-import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
-import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
-import { Route as ObrigadoRouteImport } from './routes/obrigado'
-import { Route as LinktreeRouteImport } from './routes/linktree'
-import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
-import { Route as CursofiosRouteImport } from './routes/cursofios'
-import { Route as CookiesRouteImport } from './routes/cookies'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
-import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
+import { Route as AcademyRouteImport } from './routes/academy'
+import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as CursofiosRouteImport } from './routes/cursofios'
+import { Route as CursofullfaceRouteImport } from './routes/cursofullface'
+import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
+import { Route as LinktreeRouteImport } from './routes/linktree'
+import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
+import { Route as ObrigadofullfaceRouteImport } from './routes/obrigadofullface'
+import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
+import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
 
-const QuizRoute = QuizRouteImport.update({
-  id: '/quiz',
-  path: '/quiz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacidadeRoute = PrivacidadeRouteImport.update({
-  id: '/privacidade',
-  path: '/privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
-  id: '/obrigadogift',
-  path: '/obrigadogift',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
-  id: '/obrigadofios',
-  path: '/obrigadofios',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadoRoute = ObrigadoRouteImport.update({
-  id: '/obrigado',
-  path: '/obrigado',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LinktreeRoute = LinktreeRouteImport.update({
-  id: '/linktree',
-  path: '/linktree',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GiftVoucherRoute = GiftVoucherRouteImport.update({
-  id: '/gift-voucher',
-  path: '/gift-voucher',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursofiosRoute = CursofiosRouteImport.update({
-  id: '/cursofios',
-  path: '/cursofios',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CookiesRoute = CookiesRouteImport.update({
-  id: '/cookies',
-  path: '/cookies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BeautyWeekRoute = BeautyWeekRouteImport.update({
-  id: '/beauty-week',
-  path: '/beauty-week',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcademyRoute = AcademyRouteImport.update({
@@ -85,19 +37,79 @@ const AcademyRoute = AcademyRouteImport.update({
   path: '/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BeautyWeekRoute = BeautyWeekRouteImport.update({
+  id: '/beauty-week',
+  path: '/beauty-week',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicosSlugRoute = ServicosSlugRouteImport.update({
-  id: '/servicos/$slug',
-  path: '/servicos/$slug',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursofiosRoute = CursofiosRouteImport.update({
+  id: '/cursofios',
+  path: '/cursofios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursofullfaceRoute = CursofullfaceRouteImport.update({
+  id: '/cursofullface',
+  path: '/cursofullface',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftVoucherRoute = GiftVoucherRouteImport.update({
+  id: '/gift-voucher',
+  path: '/gift-voucher',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LinktreeRoute = LinktreeRouteImport.update({
+  id: '/linktree',
+  path: '/linktree',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoRoute = ObrigadoRouteImport.update({
+  id: '/obrigado',
+  path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
+  id: '/obrigadofios',
+  path: '/obrigadofios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadofullfaceRoute = ObrigadofullfaceRouteImport.update({
+  id: '/obrigadofullface',
+  path: '/obrigadofullface',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
+  id: '/obrigadogift',
+  path: '/obrigadogift',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog_/$slug',
   path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicosSlugRoute = ServicosSlugRouteImport.update({
+  id: '/servicos/$slug',
+  path: '/servicos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -108,10 +120,12 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/cursofullface': typeof CursofullfaceRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
@@ -125,10 +139,12 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/cursofullface': typeof CursofullfaceRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
@@ -143,10 +159,12 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
+  '/cursofullface': typeof CursofullfaceRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
+  '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
@@ -162,10 +180,12 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/cursofullface'
     | '/gift-voucher'
     | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadofullface'
     | '/obrigadogift'
     | '/privacidade'
     | '/quiz'
@@ -179,10 +199,12 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/cursofullface'
     | '/gift-voucher'
     | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadofullface'
     | '/obrigadogift'
     | '/privacidade'
     | '/quiz'
@@ -196,10 +218,12 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursofios'
+    | '/cursofullface'
     | '/gift-voucher'
     | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
+    | '/obrigadofullface'
     | '/obrigadogift'
     | '/privacidade'
     | '/quiz'
@@ -214,10 +238,12 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
+  CursofullfaceRoute: typeof CursofullfaceRoute
   GiftVoucherRoute: typeof GiftVoucherRoute
   LinktreeRoute: typeof LinktreeRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
+  ObrigadofullfaceRoute: typeof ObrigadofullfaceRoute
   ObrigadogiftRoute: typeof ObrigadogiftRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuizRoute: typeof QuizRoute
@@ -227,81 +253,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/quiz': {
-      id: '/quiz'
-      path: '/quiz'
-      fullPath: '/quiz'
-      preLoaderRoute: typeof QuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidade': {
-      id: '/privacidade'
-      path: '/privacidade'
-      fullPath: '/privacidade'
-      preLoaderRoute: typeof PrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadogift': {
-      id: '/obrigadogift'
-      path: '/obrigadogift'
-      fullPath: '/obrigadogift'
-      preLoaderRoute: typeof ObrigadogiftRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadofios': {
-      id: '/obrigadofios'
-      path: '/obrigadofios'
-      fullPath: '/obrigadofios'
-      preLoaderRoute: typeof ObrigadofiosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigado': {
-      id: '/obrigado'
-      path: '/obrigado'
-      fullPath: '/obrigado'
-      preLoaderRoute: typeof ObrigadoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/linktree': {
-      id: '/linktree'
-      path: '/linktree'
-      fullPath: '/linktree'
-      preLoaderRoute: typeof LinktreeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gift-voucher': {
-      id: '/gift-voucher'
-      path: '/gift-voucher'
-      fullPath: '/gift-voucher'
-      preLoaderRoute: typeof GiftVoucherRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursofios': {
-      id: '/cursofios'
-      path: '/cursofios'
-      fullPath: '/cursofios'
-      preLoaderRoute: typeof CursofiosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cookies': {
-      id: '/cookies'
-      path: '/cookies'
-      fullPath: '/cookies'
-      preLoaderRoute: typeof CookiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/beauty-week': {
-      id: '/beauty-week'
-      path: '/beauty-week'
-      fullPath: '/beauty-week'
-      preLoaderRoute: typeof BeautyWeekRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/academy': {
@@ -311,18 +267,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/beauty-week': {
+      id: '/beauty-week'
+      path: '/beauty-week'
+      fullPath: '/beauty-week'
+      preLoaderRoute: typeof BeautyWeekRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/servicos/$slug': {
-      id: '/servicos/$slug'
-      path: '/servicos/$slug'
-      fullPath: '/servicos/$slug'
-      preLoaderRoute: typeof ServicosSlugRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursofios': {
+      id: '/cursofios'
+      path: '/cursofios'
+      fullPath: '/cursofios'
+      preLoaderRoute: typeof CursofiosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursofullface': {
+      id: '/cursofullface'
+      path: '/cursofullface'
+      fullPath: '/cursofullface'
+      preLoaderRoute: typeof CursofullfaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gift-voucher': {
+      id: '/gift-voucher'
+      path: '/gift-voucher'
+      fullPath: '/gift-voucher'
+      preLoaderRoute: typeof GiftVoucherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/linktree': {
+      id: '/linktree'
+      path: '/linktree'
+      fullPath: '/linktree'
+      preLoaderRoute: typeof LinktreeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigado': {
+      id: '/obrigado'
+      path: '/obrigado'
+      fullPath: '/obrigado'
+      preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadofios': {
+      id: '/obrigadofios'
+      path: '/obrigadofios'
+      fullPath: '/obrigadofios'
+      preLoaderRoute: typeof ObrigadofiosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadofullface': {
+      id: '/obrigadofullface'
+      path: '/obrigadofullface'
+      fullPath: '/obrigadofullface'
+      preLoaderRoute: typeof ObrigadofullfaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadogift': {
+      id: '/obrigadogift'
+      path: '/obrigadogift'
+      fullPath: '/obrigadogift'
+      preLoaderRoute: typeof ObrigadogiftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog_/$slug': {
@@ -330,6 +363,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos/$slug': {
+      id: '/servicos/$slug'
+      path: '/servicos/$slug'
+      fullPath: '/servicos/$slug'
+      preLoaderRoute: typeof ServicosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -342,10 +382,12 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
+  CursofullfaceRoute: CursofullfaceRoute,
   GiftVoucherRoute: GiftVoucherRoute,
   LinktreeRoute: LinktreeRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
+  ObrigadofullfaceRoute: ObrigadofullfaceRoute,
   ObrigadogiftRoute: ObrigadogiftRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   QuizRoute: QuizRoute,
