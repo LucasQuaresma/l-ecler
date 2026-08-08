@@ -16,12 +16,14 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CursofullfaceRouteImport } from './routes/cursofullface'
+import { Route as CursotoxinaRouteImport } from './routes/cursotoxina'
 import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
 import { Route as LinktreeRouteImport } from './routes/linktree'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadofullfaceRouteImport } from './routes/obrigadofullface'
 import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
+import { Route as ObrigadotoxinaRouteImport } from './routes/obrigadotoxina'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
@@ -62,6 +64,11 @@ const CursofullfaceRoute = CursofullfaceRouteImport.update({
   path: '/cursofullface',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CursotoxinaRoute = CursotoxinaRouteImport.update({
+  id: '/cursotoxina',
+  path: '/cursotoxina',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GiftVoucherRoute = GiftVoucherRouteImport.update({
   id: '/gift-voucher',
   path: '/gift-voucher',
@@ -90,6 +97,11 @@ const ObrigadofullfaceRoute = ObrigadofullfaceRouteImport.update({
 const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
   id: '/obrigadogift',
   path: '/obrigadogift',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadotoxinaRoute = ObrigadotoxinaRouteImport.update({
+  id: '/obrigadotoxina',
+  path: '/obrigadotoxina',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
@@ -121,12 +133,14 @@ export interface FileRoutesByFullPath {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/cursofullface': typeof CursofullfaceRoute
+  '/cursotoxina': typeof CursotoxinaRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
+  '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -140,12 +154,14 @@ export interface FileRoutesByTo {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/cursofullface': typeof CursofullfaceRoute
+  '/cursotoxina': typeof CursotoxinaRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
+  '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -160,12 +176,14 @@ export interface FileRoutesById {
   '/cookies': typeof CookiesRoute
   '/cursofios': typeof CursofiosRoute
   '/cursofullface': typeof CursofullfaceRoute
+  '/cursotoxina': typeof CursotoxinaRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
+  '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
   '/blog_/$slug': typeof BlogSlugRoute
@@ -181,12 +199,14 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/cursofullface'
+    | '/cursotoxina'
     | '/gift-voucher'
     | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
     | '/obrigadofullface'
     | '/obrigadogift'
+    | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
     | '/blog/$slug'
@@ -200,12 +220,14 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/cursofullface'
+    | '/cursotoxina'
     | '/gift-voucher'
     | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
     | '/obrigadofullface'
     | '/obrigadogift'
+    | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
     | '/blog/$slug'
@@ -219,12 +241,14 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/cursofios'
     | '/cursofullface'
+    | '/cursotoxina'
     | '/gift-voucher'
     | '/linktree'
     | '/obrigado'
     | '/obrigadofios'
     | '/obrigadofullface'
     | '/obrigadogift'
+    | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
     | '/blog_/$slug'
@@ -239,12 +263,14 @@ export interface RootRouteChildren {
   CookiesRoute: typeof CookiesRoute
   CursofiosRoute: typeof CursofiosRoute
   CursofullfaceRoute: typeof CursofullfaceRoute
+  CursotoxinaRoute: typeof CursotoxinaRoute
   GiftVoucherRoute: typeof GiftVoucherRoute
   LinktreeRoute: typeof LinktreeRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
   ObrigadofullfaceRoute: typeof ObrigadofullfaceRoute
   ObrigadogiftRoute: typeof ObrigadogiftRoute
+  ObrigadotoxinaRoute: typeof ObrigadotoxinaRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuizRoute: typeof QuizRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -302,6 +328,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CursofullfaceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cursotoxina': {
+      id: '/cursotoxina'
+      path: '/cursotoxina'
+      fullPath: '/cursotoxina'
+      preLoaderRoute: typeof CursotoxinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gift-voucher': {
       id: '/gift-voucher'
       path: '/gift-voucher'
@@ -344,6 +377,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ObrigadogiftRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obrigadotoxina': {
+      id: '/obrigadotoxina'
+      path: '/obrigadotoxina'
+      fullPath: '/obrigadotoxina'
+      preLoaderRoute: typeof ObrigadotoxinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacidade': {
       id: '/privacidade'
       path: '/privacidade'
@@ -383,12 +423,14 @@ const rootRouteChildren: RootRouteChildren = {
   CookiesRoute: CookiesRoute,
   CursofiosRoute: CursofiosRoute,
   CursofullfaceRoute: CursofullfaceRoute,
+  CursotoxinaRoute: CursotoxinaRoute,
   GiftVoucherRoute: GiftVoucherRoute,
   LinktreeRoute: LinktreeRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
   ObrigadofullfaceRoute: ObrigadofullfaceRoute,
   ObrigadogiftRoute: ObrigadogiftRoute,
+  ObrigadotoxinaRoute: ObrigadotoxinaRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   QuizRoute: QuizRoute,
   BlogSlugRoute: BlogSlugRoute,
