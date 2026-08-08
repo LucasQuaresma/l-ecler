@@ -1,0 +1,35 @@
+{
+  "campaign": "Curso Toxina Botulínica",
+  "landingPage": "https://l-ecler.lovable.app/cursotoxina",
+  "dates": "11 e 12 de setembro",
+  "sourceImages": "Fotos da Dra. Cássia Blasques fornecidas pelo cliente.",
+  "exports": [
+    {
+      "file": "toxina-feed-quadrado.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "toxina-feed-vertical.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "toxina-story.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "toxina-story-claro.png",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "copy": [
+    "Curso presencial",
+    "Toxina Botulínica",
+    "11 e 12 de setembro",
+    "Com Dra. Cássia Blasques",
+    "Garanta sua vaga"
+  ]
+}
