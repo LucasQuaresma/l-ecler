@@ -1,0 +1,86 @@
+{
+  "campaign": "L'ECLER Academy | Cursos Full Face e Toxina Botulínica",
+  "direction": "Conjunto criado no estilo editorial escuro das referências aprovadas, com foco em cursos presenciais e sem assinatura pessoal.",
+  "copyRules": [
+    "Não usar chamada para vagas de atendimento demonstrativo",
+    "Não usar assinatura pessoal",
+    "Manter L'ECLER Academy",
+    "Manter datas: Full Face em 28 e 29 de agosto; Toxina Botulínica em 11 e 12 de setembro",
+    "Evitar imagens de laser para peças de toxina"
+  ],
+  "exports": [
+    {
+      "file": "full-face-feed-01.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "full-face-story.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "full-face-feed-02.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "toxina-feed-01.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "toxina-story.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "toxina-feed-02.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "preview-aprovacao-grid.png",
+      "width": 1800,
+      "height": 2120
+    }
+  ],
+  "sources": [
+    {
+      "id": 20459105,
+      "use": "Full Face editorial escuro",
+      "url": "https://www.pexels.com/photo/portrait-of-woman-20459105/",
+      "photographer": "Alexander Krivitskiy"
+    },
+    {
+      "id": 19121975,
+      "use": "Full Face story",
+      "url": "https://www.pexels.com/photo/young-blonde-haired-woman-holding-her-face-19121975/",
+      "photographer": "David Manzyk"
+    },
+    {
+      "id": 34775443,
+      "use": "Full Face procedimento",
+      "url": "https://www.pexels.com/photo/close-up-of-cosmetic-lip-injection-procedure-34775443/",
+      "photographer": "Farhad Irani"
+    },
+    {
+      "id": 7581590,
+      "use": "Toxina aplicação frontal",
+      "url": "https://www.pexels.com/photo/close-up-photo-of-injecting-botox-on-forehead-7581590/",
+      "photographer": "cottonbro studio"
+    },
+    {
+      "id": 34220540,
+      "use": "Toxina aplicação facial",
+      "url": "https://www.pexels.com/photo/professional-cosmetic-injection-procedure-34220540/",
+      "photographer": "Daniel & Hannah Snipes"
+    },
+    {
+      "id": 4586711,
+      "use": "Toxina procedimento estético",
+      "url": "https://www.pexels.com/photo/cosmetologist-in-pink-gloves-making-injection-in-woman-face-4586711/",
+      "photographer": "Anna Shvets"
+    }
+  ]
+}
