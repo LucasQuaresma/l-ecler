@@ -2,8 +2,77 @@
   "campaign": "Curso Full Face",
   "landingPage": "https://l-ecler.lovable.app/cursofullface",
   "dates": "28 e 29 de agosto",
-  "sourceImages": "Elementos gráficos criados para a campanha, sem fotos de pessoas.",
+  "direction": "Criativos refeitos depois de pesquisa na Biblioteca de Anúncios da Meta em 2026-08-10.",
+  "creativeRationale": [
+    "headline direta de curso",
+    "data e local em destaque",
+    "prova de formato presencial",
+    "foco em prática orientada, anatomia e segurança clínica",
+    "CTA simples para inscrição ou contato",
+    "sem foto da Dra. Cássia Blasques",
+    "sem uso de travessão"
+  ],
+  "stockSources": [
+    {
+      "id": 7800666,
+      "url": "https://www.pexels.com/photo/man-and-woman-looking-on-a-monitor-7800666/",
+      "photographer": "Nadezhda Moryak",
+      "photographerUrl": "https://www.pexels.com/@nadezhda-moryak"
+    },
+    {
+      "id": 29648624,
+      "url": "https://www.pexels.com/photo/middle-aged-woman-receiving-cosmetic-facial-injection-29648624/",
+      "photographer": "Alexander Mass",
+      "photographerUrl": "https://www.pexels.com/@rebornfilmes"
+    },
+    {
+      "id": 31613322,
+      "url": "https://www.pexels.com/photo/cosmetic-procedure-training-at-delhi-clinic-31613322/",
+      "photographer": "Cosmetica Academy",
+      "photographerUrl": "https://www.pexels.com/@cosmetica-academy-2149795492"
+    },
+    {
+      "id": 34220532,
+      "url": "https://www.pexels.com/photo/professional-cosmetic-injection-procedure-34220532/",
+      "photographer": "Daniel & Hannah Snipes",
+      "photographerUrl": "https://www.pexels.com/@prolificpeople"
+    },
+    {
+      "id": 34220533,
+      "url": "https://www.pexels.com/photo/professional-aesthetic-nurse-performing-cosmetic-treatment-34220533/",
+      "photographer": "Daniel & Hannah Snipes",
+      "photographerUrl": "https://www.pexels.com/@prolificpeople"
+    },
+    {
+      "id": 34220542,
+      "url": "https://www.pexels.com/photo/professional-hand-in-aesthetic-clinic-preparing-injection-34220542/",
+      "photographer": "Daniel & Hannah Snipes",
+      "photographerUrl": "https://www.pexels.com/@prolificpeople"
+    },
+    {
+      "id": 34775442,
+      "url": "https://www.pexels.com/photo/professional-cosmetic-injection-procedure-close-up-34775442/",
+      "photographer": "Farhad Irani",
+      "photographerUrl": "https://www.pexels.com/@farhadirani"
+    },
+    {
+      "id": 36380795,
+      "url": "https://www.pexels.com/photo/medical-training-session-in-brazilian-classroom-36380795/",
+      "photographer": "Guilhemro",
+      "photographerUrl": "https://www.pexels.com/@guilhemro-203569180"
+    }
+  ],
   "exports": [
+    {
+      "file": "full-face-story.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "full-face-story-claro.png",
+      "width": 1080,
+      "height": 1920
+    },
     {
       "file": "full-face-feed-quadrado.png",
       "width": 1080,
@@ -15,24 +84,19 @@
       "height": 1350
     },
     {
-      "file": "full-face-story.png",
-      "width": 1080,
-      "height": 1920
-    },
-    {
       "file": "full-face-feed-clinico.png",
       "width": 1080,
       "height": 1080
     },
     {
-      "file": "full-face-story-claro.png",
-      "width": 1080,
-      "height": 1920
-    },
-    {
       "file": "full-face-feed-editorial.png",
       "width": 1080,
       "height": 1350
+    },
+    {
+      "file": "preview-full-face-grid.png",
+      "width": 1800,
+      "height": 1500
     }
   ],
   "copy": [
