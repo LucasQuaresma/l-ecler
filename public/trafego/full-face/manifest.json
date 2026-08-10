@@ -1,0 +1,45 @@
+{
+  "campaign": "Curso Full Face",
+  "landingPage": "https://l-ecler.lovable.app/cursofullface",
+  "dates": "28 e 29 de agosto",
+  "sourceImages": "Elementos gráficos criados para a campanha, sem fotos de pessoas.",
+  "exports": [
+    {
+      "file": "full-face-feed-quadrado.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "full-face-feed-vertical.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "full-face-story.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "full-face-feed-clinico.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "full-face-story-claro.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "full-face-feed-editorial.png",
+      "width": 1080,
+      "height": 1350
+    }
+  ],
+  "copy": [
+    "Curso presencial",
+    "Full Face",
+    "28 e 29 de agosto",
+    "Planejamento facial completo",
+    "Garanta sua vaga"
+  ]
+}
