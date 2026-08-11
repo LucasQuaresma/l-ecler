@@ -1,0 +1,71 @@
+{
+  "campaign": "L'ECLER Academy",
+  "direction": "Peças refeitas em linguagem de pôster premium: fundo escuro, rosto editorial dominante, tipografia forte em dourado e branco, sem chamada de atendimento demonstrativo e sem foto da profissional.",
+  "rules": [
+    "Sem chamada de atendimento demonstrativo",
+    "Sem assinatura pessoal",
+    "Sem foto da profissional",
+    "Sem imagem de procedimento com mãos ou instrumentos em posição incorreta",
+    "Sem botão grande de landing page"
+  ],
+  "exports": [
+    {
+      "file": "full-face-feed-dark.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "full-face-square-dark.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "full-face-story-dark.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "toxina-feed-dark.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "toxina-square-dark.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "toxina-story-dark.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "preview-aprovacao-v3-grid.png",
+      "width": 1920,
+      "height": 2250
+    }
+  ],
+  "courses": {
+    "fullFace": {
+      "date": "28|29",
+      "month": "AGOSTO",
+      "course": "CURSO PRESENCIAL",
+      "eyebrow": "PREENCHIMENTO",
+      "title": "FULL FACE",
+      "subtitle": "COM ÁCIDO HIALURÔNICO E ASSOCIAÇÕES",
+      "topics": "LÁBIO | MALAR | OLHEIRA | SULCO NASOGENIANO | TÊMPORA | MENTO | MANDÍBULA",
+      "place": "Bragança Paulista SP"
+    },
+    "toxina": {
+      "date": "11|12",
+      "month": "SETEMBRO",
+      "course": "CURSO PRESENCIAL",
+      "title": "TOXINA BOTULÍNICA",
+      "subtitle": "ESTÉTICO E FUNCIONAL",
+      "body": "Anatomia, pontos, doses e indicação com critério clínico.",
+      "status": "INSCRIÇÕES ABERTAS",
+      "limit": "VAGAS LIMITADAS",
+      "place": "Bragança Paulista SP"
+    }
+  }
+}
