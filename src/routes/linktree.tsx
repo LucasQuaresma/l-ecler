@@ -9,7 +9,7 @@ import {
   Stethoscope,
   MapPin,
 } from "lucide-react";
-import leclerLogo from "@/assets/lecler-logo.png";
+import leclerLogo from "@/assets/lecler-logo-novo.png.asset.json";
 
 export const Route = createFileRoute("/linktree")({
   ssr: false,
@@ -127,17 +127,17 @@ function LinktreePage() {
         {/* Logo */}
         <div className="relative">
           <div className="absolute inset-0 rounded-2xl bg-gradient-gold blur-md" />
-          <div className="relative flex h-24 w-56 items-center justify-center rounded-2xl border-2 border-gold/30 bg-card px-6 shadow-elegant">
+          <div className="relative flex h-40 w-40 items-center justify-center rounded-2xl border-2 border-gold/30 bg-card p-5 shadow-elegant">
             <img
-              src={leclerLogo}
+              src={leclerLogo.url}
               alt="L'ECLER"
-              className="h-16 w-auto object-contain"
+              className="h-full w-full object-contain"
             />
           </div>
         </div>
 
         <p className="mt-6 text-center text-sm text-muted-foreground">
-          Saúde, estética e bem-estar multiprofissional
+          Odontologia, Harmonização Facial e Corporal
         </p>
 
         <div className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-gold/20 bg-gold/10 px-3 py-1 text-xs font-medium text-gold">
