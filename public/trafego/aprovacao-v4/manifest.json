@@ -1,0 +1,41 @@
+{
+  "campaign": "L'ECLER Academy",
+  "direction": "V4 com logo oficial convertido para transparência e composições diferentes entre si.",
+  "exports": [
+    {
+      "file": "full-face-feed-cinema.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "full-face-feed-claro-premium.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "full-face-story-editorial.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "toxina-feed-retrato.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "toxina-square-impacto.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "toxina-story-poster.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "preview-aprovacao-v4-grid.png",
+      "width": 1920,
+      "height": 2250
+    }
+  ]
+}
