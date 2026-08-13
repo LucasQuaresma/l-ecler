@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-08-13",
+  "sets": [
+    "L'ECLER Academy / Mentoria",
+    "BIOFACES"
+  ],
+  "cta": "Baixar ebook",
+  "notes": "Composições determinísticas com fotos reais da Cássia e capas renderizadas dos PDFs locais da L'ECLER.",
+  "sources": {
+    "white_side": "C:\\Users\\agenc\\Downloads\\6X7A7980.jpg.jpeg",
+    "black_portrait": "C:\\Users\\agenc\\Downloads\\DRA CASSIA BLASQUES - SETEMBRO21 (19).jpg.jpeg",
+    "black_close": "C:\\Users\\agenc\\Downloads\\DRA CASSIA BLASQUES - SETEMBRO21 (6).jpg.jpeg",
+    "white_standing": "C:\\Users\\agenc\\Downloads\\6X7A7929.jpg.jpeg",
+    "lounge": "C:\\Users\\agenc\\Downloads\\DRA CASSIA BLASQUES SELEIONADAS (41).jpg.jpeg",
+    "blue": "C:\\Users\\agenc\\Downloads\\Z2025-CASSIA%20BLASQUES%20-%20LAPIDADAS%20%281%29.jpg.jpeg",
+    "academy": "C:\\Users\\agenc\\Downloads\\L_ecler_Elite_Mentorship.pdf",
+    "biofaces": "C:\\Users\\agenc\\Downloads\\Biofaces_Clinical_Atlas_(3).pdf"
+  },
+  "items": [
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\ebook-academy-01-feed.png",
+      "filename": "ebook-academy-01-feed.png",
+      "size": [
+        1080,
+        1350
+      ],
+      "ebook": "L'ECLER Academy / Mentoria"
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\ebook-academy-02-feed.png",
+      "filename": "ebook-academy-02-feed.png",
+      "size": [
+        1080,
+        1350
+      ],
+      "ebook": "L'ECLER Academy / Mentoria"
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\ebook-academy-03-feed.png",
+      "filename": "ebook-academy-03-feed.png",
+      "size": [
+        1080,
+        1350
+      ],
+      "ebook": "L'ECLER Academy / Mentoria"
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\ebook-biofaces-01-feed.png",
+      "filename": "ebook-biofaces-01-feed.png",
+      "size": [
+        1080,
+        1350
+      ],
+      "ebook": "BIOFACES"
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\ebook-biofaces-02-feed.png",
+      "filename": "ebook-biofaces-02-feed.png",
+      "size": [
+        1080,
+        1350
+      ],
+      "ebook": "BIOFACES"
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\ebook-biofaces-03-feed.png",
+      "filename": "ebook-biofaces-03-feed.png",
+      "size": [
+        1080,
+        1350
+      ],
+      "ebook": "BIOFACES"
+    }
+  ],
+  "preview": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\ebooks-cassia-20260813\\preview-ebooks-cassia-grid.jpg"
+}
