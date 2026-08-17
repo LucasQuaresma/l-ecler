@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-17",
+  "campaign": "LEADS | CURSO FULL THREADS NOVEMBRO",
+  "course": "Full Threads",
+  "date": "11 e 12 de novembro",
+  "date_short": "11 e 12/11",
+  "location": "Bragança Paulista/SP",
+  "landing_page": "https://l-ecler.lovable.app/cursofios",
+  "constraints": [
+    "Logo oficial L'ECLER Academy",
+    "Data correta: 11 e 12/11",
+    "Sem chamada de paciente modelo",
+    "Sem imagem de procedimento com aplicação duvidosa",
+    "Sem travessão na copy"
+  ],
+  "exports": [
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\full-threads-feed-01.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\full-threads-feed-02.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\full-threads-square-01.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\full-threads-feed-03.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\full-threads-story-01.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\full-threads-story-02.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-20261111\\preview-full-threads-20261111.png",
+      "width": 1920,
+      "height": 2280
+    }
+  ]
+}
