@@ -15,6 +15,7 @@ import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as CursoadvancedlipsRouteImport } from './routes/cursoadvancedlips'
+import { Route as CursobiofacesRouteImport } from './routes/cursobiofaces'
 import { Route as CursofiosRouteImport } from './routes/cursofios'
 import { Route as CursofullfaceRouteImport } from './routes/cursofullface'
 import { Route as CursotoxinaRouteImport } from './routes/cursotoxina'
@@ -22,6 +23,7 @@ import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
 import { Route as LinktreeRouteImport } from './routes/linktree'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as ObrigadoadvancedlipsRouteImport } from './routes/obrigadoadvancedlips'
+import { Route as ObrigadobiofacesRouteImport } from './routes/obrigadobiofaces'
 import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
 import { Route as ObrigadofullfaceRouteImport } from './routes/obrigadofullface'
 import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
@@ -61,6 +63,11 @@ const CursoadvancedlipsRoute = CursoadvancedlipsRouteImport.update({
   path: '/cursoadvancedlips',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CursobiofacesRoute = CursobiofacesRouteImport.update({
+  id: '/cursobiofaces',
+  path: '/cursobiofaces',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CursofiosRoute = CursofiosRouteImport.update({
   id: '/cursofios',
   path: '/cursofios',
@@ -94,6 +101,11 @@ const ObrigadoRoute = ObrigadoRouteImport.update({
 const ObrigadoadvancedlipsRoute = ObrigadoadvancedlipsRouteImport.update({
   id: '/obrigadoadvancedlips',
   path: '/obrigadoadvancedlips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadobiofacesRoute = ObrigadobiofacesRouteImport.update({
+  id: '/obrigadobiofaces',
+  path: '/obrigadobiofaces',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
@@ -144,6 +156,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursoadvancedlips': typeof CursoadvancedlipsRoute
+  '/cursobiofaces': typeof CursobiofacesRoute
   '/cursofios': typeof CursofiosRoute
   '/cursofullface': typeof CursofullfaceRoute
   '/cursotoxina': typeof CursotoxinaRoute
@@ -151,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadoadvancedlips': typeof ObrigadoadvancedlipsRoute
+  '/obrigadobiofaces': typeof ObrigadobiofacesRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
@@ -167,6 +181,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursoadvancedlips': typeof CursoadvancedlipsRoute
+  '/cursobiofaces': typeof CursobiofacesRoute
   '/cursofios': typeof CursofiosRoute
   '/cursofullface': typeof CursofullfaceRoute
   '/cursotoxina': typeof CursotoxinaRoute
@@ -174,6 +189,7 @@ export interface FileRoutesByTo {
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadoadvancedlips': typeof ObrigadoadvancedlipsRoute
+  '/obrigadobiofaces': typeof ObrigadobiofacesRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
@@ -191,6 +207,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
   '/cursoadvancedlips': typeof CursoadvancedlipsRoute
+  '/cursobiofaces': typeof CursobiofacesRoute
   '/cursofios': typeof CursofiosRoute
   '/cursofullface': typeof CursofullfaceRoute
   '/cursotoxina': typeof CursotoxinaRoute
@@ -198,6 +215,7 @@ export interface FileRoutesById {
   '/linktree': typeof LinktreeRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadoadvancedlips': typeof ObrigadoadvancedlipsRoute
+  '/obrigadobiofaces': typeof ObrigadobiofacesRoute
   '/obrigadofios': typeof ObrigadofiosRoute
   '/obrigadofullface': typeof ObrigadofullfaceRoute
   '/obrigadogift': typeof ObrigadogiftRoute
@@ -216,6 +234,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursoadvancedlips'
+    | '/cursobiofaces'
     | '/cursofios'
     | '/cursofullface'
     | '/cursotoxina'
@@ -223,6 +242,7 @@ export interface FileRouteTypes {
     | '/linktree'
     | '/obrigado'
     | '/obrigadoadvancedlips'
+    | '/obrigadobiofaces'
     | '/obrigadofios'
     | '/obrigadofullface'
     | '/obrigadogift'
@@ -239,6 +259,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursoadvancedlips'
+    | '/cursobiofaces'
     | '/cursofios'
     | '/cursofullface'
     | '/cursotoxina'
@@ -246,6 +267,7 @@ export interface FileRouteTypes {
     | '/linktree'
     | '/obrigado'
     | '/obrigadoadvancedlips'
+    | '/obrigadobiofaces'
     | '/obrigadofios'
     | '/obrigadofullface'
     | '/obrigadogift'
@@ -262,6 +284,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cookies'
     | '/cursoadvancedlips'
+    | '/cursobiofaces'
     | '/cursofios'
     | '/cursofullface'
     | '/cursotoxina'
@@ -269,6 +292,7 @@ export interface FileRouteTypes {
     | '/linktree'
     | '/obrigado'
     | '/obrigadoadvancedlips'
+    | '/obrigadobiofaces'
     | '/obrigadofios'
     | '/obrigadofullface'
     | '/obrigadogift'
@@ -286,6 +310,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
   CursoadvancedlipsRoute: typeof CursoadvancedlipsRoute
+  CursobiofacesRoute: typeof CursobiofacesRoute
   CursofiosRoute: typeof CursofiosRoute
   CursofullfaceRoute: typeof CursofullfaceRoute
   CursotoxinaRoute: typeof CursotoxinaRoute
@@ -293,6 +318,7 @@ export interface RootRouteChildren {
   LinktreeRoute: typeof LinktreeRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadoadvancedlipsRoute: typeof ObrigadoadvancedlipsRoute
+  ObrigadobiofacesRoute: typeof ObrigadobiofacesRoute
   ObrigadofiosRoute: typeof ObrigadofiosRoute
   ObrigadofullfaceRoute: typeof ObrigadofullfaceRoute
   ObrigadogiftRoute: typeof ObrigadogiftRoute
@@ -347,6 +373,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CursoadvancedlipsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cursobiofaces': {
+      id: '/cursobiofaces'
+      path: '/cursobiofaces'
+      fullPath: '/cursobiofaces'
+      preLoaderRoute: typeof CursobiofacesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cursofios': {
       id: '/cursofios'
       path: '/cursofios'
@@ -394,6 +427,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigadoadvancedlips'
       fullPath: '/obrigadoadvancedlips'
       preLoaderRoute: typeof ObrigadoadvancedlipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadobiofaces': {
+      id: '/obrigadobiofaces'
+      path: '/obrigadobiofaces'
+      fullPath: '/obrigadobiofaces'
+      preLoaderRoute: typeof ObrigadobiofacesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/obrigadofios': {
@@ -462,6 +502,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
   CursoadvancedlipsRoute: CursoadvancedlipsRoute,
+  CursobiofacesRoute: CursobiofacesRoute,
   CursofiosRoute: CursofiosRoute,
   CursofullfaceRoute: CursofullfaceRoute,
   CursotoxinaRoute: CursotoxinaRoute,
@@ -469,6 +510,7 @@ const rootRouteChildren: RootRouteChildren = {
   LinktreeRoute: LinktreeRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadoadvancedlipsRoute: ObrigadoadvancedlipsRoute,
+  ObrigadobiofacesRoute: ObrigadobiofacesRoute,
   ObrigadofiosRoute: ObrigadofiosRoute,
   ObrigadofullfaceRoute: ObrigadofullfaceRoute,
   ObrigadogiftRoute: ObrigadogiftRoute,
