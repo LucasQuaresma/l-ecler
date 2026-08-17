@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageCircle, ArrowLeft, Calendar, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackMetaLead } from "@/lib/meta-pixel";
 
 export const Route = createFileRoute("/obrigadofullface")({
   ssr: false,
@@ -20,6 +22,13 @@ export const Route = createFileRoute("/obrigadofullface")({
 });
 
 function Page() {
+  useEffect(() => {
+    trackMetaLead({
+      content_name: "Curso Full Face",
+      content_category: "L'ECLER Academy",
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0e0a08] text-white">
       <div
