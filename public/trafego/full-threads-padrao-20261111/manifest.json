@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-17",
+  "campaign": "LEADS | CURSO FULL THREADS NOVEMBRO",
+  "course": "Full Threads",
+  "date": "11 e 12 de novembro",
+  "location": "Bragança Paulista SP",
+  "landing_page": "https://l-ecler.lovable.app/cursofios",
+  "direction": "Refeito no padrão escuro/editorial usado nas peças anteriores de aprovação.",
+  "constraints": [
+    "Logo oficial L'ECLER Academy em PNG",
+    "Data correta: 11 e 12 de novembro",
+    "Sem chamada de paciente modelo",
+    "Sem imagem de procedimento com mãos ou aplicação duvidosa",
+    "Sem travessão na copy"
+  ],
+  "exports": [
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\full-threads-feed-editorial.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\full-threads-feed-cinema.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\full-threads-square-impacto.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\full-threads-story-editorial.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\full-threads-story-poster.png",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\full-threads-feed-premium.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "file": "C:\\Users\\agenc\\OneDrive\\Documents\\lovebol\\tmp\\l-ecler-fresh\\public\\trafego\\full-threads-padrao-20261111\\preview-full-threads-padrao-20261111.png",
+      "width": 1920,
+      "height": 2250
+    }
+  ]
+}
