@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { SIGNUP_EVENT, N8N_WEBHOOK_URL, WHATSAPP_URL, type SignupConfig } from "@/lib/signup-dialog";
+import { trackMetaLead } from "@/lib/meta-pixel";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome completo").max(100, "Nome muito longo"),
@@ -27,6 +28,10 @@ function maskPhone(value: string) {
   if (d.length <= 6) return `(${d.slice(0, 2)}) ${d.slice(2)}`;
   if (d.length <= 10) return `(${d.slice(0, 2)}) ${d.slice(2, 6)}-${d.slice(6)}`;
   return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
+}
+
+function waitForPixelDispatch() {
+  return new Promise((resolve) => window.setTimeout(resolve, 350));
 }
 
 export function SignupDialog() {
@@ -83,6 +88,14 @@ export function SignupDialog() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       }).catch(() => {});
+
+      trackMetaLead({
+        content_name: config?.title ?? "Contato L'ECLER",
+        content_category: "signup",
+        source: payload.source,
+      });
+
+      await waitForPixelDispatch();
 
       if (config?.whatsappUrl) {
         window.location.href = config.whatsappUrl;
