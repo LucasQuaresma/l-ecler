@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { z } from "zod";
 import { Loader2, Sparkles, Calendar, MapPin, CheckCircle2 } from "lucide-react";
@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { redirectCourseLeadToWhatsapp } from "@/lib/course-registration";
 
 export const Route = createFileRoute("/cursofullface")({
   ssr: false,
@@ -58,7 +59,6 @@ function CursoFullFacePage() {
   const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState<{ name?: string; email?: string; phone?: string }>({});
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -97,7 +97,10 @@ function CursoFullFacePage() {
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-      navigate({ to: "/obrigadofullface" });
+      await redirectCourseLeadToWhatsapp({
+        courseName: "Curso Full Face",
+        source: payload.source,
+      });
     } catch (err) {
       console.error(err);
       toast.error("Não foi possível enviar. Tente novamente.");
