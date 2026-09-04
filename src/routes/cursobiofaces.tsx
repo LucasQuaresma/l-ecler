@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { z } from "zod";
-import { Loader2, Sparkles, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import { Loader2, Sparkles, MapPin, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/cursobiofaces")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Curso BIOFACES | 02 e 03 de outubro de 2026 | L'ECLER Academy" },
+      { title: "Curso BIOFACES | L'ECLER Academy" },
       {
         name: "description",
         content:
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/cursobiofaces")({
       },
       {
         property: "og:title",
-        content: "Curso BIOFACES | 02 e 03 de outubro de 2026",
+        content: "Curso BIOFACES | L'ECLER Academy",
       },
       {
         property: "og:description",
@@ -146,9 +146,6 @@ function CursoBiofacesPage() {
           </motion.h1>
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-              <Calendar className="h-4 w-4 text-[#c9a84c]" /> 02 e 03 de outubro de 2026
-            </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
               <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
             </span>

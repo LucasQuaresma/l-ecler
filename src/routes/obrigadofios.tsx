@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { CheckCircle2, MessageCircle, ArrowLeft, Calendar, MapPin, Sparkles } from "lucide-react";
+import { CheckCircle2, MessageCircle, ArrowLeft, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/obrigadofios")({
@@ -61,9 +61,6 @@ function Page() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-white/80">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-              <Calendar className="h-4 w-4 text-[#c9a84c]" /> 15 e 16 de Agosto
-            </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
               <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
             </span>

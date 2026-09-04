@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { z } from "zod";
-import { Loader2, Sparkles, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import { Loader2, Sparkles, MapPin, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,13 +14,13 @@ export const Route = createFileRoute("/cursofullface")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Curso Full Face | 28 e 29 de Agosto | L'ECLER Academy" },
+      { title: "Curso Full Face | L'ECLER Academy" },
       {
         name: "description",
         content:
           "Curso presencial de Full Face em Harmonização Orofacial com a Dra. Cássia Blasques. Planejamento facial completo, combinação de técnicas e resultado natural.",
       },
-      { property: "og:title", content: "Curso Full Face | 28 e 29 de Agosto" },
+      { property: "og:title", content: "Curso Full Face | L'ECLER Academy" },
       {
         property: "og:description",
         content:
@@ -143,9 +143,6 @@ function CursoFullFacePage() {
           </motion.h1>
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-              <Calendar className="h-4 w-4 text-[#c9a84c]" /> 28 e 29 de Agosto
-            </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
               <MapPin className="h-4 w-4 text-[#c9a84c]" /> Bragança Paulista, SP
             </span>
