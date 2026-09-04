@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { redirectCourseLeadToWhatsapp } from "@/lib/course-registration";
+import { CoursePixelTracker } from "@/components/CoursePixelTracker";
 
 export const Route = createFileRoute("/cursotoxina")({
   ssr: false,
@@ -111,6 +112,7 @@ function CursoToxinaPage() {
 
   return (
     <div className="min-h-screen bg-[#0e0a08] text-white">
+      <CoursePixelTracker route="/cursotoxina" />
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 opacity-60"

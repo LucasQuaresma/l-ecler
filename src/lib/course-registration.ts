@@ -1,4 +1,4 @@
-import { trackMetaLead } from "@/lib/meta-pixel";
+import { trackCourseMetaLead, trackMetaLead } from "@/lib/meta-pixel";
 
 const COURSE_WHATSAPP_PHONE = "5511915633857";
 const PIXEL_DISPATCH_DELAY_MS = 350;
@@ -21,11 +21,14 @@ export async function redirectCourseLeadToWhatsapp({
   courseName,
   source,
 }: CourseLeadRedirectOptions) {
-  trackMetaLead({
+  const eventPayload = {
     content_name: courseName,
     content_category: "L'ECLER Academy",
     source,
-  });
+  };
+
+  trackMetaLead(eventPayload);
+  trackCourseMetaLead(eventPayload);
 
   await waitForPixelDispatch();
   window.location.href = getCourseWhatsappUrl(courseName);
