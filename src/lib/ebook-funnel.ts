@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { enqueueEbookLead } from "@/lib/ebook-automation.server";
 
 export type EbookLeadSource = "ebook-10-erros-hof" | "ebook-planejamento-completo-hof";
 
@@ -49,6 +50,7 @@ function saveReceipt(receipt: EbookReceipt) {
 
 export async function registerEbookLead(input: EbookLeadInput) {
   const leadId = getOrCreateLeadId(input.source);
+  const occurredAt = new Date().toISOString();
   const { error } = await supabase.from("leads").insert({
     id: leadId,
     name: input.name,
@@ -59,6 +61,19 @@ export async function registerEbookLead(input: EbookLeadInput) {
 
   // A retry with the same client-generated UUID means the first insert was already accepted.
   if (error && error.code !== "23505") throw error;
+
+  await enqueueEbookLead({
+    data: {
+      eventId: leadId,
+      occurredAt,
+      source: input.source,
+      contact: {
+        name: input.name,
+        email: input.email,
+        whatsapp: input.whatsapp,
+      },
+    },
+  });
 
   saveReceipt({
     leadId,

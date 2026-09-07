@@ -56,7 +56,7 @@ export function EbookThankYouPage({
             >
               <CheckCircle2 className="h-11 w-11 text-[#b99750]" />
               <p className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-[#b99750]">
-                Cadastro confirmado
+                Cadastro recebido
               </p>
               <h1 className="mt-3 font-display text-4xl leading-tight tracking-[0] sm:text-5xl">
                 Seu material está pronto.
@@ -68,7 +68,7 @@ export function EbookThankYouPage({
                     : "mt-5 max-w-2xl leading-7 text-[#6d625c]"
                 }
               >
-                Obrigado pelo interesse em <strong>{title}</strong>. Use o botão abaixo para baixar
+                Recebemos seu interesse em <strong>{title}</strong>. Use o botão abaixo para baixar
                 o PDF.
               </p>
 
