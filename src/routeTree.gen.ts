@@ -9,123 +9,37 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as QuizRouteImport } from './routes/quiz'
-import { Route as PrivacidadeRouteImport } from './routes/privacidade'
-import { Route as ObrigadotoxinaRouteImport } from './routes/obrigadotoxina'
-import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
-import { Route as ObrigadofullfaceRouteImport } from './routes/obrigadofullface'
-import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
-import { Route as ObrigadobiofacesRouteImport } from './routes/obrigadobiofaces'
-import { Route as ObrigadoadvancedlipsRouteImport } from './routes/obrigadoadvancedlips'
-import { Route as ObrigadoRouteImport } from './routes/obrigado'
-import { Route as LinktreeRouteImport } from './routes/linktree'
-import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
-import { Route as CursotoxinaRouteImport } from './routes/cursotoxina'
-import { Route as CursofullfaceRouteImport } from './routes/cursofullface'
-import { Route as CursofiosRouteImport } from './routes/cursofios'
-import { Route as CursobiofacesRouteImport } from './routes/cursobiofaces'
-import { Route as CursoadvancedlipsRouteImport } from './routes/cursoadvancedlips'
-import { Route as CookiesRouteImport } from './routes/cookies'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
-import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
+import { Route as AcademyRouteImport } from './routes/academy'
+import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as CursoadvancedlipsRouteImport } from './routes/cursoadvancedlips'
+import { Route as CursobiofacesRouteImport } from './routes/cursobiofaces'
+import { Route as CursofiosRouteImport } from './routes/cursofios'
+import { Route as CursofullfaceRouteImport } from './routes/cursofullface'
+import { Route as CursotoxinaRouteImport } from './routes/cursotoxina'
+import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
+import { Route as LinktreeRouteImport } from './routes/linktree'
+import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as ObrigadoadvancedlipsRouteImport } from './routes/obrigadoadvancedlips'
+import { Route as ObrigadobiofacesRouteImport } from './routes/obrigadobiofaces'
+import { Route as ObrigadofiosRouteImport } from './routes/obrigadofios'
+import { Route as ObrigadofullfaceRouteImport } from './routes/obrigadofullface'
+import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
+import { Route as ObrigadotoxinaRouteImport } from './routes/obrigadotoxina'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
+import { Route as Ebook10ErrosHofRouteImport } from './routes/ebook.10-erros-hof'
+import { Route as EbookPlanejamentoCompletoHofRouteImport } from './routes/ebook.planejamento-completo-hof'
+import { Route as ServicosSlugRouteImport } from './routes/servicos.$slug'
+import { Route as Ebook10ErrosHofObrigadoRouteImport } from './routes/ebook.10-erros-hof_.obrigado'
+import { Route as EbookPlanejamentoCompletoHofObrigadoRouteImport } from './routes/ebook.planejamento-completo-hof_.obrigado'
 
-const QuizRoute = QuizRouteImport.update({
-  id: '/quiz',
-  path: '/quiz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacidadeRoute = PrivacidadeRouteImport.update({
-  id: '/privacidade',
-  path: '/privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadotoxinaRoute = ObrigadotoxinaRouteImport.update({
-  id: '/obrigadotoxina',
-  path: '/obrigadotoxina',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
-  id: '/obrigadogift',
-  path: '/obrigadogift',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadofullfaceRoute = ObrigadofullfaceRouteImport.update({
-  id: '/obrigadofullface',
-  path: '/obrigadofullface',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
-  id: '/obrigadofios',
-  path: '/obrigadofios',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadobiofacesRoute = ObrigadobiofacesRouteImport.update({
-  id: '/obrigadobiofaces',
-  path: '/obrigadobiofaces',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadoadvancedlipsRoute = ObrigadoadvancedlipsRouteImport.update({
-  id: '/obrigadoadvancedlips',
-  path: '/obrigadoadvancedlips',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ObrigadoRoute = ObrigadoRouteImport.update({
-  id: '/obrigado',
-  path: '/obrigado',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LinktreeRoute = LinktreeRouteImport.update({
-  id: '/linktree',
-  path: '/linktree',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GiftVoucherRoute = GiftVoucherRouteImport.update({
-  id: '/gift-voucher',
-  path: '/gift-voucher',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursotoxinaRoute = CursotoxinaRouteImport.update({
-  id: '/cursotoxina',
-  path: '/cursotoxina',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursofullfaceRoute = CursofullfaceRouteImport.update({
-  id: '/cursofullface',
-  path: '/cursofullface',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursofiosRoute = CursofiosRouteImport.update({
-  id: '/cursofios',
-  path: '/cursofios',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursobiofacesRoute = CursobiofacesRouteImport.update({
-  id: '/cursobiofaces',
-  path: '/cursobiofaces',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursoadvancedlipsRoute = CursoadvancedlipsRouteImport.update({
-  id: '/cursoadvancedlips',
-  path: '/cursoadvancedlips',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CookiesRoute = CookiesRouteImport.update({
-  id: '/cookies',
-  path: '/cookies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BeautyWeekRoute = BeautyWeekRouteImport.update({
-  id: '/beauty-week',
-  path: '/beauty-week',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcademyRoute = AcademyRouteImport.update({
@@ -133,14 +47,99 @@ const AcademyRoute = AcademyRouteImport.update({
   path: '/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BeautyWeekRoute = BeautyWeekRouteImport.update({
+  id: '/beauty-week',
+  path: '/beauty-week',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ServicosSlugRoute = ServicosSlugRouteImport.update({
-  id: '/servicos/$slug',
-  path: '/servicos/$slug',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursoadvancedlipsRoute = CursoadvancedlipsRouteImport.update({
+  id: '/cursoadvancedlips',
+  path: '/cursoadvancedlips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursobiofacesRoute = CursobiofacesRouteImport.update({
+  id: '/cursobiofaces',
+  path: '/cursobiofaces',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursofiosRoute = CursofiosRouteImport.update({
+  id: '/cursofios',
+  path: '/cursofios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursofullfaceRoute = CursofullfaceRouteImport.update({
+  id: '/cursofullface',
+  path: '/cursofullface',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursotoxinaRoute = CursotoxinaRouteImport.update({
+  id: '/cursotoxina',
+  path: '/cursotoxina',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftVoucherRoute = GiftVoucherRouteImport.update({
+  id: '/gift-voucher',
+  path: '/gift-voucher',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LinktreeRoute = LinktreeRouteImport.update({
+  id: '/linktree',
+  path: '/linktree',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoRoute = ObrigadoRouteImport.update({
+  id: '/obrigado',
+  path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadoadvancedlipsRoute = ObrigadoadvancedlipsRouteImport.update({
+  id: '/obrigadoadvancedlips',
+  path: '/obrigadoadvancedlips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadobiofacesRoute = ObrigadobiofacesRouteImport.update({
+  id: '/obrigadobiofaces',
+  path: '/obrigadobiofaces',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadofiosRoute = ObrigadofiosRouteImport.update({
+  id: '/obrigadofios',
+  path: '/obrigadofios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadofullfaceRoute = ObrigadofullfaceRouteImport.update({
+  id: '/obrigadofullface',
+  path: '/obrigadofullface',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadogiftRoute = ObrigadogiftRouteImport.update({
+  id: '/obrigadogift',
+  path: '/obrigadogift',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrigadotoxinaRoute = ObrigadotoxinaRouteImport.update({
+  id: '/obrigadotoxina',
+  path: '/obrigadotoxina',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
@@ -148,6 +147,33 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Ebook10ErrosHofRoute = Ebook10ErrosHofRouteImport.update({
+  id: '/ebook/10-erros-hof',
+  path: '/ebook/10-erros-hof',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EbookPlanejamentoCompletoHofRoute =
+  EbookPlanejamentoCompletoHofRouteImport.update({
+    id: '/ebook/planejamento-completo-hof',
+    path: '/ebook/planejamento-completo-hof',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicosSlugRoute = ServicosSlugRouteImport.update({
+  id: '/servicos/$slug',
+  path: '/servicos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Ebook10ErrosHofObrigadoRoute = Ebook10ErrosHofObrigadoRouteImport.update({
+  id: '/ebook/10-erros-hof_/obrigado',
+  path: '/ebook/10-erros-hof/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EbookPlanejamentoCompletoHofObrigadoRoute =
+  EbookPlanejamentoCompletoHofObrigadoRouteImport.update({
+    id: '/ebook/planejamento-completo-hof_/obrigado',
+    path: '/ebook/planejamento-completo-hof/obrigado',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -172,7 +198,11 @@ export interface FileRoutesByFullPath {
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
+  '/ebook/planejamento-completo-hof': typeof EbookPlanejamentoCompletoHofRoute
   '/servicos/$slug': typeof ServicosSlugRoute
+  '/ebook/10-erros-hof/obrigado': typeof Ebook10ErrosHofObrigadoRoute
+  '/ebook/planejamento-completo-hof/obrigado': typeof EbookPlanejamentoCompletoHofObrigadoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -197,7 +227,11 @@ export interface FileRoutesByTo {
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
+  '/ebook/planejamento-completo-hof': typeof EbookPlanejamentoCompletoHofRoute
   '/servicos/$slug': typeof ServicosSlugRoute
+  '/ebook/10-erros-hof/obrigado': typeof Ebook10ErrosHofObrigadoRoute
+  '/ebook/planejamento-completo-hof/obrigado': typeof EbookPlanejamentoCompletoHofObrigadoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -223,7 +257,11 @@ export interface FileRoutesById {
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
   '/blog_/$slug': typeof BlogSlugRoute
+  '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
+  '/ebook/planejamento-completo-hof': typeof EbookPlanejamentoCompletoHofRoute
   '/servicos/$slug': typeof ServicosSlugRoute
+  '/ebook/10-erros-hof_/obrigado': typeof Ebook10ErrosHofObrigadoRoute
+  '/ebook/planejamento-completo-hof_/obrigado': typeof EbookPlanejamentoCompletoHofObrigadoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -250,7 +288,11 @@ export interface FileRouteTypes {
     | '/privacidade'
     | '/quiz'
     | '/blog/$slug'
+    | '/ebook/10-erros-hof'
+    | '/ebook/planejamento-completo-hof'
     | '/servicos/$slug'
+    | '/ebook/10-erros-hof/obrigado'
+    | '/ebook/planejamento-completo-hof/obrigado'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -275,7 +317,11 @@ export interface FileRouteTypes {
     | '/privacidade'
     | '/quiz'
     | '/blog/$slug'
+    | '/ebook/10-erros-hof'
+    | '/ebook/planejamento-completo-hof'
     | '/servicos/$slug'
+    | '/ebook/10-erros-hof/obrigado'
+    | '/ebook/planejamento-completo-hof/obrigado'
   id:
     | '__root__'
     | '/'
@@ -300,7 +346,11 @@ export interface FileRouteTypes {
     | '/privacidade'
     | '/quiz'
     | '/blog_/$slug'
+    | '/ebook/10-erros-hof'
+    | '/ebook/planejamento-completo-hof'
     | '/servicos/$slug'
+    | '/ebook/10-erros-hof_/obrigado'
+    | '/ebook/planejamento-completo-hof_/obrigado'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -326,142 +376,20 @@ export interface RootRouteChildren {
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuizRoute: typeof QuizRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  Ebook10ErrosHofRoute: typeof Ebook10ErrosHofRoute
+  EbookPlanejamentoCompletoHofRoute: typeof EbookPlanejamentoCompletoHofRoute
   ServicosSlugRoute: typeof ServicosSlugRoute
+  Ebook10ErrosHofObrigadoRoute: typeof Ebook10ErrosHofObrigadoRoute
+  EbookPlanejamentoCompletoHofObrigadoRoute: typeof EbookPlanejamentoCompletoHofObrigadoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/quiz': {
-      id: '/quiz'
-      path: '/quiz'
-      fullPath: '/quiz'
-      preLoaderRoute: typeof QuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidade': {
-      id: '/privacidade'
-      path: '/privacidade'
-      fullPath: '/privacidade'
-      preLoaderRoute: typeof PrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadotoxina': {
-      id: '/obrigadotoxina'
-      path: '/obrigadotoxina'
-      fullPath: '/obrigadotoxina'
-      preLoaderRoute: typeof ObrigadotoxinaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadogift': {
-      id: '/obrigadogift'
-      path: '/obrigadogift'
-      fullPath: '/obrigadogift'
-      preLoaderRoute: typeof ObrigadogiftRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadofullface': {
-      id: '/obrigadofullface'
-      path: '/obrigadofullface'
-      fullPath: '/obrigadofullface'
-      preLoaderRoute: typeof ObrigadofullfaceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadofios': {
-      id: '/obrigadofios'
-      path: '/obrigadofios'
-      fullPath: '/obrigadofios'
-      preLoaderRoute: typeof ObrigadofiosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadobiofaces': {
-      id: '/obrigadobiofaces'
-      path: '/obrigadobiofaces'
-      fullPath: '/obrigadobiofaces'
-      preLoaderRoute: typeof ObrigadobiofacesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigadoadvancedlips': {
-      id: '/obrigadoadvancedlips'
-      path: '/obrigadoadvancedlips'
-      fullPath: '/obrigadoadvancedlips'
-      preLoaderRoute: typeof ObrigadoadvancedlipsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/obrigado': {
-      id: '/obrigado'
-      path: '/obrigado'
-      fullPath: '/obrigado'
-      preLoaderRoute: typeof ObrigadoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/linktree': {
-      id: '/linktree'
-      path: '/linktree'
-      fullPath: '/linktree'
-      preLoaderRoute: typeof LinktreeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gift-voucher': {
-      id: '/gift-voucher'
-      path: '/gift-voucher'
-      fullPath: '/gift-voucher'
-      preLoaderRoute: typeof GiftVoucherRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursotoxina': {
-      id: '/cursotoxina'
-      path: '/cursotoxina'
-      fullPath: '/cursotoxina'
-      preLoaderRoute: typeof CursotoxinaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursofullface': {
-      id: '/cursofullface'
-      path: '/cursofullface'
-      fullPath: '/cursofullface'
-      preLoaderRoute: typeof CursofullfaceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursofios': {
-      id: '/cursofios'
-      path: '/cursofios'
-      fullPath: '/cursofios'
-      preLoaderRoute: typeof CursofiosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursobiofaces': {
-      id: '/cursobiofaces'
-      path: '/cursobiofaces'
-      fullPath: '/cursobiofaces'
-      preLoaderRoute: typeof CursobiofacesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursoadvancedlips': {
-      id: '/cursoadvancedlips'
-      path: '/cursoadvancedlips'
-      fullPath: '/cursoadvancedlips'
-      preLoaderRoute: typeof CursoadvancedlipsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cookies': {
-      id: '/cookies'
-      path: '/cookies'
-      fullPath: '/cookies'
-      preLoaderRoute: typeof CookiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/beauty-week': {
-      id: '/beauty-week'
-      path: '/beauty-week'
-      fullPath: '/beauty-week'
-      preLoaderRoute: typeof BeautyWeekRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/academy': {
@@ -471,11 +399,158 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AcademyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/beauty-week': {
+      id: '/beauty-week'
+      path: '/beauty-week'
+      fullPath: '/beauty-week'
+      preLoaderRoute: typeof BeautyWeekRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursoadvancedlips': {
+      id: '/cursoadvancedlips'
+      path: '/cursoadvancedlips'
+      fullPath: '/cursoadvancedlips'
+      preLoaderRoute: typeof CursoadvancedlipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursobiofaces': {
+      id: '/cursobiofaces'
+      path: '/cursobiofaces'
+      fullPath: '/cursobiofaces'
+      preLoaderRoute: typeof CursobiofacesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursofios': {
+      id: '/cursofios'
+      path: '/cursofios'
+      fullPath: '/cursofios'
+      preLoaderRoute: typeof CursofiosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursofullface': {
+      id: '/cursofullface'
+      path: '/cursofullface'
+      fullPath: '/cursofullface'
+      preLoaderRoute: typeof CursofullfaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursotoxina': {
+      id: '/cursotoxina'
+      path: '/cursotoxina'
+      fullPath: '/cursotoxina'
+      preLoaderRoute: typeof CursotoxinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gift-voucher': {
+      id: '/gift-voucher'
+      path: '/gift-voucher'
+      fullPath: '/gift-voucher'
+      preLoaderRoute: typeof GiftVoucherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/linktree': {
+      id: '/linktree'
+      path: '/linktree'
+      fullPath: '/linktree'
+      preLoaderRoute: typeof LinktreeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigado': {
+      id: '/obrigado'
+      path: '/obrigado'
+      fullPath: '/obrigado'
+      preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadoadvancedlips': {
+      id: '/obrigadoadvancedlips'
+      path: '/obrigadoadvancedlips'
+      fullPath: '/obrigadoadvancedlips'
+      preLoaderRoute: typeof ObrigadoadvancedlipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadobiofaces': {
+      id: '/obrigadobiofaces'
+      path: '/obrigadobiofaces'
+      fullPath: '/obrigadobiofaces'
+      preLoaderRoute: typeof ObrigadobiofacesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadofios': {
+      id: '/obrigadofios'
+      path: '/obrigadofios'
+      fullPath: '/obrigadofios'
+      preLoaderRoute: typeof ObrigadofiosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadofullface': {
+      id: '/obrigadofullface'
+      path: '/obrigadofullface'
+      fullPath: '/obrigadofullface'
+      preLoaderRoute: typeof ObrigadofullfaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadogift': {
+      id: '/obrigadogift'
+      path: '/obrigadogift'
+      fullPath: '/obrigadogift'
+      preLoaderRoute: typeof ObrigadogiftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obrigadotoxina': {
+      id: '/obrigadotoxina'
+      path: '/obrigadotoxina'
+      fullPath: '/obrigadotoxina'
+      preLoaderRoute: typeof ObrigadotoxinaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/$slug': {
+      id: '/blog_/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ebook/10-erros-hof': {
+      id: '/ebook/10-erros-hof'
+      path: '/ebook/10-erros-hof'
+      fullPath: '/ebook/10-erros-hof'
+      preLoaderRoute: typeof Ebook10ErrosHofRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ebook/planejamento-completo-hof': {
+      id: '/ebook/planejamento-completo-hof'
+      path: '/ebook/planejamento-completo-hof'
+      fullPath: '/ebook/planejamento-completo-hof'
+      preLoaderRoute: typeof EbookPlanejamentoCompletoHofRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicos/$slug': {
@@ -485,11 +560,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog_/$slug': {
-      id: '/blog_/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
+    '/ebook/10-erros-hof_/obrigado': {
+      id: '/ebook/10-erros-hof_/obrigado'
+      path: '/ebook/10-erros-hof/obrigado'
+      fullPath: '/ebook/10-erros-hof/obrigado'
+      preLoaderRoute: typeof Ebook10ErrosHofObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ebook/planejamento-completo-hof_/obrigado': {
+      id: '/ebook/planejamento-completo-hof_/obrigado'
+      path: '/ebook/planejamento-completo-hof/obrigado'
+      fullPath: '/ebook/planejamento-completo-hof/obrigado'
+      preLoaderRoute: typeof EbookPlanejamentoCompletoHofObrigadoRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -518,7 +600,12 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacidadeRoute: PrivacidadeRoute,
   QuizRoute: QuizRoute,
   BlogSlugRoute: BlogSlugRoute,
+  Ebook10ErrosHofRoute: Ebook10ErrosHofRoute,
+  EbookPlanejamentoCompletoHofRoute: EbookPlanejamentoCompletoHofRoute,
   ServicosSlugRoute: ServicosSlugRoute,
+  Ebook10ErrosHofObrigadoRoute: Ebook10ErrosHofObrigadoRoute,
+  EbookPlanejamentoCompletoHofObrigadoRoute:
+    EbookPlanejamentoCompletoHofObrigadoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
