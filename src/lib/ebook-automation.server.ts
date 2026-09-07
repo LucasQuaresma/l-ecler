@@ -53,68 +53,67 @@ const ackSchema = z
     }
   });
 
-export const enqueueEbookLead = createServerFn({ method: "POST" })
-  .validator(inputSchema)
-  .handler(async ({ data }) => {
-    const ebook = ebookBySource[data.source];
-    const webhookUrl = process.env[ebook.webhookEnv];
-    const webhookSecret = process.env.EBOOK_WEBHOOK_SECRET;
+export const enqueueEbookLead = createServerFn({ method: "POST" }).handler(async ({ data }) => {
+  const input = inputSchema.parse(data);
+  const ebook = ebookBySource[input.source];
+  const webhookUrl = process.env[ebook.webhookEnv];
+  const webhookSecret = process.env.EBOOK_WEBHOOK_SECRET;
 
-    if (!webhookUrl || !webhookSecret) {
-      throw new Error("Integração de cadastro indisponível.");
-    }
+  if (!webhookUrl || !webhookSecret) {
+    throw new Error("Integração de cadastro indisponível.");
+  }
 
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 10_000);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10_000);
 
-    try {
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Lecler-Ebook-Key": webhookSecret,
+  try {
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Lecler-Ebook-Key": webhookSecret,
+      },
+      body: JSON.stringify({
+        eventId: input.eventId,
+        eventType: "ebook.lead.created",
+        occurredAt: input.occurredAt,
+        source: input.source,
+        ebook: {
+          slug: ebook.slug,
+          title: ebook.title,
         },
-        body: JSON.stringify({
-          eventId: data.eventId,
-          eventType: "ebook.lead.created",
-          occurredAt: data.occurredAt,
-          source: data.source,
-          ebook: {
-            slug: ebook.slug,
-            title: ebook.title,
-          },
-          contact: data.contact,
-          tags: ["ebook"],
-        }),
-        signal: controller.signal,
-      });
+        contact: input.contact,
+        tags: ["ebook"],
+      }),
+      signal: controller.signal,
+    });
 
-      if (!response.ok) {
-        throw new Error("A automação recusou o cadastro.");
-      }
-
-      const parsedAck = ackSchema.safeParse(await response.json());
-      if (
-        !parsedAck.success ||
-        parsedAck.data.eventId !== data.eventId ||
-        parsedAck.data.source !== data.source
-      ) {
-        throw new Error("A automação não confirmou o cadastro.");
-      }
-
-      return {
-        queued: true as const,
-        eventId: parsedAck.data.eventId,
-        source: parsedAck.data.source,
-      };
-    } catch (error) {
-      console.error("Falha ao enfileirar lead de e-book", {
-        source: data.source,
-        eventId: data.eventId,
-        cause: error instanceof Error ? error.message : "erro desconhecido",
-      });
-      throw new Error("Não foi possível confirmar a automação do cadastro.");
-    } finally {
-      clearTimeout(timeout);
+    if (!response.ok) {
+      throw new Error("A automação recusou o cadastro.");
     }
-  });
+
+    const parsedAck = ackSchema.safeParse(await response.json());
+    if (
+      !parsedAck.success ||
+      parsedAck.data.eventId !== input.eventId ||
+      parsedAck.data.source !== input.source
+    ) {
+      throw new Error("A automação não confirmou o cadastro.");
+    }
+
+    return {
+      queued: true as const,
+      eventId: parsedAck.data.eventId,
+      source: parsedAck.data.source,
+    };
+  } catch (error) {
+    console.error("Falha ao enfileirar lead de e-book", {
+      source: input.source,
+      eventId: input.eventId,
+      cause: error instanceof Error ? error.message : "erro desconhecido",
+    });
+    throw new Error("Não foi possível confirmar a automação do cadastro.");
+  } finally {
+    clearTimeout(timeout);
+  }
+});
