@@ -18,12 +18,14 @@ const ebookBySource = {
   "ebook-10-erros-hof": {
     slug: "10-erros-hof",
     title: "Os 10 erros que impedem profissionais de alcançar resultados naturais na HOF",
-    webhookEnv: "EBOOK_10_ERROS_WEBHOOK_URL",
+    webhookUrl:
+      "https://projeto01-n8n.gmxuno.easypanel.host/webhook/lecler-ebook-10-erros-hof-2f08917fa3a2",
   },
   "ebook-planejamento-completo-hof": {
     slug: "planejamento-completo-hof",
     title: "Como transformar a avaliação em um planejamento completo na HOF",
-    webhookEnv: "EBOOK_PLANEJAMENTO_WEBHOOK_URL",
+    webhookUrl:
+      "https://projeto01-n8n.gmxuno.easypanel.host/webhook/lecler-ebook-planejamento-completo-hof-2d24586ba1f3",
   },
 } as const;
 
@@ -56,10 +58,9 @@ const ackSchema = z
 export const enqueueEbookLead = createServerFn({ method: "POST" }).handler(async ({ data }) => {
   const input = inputSchema.parse(data);
   const ebook = ebookBySource[input.source];
-  const webhookUrl = process.env[ebook.webhookEnv];
   const webhookSecret = process.env.EBOOK_WEBHOOK_SECRET;
 
-  if (!webhookUrl || !webhookSecret) {
+  if (!webhookSecret) {
     throw new Error("Integração de cadastro indisponível.");
   }
 
@@ -67,7 +68,7 @@ export const enqueueEbookLead = createServerFn({ method: "POST" }).handler(async
   const timeout = setTimeout(() => controller.abort(), 10_000);
 
   try {
-    const response = await fetch(webhookUrl, {
+    const response = await fetch(ebook.webhookUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
