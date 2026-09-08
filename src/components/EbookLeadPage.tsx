@@ -203,17 +203,8 @@ export function EbookLeadPage(props: EbookLeadPageProps) {
   if (props.variant === "dark") {
     return (
       <main className="min-h-screen bg-[#0d0c0b] text-white">
-        <section className="relative isolate min-h-screen overflow-hidden">
-          <div className="absolute inset-y-0 right-0 -z-10 w-full lg:w-[52%]">
-            <img
-              src={props.portraitImage}
-              alt="Dra. Cássia Blasques"
-              className="h-full w-full object-cover object-[center_18%] opacity-80"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,12,11,0.04)_20%,rgba(13,12,11,0.9)_92%)] lg:bg-[linear-gradient(90deg,#0d0c0b_0%,rgba(13,12,11,0.2)_48%,rgba(13,12,11,0.32)_100%)]" />
-          </div>
-
-          <div className="mx-auto grid min-h-screen max-w-7xl content-between gap-10 px-6 py-8 sm:px-10 lg:grid-cols-[1.02fr_0.98fr] lg:px-14 lg:py-12">
+        <section className="min-h-screen overflow-hidden border-t-8 border-[#d8bc77]">
+          <div className="mx-auto grid min-h-screen max-w-7xl gap-10 px-6 py-8 sm:px-10 lg:grid-cols-[1.04fr_0.96fr] lg:items-start lg:px-14 lg:py-12">
             <div className="max-w-2xl">
               <img
                 src="/trafego/brand/lecler-clinica-logo-white.png"
@@ -221,7 +212,7 @@ export function EbookLeadPage(props: EbookLeadPageProps) {
                 className="h-auto w-36 object-contain sm:w-44"
               />
 
-              <div className="mt-14 sm:mt-20 lg:mt-24">
+              <div className="mt-12 sm:mt-16 lg:mt-20">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d8bc77]">
                   Guia profissional gratuito
                 </p>
@@ -246,8 +237,16 @@ export function EbookLeadPage(props: EbookLeadPageProps) {
               </div>
             </div>
 
-            <div className="self-end lg:col-start-2 lg:row-start-1 lg:flex lg:min-h-[760px] lg:items-end lg:justify-end">
-              <div className="w-full border border-white/12 bg-[#171411]/95 p-5 shadow-2xl backdrop-blur sm:p-6 lg:max-w-md">
+            <div className="flex flex-col gap-5 lg:pt-8">
+              <figure className="order-2 h-64 overflow-hidden border border-white/10 bg-[#171411] sm:h-72 lg:order-1 lg:h-80">
+                <img
+                  src={props.portraitImage}
+                  alt="Dra. Cássia Blasques"
+                  className="h-full w-full object-cover object-[center_18%]"
+                />
+              </figure>
+
+              <div className="order-1 w-full border border-white/12 bg-[#171411] p-5 shadow-2xl sm:p-6 lg:order-2">
                 <div className="mb-5 flex items-start gap-4">
                   <img
                     src={props.coverImage}
@@ -316,15 +315,16 @@ export function EbookLeadPage(props: EbookLeadPageProps) {
             </div>
           </div>
 
-          <div className="relative min-h-[720px] lg:min-h-0">
-            <img
-              src={props.portraitImage}
-              alt="Dra. Cássia Blasques"
-              className="absolute inset-0 h-full w-full object-cover object-[center_15%]"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_38%,rgba(20,16,13,0.78)_100%)]" />
+          <div className="flex flex-col gap-5 lg:pt-8">
+            <figure className="order-2 h-64 overflow-hidden bg-[#f2ede6] sm:h-72 lg:order-1 lg:h-80">
+              <img
+                src={props.portraitImage}
+                alt="Dra. Cássia Blasques"
+                className="h-full w-full object-cover object-[center_16%]"
+              />
+            </figure>
 
-            <div className="absolute inset-x-4 bottom-4 bg-white/96 p-5 shadow-[0_24px_80px_-28px_rgba(36,28,24,0.45)] backdrop-blur sm:inset-x-8 sm:bottom-8 sm:p-7 lg:left-auto lg:w-[430px]">
+            <div className="order-1 bg-[#faf8f4] p-5 shadow-[0_24px_80px_-28px_rgba(36,28,24,0.35)] sm:p-7 lg:order-2">
               <div className="mb-5 flex items-center justify-between gap-4 border-b border-[#332924]/10 pb-4">
                 <div>
                   <h2 className="font-display text-2xl tracking-[0]">Receba o e-book</h2>
