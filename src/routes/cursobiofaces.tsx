@@ -95,11 +95,17 @@ function CursoBiofacesPage() {
       });
       if (error) throw error;
 
-      fetch("https://projeto01-n8n.gmxuno.easypanel.host/webhook/biofacesoutubro", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      }).catch(() => {});
+      const automationResponse = await fetch(
+        "https://projeto01-n8n.gmxuno.easypanel.host/webhook/biofacesoutubro",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        },
+      );
+      if (!automationResponse.ok) {
+        throw new Error("A automação do cadastro recusou o envio.");
+      }
 
       await redirectCourseLeadToWhatsapp({
         courseName: "Curso BIOFACES",
@@ -140,12 +146,14 @@ function CursoBiofacesPage() {
             transition={{ duration: 0.6 }}
             className="font-display text-5xl leading-[0.95] sm:text-6xl lg:text-7xl"
           >
-            CURSO DE
-            <br />
             <span className="bg-gradient-to-r from-[#f0d78c] via-[#c9a84c] to-[#8b6f2a] bg-clip-text text-transparent">
-              BIOFACES
+              BIOFACE
             </span>
           </motion.h1>
+
+          <p className="mt-4 max-w-xl text-lg leading-snug text-white/70 sm:text-xl">
+            Bioestimuladores de Colágeno e Estética Regenerativa
+          </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-white/70">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
@@ -164,8 +172,8 @@ function CursoBiofacesPage() {
               </span>
             </p>
             <p className="mt-2 text-sm text-white/70">
-              Bioestimuladores, PDRN, polinucleotídeos, peptídeos, exossomos e enzimas
-              recombinantes com planejamento, indicação criteriosa e segurança clínica.
+              Bioestimuladores, PDRN, polinucleotídeos, peptídeos, exossomos e enzimas recombinantes
+              com planejamento, indicação criteriosa e segurança clínica.
             </p>
           </div>
 
