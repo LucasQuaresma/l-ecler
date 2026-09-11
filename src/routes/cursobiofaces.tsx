@@ -144,14 +144,14 @@ function CursoBiofacesPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-display text-5xl leading-[0.95] sm:text-6xl lg:text-7xl"
+            className="font-display text-xl leading-none tracking-[0.18em] sm:text-2xl lg:text-3xl"
           >
             <span className="bg-gradient-to-r from-[#f0d78c] via-[#c9a84c] to-[#8b6f2a] bg-clip-text text-transparent">
               BIOFACE
             </span>
           </motion.h1>
 
-          <p className="mt-4 max-w-xl text-lg leading-snug text-white/70 sm:text-xl">
+          <p className="mt-4 max-w-2xl font-display text-4xl leading-[1.05] text-white sm:text-5xl lg:text-6xl">
             Bioestimuladores de Colágeno e Estética Regenerativa
           </p>
 
