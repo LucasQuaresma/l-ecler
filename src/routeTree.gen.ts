@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcademyRouteImport } from './routes/academy'
+import { Route as AulaEnzimasRecombinantesRouteImport } from './routes/aula-enzimas-recombinantes'
 import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CookiesRouteImport } from './routes/cookies'
@@ -30,6 +31,7 @@ import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
 import { Route as ObrigadotoxinaRouteImport } from './routes/obrigadotoxina'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as AulaEnzimasRecombinantesObrigadoRouteImport } from './routes/aula-enzimas-recombinantes_.obrigado'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as Ebook10ErrosHofRouteImport } from './routes/ebook.10-erros-hof'
 import { Route as EbookPlanejamentoCompletoHofRouteImport } from './routes/ebook.planejamento-completo-hof'
@@ -47,6 +49,12 @@ const AcademyRoute = AcademyRouteImport.update({
   path: '/academy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AulaEnzimasRecombinantesRoute =
+  AulaEnzimasRecombinantesRouteImport.update({
+    id: '/aula-enzimas-recombinantes',
+    path: '/aula-enzimas-recombinantes',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BeautyWeekRoute = BeautyWeekRouteImport.update({
   id: '/beauty-week',
   path: '/beauty-week',
@@ -142,6 +150,12 @@ const QuizRoute = QuizRouteImport.update({
   path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AulaEnzimasRecombinantesObrigadoRoute =
+  AulaEnzimasRecombinantesObrigadoRouteImport.update({
+    id: '/aula-enzimas-recombinantes_/obrigado',
+    path: '/aula-enzimas-recombinantes/obrigado',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog_/$slug',
   path: '/blog/$slug',
@@ -178,6 +192,7 @@ const EbookPlanejamentoCompletoHofObrigadoRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/aula-enzimas-recombinantes': typeof AulaEnzimasRecombinantesRoute
   '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
@@ -197,6 +212,7 @@ export interface FileRoutesByFullPath {
   '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
+  '/aula-enzimas-recombinantes/obrigado': typeof AulaEnzimasRecombinantesObrigadoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
   '/ebook/planejamento-completo-hof': typeof EbookPlanejamentoCompletoHofRoute
@@ -207,6 +223,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/aula-enzimas-recombinantes': typeof AulaEnzimasRecombinantesRoute
   '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
@@ -226,6 +243,7 @@ export interface FileRoutesByTo {
   '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
+  '/aula-enzimas-recombinantes/obrigado': typeof AulaEnzimasRecombinantesObrigadoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
   '/ebook/planejamento-completo-hof': typeof EbookPlanejamentoCompletoHofRoute
@@ -237,6 +255,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/aula-enzimas-recombinantes': typeof AulaEnzimasRecombinantesRoute
   '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
   '/cookies': typeof CookiesRoute
@@ -256,6 +275,7 @@ export interface FileRoutesById {
   '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
+  '/aula-enzimas-recombinantes_/obrigado': typeof AulaEnzimasRecombinantesObrigadoRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
   '/ebook/planejamento-completo-hof': typeof EbookPlanejamentoCompletoHofRoute
@@ -268,6 +288,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/academy'
+    | '/aula-enzimas-recombinantes'
     | '/beauty-week'
     | '/blog'
     | '/cookies'
@@ -287,6 +308,7 @@ export interface FileRouteTypes {
     | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
+    | '/aula-enzimas-recombinantes/obrigado'
     | '/blog/$slug'
     | '/ebook/10-erros-hof'
     | '/ebook/planejamento-completo-hof'
@@ -297,6 +319,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/academy'
+    | '/aula-enzimas-recombinantes'
     | '/beauty-week'
     | '/blog'
     | '/cookies'
@@ -316,6 +339,7 @@ export interface FileRouteTypes {
     | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
+    | '/aula-enzimas-recombinantes/obrigado'
     | '/blog/$slug'
     | '/ebook/10-erros-hof'
     | '/ebook/planejamento-completo-hof'
@@ -326,6 +350,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/academy'
+    | '/aula-enzimas-recombinantes'
     | '/beauty-week'
     | '/blog'
     | '/cookies'
@@ -345,6 +370,7 @@ export interface FileRouteTypes {
     | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
+    | '/aula-enzimas-recombinantes_/obrigado'
     | '/blog_/$slug'
     | '/ebook/10-erros-hof'
     | '/ebook/planejamento-completo-hof'
@@ -356,6 +382,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcademyRoute: typeof AcademyRoute
+  AulaEnzimasRecombinantesRoute: typeof AulaEnzimasRecombinantesRoute
   BeautyWeekRoute: typeof BeautyWeekRoute
   BlogRoute: typeof BlogRoute
   CookiesRoute: typeof CookiesRoute
@@ -375,6 +402,7 @@ export interface RootRouteChildren {
   ObrigadotoxinaRoute: typeof ObrigadotoxinaRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuizRoute: typeof QuizRoute
+  AulaEnzimasRecombinantesObrigadoRoute: typeof AulaEnzimasRecombinantesObrigadoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   Ebook10ErrosHofRoute: typeof Ebook10ErrosHofRoute
   EbookPlanejamentoCompletoHofRoute: typeof EbookPlanejamentoCompletoHofRoute
@@ -397,6 +425,13 @@ declare module '@tanstack/react-router' {
       path: '/academy'
       fullPath: '/academy'
       preLoaderRoute: typeof AcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aula-enzimas-recombinantes': {
+      id: '/aula-enzimas-recombinantes'
+      path: '/aula-enzimas-recombinantes'
+      fullPath: '/aula-enzimas-recombinantes'
+      preLoaderRoute: typeof AulaEnzimasRecombinantesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/beauty-week': {
@@ -532,6 +567,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuizRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aula-enzimas-recombinantes_/obrigado': {
+      id: '/aula-enzimas-recombinantes_/obrigado'
+      path: '/aula-enzimas-recombinantes/obrigado'
+      fullPath: '/aula-enzimas-recombinantes/obrigado'
+      preLoaderRoute: typeof AulaEnzimasRecombinantesObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/$slug': {
       id: '/blog_/$slug'
       path: '/blog/$slug'
@@ -580,6 +622,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcademyRoute: AcademyRoute,
+  AulaEnzimasRecombinantesRoute: AulaEnzimasRecombinantesRoute,
   BeautyWeekRoute: BeautyWeekRoute,
   BlogRoute: BlogRoute,
   CookiesRoute: CookiesRoute,
@@ -599,6 +642,7 @@ const rootRouteChildren: RootRouteChildren = {
   ObrigadotoxinaRoute: ObrigadotoxinaRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   QuizRoute: QuizRoute,
+  AulaEnzimasRecombinantesObrigadoRoute: AulaEnzimasRecombinantesObrigadoRoute,
   BlogSlugRoute: BlogSlugRoute,
   Ebook10ErrosHofRoute: Ebook10ErrosHofRoute,
   EbookPlanejamentoCompletoHofRoute: EbookPlanejamentoCompletoHofRoute,
