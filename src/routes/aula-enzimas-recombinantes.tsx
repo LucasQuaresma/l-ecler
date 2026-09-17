@@ -17,7 +17,8 @@ const SOURCE = "aula-enzimas-recombinantes-22-09";
 const EVENT_NAME = "Aula gratuita de Enzimas Recombinantes — 22/09 às 20h";
 const DOV_AREA = "cursos";
 const DOV_TAGS = ["live yt"] as const;
-const AUTOMATION_ENDPOINT = "";
+const AUTOMATION_ENDPOINT =
+  "https://projeto01-n8n.gmxuno.easypanel.host/webhook/lecler-live-enzimas-22-09-2026-7f4c9a";
 const REGISTRATION_ENABLED = Boolean(AUTOMATION_ENDPOINT);
 
 export const Route = createFileRoute("/aula-enzimas-recombinantes")({
@@ -110,14 +111,6 @@ function EnzimasRecombinantesPage() {
     };
 
     try {
-      const { error } = await supabase.from("leads").insert({
-        name: payload.name,
-        email: payload.email,
-        whatsapp: payload.whatsapp,
-        source: payload.source,
-      });
-      if (error) throw error;
-
       const automationResponse = await fetch(AUTOMATION_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -125,6 +118,16 @@ function EnzimasRecombinantesPage() {
       });
       if (!automationResponse.ok) {
         throw new Error("A automação do cadastro recusou o envio.");
+      }
+
+      const { error: archiveError } = await supabase.from("leads").insert({
+        name: payload.name,
+        email: payload.email,
+        whatsapp: payload.whatsapp,
+        source: payload.source,
+      });
+      if (archiveError) {
+        console.error("Falha ao arquivar o lead no Supabase:", archiveError);
       }
 
       const eventPayload = {
