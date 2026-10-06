@@ -8,6 +8,8 @@ type CourseLeadRedirectOptions = {
   source: string;
 };
 
+type CourseThankYouPath = "/obrigadofullface" | "/obrigadotoxina" | "/obrigadofios";
+
 function waitForPixelDispatch() {
   return new Promise((resolve) => window.setTimeout(resolve, PIXEL_DISPATCH_DELAY_MS));
 }
@@ -17,7 +19,7 @@ export function getCourseWhatsappUrl(courseName: string) {
   return `https://api.whatsapp.com/send?phone=${COURSE_WHATSAPP_PHONE}&text=${encodeURIComponent(text)}`;
 }
 
-export async function redirectCourseLeadToWhatsapp({
+async function trackRegisteredCourseLead({
   courseName,
   source,
 }: CourseLeadRedirectOptions) {
@@ -31,5 +33,17 @@ export async function redirectCourseLeadToWhatsapp({
   trackCourseMetaLead(eventPayload);
 
   await waitForPixelDispatch();
+}
+
+export async function redirectCourseLeadToThankYou(
+  options: CourseLeadRedirectOptions & { thankYouPath: CourseThankYouPath },
+) {
+  await trackRegisteredCourseLead(options);
+  window.location.assign(options.thankYouPath);
+}
+
+export async function redirectCourseLeadToWhatsapp(options: CourseLeadRedirectOptions) {
+  await trackRegisteredCourseLead(options);
+  const { courseName } = options;
   window.location.href = getCourseWhatsappUrl(courseName);
 }
