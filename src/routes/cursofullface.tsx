@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { redirectCourseLeadToWhatsapp } from "@/lib/course-registration";
+import { redirectCourseLeadToThankYou } from "@/lib/course-registration";
 import { CoursePixelTracker } from "@/components/CoursePixelTracker";
 
 export const Route = createFileRoute("/cursofullface")({
@@ -98,9 +98,10 @@ function CursoFullFacePage() {
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-      await redirectCourseLeadToWhatsapp({
+      await redirectCourseLeadToThankYou({
         courseName: "Curso Full Face",
         source: payload.source,
+        thankYouPath: "/obrigadofullface",
       });
     } catch (err) {
       console.error(err);

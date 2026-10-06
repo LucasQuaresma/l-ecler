@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { redirectCourseLeadToWhatsapp } from "@/lib/course-registration";
+import { redirectCourseLeadToThankYou } from "@/lib/course-registration";
 import { CoursePixelTracker } from "@/components/CoursePixelTracker";
 
 export const Route = createFileRoute("/cursofios")({
@@ -98,9 +98,10 @@ function CursoFiosPage() {
         body: JSON.stringify(payload),
       }).catch(() => {});
 
-      await redirectCourseLeadToWhatsapp({
+      await redirectCourseLeadToThankYou({
         courseName: "Curso de Fios Faciais",
         source: payload.source,
+        thankYouPath: "/obrigadofios",
       });
     } catch (err) {
       console.error(err);
