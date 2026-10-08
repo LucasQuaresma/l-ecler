@@ -48,7 +48,7 @@ export function ModulesSection() {
     <section id="modulos" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-6xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
             Especialidades
           </span>
           <h2 className="mt-3 font-display text-[1.7rem] leading-[1.04] sm:text-[2.25rem] lg:text-[2.15rem] xl:text-[2.25rem]">
@@ -129,7 +129,7 @@ export function ModulesSection() {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="rounded-2xl bg-card p-6 shadow-soft ring-1 ring-border/70"
               >
-                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
                   0{i + 1}
                 </div>
                 <h3 className="mt-3 font-display text-2xl text-foreground">{item.title}</h3>

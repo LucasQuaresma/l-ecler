@@ -40,6 +40,7 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
   --color-cream: var(--cream);
   --color-rose: var(--rose);
   --font-display: "Playfair Display", Georgia, serif;
@@ -72,6 +73,7 @@
 
   --gold: oklch(0.78 0.13 78);                  /* signature gold */
   --gold-soft: oklch(0.88 0.08 80);
+  --gold-deep: oklch(0.5 0.1 70);                /* gold for small text on light surfaces (WCAG AA) */
   --cream: oklch(0.97 0.018 80);
   --rose: oklch(0.86 0.06 25);
 

@@ -60,7 +60,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Tratamentos
             </h2>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
@@ -79,7 +79,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Saúde e bem-estar
             </h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
@@ -91,7 +91,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Contato
             </h2>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
@@ -110,7 +110,7 @@ export function Footer() {
                 <span>contato@clinicalecler.com.br</span>
               </li>
             </ul>
-            <h2 className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Institucional
             </h2>
             <ul className="mt-3 space-y-2 text-sm">
