@@ -158,7 +158,7 @@ export function ModulesSection() {
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-gold text-primary shadow-soft">
                     <Icon className="h-6 w-6" strokeWidth={1.8} />
                   </div>
-                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gold">
+                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-deep">
                     {m.category}
                   </p>
                   <h3 className="font-display text-xl text-foreground">{m.title}</h3>
