@@ -3,6 +3,8 @@ import { Instagram, MapPin, Mail, Phone } from "lucide-react";
 import { services } from "@/lib/services";
 import { WHATSAPP_URL } from "@/lib/signup-dialog";
 import leclerLogo from "@/assets/lecler-logo.png";
+import leclerLogo144 from "@/assets/lecler-logo-144.webp";
+import leclerLogo288 from "@/assets/lecler-logo-288.webp";
 import leclerSymbol from "@/assets/lecler-symbol.png";
 
 export function Footer() {
@@ -12,6 +14,9 @@ export function Footer() {
         src={leclerSymbol}
         alt=""
         aria-hidden="true"
+        width={296}
+        height={217}
+        loading="lazy"
         className="pointer-events-none absolute right-8 top-10 hidden h-44 w-auto opacity-[0.08] sm:block"
       />
       <div className="relative mx-auto max-w-6xl px-6 py-14">
@@ -20,6 +25,8 @@ export function Footer() {
             <Link to="/" className="inline-flex" aria-label="Clínica L'ECLER">
               <img
                 src={leclerLogo}
+                srcSet={`${leclerLogo144} 144w, ${leclerLogo288} 288w, ${leclerLogo} 408w`}
+                sizes="144px"
                 alt="L'ECLER Saúde e Bem-Estar"
                 width={408}
                 height={178}
@@ -30,6 +37,9 @@ export function Footer() {
               src={leclerSymbol}
               alt=""
               aria-hidden="true"
+              width={296}
+              height={217}
+              loading="lazy"
               className="mt-4 h-9 w-auto opacity-75"
             />
             <p className="mt-3 text-sm text-muted-foreground">
@@ -50,9 +60,9 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Tratamentos
-            </h4>
+            </h2>
             <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
               {services.map((s) => (
                 <li key={s.slug}>
@@ -69,9 +79,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Saúde e bem-estar
-            </h4>
+            </h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li>Medicina</li>
               <li>Psicologia</li>
@@ -81,9 +91,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Contato
-            </h4>
+            </h2>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 flex-none text-gold" />
@@ -100,9 +110,9 @@ export function Footer() {
                 <span>contato@clinicalecler.com.br</span>
               </li>
             </ul>
-            <h4 className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <h2 className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
               Institucional
-            </h4>
+            </h2>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-foreground">

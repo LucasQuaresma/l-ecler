@@ -3,6 +3,16 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openSignupDialog } from "@/lib/signup-dialog";
 import heroImg from "@/assets/hero-smile.jpg";
+import hero480w from "@/assets/hero-smile-480.webp";
+import hero640w from "@/assets/hero-smile-640.webp";
+import hero960w from "@/assets/hero-smile-960.webp";
+import hero1200w from "@/assets/hero-smile-1200.webp";
+import hero480a from "@/assets/hero-smile-480.avif";
+import hero640a from "@/assets/hero-smile-640.avif";
+import hero960a from "@/assets/hero-smile-960.avif";
+import hero1200a from "@/assets/hero-smile-1200.avif";
+
+const HERO_SIZES = "(min-width: 1280px) 560px, (min-width: 1024px) 42vw, (min-width: 640px) 448px, calc(100vw - 48px)";
 import leclerSymbolImg from "@/assets/lecler-symbol.png";
 
 function scrollToModules() {
@@ -16,15 +26,13 @@ export function HeroSection() {
         src={leclerSymbolImg}
         alt=""
         aria-hidden="true"
+        width={296}
+        height={217}
         className="pointer-events-none absolute right-[9%] top-24 hidden h-48 opacity-[0.035] sm:block lg:right-[17%] lg:top-28 lg:h-64"
       />
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative z-10 text-center lg:text-left"
-        >
+        {/* Hero copy renders visible in the server HTML (no entrance animation) so it can paint immediately. */}
+        <div className="relative z-10 text-center lg:text-left">
           <div className="inline-flex items-center rounded-full border border-gold/35 bg-card/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-primary shadow-soft backdrop-blur">
             Clínica L'ECLER | Saúde e bem-estar
           </div>
@@ -74,7 +82,7 @@ export function HeroSection() {
             <div className="hidden h-4 w-px bg-border sm:block" />
             <div><strong className="text-foreground">Clínica</strong> multidisciplinar</div>
           </div>
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -87,14 +95,20 @@ export function HeroSection() {
           <div className="absolute -left-6 bottom-12 hidden h-32 w-px bg-gradient-to-b from-transparent via-primary/30 to-transparent sm:block" />
 
           <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem] shadow-elegant ring-1 ring-gold/30">
-            <img
-              src={heroImg}
-              alt="Dra. Cássia, Clínica L'ECLER"
-              width={1024}
-              height={1536}
-              loading="eager"
-              className="h-full w-full object-cover"
-            />
+            <picture>
+              <source type="image/avif" srcSet={`${hero480a} 480w, ${hero640a} 640w, ${hero960a} 960w, ${hero1200a} 1200w`} sizes={HERO_SIZES} />
+              <source type="image/webp" srcSet={`${hero480w} 480w, ${hero640w} 640w, ${hero960w} 960w, ${hero1200w} 1200w`} sizes={HERO_SIZES} />
+              <img
+                src={heroImg}
+                alt="Dra. Cássia, Clínica L'ECLER"
+                width={1200}
+                height={1600}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/15 via-transparent to-transparent" />
           </div>
 
@@ -110,6 +124,8 @@ export function HeroSection() {
                   src={leclerSymbolImg}
                   alt=""
                   aria-hidden="true"
+                  width={296}
+                  height={217}
                   className="h-7 w-auto opacity-90"
                 />
               </div>

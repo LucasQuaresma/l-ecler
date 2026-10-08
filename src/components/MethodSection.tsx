@@ -73,7 +73,7 @@ export function MethodSection() {
     <section id="metodo" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-5xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
             Como funciona
           </span>
           <h2 className="mt-3 py-1 font-display text-3xl leading-[1.14] sm:text-4xl lg:text-5xl">
@@ -131,6 +131,9 @@ export function MethodSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
             <img
               src={leclerSymbolImg}
+              width={296}
+              height={217}
+              loading="lazy"
               alt=""
               aria-hidden="true"
               className="absolute right-6 top-6 h-16 w-auto opacity-70 drop-shadow-sm sm:h-20"
@@ -193,6 +196,9 @@ export function MethodSection() {
               </div>
               <img
                 src={leclerSymbolImg}
+                width={296}
+                height={217}
+                loading="lazy"
                 alt=""
                 aria-hidden="true"
                 className="h-10 w-auto opacity-55"
