@@ -216,6 +216,9 @@ const treatmentHeroVisuals: Record<
   },
 };
 
+// Serviços sem casos autorizados documentados: não exibir prova visual.
+const NO_PROOF_SLUGS = new Set(["clareamento-dental", "facetas-de-resina", "extracao-dentaria"]);
+
 function TreatmentProofSection({ service }: { service: Service }) {
   const isDental = service.category === "Odontologia";
   const isInvisalign = service.slug === "ortodontia-invisalign";
@@ -471,7 +474,7 @@ function ServicePage() {
         </div>
       </section>
 
-      <TreatmentProofSection service={service} />
+      {!NO_PROOF_SLUGS.has(service.slug) && <TreatmentProofSection service={service} />}
 
       {/* AVALIAÇÃO E LIMITES */}
       {service.limits && service.limits.length > 0 && (
@@ -717,8 +720,7 @@ function ServicePage() {
               Agendamento orientado
             </span>
             <h2 className="mt-5 font-display text-3xl sm:text-4xl lg:text-5xl">
-              Quer saber se{" "}
-              <span className="text-gradient-gold">{service.title}</span> é para você?
+              Vamos avaliar o <span className="text-gradient-gold">seu caso</span>?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Fale com nosso time, conte o que te incomoda e receba um direcionamento inicial

@@ -301,6 +301,10 @@ export const dentalPosts: BlogPost[] = [
       {
         "label": "American Association of Endodontists — What is a Root Canal?",
         "url": "https://www.aae.org/patients/root-canal-treatment/what-is-a-root-canal/"
+      },
+      {
+        "label": "NHS — Dental abscess (sinais de emergência: dificuldade para respirar, falar ou engolir e inchaço grave)",
+        "url": "https://www.nhs.uk/conditions/dental-abscess/"
       }
     ],
     "relatedServices": [
@@ -400,6 +404,10 @@ export const dentalPosts: BlogPost[] = [
       {
         "label": "American Dental Association — Extractions",
         "url": "https://www.mouthhealthy.org/all-topics-a-z/extractions"
+      },
+      {
+        "label": "NHS — Dental abscess (sinais de emergência: dificuldade para respirar, falar ou engolir e inchaço grave)",
+        "url": "https://www.nhs.uk/conditions/dental-abscess/"
       }
     ],
     "relatedServices": [
