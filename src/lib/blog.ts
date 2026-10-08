@@ -3,6 +3,7 @@ import consultationImg from "@/assets/home-consultation.jpg";
 import differentialsImg from "@/assets/home-differentials.jpg";
 import methodImg from "@/assets/home-method.jpg";
 import ctaImg from "@/assets/home-cta.jpg";
+import { dentalPosts } from "@/lib/blog-dental";
 
 export type BlogSection = {
   heading: string;
@@ -23,6 +24,13 @@ export type BlogPost = {
   ctaTitle: string;
   ctaText: string;
   ctaButtonLabel: string;
+  /** Optional fields used by newer articles. */
+  seoTitle?: string;
+  datePublished?: string;
+  introExtra?: string[];
+  sources?: { label: string; url: string }[];
+  relatedServices?: string[];
+  relatedPosts?: string[];
 };
 
 export const blogPosts: BlogPost[] = [
@@ -326,9 +334,13 @@ export const blogPosts: BlogPost[] = [
       "Fale com o atendimento da L'ECLER pelo WhatsApp e agende uma avaliação para entender o melhor gerenciamento dérmico para você.",
     ctaButtonLabel: "Falar com o atendimento",
   },
+  ...dentalPosts,
 ];
 
 export const featuredBlogPost = blogPosts[0];
 
 export const getBlogPostBySlug = (slug: string) =>
   blogPosts.find((post) => post.slug === slug);
+
+export const getPostsForService = (serviceSlug: string) =>
+  blogPosts.filter((post) => post.relatedServices?.includes(serviceSlug));
