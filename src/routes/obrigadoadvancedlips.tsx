@@ -15,7 +15,7 @@ export const Route = createFileRoute("/obrigadoadvancedlips")({
         content:
           "Recebemos sua inscrição para o Curso Advanced Lips. Em breve nossa equipe entrará em contato pelo WhatsApp para confirmar sua vaga.",
       },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: Page,

@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -36,6 +37,7 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/beauty-week` },
       {
         title: "Beauty Week Aniversário L'ECLER | Avaliação Multidisciplinar em Bragança Paulista",
       },
@@ -55,7 +57,7 @@ export const Route = createFileRoute("/beauty-week")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/beauty-week" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/beauty-week` }],
   }),
   component: BeautyWeekPage,
 });

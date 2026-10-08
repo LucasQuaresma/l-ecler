@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- SEO origin and clinic structured data live in src/lib/site.ts (SITE_URL); all canonicals/og:url/sitemap use it so the domain changes in one place.
+- /sitemap.xml is a server route with an explicit evergreen list; dated offers and thank-you pages stay out (thank-you pages use noindex, follow).

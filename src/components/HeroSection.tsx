@@ -30,17 +30,18 @@ export function HeroSection() {
           </div>
 
           <h1 className="mt-6 font-display text-[1.7rem] leading-[1.02] sm:text-[2.4rem] lg:text-[3rem]">
-            <span className="block">Odontologia integrada,</span>
+            <span className="block">Clínica L'ECLER: odontologia</span>
             <span className="block">
-              estética natural e <span className="text-gradient-gold">bem-estar.</span>
+              integrada em <span className="text-gradient-gold">Bragança Paulista.</span>
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground sm:text-lg lg:mx-0">
-            A L'ECLER é uma clínica multiprofissional de saúde e bem-estar, com foco em
-            odontologia integrada, Harmonização Orofacial e tecnologias para cuidar do
-            sorriso, da face e da pele com naturalidade, integrando também cuidados nas
-            áreas de medicina, psicologia, nutrição e demais áreas da saúde e do bem-estar.
+            Com atendimento em Bragança Paulista/SP, a L'ECLER é uma clínica multiprofissional
+            de saúde e bem-estar, com foco em odontologia integrada, estética natural,
+            Harmonização Orofacial e tecnologias para cuidar do sorriso, da face e da pele com
+            naturalidade, integrando também cuidados nas áreas de medicina, psicologia, nutrição
+            e demais áreas da saúde e do bem-estar.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">

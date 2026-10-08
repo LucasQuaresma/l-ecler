@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { createFileRoute } from "@tanstack/react-router";
 import cassiaPortrait from "@/assets/cassia-quiz-white.webp";
 import { EbookLeadPage } from "@/components/EbookLeadPage";
@@ -6,6 +7,7 @@ export const Route = createFileRoute("/ebook/planejamento-completo-hof")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/ebook/planejamento-completo-hof` },
       { title: "Como transformar a avaliação em planejamento completo na HOF | L'ECLER" },
       {
         name: "description",
@@ -19,7 +21,7 @@ export const Route = createFileRoute("/ebook/planejamento-completo-hof")({
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://l-ecler.lovable.app/ebook/planejamento-completo-hof" },
+      { rel: "canonical", href: `${SITE_URL}/ebook/planejamento-completo-hof` },
     ],
   }),
   component: PlanningEbookRoute,

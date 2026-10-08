@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -25,6 +26,7 @@ export const Route = createFileRoute("/aula-enzimas-recombinantes")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}${ROUTE}` },
       { title: "Aula gratuita de Enzimas Recombinantes | L'ECLER Academy" },
       {
         name: "description",
@@ -42,7 +44,7 @@ export const Route = createFileRoute("/aula-enzimas-recombinantes")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: `https://l-ecler.lovable.app${ROUTE}` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}${ROUTE}` }],
   }),
   component: EnzimasRecombinantesPage,
 });

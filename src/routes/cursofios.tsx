@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/cursofios")({
   ssr: false,
   head: () => ({
       meta: [
+      { property: "og:url", content: `${SITE_URL}/cursofios` },
         { title: "Curso de Fios Faciais | L'ECLER Academy" },
         {
           name: "description",
@@ -29,7 +31,7 @@ export const Route = createFileRoute("/cursofios")({
         },
         { property: "og:type", content: "website" },
       ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/cursofios" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/cursofios` }],
   }),
   component: CursoFiosPage,
 });

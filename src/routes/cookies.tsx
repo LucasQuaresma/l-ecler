@@ -1,3 +1,4 @@
+import { absoluteUrl } from "@/lib/site";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -7,7 +8,10 @@ export const Route = createFileRoute("/cookies")({
     meta: [
       { title: "Política de Cookies, Clínica L'ECLER" },
       { name: "description", content: "Saiba quais cookies usamos e como gerenciar suas preferências." },
+      { property: "og:url", content: absoluteUrl("/cookies") },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/cookies") }],
   }),
   component: Page,
 });

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/obrigadotoxina")({
     meta: [
       { title: "Cadastro recebido | Curso Toxina Botulínica | L'ECLER Academy" },
       { name: "description", content: "Fale com a equipe da L'ECLER Academy sobre o Curso Toxina Botulínica." },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: () => <CourseThankYouPage courseName="Curso Toxina Botulínica" coursePath="/cursotoxina" />,

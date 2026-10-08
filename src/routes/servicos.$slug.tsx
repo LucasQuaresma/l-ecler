@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { getServiceBySlug, services, type Service } from "@/lib/services";
+import { absoluteUrl, breadcrumbJsonLd, jsonLdScript, SERVICE_SEO_NAMES } from "@/lib/site";
 import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -38,14 +39,35 @@ import treatmentHeroProtesesImg from "@/assets/treatment-hero-proteses.jpg";
 export const Route = createFileRoute("/servicos/$slug")({
   head: ({ params }) => {
     const s = getServiceBySlug(params.slug);
-    const title = s ? `${s.title}, Clínica L'ECLER` : "Tratamento, Clínica L'ECLER";
-    const description = s?.hero ?? "Tratamento na Clínica L'ECLER.";
+    if (!s) {
+      return {
+        meta: [
+          { title: "Tratamento não encontrado | Clínica L'ECLER" },
+          { name: "robots", content: "noindex, follow" },
+        ],
+      };
+    }
+    const seoName = SERVICE_SEO_NAMES[s.slug] ?? s.title;
+    const title = `${seoName} em Bragança Paulista | Clínica L’Ecler`;
+    const description = `${seoName} em Bragança Paulista/SP na Clínica L'ECLER. ${s.hero}`;
+    const path = `/servicos/${s.slug}`;
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: absoluteUrl(path) },
+      ],
+      links: [{ rel: "canonical", href: absoluteUrl(path) }],
+      scripts: [
+        jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Início", path: "/" },
+            { name: s.title, path },
+          ]),
+        ),
       ],
     };
   },
@@ -364,6 +386,9 @@ function ServicePage() {
               {service.title.split(" ").slice(0, -1).join(" ")}{" "}
               <span className="text-gradient-gold">
                 {service.title.split(" ").slice(-1)}
+              </span>
+              <span className="mt-3 block font-sans text-lg font-medium tracking-wide text-muted-foreground sm:text-xl">
+                {SERVICE_SEO_NAMES[service.slug] ?? service.title} em Bragança Paulista
               </span>
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">{service.hero}</p>

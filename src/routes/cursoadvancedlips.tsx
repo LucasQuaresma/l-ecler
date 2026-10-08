@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/cursoadvancedlips")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/cursoadvancedlips` },
       { title: "Curso Advanced Lips | L'ECLER Academy" },
       {
         name: "description",
@@ -32,7 +34,7 @@ export const Route = createFileRoute("/cursoadvancedlips")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/cursoadvancedlips" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/cursoadvancedlips` }],
   }),
   component: CursoAdvancedLipsPage,
 });

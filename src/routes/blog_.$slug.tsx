@@ -6,19 +6,50 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { blogPosts, getBlogPostBySlug } from "@/lib/blog";
 import { WHATSAPP_URL } from "@/lib/signup-dialog";
+import { absoluteUrl, breadcrumbJsonLd, jsonLdScript, SITE_NAME } from "@/lib/site";
 
 export const Route = createFileRoute("/blog_/$slug")({
   head: ({ params }) => {
     const post = getBlogPostBySlug(params.slug);
-    const title = post ? `${post.title}, Blog L'ECLER` : "Artigo, Blog L'ECLER";
-    const description = post?.description ?? "Conteúdo da Clínica L'ECLER.";
+    if (!post) {
+      return {
+        meta: [
+          { title: "Artigo não encontrado | Blog L'ECLER" },
+          { name: "robots", content: "noindex, follow" },
+        ],
+      };
+    }
+    const title = `${post.title} | Blog L'ECLER`;
+    const path = `/blog/${post.slug}`;
 
     return {
       meta: [
         { title },
-        { name: "description", content: description },
+        { name: "description", content: post.description },
         { property: "og:title", content: title },
-        { property: "og:description", content: description },
+        { property: "og:description", content: post.description },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: absoluteUrl(path) },
+      ],
+      links: [{ rel: "canonical", href: absoluteUrl(path) }],
+      scripts: [
+        jsonLdScript({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          articleSection: post.category,
+          inLanguage: "pt-BR",
+          mainEntityOfPage: absoluteUrl(path),
+          publisher: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
+        }),
+        jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Início", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path },
+          ]),
+        ),
       ],
     };
   },

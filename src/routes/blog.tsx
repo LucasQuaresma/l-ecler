@@ -1,3 +1,4 @@
+import { absoluteUrl, breadcrumbJsonLd, jsonLdScript } from "@/lib/site";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, MessageCircle, Sparkles } from "lucide-react";
@@ -22,7 +23,11 @@ export const Route = createFileRoute("/blog")({
         content:
           "Orientações para quem deseja cuidar do sorriso, da face e da autoestima com segurança.",
       },
+      { property: "og:url", content: absoluteUrl("/blog") },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/blog") }],
+    scripts: [jsonLdScript(breadcrumbJsonLd([{"name": "Início", "path": "/"}, {"name": "Blog", "path": "/blog"}]))],
   }),
   component: BlogPage,
 });

@@ -15,7 +15,7 @@ export const Route = createFileRoute("/obrigadobiofaces")({
         content:
           "Recebemos sua inscrição para o Curso BIOFACES. Em breve nossa equipe entrará em contato pelo WhatsApp para confirmar sua vaga.",
       },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: Page,

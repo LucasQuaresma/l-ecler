@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/gift-voucher")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/gift-voucher` },
       { title: "Gift Voucher L'ECLER | Presenteie com Saúde e Bem-Estar" },
       {
         name: "description",
@@ -40,7 +42,7 @@ export const Route = createFileRoute("/gift-voucher")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/gift-voucher" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/gift-voucher` }],
   }),
   component: GiftVoucherPage,
 });

@@ -1,3 +1,4 @@
+import { absoluteUrl } from "@/lib/site";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/Footer";
@@ -7,7 +8,10 @@ export const Route = createFileRoute("/privacidade")({
     meta: [
       { title: "Política de Privacidade, Clínica L'ECLER" },
       { name: "description", content: "Como a Clínica L'ECLER coleta, usa e protege seus dados pessoais, em conformidade com a LGPD." },
+      { property: "og:url", content: absoluteUrl("/privacidade") },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/privacidade") }],
   }),
   component: Page,
 });
