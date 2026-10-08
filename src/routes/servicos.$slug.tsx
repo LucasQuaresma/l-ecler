@@ -13,6 +13,7 @@ import { absoluteUrl, breadcrumbJsonLd, jsonLdScript, SERVICE_SEO_NAMES } from "
 import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { InlineText } from "@/components/RichText";
 import seniorSmileImg from "@/assets/smile-senior-natural.jpg";
 import implantSmileImg from "@/assets/smile-implants-clean.jpg";
 import digitalScanImg from "@/assets/clinic-digital-scan.jpg";
@@ -468,7 +469,7 @@ function ServicePage() {
           </div>
           <div className="space-y-5 text-muted-foreground">
             {service.longDescription.map((p, i) => (
-              <p key={i} className="leading-relaxed">{p}</p>
+              <p key={i} className="leading-relaxed"><InlineText text={p} /></p>
             ))}
           </div>
         </div>
