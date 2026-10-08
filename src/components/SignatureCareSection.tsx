@@ -45,6 +45,9 @@ export function SignatureCareSection() {
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <img
         src={leclerSymbolImg}
+        width={296}
+        height={217}
+        loading="lazy"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -right-8 top-10 h-44 w-auto opacity-10 sm:right-10 sm:h-64"
@@ -61,6 +64,9 @@ export function SignatureCareSection() {
             <div className="flex items-center gap-3">
               <img
                 src={leclerSymbolImg}
+                width={296}
+                height={217}
+                loading="lazy"
                 alt=""
                 aria-hidden="true"
                 className="h-9 w-auto opacity-80"

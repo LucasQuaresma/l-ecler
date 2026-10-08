@@ -131,6 +131,9 @@ export function MethodSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
             <img
               src={leclerSymbolImg}
+              width={296}
+              height={217}
+              loading="lazy"
               alt=""
               aria-hidden="true"
               className="absolute right-6 top-6 h-16 w-auto opacity-70 drop-shadow-sm sm:h-20"
@@ -193,6 +196,9 @@ export function MethodSection() {
               </div>
               <img
                 src={leclerSymbolImg}
+                width={296}
+                height={217}
+                loading="lazy"
                 alt=""
                 aria-hidden="true"
                 className="h-10 w-auto opacity-55"
