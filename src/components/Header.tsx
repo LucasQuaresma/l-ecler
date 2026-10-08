@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import leclerLogo from "@/assets/lecler-logo.png";
+import leclerLogo144 from "@/assets/lecler-logo-144.webp";
+import leclerLogo288 from "@/assets/lecler-logo-288.webp";
 import leclerSymbol from "@/assets/lecler-symbol.png";
 
 export function Header() {
@@ -17,6 +19,8 @@ export function Header() {
           />
           <img
             src={leclerLogo}
+            srcSet={`${leclerLogo144} 144w, ${leclerLogo288} 288w, ${leclerLogo} 408w`}
+            sizes="144px"
             alt="L'ECLER Saúde e Bem-Estar"
             width={408}
             height={178}
