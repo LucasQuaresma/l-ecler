@@ -387,6 +387,9 @@ function ServicePage() {
               <span className="text-gradient-gold">
                 {service.title.split(" ").slice(-1)}
               </span>
+              <span className="mt-3 block font-sans text-lg font-medium tracking-wide text-muted-foreground sm:text-xl">
+                {SERVICE_SEO_NAMES[service.slug] ?? service.title} em Bragança Paulista
+              </span>
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">{service.hero}</p>
             <div className="mt-8 flex flex-wrap gap-3">
