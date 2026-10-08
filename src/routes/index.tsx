@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { absoluteUrl, CLINIC_JSONLD, jsonLdScript, WEBSITE_JSONLD } from "@/lib/site";
 import { HeroSection } from "@/components/HeroSection";
 import { ModulesSection } from "@/components/ModulesSection";
 import { SignatureCareSection } from "@/components/SignatureCareSection";
@@ -9,21 +10,22 @@ import { CtaSection } from "@/components/CtaSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
+const HOME_TITLE = "Dentista em Bragança Paulista | Clínica L’Ecler";
+const HOME_DESCRIPTION =
+  "Clínica L'ECLER em Bragança Paulista/SP: odontologia integrada, Invisalign, Airflow, implantes, Harmonização Orofacial e estética natural com a Dra. Cássia Blasques.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clínica L'ECLER, saúde, bem-estar e odontologia integrada" },
-      {
-        name: "description",
-        content:
-          "Clínica L'ECLER em Bragança Paulista: saúde e bem-estar multiprofissional, odontologia integrada, Invisalign, Airflow, Harmonização Orofacial e estética natural com a Dra. Cássia Blasques.",
-      },
-      { property: "og:title", content: "Clínica L'ECLER, saúde, bem-estar e odontologia integrada" },
-      {
-        property: "og:description",
-        content: "Sorriso, face e pele avaliados em conjunto para resultados naturais, seguros e sofisticados.",
-      },
+      { title: HOME_TITLE },
+      { name: "description", content: HOME_DESCRIPTION },
+      { property: "og:title", content: HOME_TITLE },
+      { property: "og:description", content: HOME_DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: absoluteUrl("/") },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/") }],
+    scripts: [jsonLdScript(WEBSITE_JSONLD), jsonLdScript(CLINIC_JSONLD)],
   }),
   component: Index,
 });
