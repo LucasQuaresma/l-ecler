@@ -9,6 +9,7 @@ import {
   Home,
   Stethoscope,
   MapPin,
+  BookOpen,
 } from "lucide-react";
 import leclerLogo from "@/assets/lecler-logo-novo.png.asset.json";
 
@@ -43,9 +44,15 @@ const links = [
     highlight: true,
   },
   {
-    label: "Beauty Week de Aniversário",
-    href: "/beauty-week",
+    label: "Conheça nossos tratamentos",
+    href: "/#modulos",
     icon: Sparkles,
+    highlight: false,
+  },
+  {
+    label: "Conteúdos de saúde e estética",
+    href: "/blog",
+    icon: BookOpen,
     highlight: false,
   },
   {
@@ -138,7 +145,11 @@ function LinktreePage() {
           </div>
         </div>
 
-        <p className="mt-6 text-center text-sm text-muted-foreground">
+        <h1 className="mt-6 text-center font-display text-xl leading-snug text-foreground sm:text-2xl">
+          Clínica L'ECLER em Bragança Paulista
+        </h1>
+
+        <p className="mt-2 text-center text-sm text-muted-foreground">
           Odontologia, Harmonização Facial e Corporal
         </p>
 
