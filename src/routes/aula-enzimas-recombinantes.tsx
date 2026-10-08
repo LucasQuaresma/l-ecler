@@ -23,26 +23,22 @@ const AUTOMATION_ENDPOINT =
 const REGISTRATION_ENABLED = Boolean(AUTOMATION_ENDPOINT);
 
 export const Route = createFileRoute("/aula-enzimas-recombinantes")({
-  ssr: false,
   head: () => ({
     meta: [
-      { property: "og:url", content: `${SITE_URL}${ROUTE}` },
-      { title: "Aula gratuita de Enzimas Recombinantes | L'ECLER Academy" },
+      { title: "Aula de Enzimas Recombinantes (22/09/2026) — Inscrições encerradas | L'ECLER Academy" },
       {
         name: "description",
         content:
-          "Inscreva-se na aula gratuita sobre enzimas recombinantes com a Dra. Cássia Blasques, em 22 de setembro, às 20h.",
+          "Página de arquivo da aula sobre enzimas recombinantes da L'ECLER Academy, marcada para 22 de setembro de 2026, às 20h. As inscrições estão encerradas.",
       },
-      {
-        property: "og:title",
-        content: "Aula gratuita de Enzimas Recombinantes | L'ECLER Academy",
-      },
+      { name: "robots", content: "noindex, follow" },
+      { property: "og:title", content: "Aula de Enzimas Recombinantes — Inscrições encerradas" },
       {
         property: "og:description",
-        content:
-          "Conheça um novo caminho da estética facial. Aula gratuita em 22 de setembro, às 20h, com vagas limitadas.",
+        content: "Arquivo da aula de 22 de setembro de 2026, às 20h. Inscrições encerradas.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}${ROUTE}` },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}${ROUTE}` }],
   }),
@@ -71,7 +67,47 @@ function maskPhone(value: string) {
   return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
 }
 
+// The class date has passed: render the archive (no form, pixel tracker or
+// webhook). The historical registration page below is kept, not rendered.
+const EVENT_CLOSED = true;
+
 function EnzimasRecombinantesPage() {
+  return EVENT_CLOSED ? <EnzimasArchive /> : <EnzimasRegistrationPage />;
+}
+
+function EnzimasArchive() {
+  return (
+    <div className="min-h-screen bg-[#0e0a08] text-white">
+      <main className="relative mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-center px-6 py-16 text-center">
+        <p
+          role="status"
+          className="rounded-full border border-[#c9a84c]/50 bg-[#c9a84c]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-[#f0d78c]"
+        >
+          Inscrições encerradas
+        </p>
+        <h1 className="mt-6 font-display text-4xl leading-tight sm:text-5xl">
+          Aula de Enzimas Recombinantes
+        </h1>
+        <p className="mt-4 flex items-center gap-2 text-lg text-white/75">
+          <CalendarDays className="h-5 w-5 text-[#c9a84c]" /> 22 de setembro de 2026, às 20h
+        </p>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65">
+          A data desta aula já passou e as inscrições estão encerradas. Esta página permanece apenas
+          como registro. Conheça os cursos e treinamentos da L'ECLER Academy.
+        </p>
+        <Button
+          asChild
+          className="mt-8 h-12 rounded-full bg-gradient-to-r from-[#f0d78c] via-[#c9a84c] to-[#8b6f2a] px-8 text-base font-semibold text-[#0e0a08]"
+        >
+          <a href="/academy">Conhecer a L'ECLER Academy</a>
+        </Button>
+        <p className="mt-10 text-xs text-white/40">L'ECLER Academy · Bragança Paulista — SP</p>
+      </main>
+    </div>
+  );
+}
+
+function EnzimasRegistrationPage() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

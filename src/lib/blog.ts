@@ -27,6 +27,8 @@ export type BlogPost = {
   /** Optional fields used by newer articles. */
   seoTitle?: string;
   datePublished?: string;
+  /** Only set when the article content was actually changed after publication. */
+  dateModified?: string;
   introExtra?: string[];
   sources?: { label: string; url: string }[];
   relatedServices?: string[];
@@ -41,6 +43,10 @@ export const blogPosts: BlogPost[] = [
       "Entenda por que o melhor resultado não é mudar o rosto, e sim equilibrar proporções, expressão e segurança clínica.",
     category: "Harmonização Orofacial",
     dateLabel: "26 jun. 2026",
+    datePublished: "2026-06-26",
+    dateModified: "2026-10-08",
+    relatedServices: ["botox-e-preenchimentos", "fios-e-bioestimulo"],
+    relatedPosts: ["botox-preenchimento-sem-exagero", "gerenciamento-dermico-pele-bonita"],
     readTime: "7 min de leitura",
     image: differentialsImg,
     imageAlt: "Dra. Cássia Blasques em retrato profissional",
@@ -58,7 +64,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "O que deve ser avaliado antes da indicação",
         body: [
-          "Antes de falar em produtos ou técnicas, é preciso entender o incômodo principal. A paciente se sente cansada? Percebe perda de contorno? Tem medo de flacidez? Quer melhorar olheiras, linhas de expressão, lábios, mandíbula ou qualidade da pele? Cada queixa pode ter causas diferentes. Uma ruga pode vir de contração muscular, perda de colágeno, desidratação, exposição solar ou falta de sustentação. Tratar todas as queixas com o mesmo procedimento é uma simplificação perigosa.",
+          "Antes de falar em produtos ou técnicas, é preciso entender o incômodo principal. A paciente se sente cansada? Percebe perda de contorno? Tem medo de flacidez? Quer melhorar olheiras, linhas de expressão, lábios, mandíbula ou qualidade da pele? Cada queixa pode ter causas diferentes. Uma ruga pode vir de contração muscular, perda de colágeno, desidratação, exposição solar ou falta de sustentação. Tratar todas as queixas com o mesmo procedimento é uma simplificação perigosa. Para conhecer as opções, veja as páginas de [botox e preenchimentos](/servicos/botox-e-preenchimentos) e de [fios e bioestímulo](/servicos/fios-e-bioestimulo).",
           "A avaliação também considera histórico de saúde, procedimentos anteriores, rotina, idade, hábitos, anatomia e expectativa. Isso evita indicações por tendência. Nem tudo o que está em alta faz sentido para todos os rostos. Um rosto mais delicado pede estratégia diferente de um rosto com maior estrutura. Uma paciente que nunca fez procedimentos pode precisar de uma abordagem mais gradual. Outra, que já tem intervenções anteriores, pode precisar primeiro reorganizar volumes ou recuperar qualidade de pele.",
           "Na L'ECLER, a proposta é unir técnica, segurança e escuta. A Dra. Cássia e a equipe analisam o que pode ser feito, mas também o que deve ser evitado. Essa parte é essencial. Um bom atendimento não empurra procedimentos; ele orienta. A paciente precisa sair da conversa entendendo possibilidades, limites, tempo de resposta, cuidados e manutenção.",
         ],
@@ -91,6 +97,10 @@ export const blogPosts: BlogPost[] = [
       "Saúde bucal, estética e bem-estar caminham juntos quando o plano é feito para o paciente como um todo.",
     category: "Odontologia Integrativa",
     dateLabel: "26 jun. 2026",
+    datePublished: "2026-06-26",
+    dateModified: "2026-10-08",
+    relatedServices: ["odontologia-preventiva-integrativa", "odontologia-estetica"],
+    relatedPosts: ["primeira-consulta-odontologica-braganca-paulista", "limpeza-dentaria-airflow-braganca-paulista"],
     readTime: "7 min de leitura",
     image: heroSmileImg,
     imageAlt: "Dra. Cássia sorrindo na Clínica L'ECLER",
@@ -108,7 +118,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Por que estética sem função pode não durar",
         body: [
-          "Um sorriso pode parecer bonito em uma foto e ainda assim não estar saudável. Se a mordida está sobrecarregada, se existe bruxismo sem controle, se a gengiva está inflamada ou se há dentes com estrutura comprometida, qualquer intervenção estética precisa ser planejada com cuidado. A pressa em transformar o sorriso pode esconder problemas que depois prejudicam o resultado.",
+          "Um sorriso pode parecer bonito em uma foto e ainda assim não estar saudável. Se a mordida está sobrecarregada, se existe bruxismo sem controle, se a gengiva está inflamada ou se há dentes com estrutura comprometida, qualquer intervenção estética precisa ser planejada com cuidado. A pressa em transformar o sorriso pode esconder problemas que depois prejudicam o resultado. Por isso a [odontologia preventiva integrativa](/servicos/odontologia-preventiva-integrativa) caminha junto com a [odontologia estética](/servicos/odontologia-estetica).",
           "Antes de indicar facetas, lentes, clareamento, alinhadores ou próteses, a equipe avalia gengiva, dentes, oclusão, histórico de restaurações, hábitos e expectativa. Em alguns casos, o primeiro passo é prevenção. Em outros, tratamento periodontal, canal, troca de restaurações, ortodontia, implantes ou reabilitação. Essa sequência não diminui o valor estético do plano; ela protege o resultado.",
           "A visão integrativa também ajuda a escolher o que não fazer. Nem todo sorriso precisa ser muito branco. Nem todo dente precisa ser desgastado. Nem todo alinhamento exige a mesma técnica. O plano ideal é aquele que melhora a aparência sem comprometer estrutura e sem criar uma estética artificial.",
         ],
@@ -141,6 +151,10 @@ export const blogPosts: BlogPost[] = [
       "Saiba em quais casos as lentes podem transformar o sorriso sem perder naturalidade e quais avaliações vêm antes.",
     category: "Odontologia Estética",
     dateLabel: "26 jun. 2026",
+    datePublished: "2026-06-26",
+    dateModified: "2026-10-08",
+    relatedServices: ["facetas-e-lentes-de-contato", "facetas-de-resina"],
+    relatedPosts: ["resina-ou-lentes-de-contato-dental", "clareamento-dental-braganca-paulista"],
     readTime: "8 min de leitura",
     image: consultationImg,
     imageAlt: "Consulta individualizada na Clínica L'ECLER",
@@ -158,7 +172,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Nem todo caso deve começar pelas lentes",
         body: [
-          "Existe uma ideia comum de que lentes resolvem qualquer incômodo estético. Na prática, nem sempre é assim. Às vezes, antes de pensar em cerâmica, é preciso alinhar dentes, tratar gengiva, clarear, corrigir mordida, trocar restaurações, tratar canal ou avaliar bruxismo. Essa etapa anterior é importante para evitar retrabalho e proteger o investimento.",
+          "Existe uma ideia comum de que lentes resolvem qualquer incômodo estético. Na prática, nem sempre é assim. Às vezes, antes de pensar em cerâmica, é preciso alinhar dentes, tratar gengiva, clarear, corrigir mordida, trocar restaurações, tratar canal ou avaliar bruxismo. Essa etapa anterior é importante para evitar retrabalho e proteger o investimento. Vale comparar [facetas e lentes de contato](/servicos/facetas-e-lentes-de-contato) com [facetas de resina](/servicos/facetas-de-resina); o artigo [resina ou lentes de contato dental](/blog/resina-ou-lentes-de-contato-dental) detalha essa escolha.",
           "Também é necessário avaliar estrutura dental. Em muitos casos, o objetivo é preservar ao máximo o dente natural. Isso significa escolher uma técnica conservadora quando possível e evitar desgaste desnecessário. A indicação depende de exames, fotografias, análise do sorriso e conversa sobre expectativa.",
           "Outro ponto importante é a cor. Dentes extremamente brancos podem parecer artificiais se não combinarem com o rosto. A estética sofisticada costuma estar no equilíbrio: dentes claros, sim, mas com textura, translucidez e proporção natural. O planejamento ajuda a encontrar esse ponto.",
         ],
@@ -191,6 +205,10 @@ export const blogPosts: BlogPost[] = [
       "A diferença entre suavizar sinais e modificar a expressão está no diagnóstico, na dose e no plano global.",
     category: "Estética Avançada",
     dateLabel: "26 jun. 2026",
+    datePublished: "2026-06-26",
+    dateModified: "2026-10-08",
+    relatedServices: ["botox-e-preenchimentos"],
+    relatedPosts: ["harmonizacao-orofacial-natural", "gerenciamento-dermico-pele-bonita"],
     readTime: "7 min de leitura",
     image: methodImg,
     imageAlt: "Planejamento de tratamento com a Dra. Cássia",
@@ -200,7 +218,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Botox e preenchimento não são a mesma coisa",
         body: [
-          "A toxina botulínica, muito conhecida como botox, atua na contração muscular. Ela pode suavizar linhas de expressão na testa, entre as sobrancelhas, ao redor dos olhos e em outras regiões quando há indicação. O preenchimento, geralmente feito com ácido hialurônico, tem outra função: repor, estruturar ou equilibrar volumes específicos.",
+          "A toxina botulínica, muito conhecida como botox, atua na contração muscular. Ela pode suavizar linhas de expressão na testa, entre as sobrancelhas, ao redor dos olhos e em outras regiões quando há indicação. O preenchimento, geralmente feito com ácido hialurônico, tem outra função: repor, estruturar ou equilibrar volumes específicos. Entenda como cada técnica é indicada na página de [botox e preenchimentos](/servicos/botox-e-preenchimentos).",
           "Essa diferença muda tudo. Quando uma linha aparece por contração muscular, o tratamento pode ser um. Quando o incômodo vem de perda de volume, flacidez, sombra, suporte ou proporção, a estratégia pode ser outra. Por isso, pedir um procedimento pelo nome nem sempre é o melhor caminho. O ideal é explicar o que incomoda.",
           "Um resultado sem exagero depende de diagnóstico. A equipe precisa olhar expressão em movimento, proporções do rosto, qualidade da pele, histórico de procedimentos e expectativa. A aplicação é apenas uma etapa. Antes dela, existe uma decisão clínica.",
         ],
@@ -241,6 +259,10 @@ export const blogPosts: BlogPost[] = [
       "Perder dentes afeta estética, função e confiança. Veja como o planejamento digital muda a experiência.",
     category: "Implantes",
     dateLabel: "26 jun. 2026",
+    datePublished: "2026-06-26",
+    dateModified: "2026-10-08",
+    relatedServices: ["implantes", "proteses"],
+    relatedPosts: ["implante-protese-sobre-implante-ou-dentadura", "primeira-consulta-odontologica-braganca-paulista"],
     readTime: "8 min de leitura",
     image: ctaImg,
     imageAlt: "Dra. Cássia na Clínica L'ECLER",
@@ -250,7 +272,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "A perda dental afeta estética e função",
         body: [
-          "Perder um ou mais dentes muda mais do que a aparência do sorriso. A mastigação pode ficar limitada, a fala pode sofrer alterações, dentes vizinhos podem se movimentar e a autoestima pode ser profundamente impactada. Muitas pessoas passam a sorrir menos, evitam alimentos mais firmes ou ficam inseguras em situações sociais.",
+          "Perder um ou mais dentes muda mais do que a aparência do sorriso. A mastigação pode ficar limitada, a fala pode sofrer alterações, dentes vizinhos podem se movimentar e a autoestima pode ser profundamente impactada. Muitas pessoas passam a sorrir menos, evitam alimentos mais firmes ou ficam inseguras em situações sociais. Conheça as opções de [implantes](/servicos/implantes) e [próteses](/servicos/proteses), e compare caminhos no artigo [implante, prótese sobre implante ou dentadura](/blog/implante-protese-sobre-implante-ou-dentadura).",
           "Além disso, a ausência dental pode influenciar suporte facial e equilíbrio da mordida. Por isso, adiar a avaliação nem sempre é a melhor escolha. Quanto antes o caso for analisado, mais opções podem estar disponíveis para planejar uma reabilitação confortável, estética e segura.",
           "Implantes dentários são uma solução moderna para substituir raízes perdidas e apoiar próteses ou coroas. Mas cada caso precisa ser estudado. A quantidade de osso, a gengiva, a mordida, o número de dentes ausentes, a saúde geral e a expectativa do paciente influenciam o plano.",
         ],
@@ -291,6 +313,10 @@ export const blogPosts: BlogPost[] = [
       "Entenda por que cuidar da pele em etapas pode entregar mais viço, textura e prevenção do que procedimentos isolados.",
     category: "Pele",
     dateLabel: "26 jun. 2026",
+    datePublished: "2026-06-26",
+    dateModified: "2026-10-08",
+    relatedServices: ["gerenciamento-dermico", "laser-co2-e-hipro"],
+    relatedPosts: ["harmonizacao-orofacial-natural", "botox-preenchimento-sem-exagero"],
     readTime: "7 min de leitura",
     image: consultationImg,
     imageAlt: "Atendimento personalizado na Clínica L'ECLER",
@@ -308,7 +334,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Por que procedimentos isolados podem frustrar",
         body: [
-          "Um procedimento pode ser excelente e ainda assim não ser suficiente sozinho. Uma sessão de laser pode melhorar textura, mas se a pele não recebe manutenção, o resultado perde força. Um peeling pode clarear, mas sem fotoproteção e rotina adequada, manchas podem voltar. Um bioestimulador pode melhorar firmeza, mas precisa de tempo de resposta e indicação correta.",
+          "Um procedimento pode ser excelente e ainda assim não ser suficiente sozinho. Uma sessão de laser pode melhorar textura, mas se a pele não recebe manutenção, o resultado perde força. Um peeling pode clarear, mas sem fotoproteção e rotina adequada, manchas podem voltar. Um bioestimulador pode melhorar firmeza, mas precisa de tempo de resposta e indicação correta. Saiba mais sobre [gerenciamento dérmico](/servicos/gerenciamento-dermico) e sobre [laser CO2 e HIPRO](/servicos/laser-co2-e-hipro).",
           "Por isso, a avaliação é tão importante. Ela define prioridade. Às vezes, o primeiro passo é controlar inflamação ou sensibilidade. Em outros casos, tratar manchas. Há pacientes que precisam estimular colágeno antes de pensar em preenchimento. Outras se beneficiam de protocolos leves e contínuos, em vez de intervenções mais intensas.",
           "A pele muda com o tempo. O plano também pode mudar. O gerenciamento permite ajustar tratamentos conforme resposta, estação do ano, rotina e fase de vida. Essa personalização é o que diferencia um cuidado estratégico de uma sequência aleatória de procedimentos.",
         ],

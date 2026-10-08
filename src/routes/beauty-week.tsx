@@ -34,28 +34,22 @@ import clinicaConsultorio1 from "@/assets/clinica-consultorio1.jpg.asset.json";
 import clinicaConsultorio2 from "@/assets/clinica-consultorio2.jpg.asset.json";
 
 export const Route = createFileRoute("/beauty-week")({
-  ssr: false,
   head: () => ({
     meta: [
-      { property: "og:url", content: `${SITE_URL}/beauty-week` },
-      {
-        title: "Beauty Week Aniversário L'ECLER | Avaliação Multidisciplinar em Bragança Paulista",
-      },
+      { title: "Beauty Week L'ECLER (24 a 30/08/2026) — Inscrições encerradas" },
       {
         name: "description",
         content:
-          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Avaliação individualizada do sorriso, pele e harmonia facial e corporal com tecnologia avançada e olhar integrado para o seu bem-estar.",
+          "Página de arquivo da Beauty Week de Aniversário da Clínica L'ECLER, prevista para 24 a 30 de agosto de 2026. As inscrições estão encerradas.",
       },
-      {
-        property: "og:title",
-        content: "Beauty Week Aniversário L'ECLER | Avaliação Multidisciplinar",
-      },
+      { name: "robots", content: "noindex, follow" },
+      { property: "og:title", content: "Beauty Week L'ECLER — Inscrições encerradas" },
       {
         property: "og:description",
-        content:
-          "De 24 a 30 de agosto de 2026 na Clínica L'ECLER. Cuidado completo do sorriso, pele e harmonia facial e corporal com tecnologia avançada e segurança.",
+        content: "Arquivo da Beauty Week de 24 a 30 de agosto de 2026. Inscrições encerradas.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/beauty-week` },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/beauty-week` }],
   }),
@@ -197,7 +191,60 @@ const faq = [
   },
 ];
 
+// The event date has passed: render the archive. The historical page below is
+// kept intact (not rendered) so its flow and integrations stay in the codebase.
+const EVENT_CLOSED = true;
+
 function BeautyWeekPage() {
+  return EVENT_CLOSED ? <BeautyWeekArchive /> : <BeautyWeekLegacyPage />;
+}
+
+function BeautyWeekArchive() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <section className="relative bg-gradient-to-br from-[#1a0f14] via-primary to-[#2d161f] px-6 py-24 text-primary-foreground sm:py-32">
+          <div className="mx-auto max-w-3xl text-center">
+            <p
+              role="status"
+              className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold"
+            >
+              Inscrições encerradas
+            </p>
+            <h1 className="mt-6 font-display text-4xl leading-tight sm:text-5xl">
+              Beauty Week de Aniversário L'ECLER
+            </h1>
+            <p className="mt-4 flex items-center justify-center gap-2 text-lg text-primary-foreground/80">
+              <Calendar className="h-5 w-5 text-gold" /> 24 a 30 de agosto de 2026
+            </p>
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/75">
+              A data desta ação já passou e as inscrições estão encerradas. Esta página permanece
+              apenas como registro. Para cuidar do seu sorriso, pele ou harmonia facial e corporal,
+              conheça os tratamentos da clínica e agende uma avaliação.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <Button asChild size="lg" className="rounded-full bg-gradient-gold px-7 font-semibold text-primary shadow-gold">
+                <a href="/#modulos">
+                  Conhecer os tratamentos <ArrowRight className="ml-1 h-4 w-4" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full border-gold/50 bg-transparent px-7 text-primary-foreground hover:bg-gold/10">
+                <a href="/#cta">Agendar uma avaliação</a>
+              </Button>
+            </div>
+            <p className="mt-8 flex items-center justify-center gap-1.5 text-xs text-primary-foreground/60">
+              <MapPin className="h-3.5 w-3.5" /> Clínica L'ECLER · Bragança Paulista — SP
+            </p>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function BeautyWeekLegacyPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (

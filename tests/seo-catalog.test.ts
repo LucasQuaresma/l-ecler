@@ -3,6 +3,10 @@ import { services } from "@/lib/services";
 import { blogPosts } from "@/lib/blog";
 import { dentalPosts } from "@/lib/blog-dental";
 import { sitemapPaths } from "@/routes/sitemap[.]xml";
+import { readFileSync, readdirSync } from "node:fs";
+
+const src = (f: string) => readFileSync(`src/routes/${f}`, "utf8");
+const between = (t: string, a: string, b: string) => t.slice(t.indexOf(a), t.indexOf(b));
 
 const serviceSlugs = new Set(services.map((s) => s.slug));
 const postSlugs = new Set(blogPosts.map((p) => p.slug));
@@ -71,5 +75,71 @@ describe("SEO catalog", () => {
     const descs = services.map((s) => s.seoDescription);
     expect(descs.every(Boolean)).toBe(true);
     expect(new Set(descs).size).toBe(15);
+  });
+
+  test("expired event pages render an archive without forms or conversions", () => {
+    for (const [file, archive, legacy] of [
+      ["beauty-week.tsx", "function BeautyWeekArchive", "function BeautyWeekLegacyPage"],
+      ["aula-enzimas-recombinantes.tsx", "function EnzimasArchive", "function EnzimasRegistrationPage"],
+    ]) {
+      const t = src(file);
+      expect(t).toContain("const EVENT_CLOSED = true;");
+      expect(t).toContain('content: "noindex, follow"');
+      const a = between(t, archive, legacy);
+      expect(a).toContain("Inscrições encerradas");
+      expect(a).not.toMatch(/<form|openSignupDialog|fetch\(|trackMeta|trackCourse|PixelTracker|vagas|24h/i);
+    }
+    expect(between(src("beauty-week.tsx"), "function BeautyWeekArchive", "function BeautyWeekLegacyPage")).toMatch(/\/#modulos[\s\S]*\/#cta/);
+    expect(between(src("aula-enzimas-recombinantes.tsx"), "function EnzimasArchive", "function EnzimasRegistrationPage")).toContain('href="/academy"');
+  });
+
+  test("sitemap excludes archived events and every thank-you page is noindex", () => {
+    const paths = sitemapPaths();
+    expect(paths).not.toContain("/beauty-week");
+    expect(paths).not.toContain("/aula-enzimas-recombinantes");
+    const thanks = readdirSync("src/routes").filter((f) => /obrigado/.test(f));
+    expect(thanks.length).toBe(10);
+    for (const f of thanks) expect(src(f)).toMatch(/noindex, ?follow/);
+  });
+
+  test("linktree links: treatments and blog, no Beauty Week, visible H1", () => {
+    const t = src("linktree.tsx");
+    expect(t).not.toContain('"/beauty-week"');
+    expect(t).toContain('label: "Conheça nossos tratamentos",\n    href: "/#modulos"');
+    expect(t).toContain('label: "Conteúdos de saúde e estética",\n    href: "/blog"');
+    expect(t).toMatch(/<h1[^>]*>\s*Clínica L'ECLER em Bragança Paulista/);
+  });
+
+  test("articles show organization byline and truthful dates", () => {
+    const t = src("blog_.$slug.tsx");
+    expect(t).toContain("Publicado pela Clínica L'ECLER");
+    expect(t).not.toMatch(/revisad|CRO/i);
+    for (const p of blogPosts) expect(p.datePublished).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    const old = blogPosts.filter((p) => !dentalPosts.includes(p));
+    expect(old.every((p) => p.datePublished === "2026-06-26" && p.dateModified === "2026-10-08")).toBe(true);
+    expect(dentalPosts.every((p) => !p.dateModified)).toBe(true);
+  });
+
+  test("old articles link contextually to their treatments in the body", () => {
+    const expected: Record<string, string[]> = {
+      "harmonizacao-orofacial-natural": ["/servicos/botox-e-preenchimentos", "/servicos/fios-e-bioestimulo"],
+      "sorriso-bonito-tambem-e-saude": ["/servicos/odontologia-preventiva-integrativa", "/servicos/odontologia-estetica"],
+      "facetas-lentes-de-contato-quando-vale-a-pena": ["/servicos/facetas-e-lentes-de-contato", "/servicos/facetas-de-resina", "/blog/resina-ou-lentes-de-contato-dental"],
+      "botox-preenchimento-sem-exagero": ["/servicos/botox-e-preenchimentos"],
+      "implantes-dentarios-voltar-a-sorrir": ["/servicos/implantes", "/servicos/proteses", "/blog/implante-protese-sobre-implante-ou-dentadura"],
+      "gerenciamento-dermico-pele-bonita": ["/servicos/gerenciamento-dermico", "/servicos/laser-co2-e-hipro"],
+    };
+    for (const [slug, hrefs] of Object.entries(expected)) {
+      const p = blogPosts.find((x) => x.slug === slug)!;
+      const body = p.sections.flatMap((s) => s.body).join("\n");
+      for (const h of hrefs) expect(body).toContain(`](${h})`);
+    }
+  });
+
+  test("veneers page has no depreciating or absolute claims", () => {
+    const s = services.find((x) => x.slug === "facetas-e-lentes-de-contato")!;
+    const t = JSON.stringify(s);
+    expect(t).not.toMatch(/não envelhece como resina|não mancha como resina|sem desgaste\)|nenhum desgaste\. |máxima naturalidade/);
+    expect(t).toContain("](/servicos/facetas-de-resina)");
   });
 });
