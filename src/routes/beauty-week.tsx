@@ -34,7 +34,6 @@ import clinicaConsultorio1 from "@/assets/clinica-consultorio1.jpg.asset.json";
 import clinicaConsultorio2 from "@/assets/clinica-consultorio2.jpg.asset.json";
 
 export const Route = createFileRoute("/beauty-week")({
-  ssr: false,
   head: () => ({
     meta: [
       { title: "Beauty Week L'ECLER (24 a 30/08/2026) — Inscrições encerradas" },

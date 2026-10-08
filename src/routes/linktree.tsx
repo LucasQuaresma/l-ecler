@@ -14,7 +14,6 @@ import {
 import leclerLogo from "@/assets/lecler-logo-novo.png.asset.json";
 
 export const Route = createFileRoute("/linktree")({
-  ssr: false,
   head: () => ({
     meta: [
       { property: "og:url", content: `${SITE_URL}/linktree` },

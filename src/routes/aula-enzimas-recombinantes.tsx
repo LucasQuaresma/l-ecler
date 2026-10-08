@@ -23,7 +23,6 @@ const AUTOMATION_ENDPOINT =
 const REGISTRATION_ENABLED = Boolean(AUTOMATION_ENDPOINT);
 
 export const Route = createFileRoute("/aula-enzimas-recombinantes")({
-  ssr: false,
   head: () => ({
     meta: [
       { title: "Aula de Enzimas Recombinantes (22/09/2026) — Inscrições encerradas | L'ECLER Academy" },
