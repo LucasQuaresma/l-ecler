@@ -67,8 +67,10 @@ function LeadForm({
     if (!parsed.success) {
       const nextErrors: FieldErrors = {};
       for (const issue of parsed.error.issues) {
-        const field = issue.path[0] as keyof FieldErrors;
-        if (field !== "website") nextErrors[field] = issue.message;
+        const field = issue.path[0];
+        if (field === "name" || field === "email" || field === "phone") {
+          nextErrors[field] = issue.message;
+        }
       }
       setErrors(nextErrors);
       return;
