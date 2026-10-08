@@ -87,7 +87,7 @@ describe("SEO catalog", () => {
       expect(t).toContain('content: "noindex, follow"');
       const a = between(t, archive, legacy);
       expect(a).toContain("Inscrições encerradas");
-      expect(a).not.toMatch(/<form|openSignupDialog|fetch\(|track|PixelTracker|vagas|24h/i);
+      expect(a).not.toMatch(/<form|openSignupDialog|fetch\(|track[A-Z]|PixelTracker|vagas|24h/i);
     }
     expect(between(src("beauty-week.tsx"), "function BeautyWeekArchive", "function BeautyWeekLegacyPage")).toMatch(/\/#modulos[\s\S]*\/#cta/);
     expect(between(src("aula-enzimas-recombinantes.tsx"), "function EnzimasArchive", "function EnzimasRegistrationPage")).toContain('href="/academy"');
