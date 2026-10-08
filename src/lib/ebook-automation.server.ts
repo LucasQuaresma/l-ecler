@@ -55,8 +55,9 @@ const ackSchema = z
     }
   });
 
-export const enqueueEbookLead = createServerFn({ method: "POST" }).handler(async ({ data }) => {
-  const input = inputSchema.parse(data);
+export const enqueueEbookLead = createServerFn({ method: "POST" })
+  .inputValidator(inputSchema)
+  .handler(async ({ data: input }) => {
   const ebook = ebookBySource[input.source];
   const webhookSecret = process.env.EBOOK_WEBHOOK_SECRET;
 
