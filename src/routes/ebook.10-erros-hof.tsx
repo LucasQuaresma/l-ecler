@@ -7,6 +7,7 @@ export const Route = createFileRoute("/ebook/10-erros-hof")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/ebook/10-erros-hof` },
       { title: "10 erros que comprometem resultados naturais na HOF | L'ECLER" },
       {
         name: "description",

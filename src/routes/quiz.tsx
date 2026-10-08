@@ -46,6 +46,7 @@ export const Route = createFileRoute("/quiz")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/quiz` },
       { title: "Quiz L'ECLER Academy, Avaliação Profissional em Fios Faciais" },
       {
         name: "description",

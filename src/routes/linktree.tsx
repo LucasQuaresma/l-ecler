@@ -16,6 +16,7 @@ export const Route = createFileRoute("/linktree")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/linktree` },
       { title: "L'ECLER | Links" },
       {
         name: "description",

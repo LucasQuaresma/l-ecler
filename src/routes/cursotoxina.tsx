@@ -16,6 +16,7 @@ export const Route = createFileRoute("/cursotoxina")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/cursotoxina` },
       { title: "Curso Toxina Botulínica | L'ECLER Academy" },
       {
         name: "description",

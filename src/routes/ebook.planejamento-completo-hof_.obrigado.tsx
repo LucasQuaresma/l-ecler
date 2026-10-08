@@ -1,17 +1,10 @@
-import { SITE_URL } from "@/lib/site";
 import { createFileRoute } from "@tanstack/react-router";
 import { EbookThankYouPage } from "@/components/EbookThankYouPage";
 
 export const Route = createFileRoute("/ebook/planejamento-completo-hof_/obrigado")({
   ssr: false,
   head: () => ({
-    meta: [{ title: "Baixe o guia de planejamento completo na HOF | L'ECLER" }],
-    links: [
-      {
-        rel: "canonical",
-        href: `${SITE_URL}/ebook/planejamento-completo-hof/obrigado`,
-      },
-    ],
+    meta: [{ name: "robots", content: "noindex, follow" }, { title: "Baixe o guia de planejamento completo na HOF | L'ECLER" }],
   }),
   component: PlanningEbookThankYouRoute,
 });

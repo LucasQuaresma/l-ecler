@@ -37,6 +37,7 @@ export const Route = createFileRoute("/beauty-week")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/beauty-week` },
       {
         title: "Beauty Week Aniversário L'ECLER | Avaliação Multidisciplinar em Bragança Paulista",
       },

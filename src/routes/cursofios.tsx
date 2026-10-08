@@ -16,6 +16,7 @@ export const Route = createFileRoute("/cursofios")({
   ssr: false,
   head: () => ({
       meta: [
+      { property: "og:url", content: `${SITE_URL}/cursofios` },
         { title: "Curso de Fios Faciais | L'ECLER Academy" },
         {
           name: "description",

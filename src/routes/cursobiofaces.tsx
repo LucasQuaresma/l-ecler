@@ -16,6 +16,7 @@ export const Route = createFileRoute("/cursobiofaces")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/cursobiofaces` },
       { title: "Curso BIOFACES | L'ECLER Academy" },
       {
         name: "description",

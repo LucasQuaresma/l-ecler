@@ -27,6 +27,7 @@ export const Route = createFileRoute("/gift-voucher")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/gift-voucher` },
       { title: "Gift Voucher L'ECLER | Presenteie com Saúde e Bem-Estar" },
       {
         name: "description",

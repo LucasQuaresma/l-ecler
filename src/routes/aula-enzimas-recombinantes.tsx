@@ -26,6 +26,7 @@ export const Route = createFileRoute("/aula-enzimas-recombinantes")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}${ROUTE}` },
       { title: "Aula gratuita de Enzimas Recombinantes | L'ECLER Academy" },
       {
         name: "description",

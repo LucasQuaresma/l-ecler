@@ -7,6 +7,7 @@ export const Route = createFileRoute("/ebook/planejamento-completo-hof")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:url", content: `${SITE_URL}/ebook/planejamento-completo-hof` },
       { title: "Como transformar a avaliação em planejamento completo na HOF | L'ECLER" },
       {
         name: "description",
