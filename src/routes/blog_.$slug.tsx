@@ -5,6 +5,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { blogPosts, getBlogPostBySlug } from "@/lib/blog";
+import { getServiceBySlug } from "@/lib/services";
+import { InlineText, RichBody } from "@/components/RichText";
 import { WHATSAPP_URL } from "@/lib/signup-dialog";
 import { absoluteUrl, breadcrumbJsonLd, jsonLdScript, SITE_NAME } from "@/lib/site";
 
@@ -19,7 +21,7 @@ export const Route = createFileRoute("/blog_/$slug")({
         ],
       };
     }
-    const title = `${post.title} | Blog L'ECLER`;
+    const title = post.seoTitle ?? `${post.title} | Blog L'ECLER`;
     const path = `/blog/${post.slug}`;
 
     return {
@@ -42,6 +44,12 @@ export const Route = createFileRoute("/blog_/$slug")({
           inLanguage: "pt-BR",
           mainEntityOfPage: absoluteUrl(path),
           publisher: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
+          ...(post.datePublished
+            ? {
+                datePublished: post.datePublished,
+                author: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
+              }
+            : {}),
         }),
         jsonLdScript(
           breadcrumbJsonLd([
@@ -81,7 +89,16 @@ function BlogArticlePage() {
     );
   }
 
-  const related = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3);
+  const explicit = (post.relatedPosts ?? [])
+    .map((s) => blogPosts.find((p) => p.slug === s))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const related = [
+    ...explicit,
+    ...blogPosts.filter((item) => item.slug !== post.slug && !explicit.includes(item)),
+  ].slice(0, 3);
+  const relatedServices = (post.relatedServices ?? [])
+    .map((s) => getServiceBySlug(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   return (
     <main className="min-h-screen bg-background">
@@ -151,15 +168,18 @@ function BlogArticlePage() {
               <p className="font-display text-2xl leading-snug text-foreground sm:text-3xl">
                 {post.intro}
               </p>
+              {post.introExtra?.map((p) => (
+                <p key={p} className="mt-5 text-base leading-relaxed text-muted-foreground">
+                  <InlineText text={p} />
+                </p>
+              ))}
 
               <div className="mt-10 space-y-10">
                 {post.sections.map((section) => (
                   <section key={section.heading}>
                     <h2 className="font-display text-3xl text-foreground">{section.heading}</h2>
                     <div className="mt-4 space-y-4 text-base leading-relaxed text-muted-foreground">
-                      {section.body.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
-                      ))}
+                      <RichBody items={section.body} />
                     </div>
                   </section>
                 ))}
@@ -186,9 +206,29 @@ function BlogArticlePage() {
                   </div>
                 </div>
               </div>
+              {post.sources && post.sources.length > 0 && (
+                <div className="mt-10 border-t border-border/60 pt-6 text-xs leading-relaxed text-muted-foreground">
+                  <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                    Fontes para leitura
+                  </h2>
+                  <ul className="mt-3 space-y-1.5">
+                    {post.sources.map((src) => (
+                      <li key={src.url}>
+                        <a href={src.url} target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-foreground">
+                          {src.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4">
+                    Conteúdo informativo da Clínica L'ECLER. Não substitui consulta nem avaliação
+                    individual com um profissional de saúde.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <aside className="lg:sticky lg:top-24 lg:self-start">
+            <aside className="space-y-5 lg:sticky lg:top-24 lg:self-start">
               <div className="rounded-2xl bg-card p-5 shadow-soft ring-1 ring-border/70">
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
                   <Sparkles className="h-3.5 w-3.5" />
@@ -206,6 +246,26 @@ function BlogArticlePage() {
                   Falar com atendimento
                 </a>
               </div>
+              {relatedServices.length > 0 && (
+                <div className="rounded-2xl bg-card p-5 shadow-soft ring-1 ring-border/70">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                    Tratamentos relacionados
+                  </div>
+                  <ul className="mt-3 space-y-2 text-sm">
+                    {relatedServices.map((s) => (
+                      <li key={s.slug}>
+                        <Link
+                          to="/servicos/$slug"
+                          params={{ slug: s.slug }}
+                          className="inline-flex items-center gap-1 text-foreground hover:text-gold"
+                        >
+                          {s.title} <ArrowRight className="h-3.5 w-3.5 text-gold" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </aside>
           </div>
         </section>
