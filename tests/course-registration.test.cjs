@@ -123,3 +123,79 @@ for (const [slug, courseName] of courses) {
     assert.equal(cancelled, 42);
   });
 }
+
+// Advanced Lips and BIOFACES: Lead only after the real registration ACK; thank-you pages never track.
+const whatsappCourses = [
+  ["advancedlips", "Curso Advanced Lips", "obrigadoadvancedlips"],
+  ["biofaces", "Curso BIOFACES", "obrigadobiofaces"],
+];
+for (const [slug, courseName, thanks] of whatsappCourses) {
+  const scenarios = ["success", "database failure", "invalid input"];
+  if (slug === "biofaces") scenarios.push("webhook rejected");
+  for (const scenario of scenarios) {
+    test(`${slug}: ${scenario} — Lead only after confirmed registration`, async () => {
+      const calls = [];
+      const states = [scenario === "invalid input" ? "" : "Test User", "test@example.invalid", "11999990000", {}, false];
+      const { Route } = load(`src/routes/curso${slug}.tsx`, {
+        react: { useState: () => [states.shift(), () => {}] },
+        "react/jsx-runtime": jsxRuntime,
+        "@/lib/site": { SITE_URL: "https://leclersaude.com.br" },
+        "@tanstack/react-router": { createFileRoute: () => (route) => route },
+        "framer-motion": { motion: { div: "div", h1: "h1", section: "section" } },
+        "lucide-react": {},
+        "@/components/ui/button": {}, "@/components/ui/input": {}, "@/components/ui/label": {},
+        "@/components/CoursePixelTracker": {},
+        sonner: { toast: { error: () => calls.push("error") } },
+        "@/integrations/supabase/client": { supabase: { from: () => ({
+          insert: async () => { calls.push("insert"); return { error: scenario === "database failure" ? new Error("offline") : null }; },
+        }) } },
+        "@/lib/course-registration": { redirectCourseLeadToWhatsapp: async (options) => {
+          calls.push("lead+whatsapp");
+          assert.equal(options.courseName, courseName);
+          assert.equal(options.source, `curso${slug}`);
+        } },
+      }, { fetch: async () => { calls.push("webhook"); return { ok: scenario !== "webhook rejected" }; } });
+      const form = find(Route.component(), (node) => node.type === "form");
+      assert.ok(form);
+      await form.props.onSubmit({ preventDefault() {} });
+      const expected = {
+        success: ["insert", "webhook", "lead+whatsapp"],
+        "database failure": ["insert", "error"],
+        "invalid input": [],
+        "webhook rejected": ["insert", "webhook", "error"],
+      }[scenario];
+      assert.deepEqual(calls, expected);
+      assert.ok(calls.filter((c) => c === "lead+whatsapp").length <= 1);
+    });
+  }
+
+  test(`${thanks}: direct open and reload never send a Lead`, () => {
+    const source = fs.readFileSync(path.join(__dirname, "..", `src/routes/${thanks}.tsx`), "utf8");
+    assert.doesNotMatch(source, /meta-pixel|trackMetaLead|trackCourseMetaLead|fbq/);
+    let rendered = 0;
+    const { Route } = load(`src/routes/${thanks}.tsx`, {
+      "react/jsx-runtime": jsxRuntime,
+      "@tanstack/react-router": { createFileRoute: () => (route) => route, Link: "a" },
+      "framer-motion": { motion: { div: "div" } },
+      "lucide-react": {}, "@/components/ui/button": {},
+    }, { window: new Proxy({}, { get() { throw new Error("thank-you page touched window"); } }) });
+    for (let i = 0; i < 2; i++) { Route.component(); rendered++; }
+    assert.equal(rendered, 2);
+  });
+}
+
+test("Lead helper sends each pixel once per confirmed registration (dedupe) before WhatsApp", async () => {
+  const events = [];
+  const pending = [];
+  const lib = load("src/lib/course-registration.ts", {
+    "@/lib/meta-pixel": {
+      trackMetaLead: (p) => events.push(["general", p.content_name]),
+      trackCourseMetaLead: (p) => events.push(["course", p.content_name]),
+    },
+  }, { window: { setTimeout: (fn, ms) => pending.push({ fn, ms }), location: {} } });
+  const done = lib.redirectCourseLeadToWhatsapp({ courseName: "Curso BIOFACES", source: "cursobiofaces" });
+  assert.deepEqual(events, [["general", "Curso BIOFACES"], ["course", "Curso BIOFACES"]]);
+  pending[0].fn();
+  await done;
+  assert.equal(events.length, 2);
+});

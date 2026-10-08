@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageCircle, ArrowLeft, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackMetaLead } from "@/lib/meta-pixel";
 
 export const Route = createFileRoute("/obrigadoadvancedlips")({
   ssr: false,
@@ -22,13 +20,9 @@ export const Route = createFileRoute("/obrigadoadvancedlips")({
 });
 
 function Page() {
-  useEffect(() => {
-    trackMetaLead({
-      content_name: "Curso Advanced Lips",
-      content_category: "L'ECLER Academy",
-    });
-  }, []);
-
+  // No Lead here: the Lead is sent only by the registration form after the
+  // database confirms the insert (see redirectCourseLeadToWhatsapp). Direct
+  // visits and reloads of this page must not count as conversions.
   return (
     <div className="min-h-screen bg-[#0e0a08] text-white">
       <div
