@@ -31,6 +31,7 @@ import { Route as ObrigadogiftRouteImport } from './routes/obrigadogift'
 import { Route as ObrigadotoxinaRouteImport } from './routes/obrigadotoxina'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as AulaEnzimasRecombinantesObrigadoRouteImport } from './routes/aula-enzimas-recombinantes_.obrigado'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
 import { Route as Ebook10ErrosHofRouteImport } from './routes/ebook.10-erros-hof'
@@ -150,6 +151,11 @@ const QuizRoute = QuizRouteImport.update({
   path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AulaEnzimasRecombinantesObrigadoRoute =
   AulaEnzimasRecombinantesObrigadoRouteImport.update({
     id: '/aula-enzimas-recombinantes_/obrigado',
@@ -212,6 +218,7 @@ export interface FileRoutesByFullPath {
   '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/aula-enzimas-recombinantes/obrigado': typeof AulaEnzimasRecombinantesObrigadoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
@@ -243,6 +250,7 @@ export interface FileRoutesByTo {
   '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/aula-enzimas-recombinantes/obrigado': typeof AulaEnzimasRecombinantesObrigadoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
@@ -275,6 +283,7 @@ export interface FileRoutesById {
   '/obrigadotoxina': typeof ObrigadotoxinaRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quiz': typeof QuizRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/aula-enzimas-recombinantes_/obrigado': typeof AulaEnzimasRecombinantesObrigadoRoute
   '/blog_/$slug': typeof BlogSlugRoute
   '/ebook/10-erros-hof': typeof Ebook10ErrosHofRoute
@@ -308,6 +317,7 @@ export interface FileRouteTypes {
     | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
+    | '/sitemap.xml'
     | '/aula-enzimas-recombinantes/obrigado'
     | '/blog/$slug'
     | '/ebook/10-erros-hof'
@@ -339,6 +349,7 @@ export interface FileRouteTypes {
     | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
+    | '/sitemap.xml'
     | '/aula-enzimas-recombinantes/obrigado'
     | '/blog/$slug'
     | '/ebook/10-erros-hof'
@@ -370,6 +381,7 @@ export interface FileRouteTypes {
     | '/obrigadotoxina'
     | '/privacidade'
     | '/quiz'
+    | '/sitemap.xml'
     | '/aula-enzimas-recombinantes_/obrigado'
     | '/blog_/$slug'
     | '/ebook/10-erros-hof'
@@ -402,6 +414,7 @@ export interface RootRouteChildren {
   ObrigadotoxinaRoute: typeof ObrigadotoxinaRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuizRoute: typeof QuizRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   AulaEnzimasRecombinantesObrigadoRoute: typeof AulaEnzimasRecombinantesObrigadoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   Ebook10ErrosHofRoute: typeof Ebook10ErrosHofRoute
@@ -567,6 +580,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuizRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aula-enzimas-recombinantes_/obrigado': {
       id: '/aula-enzimas-recombinantes_/obrigado'
       path: '/aula-enzimas-recombinantes/obrigado'
@@ -642,6 +662,7 @@ const rootRouteChildren: RootRouteChildren = {
   ObrigadotoxinaRoute: ObrigadotoxinaRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   QuizRoute: QuizRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   AulaEnzimasRecombinantesObrigadoRoute: AulaEnzimasRecombinantesObrigadoRoute,
   BlogSlugRoute: BlogSlugRoute,
   Ebook10ErrosHofRoute: Ebook10ErrosHofRoute,

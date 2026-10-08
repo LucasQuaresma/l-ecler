@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { createFileRoute } from "@tanstack/react-router";
 import cassiaPortrait from "@/assets/cassia-quiz-authority.webp";
 import { EbookLeadPage } from "@/components/EbookLeadPage";
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/ebook/10-erros-hof")({
       { property: "og:title", content: "Os 10 erros que impedem resultados naturais na HOF" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/ebook/10-erros-hof" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/ebook/10-erros-hof` }],
   }),
   component: TenErrorsEbookRoute,
 });

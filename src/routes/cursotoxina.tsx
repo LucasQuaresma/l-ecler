@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -29,7 +30,7 @@ export const Route = createFileRoute("/cursotoxina")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/cursotoxina" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/cursotoxina` }],
   }),
   component: CursoToxinaPage,
 });

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/obrigado")({
     meta: [
       { title: "Obrigado, Clínica L'ECLER" },
       { name: "description", content: "Recebemos seu contato. Em breve nossa equipe falará com você no WhatsApp." },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: Page,

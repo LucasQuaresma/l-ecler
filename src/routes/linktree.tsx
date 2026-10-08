@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -28,7 +29,7 @@ export const Route = createFileRoute("/linktree")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/linktree" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/linktree` }],
   }),
   component: LinktreePage,
 });

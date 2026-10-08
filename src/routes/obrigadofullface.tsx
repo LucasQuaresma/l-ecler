@@ -7,7 +7,7 @@ export const Route = createFileRoute("/obrigadofullface")({
     meta: [
       { title: "Cadastro recebido | Curso Full Face | L'ECLER Academy" },
       { name: "description", content: "Fale com a equipe da L'ECLER Academy sobre o Curso Full Face." },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: () => <CourseThankYouPage courseName="Curso Full Face" coursePath="/cursofullface" />,

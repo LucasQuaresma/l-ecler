@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
@@ -63,7 +64,7 @@ export const Route = createFileRoute("/quiz")({
       { property: "og:image", content: cassiaHero },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/quiz" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/quiz` }],
   }),
   component: QuizPage,
 });

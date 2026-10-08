@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { createFileRoute } from "@tanstack/react-router";
 import { EbookThankYouPage } from "@/components/EbookThankYouPage";
 
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/ebook/planejamento-completo-hof_/obrigado
     links: [
       {
         rel: "canonical",
-        href: "https://l-ecler.lovable.app/ebook/planejamento-completo-hof/obrigado",
+        href: `${SITE_URL}/ebook/planejamento-completo-hof/obrigado`,
       },
     ],
   }),

@@ -16,7 +16,7 @@ export const Route = createFileRoute("/aula-enzimas-recombinantes_/obrigado")({
         content:
           "Sua inscrição para a aula gratuita de Enzimas Recombinantes, em 22 de setembro, às 20h, foi confirmada.",
       },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: EnzimasRecombinantesThankYouPage,

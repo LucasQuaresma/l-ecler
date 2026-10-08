@@ -13,7 +13,7 @@ export const Route = createFileRoute("/obrigadogift")({
         content:
           "Recebemos seu interesse no Gift Voucher L'ECLER. Em breve nossa equipe entrará em contato pelo WhatsApp com as opções de voucher.",
       },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, follow" },
     ],
   }),
   component: Page,

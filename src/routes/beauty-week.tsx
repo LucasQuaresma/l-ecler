@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -55,7 +56,7 @@ export const Route = createFileRoute("/beauty-week")({
       },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "https://l-ecler.lovable.app/beauty-week" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/beauty-week` }],
   }),
   component: BeautyWeekPage,
 });
