@@ -1,5 +1,4 @@
 import { Fragment, type ReactNode } from "react";
-import { Link } from "@tanstack/react-router";
 
 /** Renders **bold** and [label](/internal-or-https) inline markup. */
 export function InlineText({ text }: { text: string }) {
@@ -21,9 +20,9 @@ export function InlineText({ text }: { text: string }) {
       const cls = "font-medium text-gold underline underline-offset-4 hover:text-foreground";
       nodes.push(
         href.startsWith("/") ? (
-          <Link key={i++} to={href} className={cls}>
+          <a key={i++} href={href} className={cls}>
             {m[2]}
-          </Link>
+          </a>
         ) : (
           <a key={i++} href={href} target="_blank" rel="noreferrer" className={cls}>
             {m[2]}
