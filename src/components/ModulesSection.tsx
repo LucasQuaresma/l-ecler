@@ -23,12 +23,15 @@ const treatmentHighlights = [
 
 const serviceDisplayOrder = [
   "odontologia-estetica",
+  "clareamento-dental",
   "facetas-e-lentes-de-contato",
+  "facetas-de-resina",
   "ortodontia-invisalign",
   "airflow-prevencao-suica",
   "implantes",
   "proteses",
   "endodontia",
+  "extracao-dentaria",
   "odontologia-preventiva-integrativa",
   "fios-e-bioestimulo",
   "gerenciamento-dermico",

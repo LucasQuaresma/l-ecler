@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { getServiceBySlug, services, type Service } from "@/lib/services";
+import { getPostsForService } from "@/lib/blog";
 import { absoluteUrl, breadcrumbJsonLd, jsonLdScript, SERVICE_SEO_NAMES } from "@/lib/site";
 import { openSignupDialog } from "@/lib/signup-dialog";
 import { Header } from "@/components/Header";
@@ -49,7 +50,8 @@ export const Route = createFileRoute("/servicos/$slug")({
     }
     const seoName = SERVICE_SEO_NAMES[s.slug] ?? s.title;
     const title = `${seoName} em Bragança Paulista | Clínica L’Ecler`;
-    const description = `${seoName} em Bragança Paulista/SP na Clínica L'ECLER. ${s.hero}`;
+    const description =
+      s.seoDescription ?? `${seoName} em Bragança Paulista/SP na Clínica L'ECLER. ${s.hero}`;
     const path = `/servicos/${s.slug}`;
     return {
       meta: [
@@ -65,7 +67,7 @@ export const Route = createFileRoute("/servicos/$slug")({
         jsonLdScript(
           breadcrumbJsonLd([
             { name: "Início", path: "/" },
-            { name: s.title, path },
+            { name: seoName, path },
           ]),
         ),
       ],
@@ -190,6 +192,21 @@ const treatmentHeroVisuals: Record<
   "gerenciamento-dermico": {
     image: treatmentHeroDermicoImg,
     alt: "Tratamento de pele para biorregeneração e bioestimulação",
+    objectPosition: "center",
+  },
+  "clareamento-dental": {
+    image: treatmentHeroFacetasImg,
+    alt: "Seleção de cor dental durante avaliação estética",
+    objectPosition: "center",
+  },
+  "facetas-de-resina": {
+    image: treatmentHeroOdontoEsteticaImg,
+    alt: "Sorriso natural em destaque",
+    objectPosition: "center",
+  },
+  "extracao-dentaria": {
+    image: consultationImg,
+    alt: "Consulta individualizada na Clínica L'ECLER",
     objectPosition: "center",
   },
   "laser-co2-e-hipro": {
@@ -362,6 +379,7 @@ function ServicePage() {
   const treatmentVisual =
     treatmentHeroVisuals[service.slug] ?? treatmentHeroVisuals["odontologia-estetica"];
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 6);
+  const relatedPosts = getPostsForService(service.slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -383,13 +401,8 @@ function ServicePage() {
               </span>
             </div>
             <h1 className="mt-5 font-display text-4xl leading-tight sm:text-5xl lg:text-6xl">
-              {service.title.split(" ").slice(0, -1).join(" ")}{" "}
-              <span className="text-gradient-gold">
-                {service.title.split(" ").slice(-1)}
-              </span>
-              <span className="mt-3 block font-sans text-lg font-medium tracking-wide text-muted-foreground sm:text-xl">
-                {SERVICE_SEO_NAMES[service.slug] ?? service.title} em Bragança Paulista
-              </span>
+              {SERVICE_SEO_NAMES[service.slug] ?? service.title}{" "}
+              <span className="text-gradient-gold">em Bragança Paulista</span>
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">{service.hero}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -459,6 +472,39 @@ function ServicePage() {
       </section>
 
       <TreatmentProofSection service={service} />
+
+      {/* AVALIAÇÃO E LIMITES */}
+      {service.limits && service.limits.length > 0 && (
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                Avaliação individual
+              </span>
+              <h2 className="mt-3 font-display text-3xl sm:text-4xl">
+                Como a avaliação <span className="text-gradient-gold">orienta a decisão</span>
+              </h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                A indicação de {(SERVICE_SEO_NAMES[service.slug] ?? service.title).toLowerCase()} é
+                individual. Na consulta, a equipe considera sua história de saúde, o exame clínico e
+                o que você deseja, explica alternativas e só então propõe um plano. Este conteúdo é
+                informativo e não substitui a avaliação.
+              </p>
+            </div>
+            <div className="rounded-[1.5rem] border border-border bg-card p-6 shadow-soft sm:p-8">
+              <h3 className="font-display text-xl">Limites, alternativas e cuidados</h3>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {service.limits.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-gold" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* INDICAÇÕES */}
       <section className="bg-secondary/40 py-20 sm:py-24">

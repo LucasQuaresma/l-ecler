@@ -67,4 +67,7 @@ export const SERVICE_SEO_NAMES: Record<string, string> = {
   "fios-e-bioestimulo": "Fios de PDO e Bioestimuladores",
   "gerenciamento-dermico": "Gerenciamento Dérmico",
   "laser-co2-e-hipro": "Laser CO2 e HIPRO",
+  "clareamento-dental": "Clareamento Dental",
+  "facetas-de-resina": "Facetas de Resina",
+  "extracao-dentaria": "Extração Dentária",
 };
