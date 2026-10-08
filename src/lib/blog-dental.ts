@@ -363,7 +363,7 @@ export const dentalPosts: BlogPost[] = [
       {
         "heading": "Quais sinais merecem contato com o dentista?",
         "body": [
-          "Dor que piora depois de uma melhora inicial, sangramento que não cede conforme a orientação, aumento importante do inchaço, febre, secreção, mau cheiro persistente ou dificuldade para engolir e respirar precisam de contato com o dentista responsável pelo procedimento. Dificuldade para engolir ou respirar, ou inchaço que avança rapidamente, exige atendimento de urgência imediato em um pronto-socorro.",
+          "Dor que piora depois de uma melhora inicial, sangramento que não cede conforme a orientação, febre, secreção ou mau cheiro persistente precisam de contato com o dentista responsável pelo procedimento. Dificuldade para respirar, falar ou engolir, ou inchaço importante, exige atendimento imediato em um pronto-socorro.",
           "Não compare sua recuperação apenas com relatos da internet. Extensão do procedimento, região, condição prévia e resposta do organismo mudam o pós-operatório."
         ]
       },
@@ -398,7 +398,7 @@ export const dentalPosts: BlogPost[] = [
       }
     ],
     "ctaTitle": "A decisão começa por uma avaliação completa",
-    "ctaText": "Se um dente está quebrado, dolorido ou com indicação prévia de remoção, marque uma consulta para revisar o diagnóstico e as opções. A Clínica L'Ecler fica na Rua José Domingues, 577, Centro, em Bragança Paulista. Em caso de dificuldade para respirar ou engolir, procure imediatamente um pronto-socorro.",
+    "ctaText": "Se um dente está quebrado, dolorido ou com indicação prévia de remoção, marque uma consulta para revisar o diagnóstico e as opções. A Clínica L'Ecler fica na Rua José Domingues, 577, Centro, em Bragança Paulista. Em caso de dificuldade para respirar, falar ou engolir, ou inchaço importante, procure imediatamente um pronto-socorro.",
     "ctaButtonLabel": "Solicitar avaliação",
     "sources": [
       {

@@ -57,6 +57,14 @@ describe("SEO catalog", () => {
     }
   });
 
+  test("extraction emergency guidance sends severe symptoms to an emergency room", () => {
+    const post = dentalPosts.find((p) => p.slug === "extracao-dentaria-braganca-paulista");
+    expect(post).toBeDefined();
+    const text = post ? allText(post) : "";
+    expect(text).toContain("Dificuldade para respirar, falar ou engolir, ou inchaço importante");
+    expect(text).toContain("atendimento imediato em um pronto-socorro");
+  });
+
   test("unique SEO titles and descriptions", () => {
     const titles = dentalPosts.map((p) => p.seoTitle);
     expect(new Set(titles).size).toBe(titles.length);

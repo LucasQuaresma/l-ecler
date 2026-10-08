@@ -193,7 +193,7 @@ function BlogArticlePage() {
                   <div>
                     <h2 className="font-display text-2xl">{post.ctaTitle}</h2>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {post.ctaText}
+                      <InlineText text={post.ctaText} />
                     </p>
                     <Button
                       asChild
