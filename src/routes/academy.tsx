@@ -1,3 +1,4 @@
+import { absoluteUrl } from "@/lib/site";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -35,7 +36,10 @@ export const Route = createFileRoute("/academy")({
           "Cursos de habilitação e atualização em HOF, reunidos na Residência Completa. Toxina, BIOFACES, Full Threads, Full Face e LIPS Advanced.",
       },
       { property: "og:image", content: heroImg },
+      { property: "og:url", content: absoluteUrl("/academy") },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: absoluteUrl("/academy") }],
   }),
   component: AcademyPage,
 });
