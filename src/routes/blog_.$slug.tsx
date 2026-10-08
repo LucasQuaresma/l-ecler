@@ -44,12 +44,9 @@ export const Route = createFileRoute("/blog_/$slug")({
           inLanguage: "pt-BR",
           mainEntityOfPage: absoluteUrl(path),
           publisher: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
-          ...(post.datePublished
-            ? {
-                datePublished: post.datePublished,
-                author: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
-              }
-            : {}),
+          author: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
+          ...(post.datePublished ? { datePublished: post.datePublished } : {}),
+          ...(post.dateModified ? { dateModified: post.dateModified } : {}),
         }),
         jsonLdScript(
           breadcrumbJsonLd([
@@ -63,6 +60,12 @@ export const Route = createFileRoute("/blog_/$slug")({
   },
   component: BlogArticlePage,
 });
+
+const MONTHS = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+function formatDate(iso: string) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return `${d} de ${MONTHS[m - 1]} de ${y}`;
+}
 
 function BlogArticlePage() {
   const { slug } = Route.useParams();
@@ -92,9 +95,15 @@ function BlogArticlePage() {
   const explicit = (post.relatedPosts ?? [])
     .map((s) => blogPosts.find((p) => p.slug === s))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  // Fill remaining slots by theme (shared treatments, then same category), never catalog order alone.
+  const themeScore = (item: (typeof blogPosts)[number]) =>
+    (item.relatedServices ?? []).filter((s) => post.relatedServices?.includes(s)).length * 2 +
+    (item.category === post.category ? 1 : 0);
   const related = [
     ...explicit,
-    ...blogPosts.filter((item) => item.slug !== post.slug && !explicit.includes(item)),
+    ...blogPosts
+      .filter((item) => item.slug !== post.slug && !explicit.includes(item) && themeScore(item) > 0)
+      .sort((x, y) => themeScore(y) - themeScore(x)),
   ].slice(0, 3);
   const relatedServices = (post.relatedServices ?? [])
     .map((s) => getServiceBySlug(s))
@@ -130,6 +139,21 @@ function BlogArticlePage() {
               </h1>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {post.description}
+              </p>
+              <p className="mt-4 text-sm text-muted-foreground" data-testid="article-byline">
+                Publicado pela Clínica L'ECLER
+                {post.datePublished && (
+                  <>
+                    {" · "}
+                    <time dateTime={post.datePublished}>{formatDate(post.datePublished)}</time>
+                  </>
+                )}
+                {post.dateModified && (
+                  <>
+                    {" · Atualizado em "}
+                    <time dateTime={post.dateModified}>{formatDate(post.dateModified)}</time>
+                  </>
+                )}
               </p>
               <Button
                 size="lg"
