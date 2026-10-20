@@ -6,24 +6,24 @@ import academyLogo from "@/assets/lecler-academy-logo.png";
 
 const REDIRECT_SECONDS = 30;
 const WHATSAPP_URL = `https://wa.me/5511915633857?${new URLSearchParams({
-  text: "Olá! Tenho interesse em informações sobre o curso de Fios Faciais da L’Ecler Academy.",
+  text: "Olá! Tenho interesse em informações sobre o curso FULL FACE da L’Ecler Academy.",
 })}`;
 
 export const Route = createFileRoute("/academy-contato")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Contato | Curso de Fios Faciais | L’Ecler Academy" },
+      { title: "Contato | Curso FULL FACE | L’Ecler Academy" },
       {
         name: "description",
         content:
-          "Converse com a equipe da L’Ecler Academy pelo WhatsApp sobre o curso de Fios Faciais com a Dra. Cássia Blasques.",
+          "Converse com a equipe da L’Ecler Academy pelo WhatsApp sobre o curso FULL FACE com a Dra. Cássia Blasques.",
       },
       { name: "robots", content: "noindex, follow" },
       { property: "og:title", content: "Fale com a L’Ecler Academy" },
       {
         property: "og:description",
-        content: "Informações sobre o curso de Fios Faciais pelo WhatsApp: +55 11 91563-3857.",
+        content: "Informações sobre o curso FULL FACE pelo WhatsApp: +55 11 91563-3857.",
       },
       { property: "og:url", content: absoluteUrl("/academy-contato") },
     ],
@@ -61,7 +61,7 @@ function AcademyContactPage() {
           className="mb-9 h-32 w-36 object-contain sm:h-36 sm:w-40"
         />
         <p className="mb-3 text-sm font-semibold text-[#73613b]">Com a Dra. Cássia Blasques</p>
-        <h1 className="font-display text-3xl leading-tight sm:text-4xl">Curso de Fios Faciais</h1>
+        <h1 className="font-display text-3xl leading-tight sm:text-4xl">Curso FULL FACE</h1>
         <p className="mt-5 max-w-sm text-base leading-relaxed text-[#5c5c5c]">
           Fale com a equipe da L’Ecler Academy para conhecer a programação, os pré-requisitos e a
           disponibilidade de vagas.
