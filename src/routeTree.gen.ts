@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcademyRouteImport } from './routes/academy'
+import { Route as AcademyContatoRouteImport } from './routes/academy-contato'
 import { Route as AulaEnzimasRecombinantesRouteImport } from './routes/aula-enzimas-recombinantes'
 import { Route as BeautyWeekRouteImport } from './routes/beauty-week'
 import { Route as BlogRouteImport } from './routes/blog'
@@ -48,6 +49,11 @@ const IndexRoute = IndexRouteImport.update({
 const AcademyRoute = AcademyRouteImport.update({
   id: '/academy',
   path: '/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyContatoRoute = AcademyContatoRouteImport.update({
+  id: '/academy-contato',
+  path: '/academy-contato',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AulaEnzimasRecombinantesRoute =
@@ -198,6 +204,7 @@ const EbookPlanejamentoCompletoHofObrigadoRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/academy-contato': typeof AcademyContatoRoute
   '/aula-enzimas-recombinantes': typeof AulaEnzimasRecombinantesRoute
   '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
@@ -230,6 +237,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/academy-contato': typeof AcademyContatoRoute
   '/aula-enzimas-recombinantes': typeof AulaEnzimasRecombinantesRoute
   '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
@@ -263,6 +271,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/academy': typeof AcademyRoute
+  '/academy-contato': typeof AcademyContatoRoute
   '/aula-enzimas-recombinantes': typeof AulaEnzimasRecombinantesRoute
   '/beauty-week': typeof BeautyWeekRoute
   '/blog': typeof BlogRoute
@@ -297,6 +306,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/academy'
+    | '/academy-contato'
     | '/aula-enzimas-recombinantes'
     | '/beauty-week'
     | '/blog'
@@ -329,6 +339,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/academy'
+    | '/academy-contato'
     | '/aula-enzimas-recombinantes'
     | '/beauty-week'
     | '/blog'
@@ -361,6 +372,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/academy'
+    | '/academy-contato'
     | '/aula-enzimas-recombinantes'
     | '/beauty-week'
     | '/blog'
@@ -394,6 +406,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcademyRoute: typeof AcademyRoute
+  AcademyContatoRoute: typeof AcademyContatoRoute
   AulaEnzimasRecombinantesRoute: typeof AulaEnzimasRecombinantesRoute
   BeautyWeekRoute: typeof BeautyWeekRoute
   BlogRoute: typeof BlogRoute
@@ -438,6 +451,13 @@ declare module '@tanstack/react-router' {
       path: '/academy'
       fullPath: '/academy'
       preLoaderRoute: typeof AcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy-contato': {
+      id: '/academy-contato'
+      path: '/academy-contato'
+      fullPath: '/academy-contato'
+      preLoaderRoute: typeof AcademyContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aula-enzimas-recombinantes': {
@@ -642,6 +662,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcademyRoute: AcademyRoute,
+  AcademyContatoRoute: AcademyContatoRoute,
   AulaEnzimasRecombinantesRoute: AulaEnzimasRecombinantesRoute,
   BeautyWeekRoute: BeautyWeekRoute,
   BlogRoute: BlogRoute,
