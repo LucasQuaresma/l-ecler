@@ -70,9 +70,19 @@ test("one contact CTA opens the confirmed Academy number with no personal lead d
   assert.equal(url.origin, "https://wa.me");
   assert.equal(url.pathname, "/5511915633857");
   assert.equal(url.searchParams.size, 1);
-  assert.match(url.searchParams.get("text"), /Fios Faciais/);
+  assert.match(url.searchParams.get("text"), /curso FULL FACE/);
   assert.equal(Route.path, "/academy-contato");
   assert.equal(Route.head().meta.find((item) => item.name === "robots").content, "noindex, follow");
+});
+
+test("FULL FACE is consistent in the heading, metadata and WhatsApp message", () => {
+  const { tree, Route, source } = renderContact();
+  const heading = nodes(tree).find((node) => node.type === "h1");
+  assert.equal(heading.props.children, "Curso FULL FACE");
+  for (const meta of Route.head().meta.filter((item) => item.title || item.name === "description" || item.property === "og:description")) {
+    assert.match(meta.title || meta.content, /FULL FACE/);
+  }
+  assert.doesNotMatch(source, /Fios Faciais/);
 });
 
 test("redirect waits 30 seconds, uses the same destination, and cleans up both timers", () => {
