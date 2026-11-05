@@ -6,7 +6,8 @@ export const registerBioframe = createServerFn({ method: "POST" })
   .inputValidator(bioframeRequestSchema)
   .handler(async ({ data }) => {
     try {
-      return await deliverBioframeRegistration(data, { secret: process.env.EBOOK_WEBHOOK_SECRET });
+      const secret = process.env['EBOOK_WEBHOOK_SECRET'];
+      return await deliverBioframeRegistration(data, { secret });
     } catch {
       // Never return provider responses, credentials or contact details to the browser.
       throw new Error(
