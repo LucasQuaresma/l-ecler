@@ -9,7 +9,13 @@ export function normalizeBioframePhone(value: string) {
 }
 
 export const bioframeRegistrationSchema = z.object({
-  name: z.string().trim().min(2, "Informe seu nome completo.").max(100, "Use até 100 caracteres."),
+  name: z
+    .string()
+    .trim()
+    .min(2, "Informe seu nome completo.")
+    .max(100, "Use até 100 caracteres.")
+    .refine((value) => /\p{L}/u.test(value), "Informe seu nome completo.")
+    .transform((value) => value.replace(/\s+/g, " ")),
   email: z
     .string()
     .trim()
@@ -22,7 +28,7 @@ export const bioframeRegistrationSchema = z.object({
     .max(30)
     .transform(normalizeBioframePhone)
     .refine(
-      (value) => /^55[1-9]\d\d{8,9}$/.test(value) && !/^(\d)\1+$/.test(value.slice(4)),
+      (value) => /^55[1-9]{2}(?:9\d{8}|[2-5]\d{7})$/.test(value),
       "Informe um WhatsApp brasileiro com DDD.",
     ),
   consent: z.literal(true, {
