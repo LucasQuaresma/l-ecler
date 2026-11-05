@@ -23,6 +23,7 @@ import { Route as CursofullfaceRouteImport } from './routes/cursofullface'
 import { Route as CursotoxinaRouteImport } from './routes/cursotoxina'
 import { Route as GiftVoucherRouteImport } from './routes/gift-voucher'
 import { Route as LinktreeRouteImport } from './routes/linktree'
+import { Route as LiveBioframeLiftRouteImport } from './routes/live-bioframe-lift'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as ObrigadoadvancedlipsRouteImport } from './routes/obrigadoadvancedlips'
 import { Route as ObrigadobiofacesRouteImport } from './routes/obrigadobiofaces'
@@ -110,6 +111,11 @@ const GiftVoucherRoute = GiftVoucherRouteImport.update({
 const LinktreeRoute = LinktreeRouteImport.update({
   id: '/linktree',
   path: '/linktree',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiveBioframeLiftRoute = LiveBioframeLiftRouteImport.update({
+  id: '/live-bioframe-lift',
+  path: '/live-bioframe-lift',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObrigadoRoute = ObrigadoRouteImport.update({
@@ -216,6 +222,7 @@ export interface FileRoutesByFullPath {
   '/cursotoxina': typeof CursotoxinaRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
+  '/live-bioframe-lift': typeof LiveBioframeLiftRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadoadvancedlips': typeof ObrigadoadvancedlipsRoute
   '/obrigadobiofaces': typeof ObrigadobiofacesRoute
@@ -249,6 +256,7 @@ export interface FileRoutesByTo {
   '/cursotoxina': typeof CursotoxinaRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
+  '/live-bioframe-lift': typeof LiveBioframeLiftRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadoadvancedlips': typeof ObrigadoadvancedlipsRoute
   '/obrigadobiofaces': typeof ObrigadobiofacesRoute
@@ -283,6 +291,7 @@ export interface FileRoutesById {
   '/cursotoxina': typeof CursotoxinaRoute
   '/gift-voucher': typeof GiftVoucherRoute
   '/linktree': typeof LinktreeRoute
+  '/live-bioframe-lift': typeof LiveBioframeLiftRoute
   '/obrigado': typeof ObrigadoRoute
   '/obrigadoadvancedlips': typeof ObrigadoadvancedlipsRoute
   '/obrigadobiofaces': typeof ObrigadobiofacesRoute
@@ -318,6 +327,7 @@ export interface FileRouteTypes {
     | '/cursotoxina'
     | '/gift-voucher'
     | '/linktree'
+    | '/live-bioframe-lift'
     | '/obrigado'
     | '/obrigadoadvancedlips'
     | '/obrigadobiofaces'
@@ -351,6 +361,7 @@ export interface FileRouteTypes {
     | '/cursotoxina'
     | '/gift-voucher'
     | '/linktree'
+    | '/live-bioframe-lift'
     | '/obrigado'
     | '/obrigadoadvancedlips'
     | '/obrigadobiofaces'
@@ -384,6 +395,7 @@ export interface FileRouteTypes {
     | '/cursotoxina'
     | '/gift-voucher'
     | '/linktree'
+    | '/live-bioframe-lift'
     | '/obrigado'
     | '/obrigadoadvancedlips'
     | '/obrigadobiofaces'
@@ -418,6 +430,7 @@ export interface RootRouteChildren {
   CursotoxinaRoute: typeof CursotoxinaRoute
   GiftVoucherRoute: typeof GiftVoucherRoute
   LinktreeRoute: typeof LinktreeRoute
+  LiveBioframeLiftRoute: typeof LiveBioframeLiftRoute
   ObrigadoRoute: typeof ObrigadoRoute
   ObrigadoadvancedlipsRoute: typeof ObrigadoadvancedlipsRoute
   ObrigadobiofacesRoute: typeof ObrigadobiofacesRoute
@@ -535,6 +548,13 @@ declare module '@tanstack/react-router' {
       path: '/linktree'
       fullPath: '/linktree'
       preLoaderRoute: typeof LinktreeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/live-bioframe-lift': {
+      id: '/live-bioframe-lift'
+      path: '/live-bioframe-lift'
+      fullPath: '/live-bioframe-lift'
+      preLoaderRoute: typeof LiveBioframeLiftRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/obrigado': {
@@ -674,6 +694,7 @@ const rootRouteChildren: RootRouteChildren = {
   CursotoxinaRoute: CursotoxinaRoute,
   GiftVoucherRoute: GiftVoucherRoute,
   LinktreeRoute: LinktreeRoute,
+  LiveBioframeLiftRoute: LiveBioframeLiftRoute,
   ObrigadoRoute: ObrigadoRoute,
   ObrigadoadvancedlipsRoute: ObrigadoadvancedlipsRoute,
   ObrigadobiofacesRoute: ObrigadobiofacesRoute,
