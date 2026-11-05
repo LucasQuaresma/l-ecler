@@ -163,3 +163,71 @@ test("preserves campaign context across navigation without mixing separate campa
   assert.equal(next.utm_medium, undefined);
   assert.ok(![...storage.values()].join("").includes("private"));
 });
+
+function loadServerFunction(environment, fetcher) {
+  const filename = path.join(__dirname, "../src/lib/bioframe-registration.functions.ts");
+  const { outputText } = ts.transpileModule(fs.readFileSync(filename, "utf8"), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+  });
+  const exports = {};
+  const modules = loadModules();
+  vm.runInNewContext(outputText, {
+    exports,
+    process: { env: environment },
+    require: (id) => {
+      if (id === "@tanstack/react-start") return {
+        createServerFn: () => ({ inputValidator: (schema) => ({
+          handler: (handler) => async ({ data }) => handler({ data: schema.parse(data) }),
+        }) }),
+      };
+      if (id === "./bioframe-registration") return modules;
+      if (id === "./bioframe-registration-transport.server") return {
+        deliverBioframeRegistration: (data, options) =>
+          modules.deliverBioframeRegistration(data, { ...options, fetcher }),
+      };
+      throw new Error(`Unexpected import: ${id}`);
+    },
+  });
+  return exports.registerBioframe;
+}
+
+test("RPC reads the secret at request time, not when the module is imported", async () => {
+  const environment = {};
+  let sent = 0;
+  const register = loadServerFunction(environment, async () => {
+    sent++;
+    return Response.json(ack);
+  });
+  await assert.rejects(() => register({ data: input }), /Não foi possível confirmar/);
+  assert.equal(sent, 0);
+  environment.EBOOK_WEBHOOK_SECRET = "test-only";
+  const result = await register({ data: input });
+  assert.equal(result.confirmed, true);
+  assert.equal(result.duplicate, false);
+  assert.equal(sent, 1);
+});
+
+test("RPC stays fail-closed on rejected, partial or unrelated webhook ACKs", async () => {
+  for (const response of [
+    () => Response.json(ack, { status: 401 }),
+    () => Response.json({ ...ack, sheet_saved: false }),
+    () => Response.json({ ...ack, dov_synced: false }),
+    () => Response.json({ ...ack, eventId: "5e858c0d-b662-40c8-a12a-a4c03b9a8449" }),
+    () => { throw new Error("Provider details must remain private"); },
+  ]) {
+    const register = loadServerFunction({ EBOOK_WEBHOOK_SECRET: "test-only" }, async () => response());
+    await assert.rejects(() => register({ data: input }), {
+      message: "Não foi possível confirmar sua inscrição. Seus dados continuam no formulário para tentar novamente.",
+    });
+  }
+});
+
+test("RPC rejects invalid consent before webhook delivery", async () => {
+  let sent = false;
+  const register = loadServerFunction({ EBOOK_WEBHOOK_SECRET: "test-only" }, async () => {
+    sent = true;
+    return Response.json(ack);
+  });
+  await assert.rejects(() => register({ data: { ...input, consent: false } }));
+  assert.equal(sent, false);
+});

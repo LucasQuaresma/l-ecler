@@ -1,5 +1,6 @@
 import { useRef, useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, CalendarDays, CheckCircle2, Clock3, Loader2 } from "lucide-react";
 import academyLogo from "@/assets/lecler-academy-logo.png";
 import cassiaPortrait from "@/assets/cassia-quiz-white.webp";
@@ -10,7 +11,7 @@ import {
   bioframeRegistrationSchema,
   collectBioframeAttribution,
 } from "@/lib/bioframe-registration";
-import { registerBioframe } from "@/lib/bioframe-registration.server";
+import { registerBioframe } from "@/lib/bioframe-registration.functions";
 import { SITE_URL } from "@/lib/site";
 
 const pageTitle = "Live Bioframe Lift · 30/11 às 20h | L'ECLER Academy";
@@ -44,6 +45,7 @@ type RegistrationFields = {
 type FieldErrors = Partial<Record<keyof RegistrationFields, string>>;
 
 function BioframeLivePage() {
+  const submitRegistration = useServerFn(registerBioframe);
   const [fields, setFields] = useState<RegistrationFields>({
     name: "",
     email: "",
@@ -104,7 +106,7 @@ function BioframeLivePage() {
     setSubmissionError("");
 
     try {
-      const result = await registerBioframe({
+      const result = await submitRegistration({
         data: {
           ...parsed.data,
           requestId: attemptRef.current.requestId,
